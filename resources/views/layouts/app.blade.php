@@ -13,7 +13,7 @@
   <!-- Styles -->
   <link href="{{ asset('css/app.css') }}" rel="stylesheet">
   <link href="{{ asset('css/login.css') }}" rel="stylesheet">
-  <link href="{{ asset('css/login-green.css') }}" rel="stylesheet">
+  <link href="{{ asset('css/login-green.css') }}?v=0.2" rel="stylesheet">
 
   <!-- Scripts -->
   <script>
