@@ -157,9 +157,12 @@
                   <li> <a href="#"> Profile </a> </li>
                   <li> <a href="#"> Settings </a> </li>
                   <li>
-                    <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                    <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"> 
                       <i class="fa fa-sign-out pull-right"></i> Log out
                     </a>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                      {{ csrf_field() }} 
+                    </form> 
                   </li>
                 </ul>
               </li>
