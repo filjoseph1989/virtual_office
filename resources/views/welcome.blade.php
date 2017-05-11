@@ -1,4 +1,4 @@
-@extends('layouts.home') 
+@extends('layouts.welcome') 
 
 @section('content')
 <div class="login-page">
