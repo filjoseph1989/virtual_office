@@ -28,7 +28,7 @@
 .panel.widget .dimmer {
     background: rgba(45, 53, 61, 0.5);
     background: -moz-linear-gradient(-45deg, rgba(45, 53, 61, 0.79) 0%, rgba(45, 53, 61, 0.5) 100%);
-    background: -webkit-linear-gradient(-45deg, rgba(45, 53, 61, 0.79) 0%, rgba(45, 53, 61, 0.5) 100%);
+    background: linear-gradient(-45deg, rgba(45, 53, 61, 0.79) 0%, rgba(45, 53, 61, 0.5) 100%);
     background: linear-gradient(135deg, rgba(45, 53, 61, 0.79) 0%, rgba(45, 53, 61, 0.5) 100%);
     filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#c92d353d', endColorstr='#802d353d', GradientType=1);
     opacity: 1;
