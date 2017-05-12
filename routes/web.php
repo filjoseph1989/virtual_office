@@ -12,13 +12,18 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+  return view('auth.login');
 });
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
+/**
+ * Route for admin dashboard, login form and login
+ */
+Route::prefix('admin')->group(function() {
+  Route::get('/login', 'Auth\AdminLoginController@showLoginForm')->name('admin.login');
+  Route::post('/', 'Auth\AdminLoginController@login')->name('admin.login.submit');
+  Route::get('/', 'AdminController@index')->name('admin');
+});

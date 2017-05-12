@@ -157,12 +157,12 @@
                   <li> <a href="#"> Profile </a> </li>
                   <li> <a href="#"> Settings </a> </li>
                   <li>
-                    <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"> 
+                    <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                       <i class="fa fa-sign-out pull-right"></i> Log out
                     </a>
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                      {{ csrf_field() }} 
-                    </form> 
+                      {{ csrf_field() }}
+                    </form>
                   </li>
                 </ul>
               </li>
@@ -175,7 +175,7 @@
                   <li>
                     <a>
                       <span class="image"><img src="images/img.jpg" alt="Profile Image"></span>
-                      <span> 
+                      <span>
                         <span>John Smith</span>
                         <span class="time">3 mins ago</span>
                       </span>
@@ -185,8 +185,8 @@
                   <li>
                     <a>
                       <span class="image"><img src="images/img.jpg" alt="Profile Image"></span>
-                      <span> 
-                        <span>John Doe</span> 
+                      <span>
+                        <span>John Doe</span>
                         <span class="time">6 mins ago</span>
                       </span>
                       <span class="message"> Request for travel expense </span>
@@ -195,7 +195,7 @@
                   <li>
                     <a>
                       <span class="image"><img src="images/img.jpg" alt="Profile Image"></span>
-                      <span> 
+                      <span>
                         <span>John Cover</span>
                         <span class="time">9 mins ago</span>
                       </span>
@@ -218,7 +218,7 @@
       </div>
       <div class="right_col" role="main">
         <div class="page-title">
-          <div class="title_left"> 
+          <div class="title_left">
             <div class="container-fluid">
               <div class="side-body padding-top">
                 <div class="page-content">
