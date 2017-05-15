@@ -38,7 +38,7 @@
               <span class="fa fa-chevron-down"></span>
             </a>
             <ul class="nav child_menu">
-              <li> <a href="#"> Recruitment </a> </li>
+              <li> <a href="{{ route('recruitement')}}"> Recruitment </a> </li>
               <li> <a href="#"> Payroll </a> </li>
               <li> <a href="#"> Training </a> </li>
               <li> <a href="#"> Administration </a> </li>
