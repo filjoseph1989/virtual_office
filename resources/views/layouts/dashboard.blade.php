@@ -27,12 +27,14 @@
     <div class="main_container">
 
       @yield('sidebar')
+
       @yield('top-navigation')
+
       @yield('content')
 
     </div>
   </div>
-  
+
   @yield('footer')
 
 </body>

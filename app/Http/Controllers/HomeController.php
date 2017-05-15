@@ -22,6 +22,11 @@ class HomeController extends Controller
    * @return \Illuminate\Http\Response
    */
   public function index() {
-    return view('layouts.user-dashboard');
+    return view('users.user-dashboard');
+  }
+
+  public function recruitement() {
+    $content = "users.recruitement.index";
+    return view('users.user-dashboard', compact('content'));
   }
 }
