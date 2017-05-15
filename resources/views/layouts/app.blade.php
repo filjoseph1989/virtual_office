@@ -8,12 +8,10 @@
 
   <!-- CSRF Token -->
   <meta name="csrf-token" content="{{ csrf_token() }}">
-  <title>{{ config('app.name', 'Laravel') }}</title>
+  <title>{{ config('app.name', 'MPCI') }}</title>
 
   <!-- Styles -->
-  <link href="{{ asset('css/app.css') }}?v=0.1" rel="stylesheet">
-  <link href="{{ asset('css/login.css') }}?v=0.1" rel="stylesheet">
-  <link href="{{ asset('css/login-green.css') }}?v=0.2" rel="stylesheet">
+  <link rel="stylesheet" href="css/master.css">
 
   <!-- Scripts -->
   <script>
