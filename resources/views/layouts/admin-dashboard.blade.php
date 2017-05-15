@@ -5,7 +5,7 @@
     <div class="left_col scroll-view">
       <div class="navbar nav_title" style="border: 0;">
         <a href="#" class="site_title">
-          <span>MPCI VO Admin</span>
+          <span>{{ config('app.name', 'Laravel') }} Admin</span>
         </a>
       </div>
       <div class="clearfix"></div>
@@ -15,7 +15,7 @@
         </div>
         <div class="profile_info">
           <span>Welcome,</span>
-          <h2><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> {{ Auth::user()->name }} <span class="caret"></span> </a></h2>
+          <h2><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> {{ Auth::user()->first_name }} <span class="caret"></span> </a></h2>
         </div>
       </div>
       <br/>
@@ -25,41 +25,12 @@
           <ul class="nav side-menu">
             <li>
               <a href="#">
-                <i class="fa fa-home" aria-hidden="true"></i> Reports
+                <i class="fa fa-home" aria-hidden="true"></i> Administration
                 <span class="fa fa-chevron-down"></span>
               </a>
               <ul class="nav child_menu">
                 <li> <a href="#"> Daily Time Record </a> </li>
                 <li> <a href="#"> Daily Accomplishment Report </a> </li>
-              </ul>
-            </li>
-          </ul>
-          <ul class="nav side-menu">
-            <li>
-              <a href="#">
-                <i class="fa fa-home" aria-hidden="true"></i> Human Resources
-                <span class="fa fa-chevron-down"></span>
-              </a>
-              <ul class="nav child_menu">
-                <li> <a href="#"> Recruitment </a> </li>
-                <li> <a href="#"> Payroll </a> </li>
-                <li> <a href="#"> Training </a> </li>
-                <li> <a href="#"> Administration </a> </li>
-                <li> <a href="#"> Communication </a> </li>
-              </ul>
-            </li>
-          </ul>
-          <ul class="nav side-menu">
-            <li>
-              <a href="#">
-                <i class="fa fa-home" aria-hidden="true"></i> Sales
-                <span class="fa fa-chevron-down"></span>
-              </a>
-              <ul class="nav child_menu">
-                <li> <a href="#"> List of Quotations </a> </li>
-                <li> <a href="#"> List of Accounts </a> </li>
-                <li> <a href="#"> List of Quotation Forms </a> </li>
-                <li> <a href="#"> List of Job Order </a> </li>
               </ul>
             </li>
           </ul>
@@ -69,12 +40,12 @@
           <ul class="nav side-menu">
             <li>
               <a>
-                <i class="fa fa-list"></i> User Feedback
+                <i class="fa fa-list"></i> Feedback
                 <span class="fa fa-chevron-down"></span>
               </a>
               <ul class="nav child_menu">
                 <li>
-                  <a href="#"> Create Feedback </a>
+                  <a href="#"> Manage Feedback </a>
                 </li>
                 <li>
                   <a href="#"> Chat </a>
@@ -93,7 +64,10 @@
                   <a href="#"> FAQ </a>
                 </li>
                 <li>
-                  <a href="#"> Request Support </a>
+                  <a href="#"> Manage Support </a>
+                </li>
+                <li>
+                  <a href="#"> System Documentation </a>
                 </li>
               </ul>
             </li>
@@ -128,7 +102,7 @@
         <ul class="nav navbar-nav navbar-right">
           <li class="">
             <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-              <img src="http://www.gravatar.com/avatar/64e1b8d34f425d19e1ee2ea7236d3028.jpg?s=80&amp;d=mm&amp;r=g" alt="">{{ Auth::user()->name }}
+              <img src="http://www.gravatar.com/avatar/64e1b8d34f425d19e1ee2ea7236d3028.jpg?s=80&amp;d=mm&amp;r=g" alt="">{{ Auth::user()->first_name }}
               <span class=" fa fa-angle-down"></span>
             </a>
             <ul class="dropdown-menu dropdown-usermenu pull-right">
@@ -204,36 +178,25 @@
           <div class="side-body padding-top">
             <div class="page-content">
               <div class="clearfix container-fluid row">
-                <div class="col-xs-12 col-sm-6 col-md-4">
+                <div class="col-xs-12 col-sm-6 col-md-6">
                   <div class="panel widget center bgimage" style="margin-bottom:0;overflow:hidden;background-image:url(' #');">
                     <div class="dimmer"></div>
                     <div class="panel-content">
                       <i class="voyager-group"></i>
-                      <h4>23 users</h4>
-                      <p>You have 23 users in your database. Click on button below to view all users.</p>
-                      <a href="http://mpci-vo.dev/admin/users" class="btn btn-primary">View all users</a>
+                      <h4>Manage Modules</h4>
+                      <p>Click the button below for modules BREAD.</p>
+                      <a href="#" class="btn btn-primary">Start</a>
                     </div>
                   </div>
                 </div>
-                <div class="col-xs-12 col-sm-6 col-md-4">
+                <div class="col-xs-12 col-sm-6 col-md-6">
                   <div class="panel widget center bgimage" style="margin-bottom:0;overflow:hidden;">
                     <div class="dimmer"></div>
                     <div class="panel-content">
                       <i class="voyager-group"></i>
-                      <h4>4 posts</h4>
-                      <p>You have 4 posts in your database. Click on button below to view all posts.</p>
-                      <a href="http://mpci-vo.dev/admin/posts" class="btn btn-primary">View all posts</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-xs-12 col-sm-6 col-md-4">
-                  <div class="panel widget center bgimage" style="margin-bottom:0;overflow:hidden; ">
-                    <div class="dimmer"></div>
-                    <div class="panel-content">
-                      <i class="voyager-group"></i>
-                      <h4>1 page</h4>
-                      <p>You have 1 page in your database. Click on button below to view all pages.</p>
-                      <a href="http://mpci-vo.dev/admin/pages" class="btn btn-primary">View all pages</a>
+                      <h4>Manage Authorities</h4>
+                      <p> Click on button below to manage authorities.</p>
+                      <a href="#" class="btn btn-primary">Start</a>
                     </div>
                   </div>
                 </div>
