@@ -17,7 +17,8 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::name('recruitement')->get('/recruitement', 'HomeController@recruitement');
+Route::name('recruitement')->get('/recruitement', 'HomeController@showRecruitemeneMenu');
+Route::name('recruitement.add')->get('/recruitement/add', 'EmployeeController@showAddForm');
 Route::name('home')->get('/home', 'HomeController@index');
 
 Route::prefix('admin')->group(function() {

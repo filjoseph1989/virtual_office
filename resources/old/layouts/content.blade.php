@@ -10,9 +10,9 @@
                   <div class="dimmer"></div>
                   <div class="panel-content">
                     <i class="voyager-group"></i>
-                    <h4>Add Employee</h4>
-                    <p>Click the button below to add new employee.</p>
-                    <a href="#" class="btn btn-primary">Start</a>
+                    <h4>23 users</h4>
+                    <p>You have 23 users in your database. Click on button below to view all users.</p>
+                    <a href="http://mpci-vo.dev/admin/users" class="btn btn-primary">View all users</a>
                   </div>
                 </div>
               </div>
@@ -21,9 +21,9 @@
                   <div class="dimmer"></div>
                   <div class="panel-content">
                     <i class="voyager-group"></i>
-                    <h4>List of Department</h4>
-                    <p>Click on the button below to show the list of department.</p>
-                    <a href="#" class="btn btn-primary">Start</a>
+                    <h4>4 posts</h4>
+                    <p>You have 4 posts in your database. Click on button below to view all posts.</p>
+                    <a href="http://mpci-vo.dev/admin/posts" class="btn btn-primary">View all posts</a>
                   </div>
                 </div>
               </div>
@@ -32,9 +32,9 @@
                   <div class="dimmer"></div>
                   <div class="panel-content">
                     <i class="voyager-group"></i>
-                    <h4>List of Employee</h4>
-                    <p>Click on the button below to show the list of Employee.</p>
-                    <a href="#" class="btn btn-primary">View</a>
+                    <h4>1 page</h4>
+                    <p>You have 1 page in your database. Click on button below to view all pages.</p>
+                    <a href="http://mpci-vo.dev/admin/pages" class="btn btn-primary">View all pages</a>
                   </div>
                 </div>
               </div>

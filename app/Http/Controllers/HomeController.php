@@ -25,8 +25,10 @@ class HomeController extends Controller
     return view('users.user-dashboard');
   }
 
-  public function recruitement() {
-    $content = "users.recruitement.index";
+
+  public function showRecruitemeneMenu() {
+    $content = "users.recruitement.recruitement-menu";
+
     return view('users.user-dashboard', compact('content'));
   }
 }
