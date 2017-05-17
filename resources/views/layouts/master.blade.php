@@ -12,7 +12,8 @@
     <!-- Styles -->
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}?v=3.3.7">
     <link rel="stylesheet" href="{{ asset('css/font-awesome.min.css') }}?v=4.7.0">
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/jquery-ui.min.css') }}?v=0.4">
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}?v=0.5">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -30,8 +31,9 @@
     @include('users.sidebar')
 
     @yield ('content')
-    
+
     <script src="{{ asset('js/jquery.min.js') }}?v=3.2.1" charset="utf-8"></script>
-    <script src="{{ asset('js/bootstrap.js') }}?v=0.1" charset="utf-8"></script>
+    <script src="{{ asset('js/jquery-ui.min.js') }}?v=3.3.7" charset="utf-8"></script>
+    <script src="{{ asset('js/bootstrap.js') }}?v=3.3.7" charset="utf-8"></script>
   </body>
 </html>

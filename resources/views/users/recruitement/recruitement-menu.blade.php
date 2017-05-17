@@ -2,36 +2,59 @@
   <div class="side-body padding-top">
     <div class="page-content">
       <div class="clearfix container-fluid row">
-        <div class="col-xs-12 col-sm-6 col-md-4">
-          <div class="panel widget center bgimage" style="margin-bottom:0;overflow:hidden;background-image:url(' #');">
-            <div class="dimmer"></div>
-            <div class="panel-content">
-              <i class="voyager-group"></i>
-              <h4>Add Employee</h4>
-              <p>Click the button below to add new employee.</p>
-              <a href="{{ route('recruitement.add') }}" class="btn btn-primary">Start</a>
-            </div>
+        <div class="x_panel">
+          <div class="x_title">
+            <h2>Recruitement</h2>
+            <ul class="nav navbar-right panel_toolbox">
+              <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a> </li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="#">Settings 1</a></li>
+                  <li><a href="#">Settings 2</a></li>
+                </ul>
+              </li>
+            </ul>
+            <div class="clearfix"></div>
           </div>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-4">
-          <div class="panel widget center bgimage" style="margin-bottom:0;overflow:hidden;">
-            <div class="dimmer"></div>
-            <div class="panel-content">
-              <i class="voyager-group"></i>
-              <h4>List of Department</h4>
-              <p>Click on the button below to show the list of department.</p>
-              <a href="#" class="btn btn-primary">Start</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-4">
-          <div class="panel widget center bgimage" style="margin-bottom:0;overflow:hidden; ">
-            <div class="dimmer"></div>
-            <div class="panel-content">
-              <i class="voyager-group"></i>
-              <h4>List of Employee</h4>
-              <p>Click on the button below to show the list of Employee.</p>
-              <a href="#" class="btn btn-primary">View</a>
+          <div class="x_content">
+            <div class="clearfix container-fluid row">
+              <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <a href="{{ route('recruitement') }}">
+                  <div class="tile-stats">
+                    <div class="count">1</div>
+                    <h3>Add New Employee</h3>
+                    <p>Click here to add new employee.</p>
+                  </div>
+                </a>
+              </div>
+              <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <a href="#">
+                  <div class="tile-stats">
+                    <div class="count">2</div>
+                    <h3>List of Department</h3>
+                    <p>Click here to view the list of department.</p>
+                  </div>
+                </a>
+              </div>
+              <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <a href="#">
+                  <div class="tile-stats">
+                    <div class="count">3</div>
+                    <h3>List of Employee</h3>
+                    <p>Click here to view the list of employee.</p>
+                  </div>
+                </a>
+              </div>
+              <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <a href="#">
+                  <div class="tile-stats">
+                    <div class="count">3</div>
+                    <h3>Choose</h3>
+                    <p>Choose other you'd like to add.</p>
+                  </div>
+                </a>
+              </div>
             </div>
           </div>
         </div>

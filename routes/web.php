@@ -12,13 +12,18 @@
 */
 
 Route::get('/', function () {
-  return view('auth.login');
+  if (Auth::check() === false) {
+    return view('auth.login');
+  } else {
+    return view('users.user-dashboard');
+  }
 });
 
 Auth::routes();
 
 Route::name('recruitement')->get('/recruitement', 'HomeController@showRecruitemeneMenu');
 Route::name('recruitement.add')->get('/recruitement/add', 'EmployeeController@showAddForm');
+
 Route::name('home')->get('/home', 'HomeController@index');
 
 Route::prefix('admin')->group(function() {
