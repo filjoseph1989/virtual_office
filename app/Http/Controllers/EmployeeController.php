@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\User;
 
 class EmployeeController extends Controller
 {
@@ -34,7 +35,13 @@ class EmployeeController extends Controller
    */
   public function store(Request $request)
   {
-      //
+    $result = $request->only(['position_id', 'department_id', 'first_name', 'last_name', 'email', 'gender', 'birthday', 'street', 'city', 'country', 'zipcode', 'contact', 'tin', 'sss', 'philhealth', 'pag_ibig']);
+    $result['password'] = bcrypt('password');
+    // $result['active'] = 1;
+
+    User::create($result);
+
+    return redirect()->route('recruitement.add');
   }
 
   /**
@@ -45,7 +52,7 @@ class EmployeeController extends Controller
    */
   public function show($id)
   {
-      //
+
   }
 
   /**
@@ -67,7 +74,7 @@ class EmployeeController extends Controller
    */
   public function edit($id)
   {
-      //
+
   }
 
   /**

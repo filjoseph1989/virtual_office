@@ -23,6 +23,7 @@ Auth::routes();
 
 Route::name('recruitement')->get('/recruitement', 'HomeController@showRecruitemeneMenu');
 Route::name('recruitement.add')->get('/recruitement/add', 'EmployeeController@showAddForm');
+Route::name('user.posts')->post('/user/posts', 'EmployeeController@store');
 
 Route::name('home')->get('/home', 'HomeController@index');
 
