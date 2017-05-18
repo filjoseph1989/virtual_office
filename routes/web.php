@@ -21,9 +21,15 @@ Route::get('/', function () {
 
 Auth::routes();
 
+/**
+ * Recruitement Area
+ */
 Route::name('recruitement')->get('/recruitement', 'HomeController@showRecruitemeneMenu');
 Route::name('recruitement.add')->get('/recruitement/add', 'EmployeeController@showAddForm');
+Route::name('recruitement.add.family')->get('/recruitement/add-family', 'EmployeeController@showAddFormFamily');
+
 Route::name('user.posts')->post('/user/posts', 'EmployeeController@store');
+Route::name('user.add.family')->post('/user/family', 'EmployeeController@storeFamilyInfo');
 
 Route::name('home')->get('/home', 'HomeController@index');
 

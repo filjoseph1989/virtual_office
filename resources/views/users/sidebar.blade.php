@@ -1,7 +1,7 @@
 <aside class="aside">
   <div class="left_col scroll-view">
     <div class="navbar nav_title">
-      <a href="{{route('home')}}" class="site_title">
+      <a href="{{ route('home') }}" class="site_title">
         <img src="images/logo.png" alt=""> MPCI VO
       </a>
     </div>
@@ -9,7 +9,7 @@
     <div class="profile clearfix">
       <div class="profile_pic">
         <a href="{{route('home')}}">
-          <img src="http://www.gravatar.com/avatar/64e1b8d34f425d19e1ee2ea7236d3028.jpg?s=80&amp;d=mm&amp;r=g" alt="..." class="img-circle profile_img">           
+          <img src="http://www.gravatar.com/avatar/64e1b8d34f425d19e1ee2ea7236d3028.jpg?s=80&amp;d=mm&amp;r=g" alt="..." class="img-circle profile_img">
         </a>
       </div>
       <div class="profile_info">

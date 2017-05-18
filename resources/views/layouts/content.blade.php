@@ -11,7 +11,6 @@
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
               <ul class="dropdown-menu" role="menu">
                 <li><a href="#">Settings 1</a></li>
-                <li><a href="#">Settings 2</a></li>
               </ul>
             </li>
           </ul>
@@ -33,7 +32,7 @@
                 <a href="#" target="_blank">www.example.com</a>
               </li>
             </ul>
-            <a class="btn btn-success"><i class="fa fa-edit m-right-xs"></i>Edit Profile</a>
+            <a href="{{ route('recruitement.add.family') }}" class="btn btn-success"><i class="fa fa-edit m-right-xs"></i>Edit Profile</a>
             <h4>Skills</h4>
             <ul class="list-unstyled user_data">
               <li>

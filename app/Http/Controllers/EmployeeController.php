@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\User;
+use App\Family;
 
 class EmployeeController extends Controller
 {
@@ -33,7 +34,7 @@ class EmployeeController extends Controller
    * @param  \Illuminate\Http\Request  $request
    * @return \Illuminate\Http\Response
    */
-  public function store(Request $request)
+  public function _store(Request $request)
   {
     $rules = array('email' => 'unique:users,email');
 
@@ -47,7 +48,7 @@ class EmployeeController extends Controller
     }
 
   }
-  public function _store(Request $request)
+  public function store(Request $request)
   {
     $result = $request->only(['position_id', 'department_id', 'first_name', 'last_name', 'email', 'gender', 'birthday', 'street', 'city', 'country', 'zipcode', 'contact', 'tin', 'sss', 'philhealth', 'pag_ibig']);
     $result['password'] = bcrypt('password');
@@ -55,6 +56,21 @@ class EmployeeController extends Controller
     User::create($result);
 
     return redirect()->route('recruitement.add')->with('status', 'Successfuly added new employee');
+  }
+
+  /**
+   * Store the family information
+   *
+   * @param  Request $request
+   * @return \Illuminate
+   */
+  public function storeFamilyInfo(Request $request)
+  {
+    $result = $request->only(['user_id', 'first_name', 'last_name', 'contact', 'relationship']);
+
+    Family::create($result);
+
+    return redirect()->route('recruitement.add.family')->with('status', 'Successfuly added new employee');
   }
 
   /**
@@ -75,6 +91,17 @@ class EmployeeController extends Controller
    */
   public function showAddForm() {
     $content = "users.recruitement.add";
+
+    return view('users.user-dashboard', compact('content'));
+  }
+
+  /**
+   * Display the family form
+   *
+   * @return \Illuminate\Http\Response
+   */
+  public function showAddFormFamily() {
+    $content = "users.recruitement.family";
 
     return view('users.user-dashboard', compact('content'));
   }
