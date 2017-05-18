@@ -29,6 +29,8 @@ Route::name('recruitement.add')->get('/recruitement/add', 'EmployeeController@sh
 Route::name('recruitement.add.family')->get('/recruitement/add-family', 'EmployeeController@showAddFormFamily');
 Route::name('recruitement.add.department')->get('/recruitement/add-department', 'DepartmentController@showAddDepartmentForm');
 Route::name('recruitement.add.department')->post('/recruitement/add-department', 'DepartmentController@store');
+Route::name('recruitement.add.position')->get('/recruitement/add-position', 'PositionController@show');
+Route::name('recruitement.add.position')->post('/recruitement/add-position', 'PositionController@store');
 
 /**
  * User group
