@@ -14,8 +14,6 @@
                   <li><a href="#">Settings 1</a></li>
                 </ul>
               </li>
-              <li><a class="close-link"><i class="fa fa-close"></i></a>
-              </li>
             </ul>
             <div class="clearfix"></div>
           </div>
