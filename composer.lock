@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "0975ca410fa9c47b0a8bafe1562ad654",
+    "content-hash": "ad174013a058e375908d4aaa58e93f60",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -640,16 +640,16 @@
         },
         {
             "name": "kint-php/kint",
-            "version": "2.0",
+            "version": "2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/kint-php/kint.git",
-                "reference": "d6b2540da2477ec8f4c5d6d30807208e5f814d75"
+                "reference": "17ec4f2393560ea857f7e72ada106f489cb1e277"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kint-php/kint/zipball/d6b2540da2477ec8f4c5d6d30807208e5f814d75",
-                "reference": "d6b2540da2477ec8f4c5d6d30807208e5f814d75",
+                "url": "https://api.github.com/repos/kint-php/kint/zipball/17ec4f2393560ea857f7e72ada106f489cb1e277",
+                "reference": "17ec4f2393560ea857f7e72ada106f489cb1e277",
                 "shasum": ""
             },
             "require": {
@@ -694,7 +694,7 @@
                 "kint",
                 "php"
             ],
-            "time": "2017-04-22T13:41:40+00:00"
+            "time": "2017-05-13T17:24:30+00:00"
         },
         {
             "name": "laravel/framework",

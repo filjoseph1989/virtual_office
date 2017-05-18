@@ -20,7 +20,7 @@
           <div class="x_content">
             <div class="clearfix container-fluid row">
               <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                <a href="{{ route('recruitement') }}">
+                <a href="{{ route('recruitement.add') }}">
                   <div class="tile-stats">
                     <div class="count">1</div>
                     <h3>Add New Employee</h3>

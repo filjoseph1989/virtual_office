@@ -11,7 +11,6 @@
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
               <ul class="dropdown-menu" role="menu">
                 <li><a href="#">Settings 1</a></li>
-                <li><a href="#">Settings 2</a></li>
               </ul>
             </li>
           </ul>
@@ -21,20 +20,19 @@
           <div class="col-md-3 col-sm-3 col-xs-12 profile_left">
             <div class="profile_img">
               <div id="crop-avatar">
-                <!-- Current avatar -->
                 <img class="img-responsive avatar-view" src="{{ asset('images/logo.png') }}" alt="Avatar" title="Change the avatar">
               </div>
             </div>
             <h3>Samuel Doe</h3>
             <ul class="list-unstyled user_data">
-              <li><i class="fa fa-map-marker user-profile-icon"></i> San Francisco, California, USA </li>
+              <li><i class="fa fa-map-marker user-profile-icon"></i> Bonifacio Street, Davao City, Philippines </li>
               <li> <i class="fa fa-briefcase user-profile-icon"></i> Software Engineer </li>
               <li class="m-top-xs">
                 <i class="fa fa-external-link user-profile-icon"></i>
-                <a href="http://www.kimlabs.com/profile/" target="_blank">www.kimlabs.com</a>
+                <a href="#" target="_blank">www.example.com</a>
               </li>
             </ul>
-            <a class="btn btn-success"><i class="fa fa-edit m-right-xs"></i>Edit Profile</a>
+            <a href="{{ route('recruitement.add.family') }}" class="btn btn-success"><i class="fa fa-edit m-right-xs"></i>Edit Profile</a>
             <h4>Skills</h4>
             <ul class="list-unstyled user_data">
               <li>
@@ -66,13 +64,13 @@
           <div class="col-md-9 col-sm-9 col-xs-12">
             <div class="bs-example" data-example-id="simple-jumbotron">
               <div class="jumbotron">
-                <h1>Hello, Fil</h1>
+                <h1>Hello, Samuel</h1>
                 <p>Welcome back to MPCI virtual office.</p>
               </div>
             </div>
             <div class="clearfix container-fluid row">
-              <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                <a href="{{ route('recruitement.add') }}">
+              <div class="animated flipInY col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                  <a href="{{ route('recruitement.add') }}">
                   <div class="tile-stats">
                     <div class="count">1</div>
                     <h3>Add New Employee</h3>
@@ -80,7 +78,7 @@
                   </div>
                 </a>
               </div>
-              <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
+              <div class="animated flipInY col-lg-4 col-md-4 col-sm-6 col-xs-12">
                 <a href="#">
                   <div class="tile-stats">
                     <div class="count">2</div>
@@ -89,21 +87,12 @@
                   </div>
                 </a>
               </div>
-              <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
+              <div class="animated flipInY col-lg-4 col-md-4 col-sm-6 col-xs-12">
                 <a href="#">
                   <div class="tile-stats">
                     <div class="count">3</div>
                     <h3>List of Employee</h3>
                     <p>Click here to view the list of employee.</p>
-                  </div>
-                </a>
-              </div>
-              <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                <a href="#">
-                  <div class="tile-stats">
-                    <div class="count">3</div>
-                    <h3>Choose</h3>
-                    <p>Choose other you'd like to add.</p>
                   </div>
                 </a>
               </div>

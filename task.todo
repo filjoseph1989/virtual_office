@@ -1,5 +1,24 @@
-☐ Add employee
-☐ Department list
-☐ Employee list
+Sprint 1:
+✔ Add employee @done (5/18/2017, 10:28:40 AM)
+✔ Add family @done(2017-05-18 11:30)
+☐ Add department
+☐ Add position
+☐ Add Education of user
+☐ Add family - Fetch first the user id before adding the family information
+☐ Add family form - logo on the side bar does not show up
+
+Sprint 2:
+☐ List of employee
+☐ List of department
+☐ List of all position
+☐ List of position by department
+
+Log:
+☐ Add employee - success alert
+☐ Add employee - login check
+☐ Add employee - form validation
+☐ Add family - form validation
 ☐ Add close option on profile welcome card
-☐ Login show even if loggedin
+☐ Dashboard sidebar collapse
+☐ HR should be the one who can view employee profile
+☐
