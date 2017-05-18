@@ -35,13 +35,26 @@ class EmployeeController extends Controller
    */
   public function store(Request $request)
   {
+    $rules = array('email' => 'unique:users,email');
+
+    $validator = Validator::make($request->email, $rules);
+
+    if ($validator->fails()) {
+      return redirect()->route('recruitement.add')->with('status', 'That email address is already registered. You sure you don\'t have an account?');
+    }
+    else {
+      return redirect()->route('recruitement.add')->with('status', 'Successfuly added new employee');
+    }
+
+  }
+  public function _store(Request $request)
+  {
     $result = $request->only(['position_id', 'department_id', 'first_name', 'last_name', 'email', 'gender', 'birthday', 'street', 'city', 'country', 'zipcode', 'contact', 'tin', 'sss', 'philhealth', 'pag_ibig']);
     $result['password'] = bcrypt('password');
-    // $result['active'] = 1;
 
     User::create($result);
 
-    return redirect()->route('recruitement.add');
+    return redirect()->route('recruitement.add')->with('status', 'Successfuly added new employee');
   }
 
   /**
