@@ -49,9 +49,20 @@
               <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
                 <a href="#">
                   <div class="tile-stats">
-                    <div class="count">3</div>
+                    <div class="count">4</div>
                     <h3>Choose</h3>
                     <p>Choose other you'd like to add.</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="clearfix container-fluid row">
+              <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <a href="{{ route('recruitement.add.department') }}">
+                  <div class="tile-stats">
+                    <div class="count">5</div>
+                    <h3>Add Department</h3>
+                    <p>Click here to add new department.</p>
                   </div>
                 </a>
               </div>

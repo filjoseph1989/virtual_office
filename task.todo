@@ -1,7 +1,7 @@
 Sprint 1:
 ✔ Add employee @done (5/18/2017, 10:28:40 AM)
 ✔ Add family @done(2017-05-18 11:30)
-☐ Add department
+✔ Add department @done(2017-05-18 12:44)
 ☐ Add position
 ☐ Add Education of user
 ☐ Add family - Fetch first the user id before adding the family information
@@ -18,6 +18,7 @@ Log:
 ☐ Add employee - login check
 ☐ Add employee - form validation
 ☐ Add family - form validation
+☐ Add department - form validation
 ☐ Add close option on profile welcome card
 ☐ Dashboard sidebar collapse
 ☐ HR should be the one who can view employee profile

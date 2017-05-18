@@ -13,8 +13,7 @@ class EmployeeController extends Controller
    *
    * @return \Illuminate\Http\Response
    */
-  public function index()
-  {
+  public function index() {
       //
   }
 
@@ -23,8 +22,7 @@ class EmployeeController extends Controller
    *
    * @return \Illuminate\Http\Response
    */
-  public function create()
-  {
+  public function create() {
       //
   }
 
@@ -34,8 +32,7 @@ class EmployeeController extends Controller
    * @param  \Illuminate\Http\Request  $request
    * @return \Illuminate\Http\Response
    */
-  public function _store(Request $request)
-  {
+  public function _store(Request $request) {
     $rules = array('email' => 'unique:users,email');
 
     $validator = Validator::make($request->email, $rules);
@@ -64,8 +61,7 @@ class EmployeeController extends Controller
    * @param  Request $request
    * @return \Illuminate
    */
-  public function storeFamilyInfo(Request $request)
-  {
+  public function storeFamilyInfo(Request $request) {
     $result = $request->only(['user_id', 'first_name', 'last_name', 'contact', 'relationship']);
 
     Family::create($result);
@@ -79,9 +75,7 @@ class EmployeeController extends Controller
    * @param  int  $id
    * @return \Illuminate\Http\Response
    */
-  public function show($id)
-  {
-
+  public function show($id) {
   }
 
   /**
@@ -112,9 +106,7 @@ class EmployeeController extends Controller
    * @param  int  $id
    * @return \Illuminate\Http\Response
    */
-  public function edit($id)
-  {
-
+  public function edit($id) {
   }
 
   /**
@@ -124,8 +116,7 @@ class EmployeeController extends Controller
    * @param  int  $id
    * @return \Illuminate\Http\Response
    */
-  public function update(Request $request, $id)
-  {
+  public function update(Request $request, $id) {
       //
   }
 
@@ -135,8 +126,7 @@ class EmployeeController extends Controller
    * @param  int  $id
    * @return \Illuminate\Http\Response
    */
-  public function destroy($id)
-  {
+  public function destroy($id) {
       //
   }
 }

@@ -21,7 +21,7 @@
           </div>
           <div class="x_content">
             <form class="form-horizontal form-label-left" novalidate="" action="{{ route('user.add.family') }}" method="post">
-              <span class="section">Personal Info</span>
+              <span class="section">Family Info</span>
               @if (session('status'))
                 <div class="alert alert-success">
                   {{ session('status') }}

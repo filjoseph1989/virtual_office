@@ -27,12 +27,23 @@ Auth::routes();
 Route::name('recruitement')->get('/recruitement', 'HomeController@showRecruitemeneMenu');
 Route::name('recruitement.add')->get('/recruitement/add', 'EmployeeController@showAddForm');
 Route::name('recruitement.add.family')->get('/recruitement/add-family', 'EmployeeController@showAddFormFamily');
+Route::name('recruitement.add.department')->get('/recruitement/add-department', 'DepartmentController@showAddDepartmentForm');
+Route::name('recruitement.add.department')->post('/recruitement/add-department', 'DepartmentController@store');
 
+/**
+ * User group
+ */
 Route::name('user.posts')->post('/user/posts', 'EmployeeController@store');
 Route::name('user.add.family')->post('/user/family', 'EmployeeController@storeFamilyInfo');
 
+/**
+ * Home
+ */
 Route::name('home')->get('/home', 'HomeController@index');
 
+/**
+ * Administration group
+ */
 Route::prefix('admin')->group(function() {
   Route::get('/login', 'Auth\AdminLoginController@showLoginForm')->name('admin.login');
   Route::post('/', 'Auth\AdminLoginController@login')->name('admin.login.submit');
