@@ -29,20 +29,20 @@
                 </a>
               </div>
               <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                <a href="#">
+                <a href="{{ route('recruitement.add.department') }}">
                   <div class="tile-stats">
                     <div class="count">2</div>
-                    <h3>List of Department</h3>
-                    <p>Click here to view the list of department.</p>
+                    <h3>Add Department</h3>
+                    <p>Click here to add new department.</p>
                   </div>
                 </a>
               </div>
               <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                <a href="#">
+                <a href="{{ route('recruitement.add.position') }}">
                   <div class="tile-stats">
                     <div class="count">3</div>
-                    <h3>List of Employee</h3>
-                    <p>Click here to view the list of employee.</p>
+                    <h3>Add Position</h3>
+                    <p>Click here to add new position.</p>
                   </div>
                 </a>
               </div>
@@ -58,11 +58,20 @@
             </div>
             <div class="clearfix container-fluid row">
               <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                <a href="{{ route('recruitement.add.department') }}">
+                <a href="#">
                   <div class="tile-stats">
                     <div class="count">5</div>
-                    <h3>Add Department</h3>
-                    <p>Click here to add new department.</p>
+                    <h3>List of Department</h3>
+                    <p>Click here to view the list of department.</p>
+                  </div>
+                </a>
+              </div>
+              <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <a href="#">
+                  <div class="tile-stats">
+                    <div class="count">6</div>
+                    <h3>List of Employee</h3>
+                    <p>Click here to view the list of employee.</p>
                   </div>
                 </a>
               </div>

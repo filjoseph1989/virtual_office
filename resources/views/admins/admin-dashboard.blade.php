@@ -2,7 +2,7 @@
 
 @section ('content')
   <div class="main_container">
-
+    <p>admin</p>
     @include ('users.nav')
 
     @if (! isset($content))

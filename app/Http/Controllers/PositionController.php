@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Department;
+use App\Position;
 
-class DepartmentController extends Controller
+class PositionController extends Controller
 {
   /**
    * Display a listing of the resource.
@@ -35,9 +35,9 @@ class DepartmentController extends Controller
    */
   public function store(Request $request)
   {
-    Department::create($request->only(['name', 'color']));
+    Position::create($request->only(['name']));
 
-    return redirect()->route('recruitement.add.department')->with('status', 'Successfuly added new Department');
+    return redirect()->route('recruitement.add.position')->with('status', 'Successfuly added new Position');
   }
 
   /**
@@ -46,9 +46,9 @@ class DepartmentController extends Controller
    * @param  int  $id
    * @return \Illuminate\Http\Response
    */
-  public function showAddDepartmentForm() {
-    $content = 'users.recruitement.department';
-
+  public function show()
+  {
+    $content = 'users.recruitement.position';
     return view('users.user-dashboard', compact('content'));
   }
 

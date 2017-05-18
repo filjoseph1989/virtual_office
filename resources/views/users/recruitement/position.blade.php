@@ -18,8 +18,8 @@
             <div class="clearfix"></div>
           </div>
           <div class="x_content">
-            <form class="form-horizontal form-label-left" novalidate="" action="{{ route('recruitement.add.department') }}" method="post">
-              <span class="section">Add Department</span>
+            <form class="form-horizontal form-label-left" novalidate="" action="{{ route('recruitement.add.position') }}" method="post">
+              <span class="section">Add Position</span>
               @if (session('status'))
                 <div class="alert alert-success">
                   {{ session('status') }}
@@ -27,19 +27,11 @@
               @endif
               {{ csrf_field() }}
               <div class="item form-group">
-                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="department-name">
-                  Department Name <span class="required">*</span>
+                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="position-name">
+                  Position Name <span class="required">*</span>
                 </label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
-                  <input id="department-name" name="name" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" placeholder="e.g Management Department" required="required" type="text">
-                </div>
-              </div>
-              <div class="item form-group">
-                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="department-color">
-                  Department Color <span class="required">*</span>
-                </label>
-                <div class="col-md-6 col-sm-6 col-xs-12">
-                  <input id="department-color" name="color" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" placeholder="e.g Red" type="text">
+                  <input id="position-name" name="name" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" placeholder="e.g Sales Manager" required="required" type="text">
                 </div>
               </div>
               <div class="ln_solid"></div>
