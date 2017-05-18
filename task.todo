@@ -1,5 +1,22 @@
+Sprint 1:
 ☐ Add employee
-☐ Department list
-☐ Employee list
+☐ Add department
+☐ Add position
+☐ Add family
+☐ Add Education of user
+
+Sprint 2:
+☐ List of employee
+☐ List of department
+☐ List of all position
+☐ List of position by department
+
+
+Log:
+☐ Add employee - success alert
+☐ Add employee - login check
+☐ Add employee - form validation
 ☐ Add close option on profile welcome card
-☐ Login show even if loggedin
+☐ Dashboard sidebar collapse
+☐ HR should be the one who can view employee profile
+☐

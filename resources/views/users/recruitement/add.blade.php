@@ -22,6 +22,11 @@
           <div class="x_content">
             <form class="form-horizontal form-label-left" novalidate="" action="{{ route('user.posts') }}" method="post">
               <span class="section">Personal Info</span>
+              @if (session('status'))
+                <div class="alert alert-success">
+                  {{ session('status') }}
+                </div>
+              @endif
               {{ csrf_field() }}
               <div class="item form-group">
                 <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">
@@ -48,18 +53,6 @@
                 </div>
               </div>
               <div class="item form-group">
-                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="gender">
-                  Gender <span class="required">*</span>
-                </label>
-                <div class="col-md-6 col-sm-6 col-xs-12">
-                  <select class="form-control col-md-7 col-xs-12" name="gender">
-                    <option value="0">Select</option>
-                    <option value="1">Male</option>
-                    <option value="2">Female</option>
-                  </select>
-                </div>
-              </div>
-              <div class="item form-group">
                 <label class="control-label col-md-3 col-sm-3 col-xs-12" for="department">
                   Department <span class="required">*</span>
                 </label>
@@ -80,6 +73,18 @@
                     <option value="0">Select</option>
                     <option value="1">Web Designer</option>
                     <option value="2">Web Developer</option>
+                  </select>
+                </div>
+              </div>
+              <div class="item form-group">
+                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="gender">
+                  Gender <span class="required">*</span>
+                </label>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                  <select class="form-control col-md-7 col-xs-12" name="gender">
+                    <option value="0">Select</option>
+                    <option value="1">Male</option>
+                    <option value="2">Female</option>
                   </select>
                 </div>
               </div>
