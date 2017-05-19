@@ -38,10 +38,10 @@ class EmployeeController extends Controller
     $validator = Validator::make($request->email, $rules);
 
     if ($validator->fails()) {
-      return redirect()->route('recruitement.add')->with('status', 'That email address is already registered. You sure you don\'t have an account?');
+      return redirect()->route('recruitment.add')->with('status', 'That email address is already registered. You sure you don\'t have an account?');
     }
     else {
-      return redirect()->route('recruitement.add')->with('status', 'Successfuly added new employee');
+      return redirect()->route('recruitment.add')->with('status', 'Successfuly added new employee');
     }
 
   }
@@ -52,7 +52,7 @@ class EmployeeController extends Controller
 
     User::create($result);
 
-    return redirect()->route('recruitement.add')->with('status', 'Successfuly added new employee');
+    return redirect()->route('recruitment.add')->with('status', 'Successfuly added new employee');
   }
 
   /**
@@ -66,7 +66,7 @@ class EmployeeController extends Controller
 
     Family::create($result);
 
-    return redirect()->route('recruitement.add.family')->with('status', 'Successfuly added new employee');
+    return redirect()->route('recruitment.add.family')->with('status', 'Successfuly added new employee');
   }
 
   /**
@@ -75,8 +75,7 @@ class EmployeeController extends Controller
    * @param  int  $id
    * @return \Illuminate\Http\Response
    */
-  public function show($id) {
-  }
+  public function show($id) { }
 
   /**
    * Show the form for adding new employee
@@ -84,7 +83,7 @@ class EmployeeController extends Controller
    * @return \Illuminate\Http\Response
    */
   public function showAddForm() {
-    $content = "users.recruitement.add";
+    $content = "users.recruitment.add";
 
     return view('users.user-dashboard', compact('content'));
   }
@@ -94,9 +93,8 @@ class EmployeeController extends Controller
    *
    * @return \Illuminate\Http\Response
    */
-  public function showAddFormFamily() {
-    $content = "users.recruitement.family";
-
+  public function showEditProfileForm() {
+    $content = "users.recruitment.edit-profile";
     return view('users.user-dashboard', compact('content'));
   }
 
@@ -106,8 +104,7 @@ class EmployeeController extends Controller
    * @param  int  $id
    * @return \Illuminate\Http\Response
    */
-  public function edit($id) {
-  }
+  public function edit($id) { }
 
   /**
    * Update the specified resource in storage.

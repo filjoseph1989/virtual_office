@@ -22,15 +22,15 @@ Route::get('/', function () {
 Auth::routes();
 
 /**
- * Recruitement Area
+ * recruitment Area
  */
-Route::name('recruitement')->get('/recruitement', 'HomeController@showRecruitemeneMenu');
-Route::name('recruitement.add')->get('/recruitement/add', 'EmployeeController@showAddForm');
-Route::name('recruitement.add.family')->get('/recruitement/add-family', 'EmployeeController@showAddFormFamily');
-Route::name('recruitement.add.department')->get('/recruitement/add-department', 'DepartmentController@showAddDepartmentForm');
-Route::name('recruitement.add.department')->post('/recruitement/add-department', 'DepartmentController@store');
-Route::name('recruitement.add.position')->get('/recruitement/add-position', 'PositionController@show');
-Route::name('recruitement.add.position')->post('/recruitement/add-position', 'PositionController@store');
+Route::name('recruitment')->get('/recruitment', 'HomeController@showRecruitemeneMenu');
+Route::name('recruitment.add')->get('/recruitment/add', 'EmployeeController@showAddForm');
+Route::name('recruitment.edit.profile')->get('/recruitment/edit-profile', 'EmployeeController@showEditProfileForm');
+Route::name('recruitment.add.department')->get('/recruitment/add-department', 'DepartmentController@showAddDepartmentForm');
+Route::name('recruitment.add.department')->post('/recruitment/add-department', 'DepartmentController@store');
+Route::name('recruitment.add.position')->get('/recruitment/add-position', 'PositionController@show');
+Route::name('recruitment.add.position')->post('/recruitment/add-position', 'PositionController@store');
 
 /**
  * User group

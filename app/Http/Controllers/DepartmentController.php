@@ -37,7 +37,7 @@ class DepartmentController extends Controller
   {
     Department::create($request->only(['name', 'color']));
 
-    return redirect()->route('recruitement.add.department')->with('status', 'Successfuly added new Department');
+    return redirect()->route('recruitment.add.department')->with('status', 'Successfuly added new Department');
   }
 
   /**
@@ -47,7 +47,7 @@ class DepartmentController extends Controller
    * @return \Illuminate\Http\Response
    */
   public function showAddDepartmentForm() {
-    $content = 'users.recruitement.department';
+    $content = 'users.recruitment.department';
 
     return view('users.user-dashboard', compact('content'));
   }
