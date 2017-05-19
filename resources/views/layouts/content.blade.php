@@ -32,7 +32,7 @@
                 <a href="#" target="_blank">www.example.com</a>
               </li>
             </ul>
-            <a href="{{ route('recruitement.add.family') }}" class="btn btn-success"><i class="fa fa-edit m-right-xs"></i>Edit Profile</a>
+            <a href="{{ route('recruitment.edit.profile') }}" class="btn btn-success"><i class="fa fa-edit m-right-xs"></i>Edit Profile</a>
             <h4>Skills</h4>
             <ul class="list-unstyled user_data">
               <li>
@@ -70,7 +70,7 @@
             </div>
             <div class="clearfix container-fluid row">
               <div class="animated flipInY col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                  <a href="{{ route('recruitement.add') }}">
+                  <a href="{{ route('recruitment.add') }}">
                   <div class="tile-stats">
                     <div class="count">1</div>
                     <h3>Add New Employee</h3>

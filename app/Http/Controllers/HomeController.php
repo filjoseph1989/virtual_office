@@ -27,7 +27,7 @@ class HomeController extends Controller
 
 
   public function showRecruitemeneMenu() {
-    $content = "users.recruitement.recruitement-menu";
+    $content = "users.recruitment.recruitment-menu";
 
     return view('users.user-dashboard', compact('content'));
   }

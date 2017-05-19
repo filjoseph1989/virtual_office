@@ -37,7 +37,7 @@ class PositionController extends Controller
   {
     Position::create($request->only(['name']));
 
-    return redirect()->route('recruitement.add.position')->with('status', 'Successfuly added new Position');
+    return redirect()->route('recruitment.add.position')->with('status', 'Successfuly added new Position');
   }
 
   /**
@@ -48,7 +48,7 @@ class PositionController extends Controller
    */
   public function show()
   {
-    $content = 'users.recruitement.position';
+    $content = 'users.recruitment.position';
     return view('users.user-dashboard', compact('content'));
   }
 
