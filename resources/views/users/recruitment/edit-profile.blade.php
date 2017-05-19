@@ -264,7 +264,7 @@
             <div class="clearfix"></div>
           </div>
           <div class="x_content">
-            <form class="form-horizontal form-label-left" novalidate="" action="/" method="post">
+            <form class="form-horizontal form-label-left" novalidate="" action="{{ route('recruitment.edit.profile') }}" method="post">
               <span class="section">Education Info</span>
               @if (session('status'))
                 <div class="alert alert-success">
@@ -295,190 +295,6 @@
                 <div class="col-md-6 col-sm-6 col-xs-12">
                   <select class="form-control col-md-7 col-xs-12" id="course" name="course_id">
                     <option value="0">Select Course</option>
-                    <option value="4">
-                      Agribusiness/Management </option>
-                    <option value="11">
-                      Agricultural Economics </option>
-                    <option value="3">
-                      Agricultural Engineering </option>
-                    <option value="5">
-                      Agricultural Entrepreneurship </option>
-                    <option value="6">
-                      Agricultural Technology </option>
-                    <option value="7">
-                      Agriculture </option>
-                    <option value="1">
-                      Agro-Forestry </option>
-                    <option value="42">
-                      Animation </option>
-                    <option value="62">
-                      Art Education </option>
-                    <option value="38">
-                      Atmospheric Science </option>
-                    <option value="90">
-                      BA Broadcasting </option>
-                    <option value="88">
-                      BA Communication </option>
-                    <option value="89">
-                      BA Journalism </option>
-                    <option value="46">
-                      Bachelor in Library Science &amp; Information System M </option>
-                    <option value="57">
-                      Bachelor of Physical Education major in School PE </option>
-                    <option value="27">
-                      Bio Chemical Engineering </option>
-                    <option value="17">
-                      Biomedical Engineering </option>
-                    <option value="77">
-                      BS Accountancy </option>
-                    <option value="36">
-                      BS Applied Mathematics </option>
-                    <option value="33">
-                      BS Applied Physics </option>
-                    <option value="82">
-                      BS Architecture </option>
-                    <option value="30">
-                      BS Biology </option>
-                    <option value="31">
-                      BS Chemistry </option>
-                    <option value="44">
-                      BS Computer Science </option>
-                    <option value="91">
-                      BS Development Communication </option>
-                    <option value="35">
-                      BS Earth Science </option>
-                    <option value="10">
-                      BS Food Technology </option>
-                    <option value="34">
-                      BS Geology </option>
-                    <option value="50">
-                      BS in Education - Chemistry </option>
-                    <option value="52">
-                      BS in Education - English </option>
-                    <option value="47">
-                      BS in Education - Mathematics </option>
-                    <option value="49">
-                      BS in Education - Physics </option>
-                    <option value="51">
-                      BS in Education - Reading </option>
-                    <option value="48">
-                      BS in Education - Science </option>
-                    <option value="45">
-                      BS Information System Management </option>
-                    <option value="32">
-                      BS Marine Biology/Science </option>
-                    <option value="87">
-                      BS Marine Transportation </option>
-                    <option value="28">
-                      BS Mathematics </option>
-                    <option value="68">
-                      BS Nutrition </option>
-                    <option value="71">
-                      BS Philosophy </option>
-                    <option value="29">
-                      BS Physics </option>
-                    <option value="73">
-                      BS Psychology </option>
-                    <option value="70">
-                      BS Religious Education </option>
-                    <option value="74">
-                      BS Social Work </option>
-                    <option value="37">
-                      BS Statistics/Applied Statistics </option>
-                    <option value="72">
-                      BS Theology </option>
-                    <option value="78">
-                      Business Data Outsourcing </option>
-                    <option value="79">
-                      Business Process Outsourcing </option>
-                    <option value="92">
-                      Chemical Engineering </option>
-                    <option value="25">
-                      Civil Engineering </option>
-                    <option value="16">
-                      Computer Engineering </option>
-                    <option value="80">
-                      Construction Management </option>
-                    <option value="69">
-                      Creative and Performing Arts </option>
-                    <option value="58">
-                      Early Childhood Education </option>
-                    <option value="53">
-                      Educational Media/Technology </option>
-                    <option value="19">
-                      Electrical Engineering </option>
-                    <option value="14">
-                      Electronics and Communication Engineering </option>
-                    <option value="13">
-                      Electronics Engineering </option>
-                    <option value="84">
-                      Environmental Planning </option>
-                    <option value="59">
-                      Environmental Planning (for teachers) </option>
-                    <option value="39">
-                      Environmental Science </option>
-                    <option value="85">
-                      Fine Arts </option>
-                    <option value="8">
-                      Fisheries </option>
-                    <option value="18">
-                      Geodetic Engineering </option>
-                    <option value="22">
-                      Goelogical Engineering </option>
-                    <option value="76">
-                      Guidance and Counseling </option>
-                    <option value="63">
-                      Health Education </option>
-                    <option value="75">
-                      Human Development </option>
-                    <option value="55">
-                      Human Kinetics </option>
-                    <option value="24">
-                      Industrial Engineering </option>
-                    <option value="40">
-                      Information Technology and Computing Studies </option>
-                    <option value="83">
-                      Interior Design </option>
-                    <option value="93">
-                      Landscape Architecture </option>
-                    <option value="60">
-                      MAPEH </option>
-                    <option value="12">
-                      Mechanical Engineering </option>
-                    <option value="66">
-                      Medical Technology </option>
-                    <option value="15">
-                      Metallurgical Engineering </option>
-                    <option value="20">
-                      Meteorological Engineering </option>
-                    <option value="21">
-                      Mining Engineering </option>
-                    <option value="41">
-                      Multimedia </option>
-                    <option value="61">
-                      Music Education </option>
-                    <option value="26">
-                      Petroleum Engineering </option>
-                    <option value="64">
-                      Pharmacy </option>
-                    <option value="56">
-                      Physical Education and Sports Science </option>
-                    <option value="67">
-                      Physical Therapy </option>
-                    <option value="43">
-                      Programming </option>
-                    <option value="65">
-                      Radiology Technology </option>
-                    <option value="23">
-                      Sanitary Engineering </option>
-                    <option value="54">
-                      Special Education (SPED) </option>
-                    <option value="81">
-                      Tourism </option>
-                    <option value="86">
-                      Urban Planning </option>
-                    <option value="2">
-                      Veterinatry Medicine </option>
                   </select>
                 </div>
               </div>
@@ -504,8 +320,10 @@
                 </label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
                   <select name="city" class="form-control col-md-7 col-xs-12" id="city" id="education-city">
-                    <option value="0">Select</option>
-                    <option value="1">Davao City</option>
+                    <option value="0">Select City</option>
+                    <?php foreach ($cities as $key => $value): ?>
+                      <option value="<?php echo "{$value->id}"; ?>"><?php echo "{$value->name}"; ?></option>
+                    <?php endforeach; ?>
                   </select>
                 </div>
               </div>
@@ -515,17 +333,19 @@
                 </label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
                   <select class="form-control col-md-7 col-xs-12" name="country" id="education-country">
-                    <option value="0">Select</option>
-                    <option value="1">Philippines</option>
+                    <option value="0">Select Country</option>
+                    <?php foreach ($country as $key => $value): ?>
+                      <option value="<?php echo "{$value->id}"; ?>"><?php echo "{$value->name}"; ?></option>
+                    <?php endforeach; ?>
                   </select>
                 </div>
               </div>
               <div class="item form-group">
                 <label class="control-label col-md-3 col-sm-3 col-xs-12" for="year">
-                  Year Graduated
+                  Graduated
                 </label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
-                  <input type="date" id="year-graduated" name="year" placeholder="e.g 2015" class="form-control col-md-7 col-xs-12">
+                  <input type="date" id="year-graduated" name="graduated_at" placeholder="e.g 2015" class="form-control col-md-7 col-xs-12">
                 </div>
               </div>
               <div class="ln_solid"></div>

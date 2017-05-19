@@ -27,6 +27,7 @@ Auth::routes();
 Route::name('recruitment')->get('/recruitment', 'HomeController@showRecruitemeneMenu');
 Route::name('recruitment.add')->get('/recruitment/add', 'EmployeeController@showAddForm');
 Route::name('recruitment.edit.profile')->get('/recruitment/edit-profile', 'EmployeeController@showEditProfileForm');
+Route::name('recruitment.edit.profile')->post('/recruitment/edit-profile', 'EmployeeController@storeEducationInfo');
 Route::name('recruitment.add.department')->get('/recruitment/add-department', 'DepartmentController@showAddDepartmentForm');
 Route::name('recruitment.add.department')->post('/recruitment/add-department', 'DepartmentController@store');
 Route::name('recruitment.add.position')->get('/recruitment/add-position', 'PositionController@show');
