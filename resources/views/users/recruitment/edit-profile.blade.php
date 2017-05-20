@@ -109,7 +109,9 @@
                 <div class="col-md-6 col-sm-6 col-xs-12">
                   <select name="city" class="form-control col-md-7 col-xs-12" id="city">
                     <option value="0">Select</option>
-                    <option value="1">Davao City</option>
+                    <?php foreach ($cities as $key => $cities_value): ?>
+                      <option value="{{ $cities_value->id}}">{{ $cities_value->name }}</option>
+                    <?php endforeach; ?>
                   </select>
                 </div>
               </div>
@@ -200,9 +202,9 @@
           <div class="x_content">
             <form class="form-horizontal form-label-left" novalidate="" action="{{ route('user.add.family') }}" method="post">
               <span class="section">Family Info</span>
-              @if (session('status'))
+              @if (session('familyStatus'))
                 <div class="alert alert-success">
-                  {{ session('status') }}
+                  {{ session('familyStatus') }}
                 </div>
               @endif
               {{ csrf_field() }}
@@ -266,9 +268,9 @@
           <div class="x_content">
             <form class="form-horizontal form-label-left" novalidate="" action="{{ route('recruitment.edit.profile') }}" method="post">
               <span class="section">Education Info</span>
-              @if (session('status'))
+              @if (session('educationStatus'))
                 <div class="alert alert-success">
-                  {{ session('status') }}
+                  {{ session('educationStatus') }}
                 </div>
               @endif
               {{ csrf_field() }}
@@ -279,12 +281,9 @@
                 <div class="col-md-6 col-sm-6 col-xs-12">
                   <select class="form-control col-md-7 col-xs-12" id="level" name="degree_id">
                     <option value="0">Select Degree</option>
-                    <option value="1"> Elementary </option>
-                    <option value="2"> Secondary </option>
-                    <option value="3"> College </option>
-                    <option value="4"> Vocational </option>
-                    <option value="5"> Master </option>
-                    <option value="6"> Doctor </option>
+                    <?php foreach ($degree as $key => $degree_value): ?>
+                      <option value="{{ $degree_value->id }}">{{ $degree_value->name }}</option>
+                    <?php endforeach; ?>
                   </select>
                 </div>
               </div>
@@ -295,6 +294,9 @@
                 <div class="col-md-6 col-sm-6 col-xs-12">
                   <select class="form-control col-md-7 col-xs-12" id="course" name="course_id">
                     <option value="0">Select Course</option>
+                    <?php foreach ($course as $key => $courseValue): ?>
+                      <option value="<?php echo "{$courseValue->id}"; ?>"><?php echo "{$courseValue->name}"; ?></option>
+                    <?php endforeach; ?>
                   </select>
                 </div>
               </div>
@@ -321,8 +323,8 @@
                 <div class="col-md-6 col-sm-6 col-xs-12">
                   <select name="city" class="form-control col-md-7 col-xs-12" id="city" id="education-city">
                     <option value="0">Select City</option>
-                    <?php foreach ($cities as $key => $value): ?>
-                      <option value="<?php echo "{$value->id}"; ?>"><?php echo "{$value->name}"; ?></option>
+                    <?php foreach ($cities as $key => $cities_value): ?>
+                      <option value="<?php echo "{$cities_value->id}"; ?>"><?php echo "{$cities_value->name}"; ?></option>
                     <?php endforeach; ?>
                   </select>
                 </div>

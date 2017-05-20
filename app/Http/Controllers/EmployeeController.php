@@ -4,10 +4,11 @@ namespace App\Http\Controllers;
 
 use App\User;
 use App\Family;
-use App\Education;
 use App\Models\Cities;
 use App\Models\Country;
 use App\Models\Course;
+use App\Models\Degree;
+use App\Models\Education;
 use Illuminate\Http\Request;
 use Monarobase\CountryList\CountryList;
 
@@ -33,8 +34,7 @@ class EmployeeController extends Controller
    * @param  \Illuminate\Http\Request  $request
    * @return \Illuminate\Http\Response
    */
-  public function store(Request $request)
-  {
+  public function store(Request $request) {
     $result = $request->only(['position_id', 'department_id', 'first_name', 'last_name', 'email', 'gender', 'birthday', 'street', 'city', 'country', 'zipcode', 'contact', 'tin', 'sss', 'philhealth', 'pag_ibig']);
     $result['password'] = bcrypt('password');
 
@@ -54,11 +54,12 @@ class EmployeeController extends Controller
 
     Family::create($result);
 
-    return redirect()->route('recruitment.add.family')->with('status', 'Successfuly added new employee');
+    return redirect()->route('recruitment.add.family')->with('familyStatus', 'Successfuly added family information');
   }
 
   /**
    * Store the education data
+   *
    * @param  \Illuminate\Http\Request  $request
    * @return \Illuminate\Http\Response
    */
@@ -66,8 +67,9 @@ class EmployeeController extends Controller
     $receive = $request->only(['user_id', 'degree_id', 'course_id', 'school', 'street', 'city', 'country', 'graduated_at']);
     $receive['user_id'] = 1;
 
-    Education::create($receive);
-    return redirect()->route('recruitment.edit.profile')->with('status', 'Successfuly added new Education');
+    if (Education::create($receive)->wasRecentlyCreated) {
+      return redirect()->route('recruitment.edit.profile')->with('educationStatus', 'Successfuly added new Education');
+    }
   }
 
   /**
@@ -95,15 +97,13 @@ class EmployeeController extends Controller
    */
   public function showEditProfileForm()
   {
-    // $course  = Course::orderBy('name', 'desc')->get();
-    // $course  = new Course();
-    // d($course->sortBy('name'));
-    // exit;
-    $cities  = Cities::all();
+    $degree  = Degree::all();
+    $course  = Course::orderBy('name', 'ASC')->get();
+    $cities  = Cities::orderBy('name', 'ASC')->get();
     $country = Country::all();
     $content = "users.recruitment.edit-profile";
 
-    return view('users.user-dashboard', compact('content', 'country','cities', 'course'));
+    return view('users.user-dashboard', compact('content', 'country','cities', 'course', 'degree'));
   }
 
   /**
