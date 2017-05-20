@@ -16,7 +16,7 @@
         <span>Welcome,</span>
         <h2>
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-            User Name <span class="caret"></span>
+            {{ Auth::user()->first_name }} <span class="caret"></span>
           </a>
         </h2>
       </div>
