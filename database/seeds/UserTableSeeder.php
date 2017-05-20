@@ -17,7 +17,7 @@ class UserTableSeeder extends Seeder
       'first_name'    => 'user',
       'last_name' => 'user',
       'email' => 'user@email.com',
-      'password' => bcrypt('secret'),
+      'password' => bcrypt('password'),
       'gender' => 'male',
       'birthday' => date("Y-m-d H:i:s"),
       'street' => 'street',

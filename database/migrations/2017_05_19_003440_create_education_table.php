@@ -19,9 +19,9 @@ class CreateEducationTable extends Migration
       $table->integer('degree_id')->default(0);
       $table->integer('course_id')->default(0);
       $table->string('school')->nullable();
-      $table->integer('street')->nullable();
-      $table->integer('city')->nullable();
-      $table->integer('country')->nullable();
+      $table->string('street')->nullable();
+      $table->string('city')->nullable();
+      $table->string('country')->nullable();
       $table->date('graduated_at')->default(date("Y-m-d H:i:s"));
       $table->timestamps();
     });

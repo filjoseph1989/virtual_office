@@ -2,9 +2,15 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\User;
 use App\Family;
+use App\Models\Cities;
+use App\Models\Country;
+use App\Models\Course;
+use App\Models\Degree;
+use App\Models\Education;
+use Illuminate\Http\Request;
+use Monarobase\CountryList\CountryList;
 
 class EmployeeController extends Controller
 {
@@ -13,18 +19,14 @@ class EmployeeController extends Controller
    *
    * @return \Illuminate\Http\Response
    */
-  public function index() {
-      //
-  }
+  public function index() { }
 
   /**
    * Show the form for creating a new resource.
    *
    * @return \Illuminate\Http\Response
    */
-  public function create() {
-      //
-  }
+  public function create() { }
 
   /**
    * Store a newly created resource in storage.
@@ -32,21 +34,7 @@ class EmployeeController extends Controller
    * @param  \Illuminate\Http\Request  $request
    * @return \Illuminate\Http\Response
    */
-  public function _store(Request $request) {
-    $rules = array('email' => 'unique:users,email');
-
-    $validator = Validator::make($request->email, $rules);
-
-    if ($validator->fails()) {
-      return redirect()->route('recruitment.add')->with('status', 'That email address is already registered. You sure you don\'t have an account?');
-    }
-    else {
-      return redirect()->route('recruitment.add')->with('status', 'Successfuly added new employee');
-    }
-
-  }
-  public function store(Request $request)
-  {
+  public function store(Request $request) {
     $result = $request->only(['position_id', 'department_id', 'first_name', 'last_name', 'email', 'gender', 'birthday', 'street', 'city', 'country', 'zipcode', 'contact', 'tin', 'sss', 'philhealth', 'pag_ibig']);
     $result['password'] = bcrypt('password');
 
@@ -66,7 +54,22 @@ class EmployeeController extends Controller
 
     Family::create($result);
 
-    return redirect()->route('recruitment.add.family')->with('status', 'Successfuly added new employee');
+    return redirect()->route('recruitment.add.family')->with('familyStatus', 'Successfuly added family information');
+  }
+
+  /**
+   * Store the education data
+   *
+   * @param  \Illuminate\Http\Request  $request
+   * @return \Illuminate\Http\Response
+   */
+  public function storeEducationInfo(Request $request) {
+    $receive = $request->only(['user_id', 'degree_id', 'course_id', 'school', 'street', 'city', 'country', 'graduated_at']);
+    $receive['user_id'] = 1;
+
+    if (Education::create($receive)->wasRecentlyCreated) {
+      return redirect()->route('recruitment.edit.profile')->with('educationStatus', 'Successfuly added new Education');
+    }
   }
 
   /**
@@ -84,7 +87,6 @@ class EmployeeController extends Controller
    */
   public function showAddForm() {
     $content = "users.recruitment.add";
-
     return view('users.user-dashboard', compact('content'));
   }
 
@@ -93,9 +95,15 @@ class EmployeeController extends Controller
    *
    * @return \Illuminate\Http\Response
    */
-  public function showEditProfileForm() {
+  public function showEditProfileForm()
+  {
+    $degree  = Degree::all();
+    $course  = Course::orderBy('name', 'ASC')->get();
+    $cities  = Cities::orderBy('name', 'ASC')->get();
+    $country = Country::all();
     $content = "users.recruitment.edit-profile";
-    return view('users.user-dashboard', compact('content'));
+
+    return view('users.user-dashboard', compact('content', 'country','cities', 'course', 'degree'));
   }
 
   /**
