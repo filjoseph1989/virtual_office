@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use App\User;
 use Auth;
+use App\User;
+use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
@@ -24,10 +24,9 @@ class HomeController extends Controller
    * @return \Illuminate\Http\Response
    */
   public function index() {
-    $username = ucfirst(Auth::user()->first_name) . " " . ucfirst(Auth::user()->last_name);
-    return view('users.user-dashboard', compact('username', 'lastname'));
+    $username = ucfirst(Auth::user()->first_name);
+    return view('users.user-dashboard', compact('username'));
   }
-
 
   public function showRecruitemeneMenu() {
     $content = "users.recruitment.recruitment-menu";
