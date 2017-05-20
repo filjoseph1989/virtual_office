@@ -1,3 +1,21 @@
+.primary-0 { color: #3E424E }
+.primary-1 { color: #777C88 }
+.primary-2 { color: #585D6A }
+.primary-3 { color: #20232C }
+.primary-4 { color: #161C2C }
+
+.secondary-0 { color: #746F59 }
+.secondary-1 { color: #CAC5AD }
+.secondary-2 { color: #9E997F }
+.secondary-3 { color: #413E2D }
+.secondary-4 { color: #423C1D }
+
+.secondary-0 { color: #746659 }
+.secondary-1 { color: #CABBAD }
+.secondary-2 { color: #9E8E7F }
+.secondary-3 { color: #41372D }
+.secondary-4 { color: #422F1D }
+
 *,
 *:before,
 *:after {
@@ -771,10 +789,15 @@ ul.bar_tabs>li a {
   color: #fff;
   background: rgba(0,0,0,.15)
 }
-
+.department-list__action {
+  text-align: center;
+}
+.department-list__action a {
+  margin-right: 5px;
+}
 
 /**
- * Progress bar
+ * Progress bar style
  * @type {[type]}
  */
 .bar-1 {
@@ -807,6 +830,7 @@ ul.bar_tabs>li a {
 .bar-9 {
   width: 90%;
 }
+
 /**
  * User for responsive layout
  * @type {[type]}

@@ -32,6 +32,7 @@ Route::name('recruitment.add.department')->get('/recruitment/add-department', 'D
 Route::name('recruitment.add.department')->post('/recruitment/add-department', 'DepartmentController@store');
 Route::name('recruitment.add.position')->get('/recruitment/add-position', 'PositionController@show');
 Route::name('recruitment.add.position')->post('/recruitment/add-position', 'PositionController@store');
+Route::name('recruitment.list.department')->get('/recruitment/list-department', 'DepartmentController@showDepartmentList');
 
 /**
  * User group
