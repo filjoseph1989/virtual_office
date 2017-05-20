@@ -12,8 +12,7 @@ class DepartmentController extends Controller
    *
    * @return \Illuminate\Http\Response
    */
-  public function index()
-  {
+  public function index() {
       //
   }
 
@@ -36,7 +35,6 @@ class DepartmentController extends Controller
   public function store(Request $request)
   {
     Department::create($request->only(['name', 'color']));
-
     return redirect()->route('recruitment.add.department')->with('status', 'Successfuly added new Department');
   }
 
@@ -47,9 +45,15 @@ class DepartmentController extends Controller
    * @return \Illuminate\Http\Response
    */
   public function showAddDepartmentForm() {
-    $content = 'users.recruitment.department';
-
+    $content = 'users.recruitment.department-add';
     return view('users.user-dashboard', compact('content'));
+  }
+
+  public function showDepartmentList() {
+    $department = Department::all();
+    $content    = "users.recruitment.department-table";
+
+    return view('users.user-dashboard', compact('department', 'content'));
   }
 
   /**
