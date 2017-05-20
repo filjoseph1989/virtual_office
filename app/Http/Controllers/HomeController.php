@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\User;
+use Auth;
 
 class HomeController extends Controller
 {
@@ -22,7 +24,8 @@ class HomeController extends Controller
    * @return \Illuminate\Http\Response
    */
   public function index() {
-    return view('users.user-dashboard');
+    $username = ucfirst(Auth::user()->first_name) . " " . ucfirst(Auth::user()->last_name);
+    return view('users.user-dashboard', compact('username', 'lastname'));
   }
 
 
