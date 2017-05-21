@@ -53,7 +53,6 @@ class EmployeeController extends Controller
     $result = $request->only(['user_id', 'first_name', 'last_name', 'contact', 'relationship']);
 
     Family::create($result);
-
     return redirect()->route('recruitment.add.family')->with('familyStatus', 'Successfuly added family information');
   }
 
@@ -73,20 +72,12 @@ class EmployeeController extends Controller
   }
 
   /**
-   * Display the specified resource.
-   *
-   * @param  int  $id
-   * @return \Illuminate\Http\Response
-   */
-  public function show($id) { }
-
-  /**
    * Show the form for adding new employee
    *
    * @return \Illuminate\Http\Response
    */
   public function showAddForm() {
-    $content = "users.recruitment.add";
+    $content = "users.recruitment.employee-add";
     return view('users.user-dashboard', compact('content'));
   }
 
@@ -104,6 +95,14 @@ class EmployeeController extends Controller
     $content = "users.recruitment.edit-profile";
 
     return view('users.user-dashboard', compact('content', 'country','cities', 'course', 'degree'));
+  }
+
+  public function showEmployeeList()
+  {
+    $employee = User::all();
+    $content  = "users.recruitment.employee-table";
+
+    return view('users.user-dashboard', compact('employee', 'content'));
   }
 
   /**

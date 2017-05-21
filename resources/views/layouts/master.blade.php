@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}?v=3.3.7">
     <link rel="stylesheet" href="{{ asset('css/font-awesome.min.css') }}?v=4.7.0">
     <link rel="stylesheet" href="{{ asset('css/jquery-ui.min.css') }}?v=0.4">
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}?v=0.6">
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}?v=0.7">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->

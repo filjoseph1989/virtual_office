@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Position;
 use Illuminate\Http\Request;
-use App\Position;
 
 class PositionController extends Controller
 {
@@ -46,10 +46,22 @@ class PositionController extends Controller
    * @param  int  $id
    * @return \Illuminate\Http\Response
    */
-  public function show()
+  public function showAddPositionForm()
   {
-    $content = 'users.recruitment.position';
+    $content = 'users.recruitment.position-add';
     return view('users.user-dashboard', compact('content'));
+  }
+
+  /**
+   * Display all position
+   * @return [type] [description]
+   */
+  public function showPositionList()
+  {
+    $position = Position::all();
+    $content = 'users.recruitment.position-table';
+
+    return view('users.user-dashboard', compact('content', 'position'));
   }
 
   /**

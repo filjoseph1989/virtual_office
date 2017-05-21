@@ -23,14 +23,20 @@ class HomeController extends Controller
    *
    * @return \Illuminate\Http\Response
    */
-  public function index() {
+  public function index()
+  {
     $username = ucfirst(Auth::user()->first_name);
     return view('users.user-dashboard', compact('username'));
   }
 
-  public function showRecruitemeneMenu() {
+  /**
+   * display the recruitment menu
+   *
+   * @return \Illuminate\Http\Response
+   */
+  public function showRecruitemeneMenu()
+  {
     $content = "users.recruitment.recruitment-menu";
-
     return view('users.user-dashboard', compact('content'));
   }
 }

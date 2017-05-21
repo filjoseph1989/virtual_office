@@ -830,6 +830,12 @@ ul.bar_tabs>li a {
 .bar-9 {
   width: 90%;
 }
+.department-list__color {
+  width: 15px;
+  height: 15px;
+  float: left;
+  margin-right: 10px;
+}
 
 /**
  * User for responsive layout
