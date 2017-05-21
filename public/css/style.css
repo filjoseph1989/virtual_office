@@ -1,4 +1,4 @@
-.primary-0 { color: #3E424E }
+/*.primary-0 { color: #3E424E }
 .primary-1 { color: #777C88 }
 .primary-2 { color: #585D6A }
 .primary-3 { color: #20232C }
@@ -14,7 +14,41 @@
 .secondary-1 { color: #CABBAD }
 .secondary-2 { color: #9E8E7F }
 .secondary-3 { color: #41372D }
-.secondary-4 { color: #422F1D }
+.secondary-4 { color: #422F1D }*/
+
+ /*background-color: #3E424E;*/
+ /*color: #3E424E;*/
+ /*background-color: #777C88;*/
+ /*color: #777C88;*/
+ /*background-color: #585D6A;*/
+ /*color: #585D6A;*/
+ /*background-color: #20232C;*/
+ /*color: #20232C;*/
+ /*background-color: #161C2C;*/
+ /*color: #161C2C;*/
+
+ /*background-color: #746F59;*/
+ /*color: #746F59;*/
+ /*background-color: #746F59;*/
+ /*color: #746F59;*/
+ /*background-color: #9E997F;*/
+ /*color: #9E997F;*/
+ /*background-color: #413E2D;*/
+ /*color: #413E2D;*/
+ /*background-color: #423C1D;*/
+ /*color: #423C1D;*/
+
+ /*background-color: #746659;*/
+ /*color: #746659;*/
+ /*background-color: #CABBAD;*/
+ /*color: #CABBAD;*/
+ /*background-color: #9E8E7F;*/
+ /*color: #9E8E7F;*/
+ /*background-color: #41372D;*/
+ /*color: #41372D;*/
+ /*background-color: #422F1D;*/
+ /*color: #422F1D;*/
+
 
 *,
 *:before,
@@ -830,12 +864,49 @@ ul.bar_tabs>li a {
 .bar-9 {
   width: 90%;
 }
+
+/**
+ * Style for the list of department
+ * @type {[type]}
+ */
 .department-list__color {
   width: 15px;
   height: 15px;
   float: left;
   margin-right: 10px;
 }
+
+/**
+ * Style for data tables
+ * @type {[type]}
+ */
+.dataTables_wrapper .dataTables_filter input {
+  margin-left: 10px;
+}
+.dataTables_wrapper .dataTables_filter input,
+#department-list_length select {
+  border: 1px solid #ccc;
+  padding: 5px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+  border: 1px solid #ccc;
+}
+#department-list_length {
+  float:left;
+}
+#department-list_length,
+#department-list_filter {
+  color: #73879C;
+  font-size: 13px;
+}
+table.jambo_table thead {
+  background-color: #777C88;
+  color: white;
+  vertical-align: bottom;
+}
+#department-list_info {}
+#department-list_paginate {}
 
 /**
  * User for responsive layout
