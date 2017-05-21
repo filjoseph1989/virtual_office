@@ -1,5 +1,5 @@
 Sprint 3: Action on list
-☐ Working with dataTables on list of positions
+✔ Working with dataTables on list of positions @done(2017-05-21 23:25)
 ☐ List of department - action
 ☐ List of all employee - action
 ☐ List of employee by department
@@ -13,6 +13,7 @@ Sprint 4: Delete
 ☐ Add new Authority
 
 Log:
+☐ Change the button color
 ☐ Create a two parant controller for user|admin which will be responsible for rendering the dashboard layout
 ☐ Add family - Fetch first the user id before adding the family information
 ☐ Add employee - success alert
@@ -21,18 +22,17 @@ Log:
 ☐ Add family - form validation
 ☐ Add department - form validation
 ☐ Add close option on profile welcome card
-☐ Dashboard sidebar collapse
+☐ Dashboard sidebar should collapse
 ☐ View profile - HR should be the one who can view employee profile
 ☐ If add position is click from recruitment menu, dropdown of department is necessary
 ☐ If list of department if click view the list of position it has with the button to add new
-☐ User|employee can edit their personal information and a notification to the HR is necessary
 ☐ Automatiic Capitalize in the browser side
-☐ Change the button color
-☐ Change profile picture
+☐ Can change profile picture
 ☐ Before deleting a department, check if it has a position
 ☐ Need a hover effect of department list action column
 ☐ On payroll HR should be able to sort, undertime, absent, etc
 ☐ Must edit the position.department_id to update the records in database
+☐ On the user perpective upon viewing profile, disable email, department, position, and government data
 
 Sprint 1: Basic Forms
 ✔ Add employee @done (5/18/2017, 10:28:40 AM)

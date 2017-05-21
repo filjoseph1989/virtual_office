@@ -79,7 +79,7 @@
                 </a>
               </div>
               <div class="animated flipInY col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                <a href="#">
+                <a href="{{ route('recruitment.list.department') }}">
                   <div class="tile-stats">
                     <div class="count">2</div>
                     <h3>List of Department</h3>
@@ -88,7 +88,7 @@
                 </a>
               </div>
               <div class="animated flipInY col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                <a href="#">
+                <a href="{{ route('recruitment.list.employee') }}">
                   <div class="tile-stats">
                     <div class="count">3</div>
                     <h3>List of Employee</h3>
