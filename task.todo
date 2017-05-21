@@ -1,10 +1,5 @@
-Sprint 2: Display the data
-✔ List of department @done(2017-05-20 17:29)
-✔ List of department color @done(2017-05-21 17:12)
-✔ List of all employee @done(2017-05-21 17:44)
-✔ List of all position @done(2017-05-21 18:02)
-
 Sprint 3: Action on list
+☐ Working with dataTables on list of positions
 ☐ List of department - action
 ☐ List of all employee - action
 ☐ List of employee by department
@@ -37,6 +32,7 @@ Log:
 ☐ Before deleting a department, check if it has a position
 ☐ Need a hover effect of department list action column
 ☐ On payroll HR should be able to sort, undertime, absent, etc
+☐ Must edit the position.department_id to update the records in database
 
 Sprint 1: Basic Forms
 ✔ Add employee @done (5/18/2017, 10:28:40 AM)
@@ -48,3 +44,9 @@ Sprint 1: Basic Forms
 ✔ Address dropdown @done(2017-05-20 15:32)
 ✔ Add Education of user @done(2017-05-20 15:32)
 ✔ Edit Profile @done(2017-05-20 15:32)
+
+Sprint 2: Display the data
+✔ List of department @done(2017-05-20 17:29)
+✔ List of department color @done(2017-05-21 17:12)
+✔ List of all employee @done(2017-05-21 17:44)
+✔ List of all position @done(2017-05-21 18:02)

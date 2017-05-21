@@ -18,7 +18,7 @@
           </div>
           <div class="x_content">
             <div class="clearfix container-fluid row">
-              <table class="table table-bordered department-list">
+              <table class="table table-striped table-bordered dataTable no-footer department-list" id="department-list">
                 <thead>
                   <tr>
                     <th>#</th>
@@ -39,9 +39,11 @@
                   <?php endforeach; ?>
                 </tbody>
               </table>
-              <a href="{{ route('recruitment.add.position') }}" class="btn btn-success">
-                <i class="fa fa-plus"></i> New
-              </a>
+              <div class="">
+                <a href="{{ route('recruitment.add.position') }}" class="btn btn-success">
+                  <i class="fa fa-plus"></i> New
+                </a>
+              </div>
             </div>
           </div>
         </div>
