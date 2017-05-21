@@ -22,27 +22,24 @@
                 <thead>
                   <tr>
                     <th>#</th>
-                    <th>Department Name</th>
-                    <th>Department Color</th>
+                    <th>Employee Name</th>
                     <th class="department-list__action">Action</th>
                   </tr>
                 </thead>
                 <tbody>
-                  <?php foreach ($department as $key => $value): ?>
+                  <?php foreach ($employee as $key => $value): ?>
                     <tr>
                       <td scope="row">{{ $key + 1  }}</td>
-                      <td>{{ $value->name }}</td>
-                      <td><div class="department-list__color" style="background-color: <?php echo strtolower($value->color) ?>;"></div>{{ $value->color }}</td>
+                      <td>{{ ucfirst($value->first_name) }} {{ ucfirst($value->last_name) }}</td>
                       <td class="department-list__action">
-                        <a href="#"><i class="fa fa-times" aria-hidden="true" title="Delete Department"></i></a>
-                        <a href="#"><i class="fa fa-pencil" aria-hidden="true" title="Edit Department Name"></i></a>
-                        <a href="#"><i class="fa fa-table" aria-hidden="true" title="Display Position Under This Department"></i></a>
+                        <a href="#"><i class="fa fa-times" aria-hidden="true" title="Delete Employee"></i></a>
+                        <a href="#"><i class="fa fa-pencil" aria-hidden="true" title="Edit Employee Name"></i></a>
                       </td>
                     </tr>
                   <?php endforeach; ?>
                 </tbody>
               </table>
-              <a href="{{ route('recruitment.add.department') }}" class="btn btn-success">
+              <a href="{{ route('recruitment.add') }}" class="btn btn-success">
                 <i class="fa fa-plus"></i> New
               </a>
             </div>

@@ -57,7 +57,16 @@
                 </a>
               </div>
               <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                <a href="#">
+                <a href="{{ route('recruitment.list.position') }}">
+                  <div class="tile-stats">
+                    <div class="count">5</div>
+                    <h3>List of Position</h3>
+                    <p>Click here to view the list of position</p>
+                  </div>
+                </a>
+              </div>
+              <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <a href="{{ route('recruitment.list.employee') }}">
                   <div class="tile-stats">
                     <div class="count">5</div>
                     <h3>List of Employee</h3>

@@ -13,7 +13,7 @@
 
 Route::get('/', function () {
   if (Auth::check() === false) {
-    return view('auth.login');
+    return view('auth.user-login');
   } else {
     return view('users.user-dashboard');
   }
@@ -30,9 +30,11 @@ Route::name('recruitment.edit.profile')->get('/recruitment/edit-profile', 'Emplo
 Route::name('recruitment.edit.profile')->post('/recruitment/edit-profile', 'EmployeeController@storeEducationInfo');
 Route::name('recruitment.add.department')->get('/recruitment/add-department', 'DepartmentController@showAddDepartmentForm');
 Route::name('recruitment.add.department')->post('/recruitment/add-department', 'DepartmentController@store');
-Route::name('recruitment.add.position')->get('/recruitment/add-position', 'PositionController@show');
+Route::name('recruitment.add.position')->get('/recruitment/add-position', 'PositionController@showAddPositionForm');
 Route::name('recruitment.add.position')->post('/recruitment/add-position', 'PositionController@store');
 Route::name('recruitment.list.department')->get('/recruitment/list-department', 'DepartmentController@showDepartmentList');
+Route::name('recruitment.list.position')->get('/recruitment/list-position', 'PositionController@showPositionList');
+Route::name('recruitment.list.employee')->get('/recruitment/list-employee', 'EmployeeController@showEmployeeList');
 
 /**
  * User group

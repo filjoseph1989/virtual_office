@@ -39,6 +39,9 @@
                 <div class="col-md-6 col-md-offset-3">
                   <button type="submit" class="btn btn-primary">Cancel</button>
                   <button id="send" type="submit" class="btn btn-success">Submit</button>
+                  <a href="{{ route('recruitment.list.position') }}" class="btn btn-success">
+                    <i class="fa fa-table" aria-hidden="true"></i> Show
+                  </a>
                 </div>
               </div>
             </form>
