@@ -18,7 +18,7 @@
           </div>
           <div class="x_content">
             <div class="clearfix container-fluid row">
-              <table class="table table-bordered department-list">
+              <table class="table table-bordered employee-list" id="employee-list">
                 <thead>
                   <tr>
                     <th>#</th>

@@ -18,7 +18,7 @@
           </div>
           <div class="x_content">
             <div class="clearfix container-fluid row">
-              <table class="table table-bordered department-list">
+              <table class="table table-bordered department-list" id="department-list">
                 <thead>
                   <tr>
                     <th>#</th>
@@ -32,7 +32,7 @@
                     <tr>
                       <td scope="row">{{ $key + 1  }}</td>
                       <td>{{ $value->name }}</td>
-                      <td><div class="department-list__color" style="background-color: <?php echo strtolower($value->color) ?>;"></div>{{ $value->color }}</td>
+                      <td><div class="department-list__color" style="background-color: {{ strtolower($value->color) }};"></div>{{ $value->color }}</td>
                       <td class="department-list__action">
                         <a href="#"><i class="fa fa-times" aria-hidden="true" title="Delete Department"></i></a>
                         <a href="#"><i class="fa fa-pencil" aria-hidden="true" title="Edit Department Name"></i></a>

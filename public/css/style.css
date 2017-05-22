@@ -905,8 +905,21 @@ table.jambo_table thead {
   color: white;
   vertical-align: bottom;
 }
-#department-list_info {}
-#department-list_paginate {}
+
+/**
+ * Tags input style
+ * @type {[type]}
+ */
+#add-modules-label {
+  text-align: right;
+}
+#add-modules_tagsinput {
+  width: 66% !important;
+}
+div.tagsinput span.tag {
+  background-color: #5cb85c;
+  color: #fff;
+}
 
 /**
  * User for responsive layout
