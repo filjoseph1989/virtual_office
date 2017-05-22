@@ -1,5 +1,7 @@
 Sprint 3: Action on list
 ✔ Working with dataTables on list of positions @done(2017-05-21 23:25)
+✔ DataTables for department list @done(2017-05-22 11:07)
+✔ DataTables for the list of employee @done(2017-05-22 11:09)
 ☐ List of department - action
 ☐ List of all employee - action
 ☐ List of employee by department
@@ -14,6 +16,8 @@ Sprint 4: Delete
 
 Log:
 ☐ Change the button color
+☐ Add color picker on department color
+☐ Check the department if already exist
 ☐ Create a two parant controller for user|admin which will be responsible for rendering the dashboard layout
 ☐ Add family - Fetch first the user id before adding the family information
 ☐ Add employee - success alert

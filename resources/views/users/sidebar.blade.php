@@ -2,7 +2,7 @@
   <div class="left_col scroll-view">
     <div class="navbar nav_title">
       <a href="{{ route('home') }}" class="site_title">
-        <img src="images/logo.png" alt=""> MPCI VO
+        <img src="{{asset('images/logo.png')}}" alt=""> MPCI VO
       </a>
     </div>
     <div class="clearfix"></div>
