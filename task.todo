@@ -1,15 +1,12 @@
-Sprint 3: Action on list
-✔ Working with dataTables on list of positions @done(2017-05-21 23:25)
-✔ DataTables for department list @done(2017-05-22 11:07)
-✔ DataTables for the list of employee @done(2017-05-22 11:09)
-☐ Assign user modules
+Sprint 4: Admin Dashboard
+☐ Admin assign modules to the positions
+☐ List of all position filter by deparment
+
+Sprint 4:
 ☐ List of department - action
 ☐ List of all employee - action
 ☐ List of employee by department
 ☐ List of employee by position
-☐ List of all position filter by deparment
-
-Sprint 4: Delete
 ☐ User add - add module using tag input
 ☐ Delete department
 ☐ Delete position
@@ -55,3 +52,8 @@ Sprint 2: Display the data
 ✔ List of department color @done(2017-05-21 17:12)
 ✔ List of all employee @done(2017-05-21 17:44)
 ✔ List of all position @done(2017-05-21 18:02)
+
+Sprint 3: DataTables
+✔ Working with dataTables on list of positions @done(2017-05-21 23:25)
+✔ DataTables for department list @done(2017-05-22 11:07)
+✔ DataTables for the list of employee @done(2017-05-22 11:09)
