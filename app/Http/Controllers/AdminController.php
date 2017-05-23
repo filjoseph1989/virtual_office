@@ -25,4 +25,15 @@ class AdminController extends Controller
     $username = Admin::find(1)->first_name;
     return view('admins.admin-dashboard', compact('username'));
   }
+
+  /**
+   * Display the modules menu
+   *
+   * @return function view
+   */
+  public function showAdminModuleMenu()
+  {
+    $content = "admins.modules.module-menu";
+    return view('admins.admin-dashboard', compact('content'));
+  }
 }

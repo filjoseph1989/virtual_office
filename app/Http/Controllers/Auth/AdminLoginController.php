@@ -23,16 +23,6 @@ class AdminLoginController extends Controller
   }
 
   /**
-   * Display the modules menu
-   *
-   * @return function view
-   */
-  public function showAdminModuleMenu()
-  {
-    return view('admins.modules.module-menu');
-  }
-
-  /**
    * Serve the login request
    *
    * @param  Request $request
