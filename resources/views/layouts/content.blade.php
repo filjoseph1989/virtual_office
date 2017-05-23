@@ -1,7 +1,6 @@
 <div class="container-fluid">
   <div class="side-body padding-top">
     <div class="page-content">
-
       <div class="x_panel">
         <div class="x_title">
           <h2>User Profile</h2>
@@ -23,7 +22,7 @@
                 <img class="img-responsive avatar-view" src="{{ asset('images/logo.png') }}" alt="Avatar" title="Change the avatar">
               </div>
             </div>
-            <h3>{{ $username }}</h3>
+            <h3>{{ ucfirst($username) }}</h3>
             <ul class="list-unstyled user_data">
               <li><i class="fa fa-map-marker user-profile-icon"></i> Bonifacio Street, Davao City, Philippines </li>
               <li> <i class="fa fa-briefcase user-profile-icon"></i> Software Engineer </li>
@@ -243,7 +242,6 @@
           </div>
         </div>
       </div>
-
     </div>
   </div>
 </div>
