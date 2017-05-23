@@ -32,7 +32,7 @@ class CreateAdminsTable extends Migration
         $table->char('philhealth', 15)->nullable();
         $table->char('pag_ibig', 15)->nullable();
         $table->string('profile_pic')->nullable();
-        $table->integer('active')->defualt(0);
+        $table->integer('active')->default(1);
         $table->rememberToken();
         $table->timestamps();
       });

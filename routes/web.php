@@ -51,7 +51,7 @@ Route::name('home')->get('/home', 'HomeController@index');
  * Administration group
  */
 Route::prefix('admin')->group(function() {
-  Route::get('/login', 'Auth\AdminLoginController@showLoginForm')->name('admin.login');
-  Route::post('/', 'Auth\AdminLoginController@login')->name('admin.login.submit');
-  Route::get('/', 'AdminController@index')->name('admin');
+  Route::name('admin.login')->get('/login', 'Auth\AdminLoginController@showLoginForm');
+  Route::name('admin.login.submit')->post('/', 'Auth\AdminLoginController@login');
+  Route::name('admin')->get('/', 'AdminController@index');
 });

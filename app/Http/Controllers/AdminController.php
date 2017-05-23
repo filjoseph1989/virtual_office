@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Admin;
 
 class AdminController extends Controller
 {
@@ -21,6 +22,7 @@ class AdminController extends Controller
    * @return \Illuminate\Http\Response
    */
   public function index() {
-    return view('admins.admin-dashboard');
+    $username = Admin::find(1)->first_name;
+    return view('admins.admin-dashboard', compact('username'));
   }
 }
