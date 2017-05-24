@@ -1,14 +1,14 @@
 <aside class="aside">
   <div class="left_col scroll-view">
     <div class="navbar nav_title">
-      <a href="{{ route('home') }}" class="site_title">
+      <a href="{{ route('admin') }}" class="site_title">
         <img src="{{asset('images/logo.png')}}" alt=""> MPCI VO
       </a>
     </div>
     <div class="clearfix"></div>
     <div class="profile clearfix">
       <div class="profile_pic">
-        <a href="{{route('home')}}">
+        <a href="{{route('admin')}}">
           <img src="http://www.gravatar.com/avatar/64e1b8d34f425d19e1ee2ea7236d3028.jpg?s=80&amp;d=mm&amp;r=g" alt="..." class="img-circle profile_img">
         </a>
       </div>
@@ -16,7 +16,7 @@
         <span>Welcome,</span>
         <h2>
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-            {{ ucfirst(Auth::user()->first_name) }} <span class="caret"></span>
+            <span class="caret"></span>
           </a>
         </h2>
       </div>
@@ -32,32 +32,6 @@
             </a>
             <ul class="nav child_menu" style="display: none;">
               <li> <a href="{{ route('admin.modules') }}"> Modules </a> </li>
-            </ul>
-          </li>
-        </ul>
-        <ul class="nav side-menu">
-          <li class="">
-            <a href="#">
-              <i class="fa fa-home" aria-hidden="true"></i> Reports
-              <span class="fa fa-chevron-down"></span>
-            </a>
-            <ul class="nav child_menu" style="display: none;">
-              <li> <a href="#"> Daily Time Record </a> </li>
-              <li> <a href="#"> Daily Accomplishment Report </a> </li>
-            </ul>
-          </li>
-        </ul>
-        <ul class="nav side-menu">
-          <li class="">
-            <a href="#">
-              <i class="fa fa-address-card" aria-hidden="true"></i> Sales
-              <span class="fa fa-chevron-down"></span>
-            </a>
-            <ul class="nav child_menu" style="display: none;">
-              <li> <a href="#"> List of Quotations </a> </li>
-              <li> <a href="#"> List of Accounts </a> </li>
-              <li> <a href="#"> List of Quotation Forms </a> </li>
-              <li> <a href="#"> List of Job Order </a> </li>
             </ul>
           </li>
         </ul>

@@ -3,7 +3,7 @@
     <div class="page-content">
       <div class="x_panel">
         <div class="x_title">
-          <h2>User Profile</h2>
+          <h2>Admin Profile</h2>
           <ul class="nav navbar-right panel_toolbox">
             <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a> </li>
             <li class="dropdown">
@@ -32,33 +32,6 @@
               </li>
             </ul>
             <a href="{{ route('recruitment.edit.profile') }}" class="btn btn-success"><i class="fa fa-edit m-right-xs"></i>Edit Profile</a>
-            <h4>Skills</h4>
-            <ul class="list-unstyled user_data">
-              <li>
-                <p>Web Applications</p>
-                <div class="bar bg-blue--1 bar-9">
-                  <div class=""></div>
-                </div>
-              </li>
-              <li>
-                <p>Web Design</p>
-                <div class="bar bg-blue--1 bar-8">
-                  <div class=""> </div>
-                </div>
-              </li>
-              <li>
-                <p>Automation and Testing</p>
-                <div class="bar bg-blue--1 bar-9">
-                  <div class=""> </div>
-                </div>
-              </li>
-              <li>
-                <p>UI UX</p>
-                <div class="bar bg-blue--1 bar-6">
-                  <div class=""> </div>
-                </div>
-              </li>
-            </ul>
           </div>
           <div class="col-md-9 col-sm-9 col-xs-12">
             <div class="bs-example" data-example-id="simple-jumbotron">
@@ -69,29 +42,20 @@
             </div>
             <div class="clearfix container-fluid row">
               <div class="animated flipInY col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                  <a href="{{ route('recruitment.add') }}">
+                  <a href="{{ route('admin.modules.add') }}">
                   <div class="tile-stats">
                     <div class="count">1</div>
-                    <h3>Add New Employee</h3>
-                    <p>Click here to add new employee.</p>
+                    <h3>List of Position</h3>
+                    <p>Click here to view list of position</p>
                   </div>
                 </a>
               </div>
               <div class="animated flipInY col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                <a href="{{ route('recruitment.list.department') }}">
+                <a href="{{ route('admin.modules.add') }}">
                   <div class="tile-stats">
                     <div class="count">2</div>
-                    <h3>List of Department</h3>
-                    <p>Click here to view the list of department.</p>
-                  </div>
-                </a>
-              </div>
-              <div class="animated flipInY col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                <a href="{{ route('recruitment.list.employee') }}">
-                  <div class="tile-stats">
-                    <div class="count">3</div>
-                    <h3>List of Employee</h3>
-                    <p>Click here to view the list of employee.</p>
+                    <h3>Add Module</h3>
+                    <p>Click here to add new module</p>
                   </div>
                 </a>
               </div>
