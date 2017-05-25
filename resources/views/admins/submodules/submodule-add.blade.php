@@ -18,8 +18,8 @@
             <div class="clearfix"></div>
           </div>
           <div class="x_content">
-            <form class="form-horizontal form-label-left" novalidate="" action="{{ route('admin.modules.add') }}" method="post">
-              <span class="section">Add New Module</span>
+            <form class="form-horizontal form-label-left" novalidate="" action="{{ route('admin.submodules.add') }}" method="post">
+              <span class="section">Add New Sub-Module</span>
               @if (session('status'))
                 <div class="alert alert-success">
                   {{ session('status') }}
@@ -27,11 +27,19 @@
               @endif
               {{ csrf_field() }}
               <div class="item form-group">
-                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="module-name">
-                  Module Name
+                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="sub-module-name">
+                  Sub Module Name
                 </label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
-                  <input id="module-name" name="name" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" placeholder="e.g Accounting" required="required" type="text">
+                  <input id="sub-module-name" name="name" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" placeholder="e.g Recruitment" required="required" type="text">
+                </div>
+              </div>
+              <div class="item form-group">
+                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="sub-module-route">
+                  Sub Module Route
+                </label>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                  <input id="sub-module-name" name="route" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" placeholder="e.g route.name" required="required" type="text">
                 </div>
               </div>
               <div class="ln_solid"></div>
@@ -39,7 +47,7 @@
                 <div class="col-md-6 col-md-offset-3">
                   <button type="submit" class="btn btn-primary">Cancel</button>
                   <button id="send" type="submit" class="btn btn-success">Submit</button>
-                  <a href="{{ route('admin.modules.list') }}" class="btn btn-success">
+                  <a href="{{ route('admin.submodules.list') }}" class="btn btn-success">
                     <i class="fa fa-table" aria-hidden="true"></i> Show
                   </a>
                 </div>

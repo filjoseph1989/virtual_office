@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Module;
+use App\Models\SubModules;
 use Illuminate\Http\Request;
 
-class AdminModulesController extends Controller
+class AdminSubModulesController extends Controller
 {
   /**
    * Display a listing of the resource.
@@ -14,7 +14,9 @@ class AdminModulesController extends Controller
    */
   public function index()
   {
-      //
+    $submodules = SubModules::all();
+    $content    = "admins.submodules.submodule-table";
+    return view('admins.admin-dashboard', compact('content', 'submodules'));
   }
 
   /**
@@ -24,20 +26,22 @@ class AdminModulesController extends Controller
    */
   public function create()
   {
-      //
+    $content = "admins.submodules.submodule-add";
+    return view('admins.admin-dashboard', compact('content'));
   }
 
   /**
-   * Store new module
+   * Store a newly created resource in storage.
    *
    * @param  \Illuminate\Http\Request  $request
    * @return \Illuminate\Http\Response
    */
-  public function storeNewModule(Request $request)
+  public function store(Request $request)
   {
-    $data = $request->only(['name']);
-    Module::create($data);
-    return redirect()->route('admin.modules.add')->with('status', 'Successfuly added new module');
+    $data = $request->only('name', 'route');
+    SubModules::create($data);
+
+    return redirect()->route('admin.submodules.add')->with('status', 'Successfuly added new sub-module');
   }
 
   /**
@@ -46,24 +50,9 @@ class AdminModulesController extends Controller
    * @param  int  $id
    * @return \Illuminate\Http\Response
    */
-  public function showAddForm()
+  public function show($id)
   {
-    $content = "admins.modules.module-add";
-
-    return view('admins.admin-dashboard', compact('content'));
-  }
-
-  /**
-   * Display the list of modules
-   *
-   * @return \Illuminate\Http\Response
-   */
-  public function showModuleList()
-  {
-    $module  = Module::all();
-    $content = 'admins.modules.module-table';
-
-    return view('admins.admin-dashboard', compact('module', 'content'));
+      //
   }
 
   /**

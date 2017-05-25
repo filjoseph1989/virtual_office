@@ -12,20 +12,7 @@ class PositionController extends Controller
    *
    * @return \Illuminate\Http\Response
    */
-  public function index()
-  {
-      //
-  }
-
-  /**
-   * Show the form for creating a new resource.
-   *
-   * @return \Illuminate\Http\Response
-   */
-  public function create()
-  {
-      //
-  }
+  public function index() { // }
 
   /**
    * Store a newly created resource in storage.
@@ -36,7 +23,6 @@ class PositionController extends Controller
   public function store(Request $request)
   {
     Position::create($request->only(['name']));
-
     return redirect()->route('recruitment.add.position')->with('status', 'Successfuly added new Position');
   }
 
