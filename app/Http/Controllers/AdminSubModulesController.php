@@ -15,7 +15,7 @@ class AdminSubModulesController extends Controller
   public function index()
   {
     $submodules = SubModules::all();
-    $content    = "admins.submodules.submodule-table";
+    $content    = "admins.modules.submodule-table";
     return view('admins.admin-dashboard', compact('content', 'submodules'));
   }
 
@@ -26,7 +26,7 @@ class AdminSubModulesController extends Controller
    */
   public function create()
   {
-    $content = "admins.submodules.submodule-add";
+    $content = "admins.modules.submodule-add";
     return view('admins.admin-dashboard', compact('content'));
   }
 
