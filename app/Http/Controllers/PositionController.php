@@ -12,7 +12,11 @@ class PositionController extends Controller
    *
    * @return \Illuminate\Http\Response
    */
-  public function index() { // }
+  public function index()
+  {
+    $content = 'users.recruitment.position-add';
+    return view('users.user-dashboard', compact('content'));
+  }
 
   /**
    * Store a newly created resource in storage.
@@ -27,27 +31,27 @@ class PositionController extends Controller
   }
 
   /**
-   * Display the specified resource.
-   *
-   * @param  int  $id
-   * @return \Illuminate\Http\Response
-   */
-  public function showAddPositionForm()
-  {
-    $content = 'users.recruitment.position-add';
-    return view('users.user-dashboard', compact('content'));
-  }
-
-  /**
    * Display all position
    * @return [type] [description]
    */
-  public function showPositionList()
+  public function showPositionList($content = "", $view = "users.user-dashboard")
   {
     $position = Position::all();
-    $content = 'users.recruitment.position-table';
+    $content  = ($content == "")
+      ? 'users.recruitment.position-table'
+      : $content;
 
-    return view('users.user-dashboard', compact('content', 'position'));
+    return view($view, compact('content', 'position'));
+  }
+
+  /**
+   * Display position in admin dashboard
+   *
+   * @return \Illuminate\Http\Response
+   */
+  public function showAdminPositionList()
+  {
+    return self::showPositionList('admins.modules.position-table', 'admins.admin-dashboard');
   }
 
   /**

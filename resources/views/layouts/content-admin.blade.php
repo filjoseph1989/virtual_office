@@ -25,7 +25,7 @@
             </div>
             <div class="clearfix container-fluid row">
               <div class="animated flipInY col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                  <a href="{{ route('admin.modules.add') }}">
+                  <a href="{{ route('admin.position.list') }}">
                   <div class="tile-stats">
                     <div class="count">1</div>
                     <h3>List of Position</h3>
