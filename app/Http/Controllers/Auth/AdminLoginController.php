@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers\Auth;
 
+use Auth;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use Auth;
 
 class AdminLoginController extends Controller
 {
@@ -12,7 +12,13 @@ class AdminLoginController extends Controller
     $this->middleware('guest:admin');
   }
 
-  public function showLoginForm() {
+  /**
+   * Display the login form for admin
+   *
+   * @return function view
+   */
+  public function showLoginForm()
+  {
     return view('auth.admin-login');
   }
 
@@ -22,7 +28,8 @@ class AdminLoginController extends Controller
    * @param  Request $request
    * @return
    */
-  public function login(Request $request) {
+  public function login(Request $request)
+  {
     $this->validate($request, [
       'email'    => 'required|email',
       'password' => 'required|min:6'

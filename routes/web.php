@@ -51,6 +51,13 @@ Route::name('home')->get('/home', 'HomeController@index');
  * Administration group
  */
 Route::prefix('admin')->group(function() {
+  Route::name('admin.modules.add')->get('/modules/add', 'AdminModulesController@showAddForm');
+  Route::name('admin.modules.add')->post('/modules/add', 'AdminModulesController@storeNewModule');
+  Route::name('admin.modules.list')->get('/modules/list', 'AdminModulesController@showModuleList');
+  Route::name('admin.submodules.add')->get('/submodules/add', 'AdminSubModulesController@create');
+  Route::name('admin.submodules.add')->post('/submodules/add', 'AdminSubModulesController@store');
+  Route::name('admin.submodules.list')->get('/submodules/list', 'AdminSubModulesController@index');
+  Route::name('admin.modules')->get('/modules', 'AdminController@showAdminModuleMenu');
   Route::name('admin.login')->get('/login', 'Auth\AdminLoginController@showLoginForm');
   Route::name('admin.login.submit')->post('/', 'Auth\AdminLoginController@login');
   Route::name('admin')->get('/', 'AdminController@index');

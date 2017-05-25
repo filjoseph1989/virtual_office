@@ -1,4 +1,7 @@
 ✔ Display of the username if wrong @done(2017-05-20 16:13)
 ✔ Logo on the sidebar doesn't show up when in another page @done(2017-05-23 11:07)
 ✔ Undefine username on admin login @done(2017-05-23 11:18)
+✔ When in admin dashboard and click logo or profile picture, site wiil redirect to mpci-vo.dev/login @done(2017-05-24 10:10)
+☐ Display the admin name in admin dashboard has an error
+☐ Progress bar using bootstrap will not work
 ☐ What if there are many admin registered, how to handle them?

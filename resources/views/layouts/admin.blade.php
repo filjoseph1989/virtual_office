@@ -29,20 +29,17 @@
   </head>
   <body class="nav-md">
 
-    @include('users.sidebar')
+    @include('admins.sidebar')
 
     @yield ('content')
 
     <script src="{{ asset('js/jquery.min.js') }}?v=3.2.1" charset="utf-8"></script>
-    <script src="{{ asset('js/bootstrap.js') }}?v=3.3.7" charset="utf-8"></script>
     <script src="{{ asset('js/jquery.dataTables.min.js') }}" charset="utf-8"></script>
     <script src="{{ asset('js/jquery.tagsinput.min.js') }}" charset="utf-8"></script>
+    <script src="{{ asset('js/bootstrap.js') }}?v=3.3.7" charset="utf-8"></script>
 
     <script type="text/javascript">
-      $('#position-list').DataTable();
-      $('#employee-list').DataTable();
-      $('#department-list').DataTable();
-      $('#add-modules').tagsInput();
+      // Content
     </script>
   </body>
 </html>

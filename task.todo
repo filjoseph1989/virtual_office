@@ -1,8 +1,13 @@
 Sprint 4: Admin Dashboard
+✔ Admin add new moddule @done(2017-05-25 10:50)
+✔ Admin display table of module @done(2017-05-25 10:50)
+☐ Admin add new sub module
+☐ Admin display sub module
+☐ Admin display table of positions
 ☐ Admin assign modules to the positions
-☐ List of all position filter by deparment
 
 Sprint 4:
+☐ List of all position filter by deparment
 ☐ List of department - action
 ☐ List of all employee - action
 ☐ List of employee by department

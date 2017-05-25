@@ -2,28 +2,42 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Position;
+use App\Models\Module;
 use Illuminate\Http\Request;
 
-class PositionController extends Controller
+class AdminModulesController extends Controller
 {
   /**
    * Display a listing of the resource.
    *
    * @return \Illuminate\Http\Response
    */
-  public function index() { // }
+  public function index()
+  {
+      //
+  }
 
   /**
-   * Store a newly created resource in storage.
+   * Show the form for creating a new resource.
+   *
+   * @return \Illuminate\Http\Response
+   */
+  public function create()
+  {
+      //
+  }
+
+  /**
+   * Store new module
    *
    * @param  \Illuminate\Http\Request  $request
    * @return \Illuminate\Http\Response
    */
-  public function store(Request $request)
+  public function storeNewModule(Request $request)
   {
-    Position::create($request->only(['name']));
-    return redirect()->route('recruitment.add.position')->with('status', 'Successfuly added new Position');
+    $data = $request->only(['name']);
+    Module::create($data);
+    return redirect()->route('admin.modules.add')->with('status', 'Successfuly added new module');
   }
 
   /**
@@ -32,22 +46,24 @@ class PositionController extends Controller
    * @param  int  $id
    * @return \Illuminate\Http\Response
    */
-  public function showAddPositionForm()
+  public function showAddForm()
   {
-    $content = 'users.recruitment.position-add';
-    return view('users.user-dashboard', compact('content'));
+    $content = "admins.modules.module-add";
+
+    return view('admins.admin-dashboard', compact('content'));
   }
 
   /**
-   * Display all position
-   * @return [type] [description]
+   * Display the list of modules
+   *
+   * @return \Illuminate\Http\Response
    */
-  public function showPositionList()
+  public function showModuleList()
   {
-    $position = Position::all();
-    $content = 'users.recruitment.position-table';
+    $module  = Module::all();
+    $content = 'admins.modules.module-table';
 
-    return view('users.user-dashboard', compact('content', 'position'));
+    return view('admins.admin-dashboard', compact('module', 'content'));
   }
 
   /**
