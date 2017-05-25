@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="{{ asset('css/font-awesome.min.css') }}?v=4.7.0">
     <link rel="stylesheet" href="{{ asset('css/jquery.dataTables.css') }}">
     <link rel="stylesheet" href="{{ asset('css/jquery.tagsinput.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}?v=0.10">
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}?v=0.11">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -39,7 +39,7 @@
     <script src="{{ asset('js/bootstrap.js') }}?v=3.3.7" charset="utf-8"></script>
 
     <script type="text/javascript">
-      // Content
+      $('#position-list').DataTable();
     </script>
   </body>
 </html>
