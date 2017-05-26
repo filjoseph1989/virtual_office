@@ -55,7 +55,9 @@ class AdminSubModulesController extends Controller
    */
   public function showAllSubModules()
   {
-    
+    $subModules = SubModules::all();
+    $content    = "admins.modules.submodule-table-all";
+    return view('admins.admin-dashboard', compact('content', 'subModules'));
   }
 
   /**
