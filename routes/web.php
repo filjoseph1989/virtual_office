@@ -57,7 +57,8 @@ Route::prefix('admin')->group(function() {
   Route::name('admin.modules.list')->get('/modules/list', 'AdminModulesController@showModuleList');
   Route::name('admin.submodules.add')->get('/submodules/add', 'AdminSubModulesController@create');
   Route::name('admin.submodules.add')->post('/submodules/add', 'AdminSubModulesController@store');
-  Route::name('admin.submodules.list')->get('/submodules/list', 'AdminSubModulesController@index');
+  Route::name('admin.submodules.list')->get('/submodules/list/{id}', 'AdminSubModulesController@index');   
+  Route::name('admin.submodules.list.all')->get('/submodules/list', 'AdminSubModulesController@showAllSubModules');
   Route::name('admin.position.list')->get('/position/list', 'PositionController@showAdminPositionList');
   Route::name('admin.login')->get('/login', 'Auth\AdminLoginController@showLoginForm');
   Route::name('admin.login.submit')->post('/', 'Auth\AdminLoginController@login');

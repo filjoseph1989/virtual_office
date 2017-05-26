@@ -13,10 +13,11 @@ class AdminSubModulesController extends Controller
    *
    * @return \Illuminate\Http\Response
    */
-  public function index()
+  public function index($id)
   {
-    $submodules = SubModules::all();
+    $submodules = SubModules::where('module_id', $id)->get();
     $content    = "admins.modules.submodule-table";
+
     return view('admins.admin-dashboard', compact('content', 'submodules'));
   }
 
@@ -40,7 +41,7 @@ class AdminSubModulesController extends Controller
    */
   public function store(Request $request)
   {
-    $data = $request->only('name', 'route');
+    $data = $request->only('module_id', 'name', 'route');
     SubModules::create($data);
 
     return redirect()->route('admin.submodules.add')->with('status', 'Successfuly added new sub-module');
@@ -52,9 +53,9 @@ class AdminSubModulesController extends Controller
    * @param  int  $id
    * @return \Illuminate\Http\Response
    */
-  public function show($id)
+  public function showAllSubModules()
   {
-      //
+    
   }
 
   /**
