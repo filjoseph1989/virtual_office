@@ -1,11 +1,21 @@
 Sprint 4: Admin Dashboard
 ✔ Admin add new moddule @done(2017-05-25 10:50)
 ✔ Admin display table of module @done(2017-05-25 10:50)
-☐ Admin add new sub module
-☐ Admin display sub module
-☐ Admin display table of positions
+✔ Admin add new sub module @done(2017-05-26 07:43)
+✔ Admin display sub module @done(2017-05-26 07:43)
+✔ Admin display table of positions  @done(2017-05-26 07:44)
 ☐ Admin assign positions to module
+  Problem 1. Add a sub-module to a module
+  ☐ Click on add button, display add form
+  ☐ On the add form, dropdown the list of module, and add route then Submit
+  ☐ On AdminSubModulesController find the module name id, and get module name
+  ☐ Store new sub-module
 
+  Problem 2. Display sub-module of a module
+  ☐ Click on table icon
+  ☐ Make route with id as a parameter
+  ☐ display the list of sub modules under the clicked module
+  
 Sprint 4:
 ☐ List of all position filter by deparment
 ☐ List of department - action

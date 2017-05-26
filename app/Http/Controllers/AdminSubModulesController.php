@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Module;
 use App\Models\SubModules;
 use Illuminate\Http\Request;
 
@@ -26,8 +27,9 @@ class AdminSubModulesController extends Controller
    */
   public function create()
   {
+    $module  = Module::all();
     $content = "admins.modules.submodule-add";
-    return view('admins.admin-dashboard', compact('content'));
+    return view('admins.admin-dashboard', compact('content', 'module'));
   }
 
   /**
