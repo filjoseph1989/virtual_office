@@ -12,6 +12,7 @@ Sprint 4: Admin Dashboard
   ☐ Store new sub-module
 
   Problem 2. Display sub-module of a module
+  ☐ Validate the id parameter
   ✔ Click on table icon @done(2017-05-26 12:00)
   ✔ Make route with id as a parameter @done(2017-05-26 12:00)
   ✔ display the list of sub modules under the clicked module @done(2017-05-26 12:00)
