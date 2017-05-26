@@ -27,6 +27,19 @@
               @endif
               {{ csrf_field() }}
               <div class="item form-group">
+                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="module-id">
+                  Module Name
+                </label>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                  <select class="form-control" name="module_id" id="module-id">
+                    <option>Choose Module</option>
+                    <?php foreach ($module as $key => $moduleValue): ?>
+                      <option value="{{ $moduleValue->id }}">{{ $moduleValue->name }}</option>
+                    <?php endforeach; ?>
+                  </select>
+                </div>
+              </div>
+              <div class="item form-group">
                 <label class="control-label col-md-3 col-sm-3 col-xs-12" for="sub-module-name">
                   Sub Module Name
                 </label>
@@ -39,7 +52,7 @@
                   Sub Module Route
                 </label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
-                  <input id="sub-module-name" name="route" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" placeholder="e.g route.name" required="required" type="text">
+                  <input id="sub-module-route" name="route" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" placeholder="e.g route.name" required="required" type="text">
                 </div>
               </div>
               <div class="ln_solid"></div>

@@ -18,7 +18,7 @@
           </div>
           <div class="x_content">
             <div class="clearfix container-fluid row">
-              <table class="table table-bordered department-list" id="department-list">
+              <table class="table table-bordered" id="module-list">
                 <thead>
                   <tr>
                     <th>#</th>
@@ -34,7 +34,7 @@
                       <td scope="row" class="department-list__action">
                         <a href="#"><i class="fa fa-times" aria-hidden="true" title="Delete Module"></i></a>
                         <a href="#"><i class="fa fa-pencil" aria-hidden="true" title="Edit Module Name"></i></a>
-                        <a href="{{ route('admin.submodules.list') }}">
+                        <a href="{{ route('admin.submodules.list', $value->id) }}">
                           <i class="fa fa-table" aria-hidden="true" title="Display Sub Modules"></i>
                         </a>
                       </td>

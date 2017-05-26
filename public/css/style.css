@@ -804,10 +804,14 @@ ul.bar_tabs>li a {
   color: #fff;
   background: rgba(0,0,0,.15)
 }
-.department-list__action {
+.department-list__action,
+.sub-modules-list__action,
+.action {
   text-align: center;
 }
-.department-list__action a {
+.department-list__action a,
+.sub-modules-list__action a,
+.action a {
   margin-right: 5px;
 }
 
