@@ -36,7 +36,7 @@
                           <a href="#"><i class="fa fa-times" aria-hidden="true" title="Delete Module"></i></a>
                           <a href="#"><i class="fa fa-pencil" aria-hidden="true" title="Edit Module Name"></i></a>
                           <a href="{{ route('admin.submodules.list', $value->id) }}">
-                            <i class="fa fa-table" aria-hidden="true" title="Display Sub Modules"></i>
+                            <i class="fa fa-wrench" aria-hidden="true" title="Configure Module"></i>
                           </a>
                         </td>
                       </tr>

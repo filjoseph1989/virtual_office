@@ -930,6 +930,9 @@ div.tagsinput span.tag {
   background-color: #5cb85c;
   color: #fff;
 }
+#admin-positions-tags_tagsinput {
+  width: 100% !important;
+}
 
 /**
  * User for responsive layout
