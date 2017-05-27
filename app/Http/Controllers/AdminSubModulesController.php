@@ -4,23 +4,12 @@ namespace App\Http\Controllers;
 
 use App\Models\Module;
 use App\Models\SubModules;
+use App\Models\Position;
 use Illuminate\Http\Request;
+use Symfony\Component\HttpFoundation\Response;
 
 class AdminSubModulesController extends Controller
 {
-  /**
-   * Display a listing of the resource.
-   *
-   * @return \Illuminate\Http\Response
-   */
-  public function index($id)
-  {
-    $submodules = SubModules::where('module_id', $id)->get();
-    $content    = "admins.modules.submodule-table";
-
-    return view('admins.admin-dashboard', compact('content', 'submodules'));
-  }
-
   /**
    * Show the form for creating a new resource.
    *
@@ -30,6 +19,7 @@ class AdminSubModulesController extends Controller
   {
     $module  = Module::all();
     $content = "admins.modules.submodule-add";
+
     return view('admins.admin-dashboard', compact('content', 'module'));
   }
 
@@ -58,6 +48,21 @@ class AdminSubModulesController extends Controller
     $subModules = SubModules::all();
     $content    = "admins.modules.submodule-table-all";
     return view('admins.admin-dashboard', compact('content', 'subModules'));
+  }
+
+  /**
+   * Display the table of sub-module of a module
+   *
+   * @return \Illuminate\Http\Response
+   */
+  public function showModuleList($id)
+  {
+    $position   = Position::all();
+    $moduleName = Module::find($id);
+    $submodules = SubModules::where('module_id', $id)->get();
+    $content    = "admins.modules.submodule-table";
+
+    return view('admins.admin-dashboard', compact('content', 'submodules', 'id', 'moduleName', 'position'));
   }
 
   /**

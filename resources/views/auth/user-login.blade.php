@@ -2,6 +2,7 @@
 
 @section('content')
   <div class="body"></div>
+  <div class="wrapper"></div>
   <div class="title-employee">
     <h2>Employee Login</h2>
   </div>

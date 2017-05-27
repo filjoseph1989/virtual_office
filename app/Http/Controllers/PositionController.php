@@ -87,4 +87,17 @@ class PositionController extends Controller
   {
       //
   }
+
+  public function autocomplete(Request $request)
+  {
+    $term = $request->tags;
+    $data   = Position::where('name','LIKE','%'.$term.'%')->take(10)->get();
+    $result = array();
+
+    foreach ($data as $key => $value) {
+      $result[] = ['value' => $value->name];
+    }
+    return response()->json($results);
+  }
+
 }
