@@ -49,7 +49,7 @@
                   <i class="fa fa-plus"></i> New
                 </a>
                 <a href="{{ route('admin.submodules.list.all') }}" class="btn btn-success">
-                  <i class="fa fa-plus"></i> Show Sub-Module
+                  <i class="fa fa-table" aria-hidden="true"></i> Show Sub-Module
                 </a>
               </div>
             </div>

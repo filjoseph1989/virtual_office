@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Module;
 use App\Models\SubModules;
 use Illuminate\Http\Request;
+use Symfony\Component\HttpFoundation\Response;
 
 class AdminSubModulesController extends Controller
 {
@@ -40,6 +41,14 @@ class AdminSubModulesController extends Controller
    * @return \Illuminate\Http\Response
    */
   public function store(Request $request)
+  {
+    $response = Response::make($contents, $statusCode);
+
+    $response->header('Content-Type', $value);
+
+    return $response;
+  }
+  public function _store(Request $request)
   {
     $data = $request->only('module_id', 'name', 'route');
     SubModules::create($data);
