@@ -4,7 +4,7 @@
       <div class="row">
         <div class="col-md-12">
           <ol class="breadcrumb">
-            <li><a href="{{ route('admin.modules.list') }}">{{ $module->name }}</a></li>
+            <li><a href="{{ route('admin.modules.list') }}">Module</a></li>
             <li class="active">Configuration</li>
           </ol>
         </div>

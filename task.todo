@@ -1,15 +1,6 @@
-Sprint 4: Admin Dashboard
-✔ Admin add new moddule @done(2017-05-25 10:50)
-✔ Admin display table of module @done(2017-05-25 10:50)
-✔ Admin add new sub module @done(2017-05-26 07:43)
-✔ Admin display sub module @done(2017-05-26 07:43)
-✔ Admin display table of positions  @done(2017-05-26 07:44)
-✔ Display sub-module of a module @done(2017-05-27 11:57)
-✔ Display breadcrumb in the sub-module @done(2017-05-27 11:57)
-✔ Add a sub-module to a module @done(2017-05-27 15:07)
-✔ Admin assign positions to module @done(2017-05-29 10:58)
-✔ On the http://mpci-vo.dev/admin/submodules/list/1 display the position currently assign in module @done(2017-05-29 10:58)
-☐ Login checker
+Sprint 5:
+  ✔ Module table - add new in modal @done(2017-05-30 06:36) @project(Sprint 5)
+  ✔ Module table - show all sub-modules in modal @done(2017-05-30 06:48) @project(Sprint 5)
 
 Log:
 ☐ User add - add module using tag input
@@ -67,3 +58,16 @@ Sprint 3: DataTables
 ✔ Working with dataTables on list of positions @done(2017-05-21 23:25)
 ✔ DataTables for department list @done(2017-05-22 11:07)
 ✔ DataTables for the list of employee @done(2017-05-22 11:09)
+
+Sprint 4: Admin Dashboard
+✔ Admin add new moddule @done(2017-05-25 10:50)
+✔ Admin display table of module @done(2017-05-25 10:50)
+✔ Admin add new sub module @done(2017-05-26 07:43)
+✔ Admin display sub module @done(2017-05-26 07:43)
+✔ Admin display table of positions  @done(2017-05-26 07:44)
+✔ Display sub-module of a module @done(2017-05-27 11:57)
+✔ Display breadcrumb in the sub-module @done(2017-05-27 11:57)
+✔ Add a sub-module to a module @done(2017-05-27 15:07)
+✔ Admin assign positions to module @done(2017-05-29 10:58)
+✔ On the http://mpci-vo.dev/admin/submodules/list/1 display the position currently assign in module @done(2017-05-29 10:58)
+✔ Login checker @done(2017-05-30 06:09)

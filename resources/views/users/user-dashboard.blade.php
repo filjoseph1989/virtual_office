@@ -6,7 +6,7 @@
     @include ('users.nav')
 
     @if (! isset($content))
-      @include('layouts.content')
+      @include('layouts.content-user')
     @else
       @include($content)
     @endif

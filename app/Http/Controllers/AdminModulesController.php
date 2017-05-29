@@ -3,10 +3,20 @@
 namespace App\Http\Controllers;
 
 use App\Models\Module;
+use App\Models\SubModules;
 use Illuminate\Http\Request;
 
 class AdminModulesController extends Controller
 {
+  /**
+   * Create a new controller instance.
+   *
+   * @return void
+   */
+  public function __construct() {
+    $this->middleware('auth:admin');
+  }
+
   /**
    * Display a listing of the resource.
    *
@@ -14,7 +24,11 @@ class AdminModulesController extends Controller
    */
   public function index()
   {
-      //
+    $module     = Module::all();
+    $subModules = SubModules::all();
+    $content    = 'admins.modules.module-table';
+
+    return view('admins.admin-dashboard', compact('module', 'content', 'subModules'));
   }
 
   /**
@@ -37,33 +51,7 @@ class AdminModulesController extends Controller
   {
     $data = $request->only(['name']);
     Module::create($data);
-    return redirect()->route('admin.modules.add')->with('status', 'Successfuly added new module');
-  }
-
-  /**
-   * Display the specified resource.
-   *
-   * @param  int  $id
-   * @return \Illuminate\Http\Response
-   */
-  public function showAddForm()
-  {
-    $content = "admins.modules.module-add";
-
-    return view('admins.admin-dashboard', compact('content'));
-  }
-
-  /**
-   * Display the list of modules
-   *
-   * @return \Illuminate\Http\Response
-   */
-  public function showModuleList()
-  {
-    $module  = Module::all();
-    $content = 'admins.modules.module-table';
-
-    return view('admins.admin-dashboard', compact('module', 'content'));
+    return redirect()->route('admin.modules.list')->with('status', 'Successfuly added new module');
   }
 
   /**

@@ -24,7 +24,7 @@
               </div>
             </div>
             <div class="clearfix container-fluid row">
-              <div class="animated flipInY col-lg-4 col-md-4 col-sm-6 col-xs-12">
+              <div class="animated flipInY col-lg-6 col-md-6 col-sm-6 col-xs-12">
                   <a href="{{ route('admin.position.list') }}">
                   <div class="tile-stats">
                     <div class="count">1</div>
@@ -33,19 +33,10 @@
                   </div>
                 </a>
               </div>
-              <div class="animated flipInY col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                <a href="{{ route('admin.modules.add') }}">
-                  <div class="tile-stats">
-                    <div class="count">2</div>
-                    <h3>Add Module</h3>
-                    <p>Click here to add new module</p>
-                  </div>
-                </a>
-              </div>
-              <div class="animated flipInY col-lg-4 col-md-4 col-sm-6 col-xs-12">
+              <div class="animated flipInY col-lg-6 col-md-6 col-sm-6 col-xs-12">
                 <a href="{{ route('admin.modules.list') }}">
                   <div class="tile-stats">
-                    <div class="count">3</div>
+                    <div class="count">2</div>
                     <h3>Show Modules</h3>
                     <p>Click here to display module list</p>
                   </div>

@@ -12,6 +12,15 @@ use Symfony\Component\HttpFoundation\Response;
 class AdminSubModulesController extends Controller
 {
   /**
+   * Create a new controller instance.
+   *
+   * @return void
+   */
+  public function __construct() {
+    $this->middleware('auth:admin');
+  }
+
+  /**
    * Store a newly created resource in storage.
    *
    * @param  \Illuminate\Http\Request  $request
@@ -28,21 +37,9 @@ class AdminSubModulesController extends Controller
   }
 
   /**
-   * Display the specified resource.
-   *
-   * @param  int  $id
-   * @return \Illuminate\Http\Response
-   */
-  public function showAllSubModules()
-  {
-    $subModules = SubModules::all();
-    $content    = "admins.modules.submodule-table-all";
-    return view('admins.admin-dashboard', compact('content', 'subModules'));
-  }
-
-  /**
    * Display the table of sub-module
    *
+   * Issue 2: Go to this line and optimize this function
    * @param  int $id Module ID
    * @return \Illuminate\Http\Response
    */
@@ -50,6 +47,8 @@ class AdminSubModulesController extends Controller
   {
     $submodules    = SubModules::where('module_id', $id)->get();
     $position      = Position::all();
+
+    # Issue 1: transfer this to mudule model class
     $module        = Module::find($id);
     $position_name = $module->module_group()
       ->select('positions.id', 'positions.name')
