@@ -54,10 +54,10 @@ Route::prefix('admin')->group(function() {
   Route::name('admin.modules')->get('/modules', 'AdminController@showAdminModuleMenu');
   Route::name('admin.modules.add')->get('/modules/add', 'AdminModulesController@showAddForm');
   Route::name('admin.modules.add')->post('/modules/add', 'AdminModulesController@storeNewModule');
+  Route::name('admin.modules.add.position')->post('/modules/add/position', 'ModuleGroupController@store');
   Route::name('admin.modules.list')->get('/modules/list', 'AdminModulesController@showModuleList');
-  Route::name('admin.submodules.create')->get('/submodules/add', 'AdminSubModulesController@create');
   Route::name('admin.submodules.add')->post('/submodules/add', 'AdminSubModulesController@store');
-  Route::name('admin.submodules.list')->get('/submodules/list/{id}', 'AdminSubModulesController@showModuleList');
+  Route::name('admin.submodules.list')->get('/submodules/list/{id}', 'AdminSubModulesController@showSubModuleList');
   Route::name('admin.submodules.list.all')->get('/submodules/list', 'AdminSubModulesController@showAllSubModules');
   Route::name('admin.position.list')->get('/position/list', 'PositionController@showAdminPositionList');
   Route::name('admin.position.list.autocomplete')->get('/position/autocomplete', 'PositionController@autocomplete');
