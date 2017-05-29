@@ -1,6 +1,7 @@
 Sprint 5:
   ✔ Module table - add new in modal @done(2017-05-30 06:36) @project(Sprint 5)
   ✔ Module table - show all sub-modules in modal @done(2017-05-30 06:48) @project(Sprint 5)
+  ☐ Display the module and sub-modules on sidebar
 
 Log:
 ☐ User add - add module using tag input
@@ -12,7 +13,6 @@ Log:
 ☐ List of employee by position
 ☐ Delete department
 ☐ Delete position
-☐ Change the button color
 ☐ Add color picker on department color
 ☐ Check the department if already exist
 ☐ Create a two parant controller for user|admin which will be responsible for rendering the dashboard layout
@@ -35,7 +35,6 @@ Log:
 ☐ Must edit the position.department_id to update the records in database
 ☐ On the user perpective upon viewing profile, disable email, department, position, and government data
 ☐ What if there are many admin registered, how to handle them?
-☐ How to add position in module?
 
 Sprint 1: Basic Forms
 ✔ Add employee @done (5/18/2017, 10:28:40 AM)
@@ -71,3 +70,4 @@ Sprint 4: Admin Dashboard
 ✔ Admin assign positions to module @done(2017-05-29 10:58)
 ✔ On the http://mpci-vo.dev/admin/submodules/list/1 display the position currently assign in module @done(2017-05-29 10:58)
 ✔ Login checker @done(2017-05-30 06:09)
+✔ How to add position in module? @done(2017-05-30 06:59)
