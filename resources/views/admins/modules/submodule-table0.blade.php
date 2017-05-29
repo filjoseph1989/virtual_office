@@ -4,7 +4,7 @@
       <div class="row">
         <div class="col-md-12">
           <ol class="breadcrumb">
-            <li><a href="{{ route('admin.modules.list') }}">{{ $module->name }}</a></li>
+            <li><a href="{{ route('admin.modules.list') }}">{{ $moduleName->name }}</a></li>
             <li class="active">Configuration</li>
           </ol>
         </div>
@@ -43,13 +43,13 @@
                 </tr>
               </thead>
               <tbody>
-                <?php foreach ($position_name as $key => $pn_value): ?>
+                <?php foreach ($position as $key => $value): ?>
                   <tr>
                     <td scope="row">{{ $key + 1 }}</td>
-                    <td scope="row">{{ $pn_value->name }}</td>
+                    <td scope="row">{{ $value->name }}</td>
                     <td scope="row" class="action">
-                      <a href="#" data-id="{{ $pn_value->id }}"><i class="fa fa-times" aria-hidden="true" title="Delete Sub-Module"></i></a>
-                      <a href="#" data-id="{{ $pn_value->id }}"><i class="fa fa-pencil" aria-hidden="true" title="Edit Sub-Module Name"></i></a>
+                      <a href="#"><i class="fa fa-times" aria-hidden="true" title="Delete Sub-Module"></i></a>
+                      <a href="#"><i class="fa fa-pencil" aria-hidden="true" title="Edit Sub-Module Name"></i></a>
                     </td>
                   </tr>
                 <?php endforeach; ?>
@@ -120,7 +120,7 @@
       <div class="modal-body">
         <form class="" action="{{ route('admin.modules.add.position') }}" method="post">
           {{ csrf_field() }}
-          <input type="hidden" name="module_id" value="{{ $module->id }}">
+          <input type="hidden" name="module_id" value="{{ $moduleName->id }}">
           <table class="table table-bordered department-list" id="sub-module-list-modal">
             <thead>
               <tr>
@@ -164,7 +164,7 @@
             </div>
           @endif
           {{ csrf_field() }}
-          <input type="hidden" name="module_id" value="{{ $module->id }}">
+          <input type="hidden" name="module_id" value="{{ $moduleName->id }}">
           <div class="item form-group">
             <label class="control-label col-md-3 col-sm-3 col-xs-12" for="sub-module-name">
               Sub Module Name

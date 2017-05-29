@@ -3,26 +3,14 @@
 namespace App\Http\Controllers;
 
 use App\Models\Module;
-use App\Models\SubModules;
 use App\Models\Position;
+use App\Models\SubModules;
+use App\Models\ModuleGroup;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 
 class AdminSubModulesController extends Controller
 {
-  /**
-   * Show the form for creating a new resource.
-   *
-   * @return \Illuminate\Http\Response
-   */
-  public function create()
-  {
-    $module  = Module::all();
-    $content = "admins.modules.submodule-add";
-
-    return view('admins.admin-dashboard', compact('content', 'module'));
-  }
-
   /**
    * Store a newly created resource in storage.
    *
@@ -34,7 +22,9 @@ class AdminSubModulesController extends Controller
     $data = $request->only('module_id', 'name', 'route');
     SubModules::create($data);
 
-    return redirect()->route('admin.submodules.add')->with('status', 'Successfuly added new sub-module');
+    return redirect()
+      ->route('admin.submodules.list', $request->module_id)
+      ->with('status', 'Successfuly added new sub-module');
   }
 
   /**
@@ -51,18 +41,24 @@ class AdminSubModulesController extends Controller
   }
 
   /**
-   * Display the table of sub-module of a module
+   * Display the table of sub-module
    *
+   * @param  int $id Module ID
    * @return \Illuminate\Http\Response
    */
-  public function showModuleList($id)
+  public function showSubModuleList($id)
   {
-    $position   = Position::all();
-    $moduleName = Module::find($id);
-    $submodules = SubModules::where('module_id', $id)->get();
-    $content    = "admins.modules.submodule-table";
+    $submodules    = SubModules::where('module_id', $id)->get();
+    $position      = Position::all();
+    $module        = Module::find($id);
+    $position_name = $module->module_group()
+      ->select('positions.id', 'positions.name')
+      ->join('positions', 'positions.id','=','module_groups.position_id')
+      ->where('module_id', $id)
+      ->get();
 
-    return view('admins.admin-dashboard', compact('content', 'submodules', 'id', 'moduleName', 'position'));
+    $content = "admins.modules.submodule-table";
+    return view('admins.admin-dashboard', compact('content', 'position_name', 'module', 'position', 'submodules'));
   }
 
   /**

@@ -15,4 +15,12 @@ class Position extends Model
     'department_id', 'name'
   ];
 
+  /**
+   * Defines the relationship between module_group
+   *
+   * @return
+   */
+  public function module_group() {
+    return $this->hasMany('App\Models\ModuleGroup');
+  }
 }
