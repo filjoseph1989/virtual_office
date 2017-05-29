@@ -1,8 +1,14 @@
-☐ Optimize the code in AdminSubModulesController/showSubModuleList
-☐ Display the admin name in admin dashboard has an error
-☐ Progress bar using bootstrap will not work
-✔ Remove this AdminSubModulesController/create same in web.php @done(2017-05-29 08:09)
-✔ Display of the username if wrong @done(2017-05-20 16:13)
-✔ Logo on the sidebar doesn't show up when in another page @done(2017-05-23 11:07)
-✔ Undefine username on admin login @done(2017-05-23 11:18)
-✔ When in admin dashboard and click logo or profile picture, site wiil redirect to mpci-vo.dev/login @done(2017-05-24 10:10)
+New:
+  ☐ Issue 1: transfer this to mudule model class
+  ☐ Issue 2: Go to this line and optimize this function
+  ☐ DataTables should activate only if records is more than 10
+  ☐ Display the admin name in admin dashboard has an error
+  ☐ Progress bar using bootstrap will not work
+  ☐ Improve the pagination layout in the DataTables
+
+Done:
+  ✔ Remove this AdminSubModulesController/create same in web.php @done(2017-05-29 08:09)
+  ✔ Display of the username if wrong @done(2017-05-20 16:13)
+  ✔ Logo on the sidebar doesn't show up when in another page @done(2017-05-23 11:07)
+  ✔ Undefine username on admin login @done(2017-05-23 11:18)
+  ✔ When in admin dashboard and click logo or profile picture, site wiil redirect to mpci-vo.dev/login @done(2017-05-24 10:10)
