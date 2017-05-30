@@ -12,10 +12,12 @@
 */
 
 Route::get('/', function () {
+
   if (Auth::check() === false) {
     return view('auth.user-login');
   } else {
-    return view('users.user-dashboard');
+    $username = ucfirst(Auth::user()->first_name);
+    return view('users.user-dashboard', compact('username'));
   }
 });
 
