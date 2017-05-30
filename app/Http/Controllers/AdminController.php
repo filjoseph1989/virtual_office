@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Admin;
+use Illuminate\Http\Request;
 
 class AdminController extends Controller
 {
@@ -22,7 +22,7 @@ class AdminController extends Controller
    * @return \Illuminate\Http\Response
    */
   public function index() {
-    $username = Admin::find(1)->first_name;     
+    $username = Admin::find(1)->first_name;
     return view('admins.admin-dashboard', compact('username'));
   }
 
