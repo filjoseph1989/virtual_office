@@ -22,7 +22,7 @@
                 <img class="img-responsive avatar-view" src="{{ asset('images/logo.png') }}" alt="Avatar" title="Change the avatar">
               </div>
             </div>
-            <h3>{{ ucfirst($username) }}</h3>
+            <h3>{{ $username }}</h3>
             <ul class="list-unstyled user_data">
               <li><i class="fa fa-map-marker user-profile-icon"></i> Bonifacio Street, Davao City, Philippines </li>
               <li> <i class="fa fa-briefcase user-profile-icon"></i> Software Engineer </li>
@@ -63,7 +63,7 @@
           <div class="col-md-9 col-sm-9 col-xs-12">
             <div class="bs-example" data-example-id="simple-jumbotron">
               <div class="jumbotron">
-                <h1>Hello, {{ Auth::user()->first_name }}</h1>
+                <h1>Hello, {{ $username }}<h1>
                 <p>Welcome back to MPCI virtual office.</p>
               </div>
             </div>

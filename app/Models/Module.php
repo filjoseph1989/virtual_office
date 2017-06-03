@@ -18,9 +18,10 @@ class Module extends Model
   /**
    * Defines the relationship between module_group
    *
-   * @return 
+   * @return
    */
-  public function module_group() {
+  public function module_group()
+  {
     return $this->hasMany('App\Models\ModuleGroup');
   }
 }

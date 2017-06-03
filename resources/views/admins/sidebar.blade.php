@@ -16,7 +16,7 @@
         <span>Welcome,</span>
         <h2>
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-            <span class="caret"></span>
+            {{ $username }} <span class="caret"></span>
           </a>
         </h2>
       </div>
@@ -45,12 +45,8 @@
               <span class="fa fa-chevron-down"></span>
             </a>
             <ul class="nav child_menu" style="display: none;">
-              <li>
-                <a href="#"> Create Feedback </a>
-              </li>
-              <li>
-                <a href="#"> Chat </a>
-              </li>
+              <li><a href="#"> Create Feedback </a></li>
+              <li><a href="#"> Chat </a></li>
             </ul>
           </li>
         </ul>

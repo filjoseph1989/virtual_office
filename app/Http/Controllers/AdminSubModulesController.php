@@ -45,8 +45,8 @@ class AdminSubModulesController extends Controller
    */
   public function showSubModuleList($id)
   {
-    $submodules    = SubModules::where('module_id', $id)->get();
-    $position      = Position::all();
+    $submodules = SubModules::where('module_id', $id)->get();
+    $position   = Position::all();
 
     # Issue 1: transfer this to mudule model class
     $module        = Module::find($id);

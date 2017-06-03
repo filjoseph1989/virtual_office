@@ -24,6 +24,8 @@ class AdminModulesController extends Controller
    */
   public function index()
   {
+    parent::getSidebarDetails();
+
     $module     = Module::all();
     $subModules = SubModules::all();
     $content    = 'admins.modules.module-table';
