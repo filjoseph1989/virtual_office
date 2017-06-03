@@ -16,7 +16,7 @@
         <span>Welcome,</span>
         <h2>
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-            {{ Auth::user()->first_name }} <span class="caret"></span>
+            {{ $username }} <span class="caret"></span>
           </a>
         </h2>
       </div>
@@ -24,47 +24,23 @@
     <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
       <div class="menu_section">
         <h3>General</h3>
-        <ul class="nav side-menu">
-          <li class="">
-            <a href="#">
-              <i class="fa fa-users" aria-hidden="true"></i> Human Resources
-              <span class="fa fa-chevron-down"></span>
-            </a>
-            <ul class="nav child_menu" style="display: none;">
-              <li> <a href="{{ route('recruitment') }}"> Recruitment </a> </li>
-              <li> <a href="#"> Payroll </a> </li>
-              <li> <a href="#"> Training </a> </li>
-              <li> <a href="#"> Administration </a> </li>
-              <li> <a href="#"> Communication </a> </li>
-            </ul>
-          </li>
-        </ul>
-        <ul class="nav side-menu">
-          <li class="">
-            <a href="#">
-              <i class="fa fa-home" aria-hidden="true"></i> Reports
-              <span class="fa fa-chevron-down"></span>
-            </a>
-            <ul class="nav child_menu" style="display: none;">
-              <li> <a href="#"> Daily Time Record </a> </li>
-              <li> <a href="#"> Daily Accomplishment Report </a> </li>
-            </ul>
-          </li>
-        </ul>
-        <ul class="nav side-menu">
-          <li class="">
-            <a href="#">
-              <i class="fa fa-address-card" aria-hidden="true"></i> Sales
-              <span class="fa fa-chevron-down"></span>
-            </a>
-            <ul class="nav child_menu" style="display: none;">
-              <li> <a href="#"> List of Quotations </a> </li>
-              <li> <a href="#"> List of Accounts </a> </li>
-              <li> <a href="#"> List of Quotation Forms </a> </li>
-              <li> <a href="#"> List of Job Order </a> </li>
-            </ul>
-          </li>
-        </ul>
+        @foreach($modules as $mvalue)
+          <ul class="nav side-menu">
+            <li class="">
+              <a href="#">
+                <i class="{{ $mvalue->module_icon }}" aria-hidden="true"></i> {{ $mvalue->module_name }}
+                <span class="fa fa-chevron-down"></span>
+              </a>
+              <ul class="nav child_menu" style="display: none;">
+                <?php foreach ($subModules as $skey => $svalue): ?>
+                  <?php if ( strcmp($svalue->mid, $mvalue->id) == 0 ): ?>
+                    <li> <a href="{{ route($svalue->route) }}"> {{ $svalue->name }} </a> </li>
+                  <?php endif; ?>
+                <?php endforeach; ?>
+              </ul>
+            </li>
+          </ul>
+        @endforeach
       </div>
       <div class="menu_section">
         <h3>Support</h3>

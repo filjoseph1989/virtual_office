@@ -25,8 +25,23 @@ class HomeController extends Controller
    */
   public function index()
   {
-    $username = ucfirst(Auth::user()->first_name);
-    return view('users.user-dashboard', compact('username'));
+    if (Auth::check() === false) {
+      return view('auth.user-login');
+    } else {
+      $data = self::getHomeDetails();
+      return view('users.user-dashboard', $data);
+    }
+  }
+
+  /**
+   * Display the home page
+   *
+   * @return \Illuminate\Http\Response
+   */
+  public function home()
+  {
+    $compact  = self::getHomeDetails();
+    return view('users.user-dashboard', compact($compact));
   }
 
   /**
@@ -38,5 +53,20 @@ class HomeController extends Controller
   {
     $content = "users.recruitment.recruitment-menu";
     return view('users.user-dashboard', compact('content'));
+  }
+
+  /**
+   * Return the Home page details
+   *
+   * @return \Illuminate\Http\Response
+   */
+  private function getHomeDetails()
+  {
+    $sidebar  = parent::getSidebarDetails();
+    $username = parent::getUserName();
+    extract($sidebar);
+
+    $compact  = array('modules', 'subModules', 'username');
+    return compact($compact);
   }
 }

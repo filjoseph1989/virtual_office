@@ -1,10 +1,12 @@
 New:
   ☐ Issue 1: transfer this to mudule model class
   ☐ Issue 2: Go to this line and optimize this function
+  ☐ Issue 3: (Line Comment) Improve this using laravel way or eloquent way
   ☐ DataTables should activate only if records is more than 10
   ☐ Display the admin name in admin dashboard has an error
   ☐ Progress bar using bootstrap will not work
   ☐ Improve the pagination layout in the DataTables
+  
 
 Done:
   ✔ Remove this AdminSubModulesController/create same in web.php @done(2017-05-29 08:09)

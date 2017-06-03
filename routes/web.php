@@ -11,17 +11,22 @@
 |
 */
 
-Route::get('/', function () {
+// Route::get('/', function () {
+//   if (Auth::check() === false) {
+//     return view('auth.user-login');
+//   } else {
+//     $username = ucfirst(Auth::user()->first_name);
+//     return view('users.user-dashboard', compact('username'));
+//   }
+// });
 
-  if (Auth::check() === false) {
-    return view('auth.user-login');
-  } else {
-    $username = ucfirst(Auth::user()->first_name);
-    return view('users.user-dashboard', compact('username'));
-  }
-});
+Route::get('/', 'HomeController@index');
 
+/**
+ * Authentication
+ */
 Auth::routes();
+Route::name('home')->get('/home', 'HomeController@home');
 
 /**
  * recruitment Area
@@ -43,11 +48,6 @@ Route::name('recruitment.list.employee')->get('/recruitment/list-employee', 'Emp
  */
 Route::name('user.posts')->post('/user/posts', 'EmployeeController@store');
 Route::name('user.add.family')->post('/user/family', 'EmployeeController@storeFamilyInfo');
-
-/**
- * Home
- */
-Route::name('home')->get('/home', 'HomeController@index');
 
 /**
  * Administration group

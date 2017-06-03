@@ -12,28 +12,13 @@ class ModulesTableSeeder extends Seeder
    */
   public function run()
   {
-    Module::create( [
-    'name'=>'Administration'
-    ] );
-
-    Module::create( [
-    'name'=>'Human Resources'
-    ] );
-
-    Module::create( [
-    'name'=>'Accounting'
-    ] );
-
-    Module::create( [
-    'name'=>'Sales'
-    ] );
-
-    Module::create( [
-    'name'=>'MIS Tool'
-    ] );
-
-    Module::create( [
-    'name'=>'Module'
-    ] );
+    \DB::table('modules')->insert(array (
+      array('name' => 'Administration','icon' => NULL,'created_at' => date('Y-m-d H:i:s'),'updated_at' => date('Y-m-d H:i:s')),
+      array('name' => 'Human Resources','icon' => 'fa fa-users','created_at' => date('Y-m-d H:i:s'),'updated_at' => date('Y-m-d H:i:s')),
+      array('name' => 'Reports','icon' => 'fa fa-file-excel-o','created_at' => date('Y-m-d H:i:s'),'updated_at' => date('Y-m-d H:i:s')),
+      array('name' => 'Sales','icon' => 'fa fa-line-chart','created_at' => date('Y-m-d H:i:s'),'updated_at' => date('Y-m-d H:i:s')),
+      array('name' => 'Accounting','icon' => NULL,'created_at' => date('Y-m-d H:i:s'),'updated_at' => date('Y-m-d H:i:s')),
+      array('name' => 'MIS Tool','icon' => NULL,'created_at' => date('Y-m-d H:i:s'),'updated_at' => date('Y-m-d H:i:s'))
+    ));
   }
 }

@@ -20,7 +20,19 @@ class Position extends Model
    *
    * @return
    */
-  public function module_group() {
+  public function module_group()
+  {
     return $this->hasMany('App\Models\ModuleGroup');
+  }
+
+  /**
+   * Return the user position
+   *
+   * @param  integer $userId
+   * @return int
+   */
+  public function getPosition($userId = 0)
+  {
+    return parent::find($userId);
   }
 }

@@ -1,40 +1,55 @@
-Sprint 5:
-  ✔ Module table - add new in modal @done(2017-05-30 06:36) @project(Sprint 5)
-  ✔ Module table - show all sub-modules in modal @done(2017-05-30 06:48) @project(Sprint 5)
+Sprint 6: Sidebar module outline
   ☐ Display the module and sub-modules on sidebar
+    ☐ Change the sidebar icons base on sidebar name:
+      ☐ Get module icons
+    ☐ Report module on sidebar should always be in sidebar whatever is the account
+    ☐ CRUDS for module icon in admin panel
+    ☐ Try using this https://packagist.org/packages/jolicode/jolinotif
+    ✔ Get User Position @done(2017-06-01 11:30) @project(Sprint 5)
+    ✔ Get Sub-Modules base on Modules @done(2017-06-01 11:30) @project(Sprint 5)
+    ✔ Get Module base on position @done(2017-06-03 09:57) @project(Sprint 5)
+    ✔ Add created_at and updated_at on seeder @done(2017-06-03 09:57) @project(Sprint 5)
+    ✔ Add icon colum in module table @done(2017-06-03 09:57) @project(Sprint 5)
+
+  ☐ What if there are many admin registered, how to handle them?
+  ☐ Add new admin
+  ☐ Admin privilidges
+  ☐ Convert a user to an admin
+  ☐ Create a sub-modules seeder again
 
 Log:
-☐ User add - add module using tag input
-☐ User add - make email
-☐ List of all position filter by deparment
-☐ List of department - action
-☐ List of all employee - action
-☐ List of employee by department
-☐ List of employee by position
-☐ Delete department
-☐ Delete position
-☐ Add color picker on department color
-☐ Check the department if already exist
-☐ Create a two parant controller for user|admin which will be responsible for rendering the dashboard layout
-☐ Add family - Fetch first the user id before adding the family information
-☐ Add employee - success alert
-☐ Add employee - login check
-☐ Add employee - form validation
-☐ Add family - form validation
-☐ Add department - form validation
-☐ Add close option on profile welcome card
-☐ Dashboard sidebar should collapse
-☐ View profile - HR should be the one who can view employee profile
-☐ If add position is click from recruitment menu, dropdown of department is necessary
-☐ If list of department if click view the list of position it has with the button to add new
-☐ Automatiic Capitalize in the browser side
-☐ Can change profile picture
-☐ Before deleting a department, check if it has a position
-☐ Need a hover effect of department list action column
-☐ On payroll HR should be able to sort, undertime, absent, etc
-☐ Must edit the position.department_id to update the records in database
-☐ On the user perpective upon viewing profile, disable email, department, position, and government data
-☐ What if there are many admin registered, how to handle them?
+  ☐ Study more on Eloquent relationship
+  ☐ User add - add module using tag input
+  ☐ User add - make email
+  ☐ List of all position filter by deparment
+  ☐ List of department - action
+  ☐ List of all employee - action
+  ☐ List of employee by department
+  ☐ List of employee by position
+  ☐ Delete department
+  ☐ Delete position
+  ☐ Add color picker on department color
+  ☐ Check the department if already exist
+  ☐ Create a two parant controller for user|admin which will be responsible for rendering the dashboard layout
+  ☐ Add family - Fetch first the user id before adding the family information
+  ☐ Add employee - success alert
+  ☐ Add employee - login check
+  ☐ Add employee - form validation
+  ☐ Add family - form validation
+  ☐ Add department - form validation
+  ☐ Add close option on profile welcome card
+  ☐ Dashboard sidebar should collapse
+  ☐ View profile - HR should be the one who can view employee profile
+  ☐ If add position is click from recruitment menu, dropdown of department is necessary
+  ☐ If list of department if click view the list of position it has with the button to add new
+  ☐ Automatiic Capitalize in the browser side
+  ☐ Can change profile picture
+  ☐ Before deleting a department, check if it has a position
+  ☐ Need a hover effect of department list action column
+  ☐ On payroll HR should be able to sort, undertime, absent, etc
+  ☐ Must edit the position.department_id to update the records in database
+  ☐ On the user perpective upon viewing profile, disable email, department, position, and government data
+  ☐ Display the loggedin details last login
 
 Sprint 1: Basic Forms
 ✔ Add employee @done (5/18/2017, 10:28:40 AM)
@@ -71,3 +86,7 @@ Sprint 4: Admin Dashboard
 ✔ On the http://mpci-vo.dev/admin/submodules/list/1 display the position currently assign in module @done(2017-05-29 10:58)
 ✔ Login checker @done(2017-05-30 06:09)
 ✔ How to add position in module? @done(2017-05-30 06:59)
+
+Sprint 5: Sidebar
+  ✔ Module table - add new in modal @done(2017-05-30 06:36) @project(Sprint 5)
+  ✔ Module table - show all sub-modules in modal @done(2017-05-30 06:48) @project(Sprint 5)
