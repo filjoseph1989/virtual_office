@@ -1,24 +1,12 @@
-Sprint 6: Sidebar module outline
-  ☐ Display the module and sub-modules on sidebar
-    ☐ CRUDS for module icon in admin panel
-    ✔ Report module on sidebar should always be in sidebar whatever is the account @done(2017-06-04 10:27)
-    ✔ Work on routes @done(2017-06-04 00:20)
-    ✔ Change the sidebar icons base on sidebar name @done(2017-06-03 11:13)
-    ✔ Get module icons @done(2017-06-03 11:13) @project(☐ Change the sidebar icons base on sidebar name)
-    ✔ Get User Position @done(2017-06-01 11:30) @project(Sprint 5)
-    ✔ Get Sub-Modules base on Modules @done(2017-06-01 11:30) @project(Sprint 5)
-    ✔ Get Module base on position @done(2017-06-03 09:57) @project(Sprint 5)
-    ✔ Add created_at and updated_at on seeder @done(2017-06-03 09:57) @project(Sprint 5)
-    ✔ Add icon colum in module table @done(2017-06-03 09:57) @project(Sprint 5)
-    ✔ Create a sub-modules seeder again @done(2017-06-03 23:49)
-
-  ☐ What if there are many admin registered, how to handle them?
-  ☐ Add new admin
-  ☐ Admin privilidges
-  ☐ Convert a user to an admin
+Sprint 7:
+  ☐ Sidebar module for admin
+  ☐ Delete module
+  ☐ Edit sub-module
+  ☐ Delete sub-module
+  ☐ Delete position in module
+  ☐ Add new sub-module must have a list of routes
 
 Log:
-  ☐ Try using this https://packagist.org/packages/jolicode/jolinotif
   ☐ Task 1: On recruitment/add dropdown department and position should be related to each other:
     ☐ City look up
     ☐ Country look up
@@ -26,6 +14,11 @@ Log:
     ☐ Form validation
     ☐ On recruitment/add there should be show employees button
     ☐ recruitment/list-department add plus icon for adding position
+  ☐ What if there are many admin registered, how to handle them?
+  ☐ Add new admin
+  ☐ Admin privilidges
+  ☐ Convert a user to an admin
+  ☐ Try using this https://packagist.org/packages/jolicode/jolinotif
   ☐ Study more on Eloquent relationship
   ☐ User add - add module using tag input
   ☐ User add - make email
@@ -42,7 +35,8 @@ Log:
   ☐ Add family - Fetch first the user id before adding the family information
   ☐ Add employee - success alert
   ☐ Add employee - login check
-  ☐ Add employee - form validation
+  ☐ Add employee - form validation:
+    ☐ Refer 1: Go to this line an the example are here
   ☐ Add family - form validation
   ☐ Add department - form validation
   ☐ Add close option on profile welcome card
@@ -98,3 +92,17 @@ Sprint 4: Admin Dashboard
 Sprint 5: Sidebar
   ✔ Module table - add new in modal @done(2017-05-30 06:36) @project(Sprint 5)
   ✔ Module table - show all sub-modules in modal @done(2017-05-30 06:48) @project(Sprint 5)
+
+Sprint 6: Sidebar module outline
+  ✔ Display the module and sub-modules on sidebar @done(2017-06-04 12:03)
+    ✔ Update Module @done(2017-06-04 12:03)
+    ✔ Report module on sidebar should always be in sidebar whatever is the account @done(2017-06-04 10:27)
+    ✔ Work on routes @done(2017-06-04 00:20)
+    ✔ Change the sidebar icons base on sidebar name @done(2017-06-03 11:13)
+    ✔ Get module icons @done(2017-06-03 11:13) @project(☐ Change the sidebar icons base on sidebar name)
+    ✔ Get User Position @done(2017-06-01 11:30) @project(Sprint 5)
+    ✔ Get Sub-Modules base on Modules @done(2017-06-01 11:30) @project(Sprint 5)
+    ✔ Get Module base on position @done(2017-06-03 09:57) @project(Sprint 5)
+    ✔ Add created_at and updated_at on seeder @done(2017-06-03 09:57) @project(Sprint 5)
+    ✔ Add icon colum in module table @done(2017-06-03 09:57) @project(Sprint 5)
+    ✔ Create a sub-modules seeder again @done(2017-06-03 23:49)

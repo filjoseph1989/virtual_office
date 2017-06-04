@@ -29,7 +29,7 @@
             <li class="">
               <a href="#">
                 <i class="{{ $mvalue->module_icon }}" aria-hidden="true"></i> {{ $mvalue->module_name }}
-                <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                <span class="fa fa-chevron-down"></span>
               </a>
               <ul class="nav child_menu" style="display: none;">
                 <?php foreach ($subModules as $skey => $svalue): ?>
@@ -45,7 +45,7 @@
           <li class="">
             <a href="#">
               <i class="fa fa-file-excel-o" aria-hidden="true"></i> Reports
-              <i class="fa fa-chevron-down" aria-hidden="true"></i>
+              <span class="fa fa-chevron-down"></span>
             </a>
             <ul class="nav child_menu" style="display: none;">
               <li> <a href="#"> Daily Time Record </a> </li>

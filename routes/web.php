@@ -47,6 +47,7 @@ Route::name('user.add.family')->post('/user/family', 'EmployeeController@storeFa
 Route::prefix('admin')->group(function() {
   Route::name('admin.modules')->get('/modules', 'AdminController@showAdminModuleMenu');
   Route::name('admin.modules.add')->post('/modules/add', 'AdminModulesController@storeNewModule');
+  Route::name('admin.modules.edit')->post('/modules/edit', 'AdminModulesController@editModule');
   Route::name('admin.modules.add.position')->post('/modules/add/position', 'ModuleGroupController@store');
   Route::name('admin.modules.list')->get('/modules/list', 'AdminModulesController@index');
   Route::name('admin.submodules.add')->post('/submodules/add', 'AdminSubModulesController@store');
