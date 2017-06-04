@@ -47,7 +47,9 @@
                           <td scope="row">{{ $value->name }}</td>
                           <td scope="row" class="department-list__action">
                             <a href="#"><i class="fa fa-times" aria-hidden="true" title="Delete Module"></i></a>
-                            <a href="#"><i class="fa fa-pencil" aria-hidden="true" title="Edit Module Name"></i></a>
+                            <a href="#" class="a-module-modal-edit" data-module-id="{{ $value->id }}" data-module-name="{{ $value->name }}" data-toggle="modal" data-target="#module-modal-edit">
+                              <i class="fa fa-pencil" aria-hidden="true" title="Edit Module Name"></i>
+                            </a>
                             <a href="{{ route('admin.submodules.list', $value->id) }}">
                               <i class="fa fa-wrench" aria-hidden="true" title="Configure Module"></i>
                             </a>
@@ -97,7 +99,9 @@
           <div class="ln_solid"></div>
           <div class="form-group">
             <div class="col-md-6 col-md-offset-3">
-              <button id="send" type="submit" class="btn btn-success">Submit</button>
+              <button id="send" type="submit" class="btn btn-success">
+                <i class="fa fa-paper-plane"></i> Send
+              </button>
             </div>
           </div>
         </form>
@@ -108,7 +112,52 @@
     </div>
   </div>
 </div>
-
+<div class="modal fade" id="module-modal-edit" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="module-modal-title"></h4>
+      </div>
+      <div class="modal-body">
+        <form class="form-horizontal form-label-left" novalidate="" action="{{ route('admin.modules.edit') }}" method="post">
+          {{ csrf_field() }}
+          <div class="item form-group">
+            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="edit-module-name">
+              Module Name
+            </label>
+            <div class="col-md-6 col-sm-6 col-xs-12">
+              <input type="hidden" id="edit-module-id" name="id">
+              <input id="edit-module-name" name="name" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" placeholder="e.g Accounting" required="required" type="text">
+            </div>
+          </div>
+          <div class="item form-group">
+            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="edit-module-icon">
+              Module Icon
+            </label>
+            <div class="col-md-6 col-sm-6 col-xs-12">
+              <input id="edit-module-icon" name="icon" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" placeholder="e.g. fa fa-close" required="required" type="text">
+            </div>
+          </div>
+          <div class="ln_solid"></div>
+          <div class="form-group">
+            <div class="col-md-6 col-md-offset-3">
+              <button id="send" type="submit" class="btn btn-success">
+                <i class="fa fa-paper-plane"></i> Send
+              </button>
+              <a id="fontawesome-icons" href="http://fontawesome.io/icons/" target="_blank" class="btn btn-success">
+                <i class="fa fa-paper-plane"></i> List of Icons
+              </a>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
 <div class="modal fade" id="sub-module-list" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">

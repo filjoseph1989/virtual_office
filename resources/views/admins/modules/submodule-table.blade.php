@@ -48,8 +48,7 @@
                     <td scope="row">{{ $key + 1 }}</td>
                     <td scope="row">{{ $pn_value->name }}</td>
                     <td scope="row" class="action">
-                      <a href="#" data-id="{{ $pn_value->id }}"><i class="fa fa-times" aria-hidden="true" title="Delete Sub-Module"></i></a>
-                      <a href="#" data-id="{{ $pn_value->id }}"><i class="fa fa-pencil" aria-hidden="true" title="Edit Sub-Module Name"></i></a>
+                      <a href="#" data-id="{{ $pn_value->id }}"><i class="fa fa-times" aria-hidden="true" title="Delete Position in Module"></i></a>
                     </td>
                   </tr>
                 <?php endforeach; ?>
@@ -148,7 +147,6 @@
     </div>
   </div>
 </div>
-
 <div class="modal fade" id="sub-module-modal" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">

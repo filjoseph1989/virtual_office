@@ -17,6 +17,10 @@ This README is a document whatever steps are necessary to get your application u
   4. clone from the repo:
   5. run composer install
 
+* Bootstrap.js
+  1. open public/js/app.js
+  2. put above custom js put the codes from bootstrap.js
+
 * Database configuration
   MPCI VO database is strict with foraign key contraints be sure to follow correctly the following before setting
   your application.

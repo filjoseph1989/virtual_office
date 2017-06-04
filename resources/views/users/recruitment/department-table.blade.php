@@ -36,7 +36,9 @@
                       <td class="department-list__action">
                         <a href="#"><i class="fa fa-times" aria-hidden="true" title="Delete Department"></i></a>
                         <a href="#"><i class="fa fa-pencil" aria-hidden="true" title="Edit Department Name"></i></a>
-                        <a href="#"><i class="fa fa-table" aria-hidden="true" title="Display Position Under This Department"></i></a>
+                        <a href="#" data-department-id="{{ $value->id }}" data-department-name="{{ $value->name }}" data-route="{{ route('recruitment.list.position.by.department', $value->id) }}" class="department-position" data-toggle="modal" data-target="#position">
+                          <i class="fa fa-table" aria-hidden="true" title="Display Position Under This Department"></i>
+                        </a>
                       </td>
                     </tr>
                   <?php endforeach; ?>
@@ -48,6 +50,34 @@
             </div>
           </div>
         </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="position" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="position-title"></h4>
+      </div>
+      <div class="modal-body" id="position-body">
+        <table class="table table-bordered department-list" id="department-list">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Position Name</th>
+              <th class="department-list__action">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- content here -->
+          </tbody>
+        </table>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
       </div>
     </div>
   </div>
