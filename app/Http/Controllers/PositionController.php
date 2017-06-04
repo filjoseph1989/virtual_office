@@ -14,8 +14,10 @@ class PositionController extends Controller
    */
   public function index()
   {
-    $content = 'users.recruitment.position-add';
-    return view('users.user-dashboard', compact('content'));
+    $data = parent::getDetails([
+      'content' => 'users.recruitment.position-add'
+    ]);
+    return view('users.user-dashboard', $data);
   }
 
   /**
@@ -36,12 +38,16 @@ class PositionController extends Controller
    */
   public function showPositionList($content = "", $view = "users.user-dashboard")
   {
-    $position = Position::all();
     $content  = ($content == "")
       ? 'users.recruitment.position-table'
       : $content;
 
-    return view($view, compact('content', 'position'));
+    $data = parent::getAdminDetails([
+      'position' => Position::all(),
+      'content'  => $content
+    ]);
+
+    return view($view, $data);
   }
 
   /**

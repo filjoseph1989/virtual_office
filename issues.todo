@@ -6,9 +6,10 @@ New:
   ☐ Display the admin name in admin dashboard has an error
   ☐ Progress bar using bootstrap will not work
   ☐ Improve the pagination layout in the DataTables
-  
+
 
 Done:
+  ✔ Issue 4: uri admin/modules problem @done(2017-06-04 00:20) @project(New)
   ✔ Remove this AdminSubModulesController/create same in web.php @done(2017-05-29 08:09)
   ✔ Display of the username if wrong @done(2017-05-20 16:13)
   ✔ Logo on the sidebar doesn't show up when in another page @done(2017-05-23 11:07)

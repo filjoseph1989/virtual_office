@@ -24,13 +24,13 @@ class AdminModulesController extends Controller
    */
   public function index()
   {
-    parent::getSidebarDetails();
+    $data = parent::getAdminDetails([
+      'module'     => Module::all(),
+      'subModules' => SubModules::all(),
+      'content'    => 'admins.modules.module-table'
+    ]);
 
-    $module     = Module::all();
-    $subModules = SubModules::all();
-    $content    = 'admins.modules.module-table';
-
-    return view('admins.admin-dashboard', compact('module', 'content', 'subModules'));
+    return view('admins.admin-dashboard', $data);
   }
 
   /**

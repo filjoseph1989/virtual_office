@@ -33,7 +33,9 @@ class AdminController extends Controller
    */
   public function showAdminModuleMenu()
   {
-    $content = "admins.modules.module-menu";
-    return view('admins.admin-dashboard', compact('content'));
+    $data = parent::getAdminDetails([
+      'content' => "admins.modules.module-menu"
+    ]);
+    return view('admins.admin-dashboard', $data);
   }
 }

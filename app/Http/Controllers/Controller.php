@@ -16,6 +16,88 @@ class Controller extends BaseController
   use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
   /**
+   * Name of the home details
+   * @var mixed
+   */
+  protected $compact;
+
+  /**
+   * Additional details
+   * @var mixed
+   */
+  protected $details;
+
+  /**
+   * is Admin
+   * @var mixed
+   */
+  protected $admin = false;
+
+  /**
+   * Return the Home page details
+   *
+   * ! Deprecated
+   * Use get details instead
+   *
+   * @param  array  $data
+   * @return \Illuminate\Http\Response
+   */
+  protected function getHomeDetails($content = "")
+  {
+    return self::getDetails($content);
+  }
+
+  /**
+   * Return details for the requested page
+   *
+   * @param  array $details
+   * @return array
+   */
+  protected function getDetails($details = "")
+  {
+    $sidebar  = self::getSidebarDetails();
+    $username = self::getUserName();
+    extract($sidebar);
+
+    $this->compact = ['modules', 'subModules', 'username'];
+    if (is_array($details)) {
+      extract($details);
+      foreach ($details as $key => $value) {
+        $this->compact[] = $key;
+      }
+    } elseif ($details != "") {
+      $this->compact[] = key($details);
+    }
+
+    return compact($this->compact);
+  }
+
+  /**
+   * Return the admin page details
+   * @param  string $details
+   * @return array
+   */
+  protected function getAdminDetails($details = "")
+  {
+    $this->admin = true;
+    $sidebar     = self::getSidebarDetails();
+    $username    = self::getAdminName();
+    extract($sidebar);
+
+    $this->compact = ['modules', 'subModules', 'username'];
+    if (is_array($details)) {
+      extract($details);
+      foreach ($details as $key => $value) {
+        $this->compact[] = $key;
+      }
+    } elseif ($details != "") {
+      $this->compact[] = key($details);
+    }
+
+    return compact($this->compact);
+  }
+
+  /**
    * Return the sidebar details, modules and subModules.
    *
    * Explain:
@@ -28,10 +110,11 @@ class Controller extends BaseController
   protected function getSidebarDetails($position_id = 0)
   {
     $ModuleGroup = new ModuleGroup();
-    $position    = new Position();
 
     return $ModuleGroup->getSidebarDetails(
-      $position->getPosition( self::getUserId() )->id
+      ($this->admin === false)
+        ? Auth::user()->position_id
+        : Admin::find(1)->position_id
     );
   }
 
@@ -63,5 +146,11 @@ class Controller extends BaseController
   protected function getUserId()
   {
     return Auth::user()->id;
+  }
+
+
+  protected function getAdminId()
+  {
+    return Admin::find(1)->id;
   }
 }
