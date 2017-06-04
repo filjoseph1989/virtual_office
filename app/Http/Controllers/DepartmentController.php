@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Position;
 use App\Models\Department;
 use Illuminate\Http\Request;
 
@@ -44,20 +45,38 @@ class DepartmentController extends Controller
    * @param  int  $id
    * @return \Illuminate\Http\Response
    */
-  public function showAddDepartmentForm() {
+  public function showAddDepartmentForm()
+  {
     $data = parent::getHomeDetails([
       'content' => 'users.recruitment.department-add'
     ]);
     return view('users.user-dashboard', $data);
   }
 
-  public function showDepartmentList() {
+  /**
+   * Used to display the list of departments
+   *
+   * @return \Illuminate\Http\Response
+   */
+  public function showDepartmentList()
+  {
     $data = parent::getDetails([
       'department' => Department::all(),
       'content'    => 'users.recruitment.department-table'
     ]);
 
     return view('users.user-dashboard', $data);
+  }
+
+  /**
+   * Used by Ajax call
+   * @param  integer $id [description]
+   * @return [type]      [description]
+   */
+  public function getPositonByDepartment(Request $request)
+  {
+    $position = new Position();
+    echo $position->getPositionByDepartment($request->id);
   }
 
   /**

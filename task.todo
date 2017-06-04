@@ -1,4 +1,7 @@
 Sprint 7:
+  ✔ List of all position filter by deparment @done(2017-06-04 18:52) @project(Sprint 7)
+  ☐ Delete department
+  ☐ Delete position
   ☐ Sidebar module for admin
   ☐ Delete module
   ☐ Edit sub-module
@@ -22,16 +25,12 @@ Log:
   ☐ Study more on Eloquent relationship
   ☐ User add - add module using tag input
   ☐ User add - make email
-  ☐ List of all position filter by deparment
   ☐ List of department - action
   ☐ List of all employee - action
   ☐ List of employee by department
   ☐ List of employee by position
-  ☐ Delete department
-  ☐ Delete position
   ☐ Add color picker on department color
   ☐ Check the department if already exist
-  ☐ Create a two parant controller for user|admin which will be responsible for rendering the dashboard layout
   ☐ Add family - Fetch first the user id before adding the family information
   ☐ Add employee - success alert
   ☐ Add employee - login check

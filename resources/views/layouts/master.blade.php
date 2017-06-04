@@ -33,10 +33,11 @@
 
     @yield ('content')
 
+    <meta name="_token" content="{!! csrf_token() !!}" />
     <script src="{{ asset('js/jquery.min.js') }}?v=3.2.1" charset="utf-8"></script>
-    <script src="{{ asset('js/bootstrap.js') }}?v=3.3.7" charset="utf-8"></script>
     <script src="{{ asset('js/jquery.dataTables.min.js') }}" charset="utf-8"></script>
     <script src="{{ asset('js/jquery.tagsinput.min.js') }}" charset="utf-8"></script>
+    <script src="{{ asset('js/app.js') }}?v=0.1" charset="utf-8"></script>
 
     <script type="text/javascript">
       $('#position-list').DataTable();

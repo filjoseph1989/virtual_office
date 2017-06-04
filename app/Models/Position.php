@@ -26,12 +26,17 @@ class Position extends Model
   }
 
   /**
-   * Return the user position
+   * Return position list base on given department ID
    *
-   * @param  integer $userId
-   * @return int
+   * @param  integer $id
+   * @return json
    */
-  public function getPosition($userId = 0)
+  public function getPositionByDepartment($id = 0)
   {
+    $position = new Position();
+    return $position->select('*')
+      ->where('department_id', '=', $id)
+      ->get()
+      ->toJson();
   }
 }

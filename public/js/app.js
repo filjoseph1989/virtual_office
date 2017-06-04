@@ -7455,3 +7455,46 @@ $(document).on('click', '.a-module-modal-edit', function() {
   $('#edit-module-id').val(module_id);
   $('#edit-module-name').val(module_name);
 });
+
+/**
+ * Display the list of postion under a department
+ * @return
+ */
+$(document).on('click', '.department-position', function() {
+  var department_name = $(this).data('department-name');
+  $('#position-title').html('List of positions in ' + department_name);
+
+  $.ajaxSetup({
+    headers: {
+      'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')
+    }
+  })
+
+  var formData = {
+    id: $(this).data('department-id'),
+  }
+
+  $.ajax({
+    type: 'POST',
+  	url: '/recruitment/list-position-by-department',
+    data: formData,
+    dataType: 'json',
+    success: function (data) {
+      var html = "";
+      for (var i = 0; i < data.length; i++) {
+        html += '<tr>' +
+          '<td scope="row">'+ (i + 1) +'</td>' +
+          '<td scope="row">' + data[i].name + '</td>' +
+          '<td class="department-list__action">' +
+            '<a href="#" data-position-id="'+ data[i].id +'"><i class="fa fa-times" aria-hidden="true" title="Delete Department"></i></a>' +
+            '<a href="#" data-position-id="'+ data[i].id +'"><i class="fa fa-pencil" aria-hidden="true" title="Edit Department Name"></i></a>' +
+          '</td>' +
+        '</tr>';
+      }
+      $('#position-body tbody').html(html);
+    },
+    error: function (data) {
+      console.log('Error:');
+    }
+  });
+});
