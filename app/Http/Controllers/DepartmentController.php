@@ -45,15 +45,19 @@ class DepartmentController extends Controller
    * @return \Illuminate\Http\Response
    */
   public function showAddDepartmentForm() {
-    $content = 'users.recruitment.department-add';
-    return view('users.user-dashboard', compact('content'));
+    $data = parent::getHomeDetails([
+      'content' => 'users.recruitment.department-add'
+    ]);
+    return view('users.user-dashboard', $data);
   }
 
   public function showDepartmentList() {
-    $department = Department::all();
-    $content    = "users.recruitment.department-table";
+    $data = parent::getDetails([
+      'department' => Department::all(),
+      'content'    => 'users.recruitment.department-table'
+    ]);
 
-    return view('users.user-dashboard', compact('department', 'content'));
+    return view('users.user-dashboard', $data);
   }
 
   /**

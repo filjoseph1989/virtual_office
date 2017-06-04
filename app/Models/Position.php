@@ -33,6 +33,5 @@ class Position extends Model
    */
   public function getPosition($userId = 0)
   {
-    return parent::find($userId);
   }
 }

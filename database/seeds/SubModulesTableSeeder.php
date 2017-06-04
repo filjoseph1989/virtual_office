@@ -13,11 +13,11 @@ class SubModulesTableSeeder extends Seeder
   public function run()
   {
     \DB::table('sub_modules')->insert(array (
-      array('id' => '1','module_id' => '2','name' => 'Recruitment','route' => 'recruitment','created_at' => '2017-05-31 04:04:33','updated_at' => '2017-05-31 04:04:33'),
-      array('id' => '2','module_id' => '2','name' => 'Payroll','route' => 'recruitment','created_at' => '2017-05-31 04:04:33','updated_at' => '2017-05-31 04:04:33'),
-      array('id' => '3','module_id' => '2','name' => 'Trainings','route' => 'recruitment','created_at' => '2017-05-31 04:04:33','updated_at' => '2017-05-31 04:04:33'),
-      array('id' => '4','module_id' => '2','name' => 'Administration','route' => 'recruitment','created_at' => '2017-05-31 04:04:33','updated_at' => '2017-05-31 04:04:33'),
-      array('id' => '5','module_id' => '2','name' => 'Communication','route' => 'recruitment','created_at' => '2017-05-31 04:04:33','updated_at' => '2017-05-31 04:04:33')
+      array('module_id' => '2','name' => 'Recruitment','route' => 'recruitment','created_at' => date('Y-m-d H:i:s'),'updated_at' => date('Y-m-d H:i:s')),
+      array('module_id' => '2','name' => 'Payroll','route' => 'recruitment','created_at' => date('Y-m-d H:i:s'),'updated_at' => date('Y-m-d H:i:s')),
+      array('module_id' => '2','name' => 'Trainings','route' => 'recruitment','created_at' => date('Y-m-d H:i:s'),'updated_at' => date('Y-m-d H:i:s')),
+      array('module_id' => '2','name' => 'Administration','route' => 'recruitment','created_at' => date('Y-m-d H:i:s'),'updated_at' => date('Y-m-d H:i:s')),
+      array('module_id' => '2','name' => 'Communication','route' => 'recruitment','created_at' => date('Y-m-d H:i:s'),'updated_at' => date('Y-m-d H:i:s'))
     ));
   }
 }

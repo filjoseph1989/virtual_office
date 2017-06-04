@@ -45,9 +45,6 @@ class AdminSubModulesController extends Controller
    */
   public function showSubModuleList($id)
   {
-    $submodules = SubModules::where('module_id', $id)->get();
-    $position   = Position::all();
-
     # Issue 1: transfer this to mudule model class
     $module        = Module::find($id);
     $position_name = $module->module_group()
@@ -56,8 +53,16 @@ class AdminSubModulesController extends Controller
       ->where('module_id', $id)
       ->get();
 
-    $content = "admins.modules.submodule-table";
-    return view('admins.admin-dashboard', compact('content', 'position_name', 'module', 'position', 'submodules'));
+
+    $data = parent::getAdminDetails([
+      'position_name' => $position_name,
+      'position'      => Position::all(),
+      'submodules'    => SubModules::where('module_id', $id)->get(),
+      'content'       => "admins.modules.submodule-table"
+    ]);
+    $data['module'] = $module;
+
+    return view('admins.admin-dashboard', $data);
   }
 
   /**

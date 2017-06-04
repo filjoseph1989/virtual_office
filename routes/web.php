@@ -11,21 +11,13 @@
 |
 */
 
-// Route::get('/', function () {
-//   if (Auth::check() === false) {
-//     return view('auth.user-login');
-//   } else {
-//     $username = ucfirst(Auth::user()->first_name);
-//     return view('users.user-dashboard', compact('username'));
-//   }
-// });
-
 Route::get('/', 'HomeController@index');
 
 /**
  * Authentication
  */
 Auth::routes();
+// Route::get('/login', 'HomeController@showLoginForm');
 Route::name('home')->get('/home', 'HomeController@home');
 
 /**

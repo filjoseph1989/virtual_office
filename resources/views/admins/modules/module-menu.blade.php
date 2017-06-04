@@ -19,7 +19,7 @@
           <div class="x_content">
             <div class="clearfix container-fluid row">
               <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                <a href="{{ route('recruitment.add') }}">
+                <a href="{{ route('admin.position.list') }}">
                   <div class="tile-stats">
                     <div class="count">1</div>
                     <h3>All Positions</h3>
@@ -28,11 +28,11 @@
                 </a>
               </div>
               <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                <a href="{{ route('recruitment.add') }}">
+                <a href="{{ route('admin.modules.list') }}">
                   <div class="tile-stats">
                     <div class="count">2</div>
-                    <h3>Add Module</h3>
-                    <p>Click here to add new Module.</p>
+                    <h3>Show Modules</h3>
+                    <p>Click here to display module list</p>
                   </div>
                 </a>
               </div>
