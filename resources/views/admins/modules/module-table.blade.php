@@ -81,46 +81,12 @@
 <div class="modal fade" id="module-modal" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title" id="">Add Module</h4>
-      </div>
-      <div class="modal-body">
-        <form class="form-horizontal form-label-left" novalidate="" action="{{ route('admin.modules.add') }}" method="post">
-          {{ csrf_field() }}
-          <div class="item form-group">
-            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="module-name">
-              Module Name
-            </label>
-            <div class="col-md-6 col-sm-6 col-xs-12">
-              <input id="module-name" name="name" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" placeholder="e.g Accounting" required="required" type="text">
-            </div>
-          </div>
-          <div class="ln_solid"></div>
-          <div class="form-group">
-            <div class="col-md-6 col-md-offset-3">
-              <button id="send" type="submit" class="btn btn-success">
-                <i class="fa fa-paper-plane"></i> Send
-              </button>
-            </div>
-          </div>
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="modal fade" id="module-modal-edit" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title" id="module-modal-title"></h4>
-      </div>
-      <div class="modal-body">
-        <form class="form-horizontal form-label-left" novalidate="" action="{{ route('admin.modules.edit') }}" method="post">
+      <form class="form-horizontal form-label-left" novalidate="" action="{{ route('admin.modules.add') }}" method="post">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title" id="">Add Module</h4>
+        </div>
+        <div class="modal-body">
           {{ csrf_field() }}
           <div class="item form-group">
             <label class="control-label col-md-3 col-sm-3 col-xs-12" for="edit-module-name">
@@ -139,22 +105,51 @@
               <input id="edit-module-icon" name="icon" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" placeholder="e.g. fa fa-close" required="required" type="text">
             </div>
           </div>
-          <div class="ln_solid"></div>
-          <div class="form-group">
-            <div class="col-md-6 col-md-offset-3">
-              <button id="send" type="submit" class="btn btn-success">
-                <i class="fa fa-paper-plane"></i> Send
-              </button>
-              <a id="fontawesome-icons" href="http://fontawesome.io/icons/" target="_blank" class="btn btn-success">
-                <i class="fa fa-paper-plane"></i> List of Icons
-              </a>
+        </div>
+        <div class="modal-footer">
+          <button id="send" type="submit" class="btn btn-success"><i class="fa fa-paper-plane"></i> Send</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="module-modal-edit" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <form class="form-horizontal form-label-left" novalidate="" action="{{ route('admin.modules.edit') }}" method="post">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title" id="module-modal-title"></h4>
+        </div>
+        <div class="modal-body">
+            {{ csrf_field() }}
+            <div class="item form-group">
+              <label class="control-label col-md-3 col-sm-3 col-xs-12" for="edit-module-name">
+                Module Name
+              </label>
+              <div class="col-md-6 col-sm-6 col-xs-12">
+                <input type="hidden" id="edit-module-id" name="id">
+                <input id="edit-module-name" name="name" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" placeholder="e.g Accounting" required="required" type="text">
+              </div>
             </div>
-          </div>
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-      </div>
+            <div class="item form-group">
+              <label class="control-label col-md-3 col-sm-3 col-xs-12" for="edit-module-icon">
+                Module Icon
+              </label>
+              <div class="col-md-6 col-sm-6 col-xs-12">
+                <input id="edit-module-icon" name="icon" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" placeholder="e.g. fa fa-close" required="required" type="text">
+              </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-success" id="send"><i class="fa fa-paper-plane"></i> Send</button>
+          <a id="fontawesome-icons" href="http://fontawesome.io/cheatsheet/" target="_blank" class="btn btn-success">
+            <i class="fa fa-paper-plane"></i> List of Icons
+          </a>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </form>
     </div>
   </div>
 </div>

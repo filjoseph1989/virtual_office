@@ -14,4 +14,14 @@ class Department extends Model
   protected $fillable = [
     'name', 'color'
   ];
+
+  /**
+   * Return department name
+   * @param  integer $id
+   * @return string
+   */
+  public function getDepartmentName($id = 0)
+  {
+    return parent::find($id)->name;
+  }
 }
