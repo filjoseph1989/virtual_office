@@ -52,7 +52,7 @@
                         <a href="#"><i class="fa fa-pencil" aria-hidden="true" title="Edit Department Name"></i></a>
                         <a href="#" class="department-position"
                           data-department-id="{{ $value->id }}"
-                          data-department-name="{{ $value->name }}" 
+                          data-department-name="{{ $value->name }}"
                           data-position-new="{{ route('recruitment.add.position.modal', $value->id) }}"
                           data-route="{{ route('recruitment.list.position.by.department', $value->id) }}"
                           data-toggle="modal"
@@ -99,18 +99,14 @@
             </table>
           </div>
         </div>
-        <div class="row">
-          <div class="col-md-12">
-            <a href="#" id="position__add-new" class="btn btn-success">
-              <i class="fa fa-plus" aria-hidden="true"></i> New
-            </a>
-            <a href="#" class="btn btn-success">
-              <i class="fa fa-table" aria-hidden="true"></i> All Positions
-            </a>
-          </div>
-        </div>
       </div>
       <div class="modal-footer">
+        <a href="#" id="position__add-new" class="btn btn-success">
+          <i class="fa fa-plus" aria-hidden="true"></i> New
+        </a>
+        <a href="#" class="btn btn-success">
+          <i class="fa fa-table" aria-hidden="true"></i> All Positions
+        </a>
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
       </div>
     </div>

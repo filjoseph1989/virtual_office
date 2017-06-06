@@ -34,6 +34,7 @@ Route::name('recruitment.add.position.modal')->get('/recruitment/add-position-mo
 Route::name('recruitment.add.position')->post('/recruitment/add-position', 'PositionController@store');
 Route::name('recruitment.list.department')->get('/recruitment/list-department', 'DepartmentController@showDepartmentList');
 Route::name('recruitment.list.position.by.department')->post('/recruitment/list-position-by-department', 'DepartmentController@getPositonByDepartment');
+Route::name('recruitment.edit.position.by.department')->post('/recruitment/edit-position-by-department', 'DepartmentController@update');
 Route::name('recruitment.list.position')->get('/recruitment/list-position', 'PositionController@showPositionList');
 Route::name('recruitment.list.employee')->get('/recruitment/list-employee', 'EmployeeController@showEmployeeList');
 
