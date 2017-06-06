@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Position;
+use App\Models\Department;
 use Illuminate\Http\Request;
 
 class PositionController extends Controller
@@ -21,6 +22,24 @@ class PositionController extends Controller
   }
 
   /**
+   * display the form to add new position from the
+   * given department ID
+   *
+   * @param  int $id
+   * @return \Illuminate\Http\Response
+   */
+  public function indexModal($id)
+  {
+    $department = new Department();
+    $data       = parent::getDetails([
+      'department_id'   => $id,
+      'department_name' => $department->getDepartmentName($id),
+      'content'         => 'users.recruitment.position-add-modal'
+    ]);
+    return view('users.user-dashboard', $data);
+  }
+
+  /**
    * Store a newly created resource in storage.
    *
    * @param  \Illuminate\Http\Request  $request
@@ -28,8 +47,18 @@ class PositionController extends Controller
    */
   public function store(Request $request)
   {
-    Position::create($request->only(['name']));
-    return redirect()->route('recruitment.add.position')->with('status', 'Successfuly added new Position');
+    if (! Position::where('name', '=', $request->name)->exists()) {
+      Position::create($request->only(['department_id', 'name']));
+      $status = 'Successfuly added new Position';
+    }
+
+    return redirect()
+      ->route('recruitment.add.position.modal', $request->only(['department_id']))
+      ->with([
+        'status'          => isset($status) ? $status: 'Failed, The position name already exist',
+        'warning'         => isset($status) ? true :  false,
+        'department_name' => Department::find($request->only(['department_id']))[0]->name
+      ]);
   }
 
   /**

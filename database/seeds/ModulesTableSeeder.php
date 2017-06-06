@@ -13,10 +13,10 @@ class ModulesTableSeeder extends Seeder
   public function run()
   {
     \DB::table('modules')->insert(array (
-      array('name' => 'Administration','icon' => NULL,'created_at' => date('Y-m-d H:i:s'),'updated_at' => date('Y-m-d H:i:s')),
+      array('name' => 'Administration','icon' => 'fa fa-user-o','created_at' => date('Y-m-d H:i:s'),'updated_at' => date('Y-m-d H:i:s'))),
       array('name' => 'Human Resources','icon' => 'fa fa-users','created_at' => date('Y-m-d H:i:s'),'updated_at' => date('Y-m-d H:i:s')),
       array('name' => 'Sales','icon' => 'fa fa-line-chart','created_at' => date('Y-m-d H:i:s'),'updated_at' => date('Y-m-d H:i:s')),
-      array('name' => 'Accounting','icon' => NULL,'created_at' => date('Y-m-d H:i:s'),'updated_at' => date('Y-m-d H:i:s')),
+      array('name' => 'Accounting','icon' => 'fa fa-file-excel-o','created_at' => date('Y-m-d H:i:s'),'updated_at' => date('Y-m-d H:i:s'))
     ));
   }
 }

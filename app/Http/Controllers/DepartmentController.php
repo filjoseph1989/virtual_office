@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Validator;
 use App\Models\Position;
 use App\Models\Department;
 use Illuminate\Http\Request;
@@ -35,8 +36,22 @@ class DepartmentController extends Controller
    */
   public function store(Request $request)
   {
+    # Issue 7: Go to this line because I dont know how to this correctly
+    // $rules = [
+    //   'name' => 'required|unique:name|max:255',
+    // ];
+    //
+    // $validator = Validator::make($request->all(), $rules);
+    //
+    // if ($validator->fails()) {
+    //   return Redirect::to('recruitment.list.department')
+    //     ->withErrors($validator)
+    //     ->withInput();
+    // }
+
     Department::create($request->only(['name', 'color']));
-    return redirect()->route('recruitment.add.department')->with('status', 'Successfuly added new Department');
+    return redirect()->route('recruitment.list.department')
+      ->with('status', 'Successfuly added new Department');
   }
 
   /**
@@ -45,11 +60,19 @@ class DepartmentController extends Controller
    * @param  int  $id
    * @return \Illuminate\Http\Response
    */
-  public function showAddDepartmentForm()
+  public function showAddDepartmentForm($modal = "")
   {
     $data = parent::getHomeDetails([
       'content' => 'users.recruitment.department-add'
     ]);
+
+    # Diri ko nag stop, mali ang route sa submit
+    if ($modal == "modal") {
+      return redirect()
+        ->route('recruitment.list.department')
+        ->with('status', 'Successfuly added new Department');
+    }
+
     return view('users.user-dashboard', $data);
   }
 

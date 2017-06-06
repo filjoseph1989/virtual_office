@@ -12,51 +12,16 @@ class DepartmentsTableSeeder extends Seeder
    */
   public function run()
   {
-    Department::create( [
-    'id'=>1,
-    'name'=>'Human Resource Department',
-    'color'=>''
-    ] );
-
-    Department::create( [
-    'id'=>2,
-    'name'=>'Accounting Department',
-    'color'=>''
-    ] );
-
-    Department::create( [
-    'id'=>3,
-    'name'=>'Book Development',
-    'color'=>''
-    ] );
-
-    Department::create( [
-    'id'=>4,
-    'name'=>'Corporate Division',
-    'color'=>''
-    ] );
-
-    Department::create( [
-    'id'=>7,
-    'name'=>'Photography Department',
-    'color'=>''
-    ] );
-
-    Department::create( [
-    'id'=>8,
-    'name'=>'Pre-Press Department',
-    'color'=>''
-    ] );
-
-    Department::create( [
-    'id'=>9,
-    'name'=>'CRM/Sales/Shipping and Delivery',
-    'color'=>''
-    ] );
-
-    Department::create( [
-    'id'=>10,
-    'name'=>'Digital Imaging Section',
-    'color'=>''
-    ] );  }
+    DB::table('departments')->insert([
+      array('name' => 'Human Resource Department','color' => 'Red','created_at' => date('Y-m-d H:i:s'),'updated_at' => date('Y-m-d H:i:s')),
+      array('name' => 'Accounting Department','color' => 'Green','created_at' => date('Y-m-d H:i:s'),'updated_at' => date('Y-m-d H:i:s')),
+      array('name' => 'Book Development','color' => 'Pink','created_at' => date('Y-m-d H:i:s'),'updated_at' => date('Y-m-d H:i:s')),
+      array('name' => 'Corporate Division','color' => 'Brown','created_at' => date('Y-m-d H:i:s'),'updated_at' => date('Y-m-d H:i:s')),
+      array('name' => 'Photography Department','color' => 'Yellow','created_at' => date('Y-m-d H:i:s'),'updated_at' => date('Y-m-d H:i:s')),
+      array('name' => 'Pre-Press Department','color' => 'Orange','created_at' => date('Y-m-d H:i:s'),'updated_at' => date('Y-m-d H:i:s')),
+      array('name' => 'CRM/Sales/Shipping and Delivery','color' => 'Black','created_at' => date('Y-m-d H:i:s'),'updated_at' => date('Y-m-d H:i:s')),
+      array('name' => 'Digital Imaging Section','color' => 'Red','created_at' => date('Y-m-d H:i:s'),'updated_at' => date('Y-m-d H:i:s')),
+      array('name' => 'Photography Department','color' => 'Blue','created_at' => date('Y-m-d H:i:s'),'updated_at' => date('Y-m-d H:i:s'))
+    ]);
+  }
 }

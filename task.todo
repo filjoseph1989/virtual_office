@@ -1,15 +1,20 @@
 Sprint 7:
   ✔ List of all position filter by deparment @done(2017-06-04 18:52) @project(Sprint 7)
-  ☐ Delete department
+  ✔ Add new position @done(2017-06-06 10:12) @project(Sprint 7)
+  ✔ Add new position - check if the position already exist @done(2017-06-06 10:25) @project(Sprint 7)
   ☐ Delete position
+  ☐ List of position by department should have dataTables
+  ☐ Add department - Form validation:
+    ☐ Check if the name exist
+  ☐ Delete department
   ☐ Sidebar module for admin
   ☐ Delete module
   ☐ Edit sub-module
   ☐ Delete sub-module
-  ☐ Delete position in module
   ☐ Add new sub-module must have a list of routes
 
 Log:
+  ☐ recruitment/list-department add a dynamic form using this http://jsfiddle.net/UeSsu/1/
   ☐ Task 1: On recruitment/add dropdown department and position should be related to each other:
     ☐ City look up
     ☐ Country look up
@@ -37,12 +42,9 @@ Log:
   ☐ Add employee - form validation:
     ☐ Refer 1: Go to this line an the example are here
   ☐ Add family - form validation
-  ☐ Add department - form validation
   ☐ Add close option on profile welcome card
   ☐ Dashboard sidebar should collapse
   ☐ View profile - HR should be the one who can view employee profile
-  ☐ If add position is click from recruitment menu, dropdown of department is necessary
-  ☐ If list of department if click view the list of position it has with the button to add new
   ☐ Automatiic Capitalize in the browser side
   ☐ Can change profile picture
   ☐ Before deleting a department, check if it has a position

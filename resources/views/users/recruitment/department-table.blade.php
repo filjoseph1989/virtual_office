@@ -18,6 +18,20 @@
           </div>
           <div class="x_content">
             <div class="clearfix container-fluid row">
+              @if (count($errors) > 0)
+                <div class="alert alert-danger">
+                  <ul>
+                    @foreach ($errors->all() as $error)
+                      <li>{{ $error }}</li>
+                    @endforeach
+                  </ul>
+                </div>
+              @endif
+              @if (session('status'))
+                <div class="alert alert-success">
+                  {{ session('status') }}
+                </div>
+              @endif
               <table class="table table-bordered department-list" id="department-list">
                 <thead>
                   <tr>
@@ -36,16 +50,22 @@
                       <td class="department-list__action">
                         <a href="#"><i class="fa fa-times" aria-hidden="true" title="Delete Department"></i></a>
                         <a href="#"><i class="fa fa-pencil" aria-hidden="true" title="Edit Department Name"></i></a>
-                        <a href="#" data-department-id="{{ $value->id }}" data-department-name="{{ $value->name }}" data-route="{{ route('recruitment.list.position.by.department', $value->id) }}" class="department-position" data-toggle="modal" data-target="#position">
-                          <i class="fa fa-table" aria-hidden="true" title="Display Position Under This Department"></i>
+                        <a href="#" class="department-position"
+                          data-department-id="{{ $value->id }}"
+                          data-department-name="{{ $value->name }}" 
+                          data-position-new="{{ route('recruitment.add.position.modal', $value->id) }}"
+                          data-route="{{ route('recruitment.list.position.by.department', $value->id) }}"
+                          data-toggle="modal"
+                          data-target="#position">
+                            <i class="fa fa-table" aria-hidden="true" title="Display Position Under This Department"></i>
                         </a>
                       </td>
                     </tr>
                   <?php endforeach; ?>
                 </tbody>
               </table>
-              <a href="{{ route('recruitment.add.department') }}" class="btn btn-success">
-                <i class="fa fa-plus"></i> New
+              <a href="#" class="btn btn-success" data-toggle="modal" data-target="#department-add">
+                <i class="fa fa-plus" aria-hidden="true"></i> New
               </a>
             </div>
           </div>
@@ -63,18 +83,74 @@
         <h4 class="modal-title" id="position-title"></h4>
       </div>
       <div class="modal-body" id="position-body">
-        <table class="table table-bordered department-list" id="department-list">
-          <thead>
-            <tr>
-              <th>#</th>
-              <th>Position Name</th>
-              <th class="department-list__action">Action</th>
-            </tr>
-          </thead>
-          <tbody>
-            <!-- content here -->
-          </tbody>
-        </table>
+        <div class="row">
+          <div class="col-md-12">
+            <table class="table table-bordered department-list" id="department-list">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Position Name</th>
+                  <th class="department-list__action">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- content here -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <a href="#" id="position__add-new" class="btn btn-success">
+              <i class="fa fa-plus" aria-hidden="true"></i> New
+            </a>
+            <a href="#" class="btn btn-success">
+              <i class="fa fa-table" aria-hidden="true"></i> All Positions
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="department-add" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="">Add New Department</h4>
+      </div>
+      <div class="modal-body">
+        <form class="form-horizontal form-label-left" novalidate="" action="{{ route('recruitment.add.department') }}" method="post">
+          {{ csrf_field() }}
+          <div class="item form-group">
+            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="department-name">
+              Department Name <span class="required">*</span>
+            </label>
+            <div class="col-md-6 col-sm-6 col-xs-12">
+              <input id="department-name" name="name" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" placeholder="e.g Management Department" required="required" type="text">
+            </div>
+          </div>
+          <div class="item form-group">
+            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="department-color">
+              Department Color <span class="required">*</span>
+            </label>
+            <div class="col-md-6 col-sm-6 col-xs-12">
+              <input id="department-color" name="color" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" placeholder="e.g Red" type="text">
+            </div>
+          </div>
+          <div class="ln_solid"></div>
+          <div class="form-group">
+            <div class="col-md-6 col-md-offset-3">
+              <button id="send" type="submit" class="btn btn-success">
+                <i class="fa fa-paper-plane" aria-hidden="true"></i> Send
+              </button>
+            </div>
+          </div>
+        </form>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

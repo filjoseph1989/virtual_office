@@ -18,7 +18,7 @@
             <div class="clearfix"></div>
           </div>
           <div class="x_content">
-            <form class="form-horizontal form-label-left" novalidate="" action="{{ route('recruitment.add.department') }}" method="post">
+            <form class="form-horizontal form-label-left" novalidate="" action="{{ route('recruitment.add.department', 'not') }}" method="post">
               <span class="section">Add Department</span>
               @if (session('status'))
                 <div class="alert alert-success">

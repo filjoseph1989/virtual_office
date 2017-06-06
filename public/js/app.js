@@ -7461,7 +7461,9 @@ $(document).on('click', '.a-module-modal-edit', function() {
  * @return
  */
 $(document).on('click', '.department-position', function() {
+  var department_id   = $(this).data('department-id');
   var department_name = $(this).data('department-name');
+  var position_new    = $(this).data('position-new');
   $('#position-title').html('List of positions in ' + department_name);
 
   $.ajaxSetup({
@@ -7470,14 +7472,12 @@ $(document).on('click', '.department-position', function() {
     }
   })
 
-  var formData = {
-    id: $(this).data('department-id'),
-  }
-
   $.ajax({
     type: 'POST',
   	url: '/recruitment/list-position-by-department',
-    data: formData,
+    data: {
+      id: department_id,
+    },
     dataType: 'json',
     success: function (data) {
       var html = "";
@@ -7492,6 +7492,7 @@ $(document).on('click', '.department-position', function() {
         '</tr>';
       }
       $('#position-body tbody').html(html);
+      $('#position__add-new').attr('href', position_new);
     },
     error: function (data) {
       console.log('Error:');

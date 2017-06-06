@@ -27,9 +27,10 @@ Route::name('recruitment')->get('/recruitment', 'HomeController@showRecruitemene
 Route::name('recruitment.add')->get('/recruitment/add', 'EmployeeController@showAddForm');
 Route::name('recruitment.edit.profile')->get('/recruitment/edit-profile', 'EmployeeController@showEditProfileForm');
 Route::name('recruitment.edit.profile')->post('/recruitment/edit-profile', 'EmployeeController@storeEducationInfo');
-Route::name('recruitment.add.department')->get('/recruitment/add-department', 'DepartmentController@showAddDepartmentForm');
+Route::name('recruitment.add.department')->get('/recruitment/add-department/{modal}', 'DepartmentController@showAddDepartmentForm');
 Route::name('recruitment.add.department')->post('/recruitment/add-department', 'DepartmentController@store');
 Route::name('recruitment.add.position')->get('/recruitment/add-position', 'PositionController@index');
+Route::name('recruitment.add.position.modal')->get('/recruitment/add-position-modal/{id}', 'PositionController@indexModal');
 Route::name('recruitment.add.position')->post('/recruitment/add-position', 'PositionController@store');
 Route::name('recruitment.list.department')->get('/recruitment/list-department', 'DepartmentController@showDepartmentList');
 Route::name('recruitment.list.position.by.department')->post('/recruitment/list-position-by-department', 'DepartmentController@getPositonByDepartment');
