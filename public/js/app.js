@@ -7513,7 +7513,7 @@ $(document).on('click', '.edit-position-name', function() {
 });
 
 /**
- * Get edit position data
+ * Submit position data to be edited
  * @return
  */
 $(document).on('click', '.edit-position-button', function() {
@@ -7551,6 +7551,10 @@ $(document).on('click', '.edit-position-button', function() {
   });
 });
 
+/**
+ * Delete position from the department
+ * @return
+ */
 $(document).on('click', '.delete-position-name', function() {
   var _this = this;
   swal({
@@ -7583,17 +7587,18 @@ $(document).on('click', '.delete-position-name', function() {
       success: function (data) {
         if (data.delete_result == true) {
           var html = "";
-          for (var i = 0; i < data.length; i++) {
+          for (var i = 0; i < data.position_data.length; i++) {
             html += '<tr>' +
               '<td scope="row">'+ (i + 1) +'</td>' +
-              '<td scope="row" id="position-name-'+data[i].id+'">' + data[i].name + '</td>' +
-              '<td class="position-list__action" id="position-action-'+data[i].id+'">' +
-                '<a href="#" class="delete-position-name" data-position-id="'+ data[i].id +'" data-position-name="'+ data[i].name +'" data-department-id="'+ department_id +'"><i class="fa fa-times" aria-hidden="true" title="Delete Position"></i></a>' +
-                '<a href="#" class="edit-position-name" data-position-id="'+ data[i].id +'" data-position-name="'+data[i].name+'" data-department-id="'+ department_id +'"><i class="fa fa-pencil" aria-hidden="true" title="Edit Position Name"></i></a>' +
+              '<td scope="row" id="position-name-'+data.position_data[i].id+'">' + data.position_data[i].name + '</td>' +
+              '<td class="position-list__action" id="position-action-'+data.position_data[i].id+'">' +
+                '<a href="#" class="delete-position-name" data-position-id="'+ data.position_data[i].id +'" data-position-name="'+ data.position_data[i].name +'" data-department-id="'+ department_id +'"><i class="fa fa-times" aria-hidden="true" title="Delete Position"></i></a>' +
+                '<a href="#" class="edit-position-name" data-position-id="'+ data.position_data[i].id +'" data-position-name="'+data.position_data[i].name+'" data-department-id="'+ department_id +'"><i class="fa fa-pencil" aria-hidden="true" title="Edit Position Name"></i></a>' +
               '</td>' +
             '</tr>';
           }
           $('#position-body tbody').html(html);
+          console.log(html);
 
           swal(
             'Deleted!',

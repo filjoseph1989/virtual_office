@@ -141,7 +141,8 @@ class DepartmentController extends Controller
   {
     $position = Position::find($request->id);
     if ($position->delete()) {
-      $message['data'] = true;
+      $message['delete_result'] = true;
+      $message['position_data'] = $position->getPositionByDepartment($request->department_id, true);
       echo json_encode($message);
     }
   }
