@@ -85,7 +85,7 @@
       <div class="modal-body" id="position-body">
         <div class="row">
           <div class="col-md-12">
-            <table class="table table-bordered department-list" id="department-list">
+            <table class="table table-bordered department-list" id="position-list">
               <thead>
                 <tr>
                   <th>#</th>
