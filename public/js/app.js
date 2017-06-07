@@ -7484,15 +7484,66 @@ $(document).on('click', '.department-position', function() {
       for (var i = 0; i < data.length; i++) {
         html += '<tr>' +
           '<td scope="row">'+ (i + 1) +'</td>' +
-          '<td scope="row">' + data[i].name + '</td>' +
-          '<td class="department-list__action">' +
-            '<a href="#" data-position-id="'+ data[i].id +'"><i class="fa fa-times" aria-hidden="true" title="Delete Department"></i></a>' +
-            '<a href="#" data-position-id="'+ data[i].id +'"><i class="fa fa-pencil" aria-hidden="true" title="Edit Department Name"></i></a>' +
+          '<td scope="row" id="position-name-'+data[i].id+'">' + data[i].name + '</td>' +
+          '<td class="position-list__action" id="position-action-'+data[i].id+'">' +
+            '<a href="#" class="delete-position-name" data-position-id="'+ data[i].id +'"><i class="fa fa-times" aria-hidden="true" title="Delete Position"></i></a>' +
+            '<a href="#" class="edit-position-name" data-position-id="'+ data[i].id +'" data-position-name="'+data[i].name+'"><i class="fa fa-pencil" aria-hidden="true" title="Edit Position Name"></i></a>' +
           '</td>' +
         '</tr>';
       }
       $('#position-body tbody').html(html);
       $('#position__add-new').attr('href', position_new);
+    },
+    error: function (data) {
+      console.log('Error:');
+    }
+  });
+});
+
+/**
+ * Edit the positon name
+ * @return
+ */
+$(document).on('click', '.edit-position-name', function() {
+  var position_id   = $(this).data('position-id');
+  var position_name = $(this).data('position-name');
+
+  $('#position-name-'+position_id).html('<input type="text" id="edit-position-form-name-'+position_id+'" name="name" value="'+position_name+'">');
+  $('#position-action-'+position_id).html('<button type="button" class="btn btn-success edit-position-button" data-edit-position-button-id="'+position_id+'">Save</button>');
+});
+
+/**
+ * Get edit position data
+ * @return
+ */
+$(document).on('click', '.edit-position-button', function() {
+  var position_id   = $(this).data('edit-position-button-id');
+  var position_name = $('#position-name-'+ position_id +' #edit-position-form-name-'+position_id).val();
+
+  $.ajaxSetup({
+    headers: {
+      'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')
+    }
+  })
+
+  $.ajax({
+    type: 'POST',
+  	url: '/recruitment/edit-position-by-department',
+    data: {
+      id: position_id,
+      name: position_name
+    },
+    dataType: 'json',
+    success: function (data) {
+      if (data.data == true) {
+        $('#position-name-'+position_id).html('<div style="color:green;">Successfuly Changed</div>').fadeOut(1000, function() {
+          $('#position-name-'+position_id).html(position_name).fadeIn(1000);
+        });
+        $('#position-action-'+position_id).html(
+          '<a href="#" class="delete-position-name" data-position-id="'+ position_id +'"><i class="fa fa-times" aria-hidden="true" title="Delete Position"></i></a>' +
+          '<a href="#" class="edit-position-name" data-position-id="'+ position_id +'" data-position-name="'+position_name+'"><i class="fa fa-pencil" aria-hidden="true" title="Edit Position Name"></i></a>'
+        );
+      }
     },
     error: function (data) {
       console.log('Error:');
