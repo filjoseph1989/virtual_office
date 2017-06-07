@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="{{ asset('css/font-awesome.min.css') }}?v=4.7.0">
     <link rel="stylesheet" href="{{ asset('css/jquery.dataTables.css') }}">
     <link rel="stylesheet" href="{{ asset('css/jquery.tagsinput.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}?v=0.13">
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}?v=0.14">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -37,7 +37,7 @@
     <script src="{{ asset('js/jquery.min.js') }}?v=3.2.1" charset="utf-8"></script>
     <script src="{{ asset('js/jquery.dataTables.min.js') }}" charset="utf-8"></script>
     <script src="{{ asset('js/jquery.tagsinput.min.js') }}" charset="utf-8"></script>
-    <script src="{{ asset('js/app.js') }}?v=0.2" charset="utf-8"></script>
+    <script src="{{ asset('js/app.js') }}?v=0.3" charset="utf-8"></script>
 
     <script type="text/javascript">
       $('#position-list').DataTable();

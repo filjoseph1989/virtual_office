@@ -7485,7 +7485,7 @@ $(document).on('click', '.department-position', function() {
         html += '<tr>' +
           '<td scope="row">'+ (i + 1) +'</td>' +
           '<td scope="row" id="position-name-'+data[i].id+'">' + data[i].name + '</td>' +
-          '<td class="department-list__action" id="position-action-'+data[i].id+'">' +
+          '<td class="position-list__action" id="position-action-'+data[i].id+'">' +
             '<a href="#" class="delete-position-name" data-position-id="'+ data[i].id +'"><i class="fa fa-times" aria-hidden="true" title="Delete Position"></i></a>' +
             '<a href="#" class="edit-position-name" data-position-id="'+ data[i].id +'" data-position-name="'+data[i].name+'"><i class="fa fa-pencil" aria-hidden="true" title="Edit Position Name"></i></a>' +
           '</td>' +
@@ -7520,38 +7520,33 @@ $(document).on('click', '.edit-position-button', function() {
   var position_id   = $(this).data('edit-position-button-id');
   var position_name = $('#position-name-'+ position_id +' #edit-position-form-name-'+position_id).val();
 
-  // I stop here
-  console.log(position_id, position_name);
-  // $.ajaxSetup({
-  //   headers: {
-  //     'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')
-  //   }
-  // })
-  //
-  // $.ajax({
-  //   type: 'POST',
-  // 	url: '/recruitment/edit-position-by-department',
-  //   data: {
-  //     id: department_id,
-  //   },
-  //   dataType: 'json',
-  //   success: function (data) {
-  //     var html = "";
-  //     for (var i = 0; i < data.length; i++) {
-  //       html += '<tr>' +
-  //         '<td scope="row">'+ (i + 1) +'</td>' +
-  //         '<td scope="row" id="position-name-'+data[i].id+'">' + data[i].name + '</td>' +
-  //         '<td class="department-list__action" id="position-action-'+data[i].id+'">' +
-  //           '<a href="#" class="delete-position-name" data-position-id="'+ data[i].id +'"><i class="fa fa-times" aria-hidden="true" title="Delete Position"></i></a>' +
-  //           '<a href="#" class="edit-position-name" data-position-id="'+ data[i].id +'" data-position-name="'+data[i].name+'"><i class="fa fa-pencil" aria-hidden="true" title="Edit Position Name"></i></a>' +
-  //         '</td>' +
-  //       '</tr>';
-  //     }
-  //     $('#position-body tbody').html(html);
-  //     $('#position__add-new').attr('href', position_new);
-  //   },
-  //   error: function (data) {
-  //     console.log('Error:');
-  //   }
-  // });
+  $.ajaxSetup({
+    headers: {
+      'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')
+    }
+  })
+
+  $.ajax({
+    type: 'POST',
+  	url: '/recruitment/edit-position-by-department',
+    data: {
+      id: position_id,
+      name: position_name
+    },
+    dataType: 'json',
+    success: function (data) {
+      if (data.data == true) {
+        $('#position-name-'+position_id).html('<div style="color:green;">Successfuly Changed</div>').fadeOut(1000, function() {
+          $('#position-name-'+position_id).html(position_name).fadeIn(1000);
+        });
+        $('#position-action-'+position_id).html(
+          '<a href="#" class="delete-position-name" data-position-id="'+ position_id +'"><i class="fa fa-times" aria-hidden="true" title="Delete Position"></i></a>' +
+          '<a href="#" class="edit-position-name" data-position-id="'+ position_id +'" data-position-name="'+position_name+'"><i class="fa fa-pencil" aria-hidden="true" title="Edit Position Name"></i></a>'
+        );
+      }
+    },
+    error: function (data) {
+      console.log('Error:');
+    }
+  });
 });

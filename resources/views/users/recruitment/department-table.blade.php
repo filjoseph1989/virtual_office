@@ -104,7 +104,7 @@
         <a href="#" id="position__add-new" class="btn btn-success">
           <i class="fa fa-plus" aria-hidden="true"></i> New
         </a>
-        <a href="#" class="btn btn-success">
+        <a href="{{ route('recruitment.list.position') }}" class="btn btn-success">
           <i class="fa fa-table" aria-hidden="true"></i> All Positions
         </a>
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

@@ -122,16 +122,13 @@ class DepartmentController extends Controller
    */
   public function update(Request $request)
   {
-    // $data = $request->only(['id', 'name', 'icon']);
-    // return self::edit($data);
-    // $module       = Module::find($data['id']);
-    // $module->name = $data['name'];
-    // $module->icon = $data['icon'];
-    //
-    // if ($module->save()) {
-    //   return redirect()->route('admin.modules.list')
-    //     ->with('status', 'Successfuly updated module');
-    // }
+    $data           = $request->only(['id', 'name']);
+    $position       = Position::find($data['id']);
+    $position->name = $data['name'];
+    if ($position->save()) {
+      $message['data'] = true;
+      echo json_encode($message);
+    }
   }
 
   /**

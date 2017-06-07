@@ -805,11 +805,13 @@ ul.bar_tabs>li a {
   background: rgba(0,0,0,.15)
 }
 .department-list__action,
+.position-list__action,
 .sub-modules-list__action,
 .action {
   text-align: center;
 }
 .department-list__action a,
+.position-list__action a,
 .sub-modules-list__action a,
 .action a {
   margin-right: 5px;

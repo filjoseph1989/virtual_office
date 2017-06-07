@@ -1,11 +1,11 @@
-Sprint 7:
+Sprint 7 Positions:
   ✔ List of all position filter by deparment @done(2017-06-04 18:52) @project(Sprint 7)
   ✔ Add new position @done(2017-06-06 10:12) @project(Sprint 7)
   ✔ Add new position - check if the position already exist @done(2017-06-06 10:25) @project(Sprint 7)
-  ☐ I stop here (Go to this line)
-  ☐ Edit position
+  ✔ Edit position @done(2017-06-07 09:45) @project(Sprint 7 Positions)
   ☐ Delete position
   ☐ List of position by department should have dataTables
+  ☐ Size of the edit form should be 100%
   ☐ Add department - Form validation:
     ☐ Check if the name exist
   ☐ Delete department
