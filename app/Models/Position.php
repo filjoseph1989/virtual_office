@@ -31,12 +31,13 @@ class Position extends Model
    * @param  integer $id
    * @return json
    */
-  public function getPositionByDepartment($id = 0)
+  public function getPositionByDepartment($id = 0, $array = false)
   {
     $position = new Position();
-    return $position->select('*')
+    $result   = $position->select('*')
       ->where('department_id', '=', $id)
-      ->get()
-      ->toJson();
+      ->get();
+
+    return ($array === true) ? $result->toArray() : $result->toJson();
   }
 }
