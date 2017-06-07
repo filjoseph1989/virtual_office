@@ -4,7 +4,8 @@ Sprint 7 Positions:
   ✔ Add new position - check if the position already exist @done(2017-06-06 10:25) @project(Sprint 7)
   ✔ Edit position @done(2017-06-07 09:45) @project(Sprint 7 Positions)
   ✔ List of position by department should have dataTables @done(2017-06-07 11:09) @project(Sprint 7 Positions)
-  ☐ Delete position
+  ✔ Delete position @done(2017-06-07 11:49) @project(Sprint 7 Positions)
+  ☐ Delete position - update the list
   ☐ Size of the edit form should be 100%
   ☐ Add department - Form validation:
     ☐ Check if the name exist
@@ -16,6 +17,8 @@ Sprint 7 Positions:
   ☐ Add new sub-module must have a list of routes
 
 Log:
+  ☐ Try fetch as replacement to ajax
+  ☐ Create preloader too
   ☐ recruitment/list-department add a dynamic form using this http://jsfiddle.net/UeSsu/1/
   ☐ Task 1: On recruitment/add dropdown department and position should be related to each other:
     ☐ City look up

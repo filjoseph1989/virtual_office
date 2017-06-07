@@ -137,8 +137,12 @@ class DepartmentController extends Controller
    * @param  int  $id
    * @return \Illuminate\Http\Response
    */
-  public function destroy($id)
+  public function destroy(Request $request)
   {
-      //
+    $position = Position::find($request->id);
+    if ($position->delete()) {
+      $message['data'] = true;
+      echo json_encode($message);
+    }
   }
 }
