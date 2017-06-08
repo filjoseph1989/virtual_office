@@ -1,11 +1,5 @@
 Sprint 7 Positions:
-  ✔ List of all position filter by deparment @done(2017-06-04 18:52) @project(Sprint 7)
-  ✔ Add new position @done(2017-06-06 10:12) @project(Sprint 7)
-  ✔ Add new position - check if the position already exist @done(2017-06-06 10:25) @project(Sprint 7)
-  ✔ Edit position @done(2017-06-07 09:45) @project(Sprint 7 Positions)
-  ✔ List of position by department should have dataTables @done(2017-06-07 11:09) @project(Sprint 7 Positions)
-  ✔ Delete position @done(2017-06-07 11:49) @project(Sprint 7 Positions)
-  ✔ Delete position - update the list @done(2017-06-07 12:13) @project(Sprint 7 Positions)
+  ✔ Issue 2: Delete position on HR, will not update the list correctly @done(2017-06-08 10:41) @project(Sprint 7 Positions)
   ☐ Issue 1: recruitment/list-position has a conflict in delete, cannot get list of position by department since this page is the list of all positions,
       this should be in deffirent approach, change the class="name" in delete icon.
 
@@ -115,3 +109,11 @@ Sprint 6: Sidebar module outline
     ✔ Add created_at and updated_at on seeder @done(2017-06-03 09:57) @project(Sprint 5)
     ✔ Add icon colum in module table @done(2017-06-03 09:57) @project(Sprint 5)
     ✔ Create a sub-modules seeder again @done(2017-06-03 23:49)
+Sprint 7 Positions:
+  ✔ List of all position filter by deparment @done(2017-06-04 18:52) @project(Sprint 7)
+  ✔ Add new position @done(2017-06-06 10:12) @project(Sprint 7)
+  ✔ Add new position - check if the position already exist @done(2017-06-06 10:25) @project(Sprint 7)
+  ✔ Edit position @done(2017-06-07 09:45) @project(Sprint 7 Positions)
+  ✔ List of position by department should have dataTables @done(2017-06-07 11:09) @project(Sprint 7 Positions)
+  ✔ Delete position @done(2017-06-07 11:49) @project(Sprint 7 Positions)
+  ✔ Delete position - update the list @done(2017-06-07 12:13) @project(Sprint 7 Positions)
