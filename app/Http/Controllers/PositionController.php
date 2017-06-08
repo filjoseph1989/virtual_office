@@ -113,14 +113,19 @@ class PositionController extends Controller
   }
 
   /**
-   * Remove the specified resource from storage.
+   * Delete the position from the database
    *
    * @param  int  $id
    * @return \Illuminate\Http\Response
    */
-  public function destroy($id)
+  public function destroy(Request $request)
   {
-      //
+    $position = Position::find($request->id);
+    if ($position->delete()) {
+      $message['delete_result'] = true;
+      $message['position_data'] = Position::all();
+      echo json_encode($message);
+    }
   }
 
   public function autocomplete(Request $request)
