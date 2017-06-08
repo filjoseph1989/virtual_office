@@ -7604,7 +7604,72 @@ $(document).on('click', '.delete-position-name', function() {
             '</tr>';
           }
           $('#position-body tbody').html(html);
-          console.log(html);
+
+          swal(
+            'Deleted!',
+            'Position ID is '+ position_name,
+            'success'
+          )
+        }
+      },
+      error: function (data) {
+        console.log('Error:');
+      }
+    });
+
+  })
+});
+
+/**
+ * Delete position on the url
+ * http://{$_SERVER['SERVER_NAME']}/recruitment/list-position
+ *
+ * @return
+ */
+$(document).on('click', '.delete-position', function() {
+  var _this = this;
+  swal({
+    title: 'Are you sure?',
+    text: "You won't be able to revert this!",
+    type: 'warning',
+    showCancelButton: true,
+    confirmButtonColor: '#3085d6',
+    cancelButtonColor: '#d33',
+    confirmButtonText: 'Yes, delete it!'
+  }).then(function () {
+    var position_id   = $(_this).data('position-id');
+    var position_name = $(_this).data('position-name');
+
+    console.log(position_id, position_name);
+
+    $.ajaxSetup({
+      headers: {
+        'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')
+      }
+    })
+
+    $.ajax({
+      type: 'POST',
+    	url: '/recruitment/delete-list-position',
+      data: {
+        id: position_id,
+      },
+      dataType: 'json',
+      success: function (data) {
+        if (data.delete_result == true) {
+          var html = "";
+          for (var i = 0; i < data.position_data.length; i++) {
+            html +=
+            '<tr>' +
+              '<td scope="row">'+i + 1+'</td>' +
+              '<td scope="row" id="position-name-'+data.position_data[i].id+'">'+data.position_data[i].name+'</td>' +
+              '<td class="position-list__action" id="position-action-'+data.position_data[i].id+'">' +
+                '<a href="#" class="delete-position" data-position-id='+data.position_data[i].id+'" data-position-name="'+data.position_data[i].name+'"><i class="fa fa-times" aria-hidden="true" title="Delete Position"></i></a>' +
+                '<a href="#" class="edit-position-name" data-position-id="'+data.position_data[i].id+'" data-position-name="'+data.position_data[i].name+'"><i class="fa fa-pencil" aria-hidden="true" title="Edit Position Name"></i></a>' +
+              '</td>' +
+            '</tr>';
+          }
+          $('#position-list tbody').html(html);
 
           swal(
             'Deleted!',

@@ -37,6 +37,7 @@ Route::name('recruitment.list.position.by.department')->post('/recruitment/list-
 Route::name('recruitment.edit.position.by.department')->post('/recruitment/edit-position-by-department', 'DepartmentController@update');
 Route::name('recruitment.delete.position.by.department')->post('/recruitment/delete-position-by-department', 'DepartmentController@destroy');
 Route::name('recruitment.list.position')->get('/recruitment/list-position', 'PositionController@showPositionList');
+Route::name('recruitment.delete.position')->post('/recruitment/delete-list-position', 'PositionController@destroy');
 Route::name('recruitment.list.employee')->get('/recruitment/list-employee', 'EmployeeController@showEmployeeList');
 
 /**

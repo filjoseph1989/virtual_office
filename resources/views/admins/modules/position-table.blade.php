@@ -32,7 +32,7 @@
                       <td scope="row">{{ $key + 1  }}</td>
                       <td scope="row" id="position-name-{{ $value->id }}">{{ ucfirst($value->name) }}</td>
                       <td class="position-list__action" id="position-action-{{ $value->id }}">
-                        <a href="#" class="delete-position-name" data-position-id="{{ $value->id }}"><i class="fa fa-times" aria-hidden="true" title="Delete Position"></i></a>
+                        <a href="#" class="delete-position" data-position-id="{{ $value->id }}"><i class="fa fa-times" aria-hidden="true" title="Delete Position"></i></a>
                         <a href="#" class="edit-position-name" data-position-id="{{ $value->id }}" data-position-name="{{ $value->name }}"><i class="fa fa-pencil" aria-hidden="true" title="Edit Position Name"></i></a>
                       </td>
                     </tr>
