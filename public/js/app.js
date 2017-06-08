@@ -7443,6 +7443,12 @@ if (typeof NProgress != 'undefined') {
 	});
 
 /**
+ * ------------------------------------------------------------------------------
+ * My Custom JS Here
+ * ------------------------------------------------------------------------------
+ */
+
+/**
  * Custom JS
  * @return
  */
@@ -7457,7 +7463,7 @@ $(document).on('click', '.a-module-modal-edit', function() {
 });
 
 /**
- * Display the list of postion under a department
+ * Display the list of postion under a department in modal
  * @return
  */
 $(document).on('click', '.department-position', function() {
@@ -7580,7 +7586,7 @@ $(document).on('click', '.delete-position-name', function() {
       type: 'POST',
     	url: '/recruitment/delete-position-by-department',
       data: {
-        id: position_id,
+        id:            position_id,
         department_id: department_id,
       },
       dataType: 'json',

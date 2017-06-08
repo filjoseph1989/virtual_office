@@ -6,12 +6,13 @@ New:
   ☐ Issue 5: Go to this line and read it description in comment the concerns of this issue
   ☐ Issue 6: What I want to remove the module from users?
   ☐ Issue 7: Go to this line because I dont know how to this correctly
-  ☐ DataTables should activate only if records is more than 10
-  ☐ Display the admin name in admin dashboard has an error
-  ☐ Progress bar using bootstrap will not work
-  ☐ Improve the pagination layout in the DataTables
+  ☐ Issue 8: DataTables should activate only if records is more than 10
+  ☐ Issue 9: Progress bar using bootstrap will not work
+  ☐ Issue 10: Improve the pagination layout in the DataTables
+  ☐ Issue 11: In edit positions, check also if the name given already exist
 
 Done:
+  ✔ Display the admin name in admin dashboard has an error @done(2017-06-07 12:18) @project(New)
   ✔ Issue 4: uri admin/modules problem @done(2017-06-04 00:20) @project(New)
   ✔ Remove this AdminSubModulesController/create same in web.php @done(2017-05-29 08:09)
   ✔ Display of the username if wrong @done(2017-05-20 16:13)
