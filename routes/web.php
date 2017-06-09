@@ -23,22 +23,27 @@ Route::name('home')->get('/home', 'HomeController@home');
 /**
  * recruitment Area
  */
-Route::name('recruitment')->get('/recruitment', 'HomeController@showRecruitemeneMenu');
-Route::name('recruitment.add')->get('/recruitment/add', 'EmployeeController@showAddForm');
-Route::name('recruitment.edit.profile')->get('/recruitment/edit-profile', 'EmployeeController@showEditProfileForm');
-Route::name('recruitment.edit.profile')->post('/recruitment/edit-profile', 'EmployeeController@storeEducationInfo');
-Route::name('recruitment.add.department')->get('/recruitment/add-department/{modal}', 'DepartmentController@showAddDepartmentForm');
-Route::name('recruitment.add.department')->post('/recruitment/add-department', 'DepartmentController@store');
-Route::name('recruitment.add.position')->get('/recruitment/add-position', 'PositionController@index');
-Route::name('recruitment.add.position.modal')->get('/recruitment/add-position-modal/{id}', 'PositionController@indexModal');
-Route::name('recruitment.add.position')->post('/recruitment/add-position', 'PositionController@store');
-Route::name('recruitment.list.department')->get('/recruitment/list-department', 'DepartmentController@showDepartmentList');
-Route::name('recruitment.list.position.by.department')->post('/recruitment/list-position-by-department', 'DepartmentController@getPositonByDepartment');
-Route::name('recruitment.edit.position.by.department')->post('/recruitment/edit-position-by-department', 'DepartmentController@update');
-Route::name('recruitment.delete.position.by.department')->post('/recruitment/delete-position-by-department', 'DepartmentController@destroy');
-Route::name('recruitment.list.position')->get('/recruitment/list-position', 'PositionController@showPositionList');
-Route::name('recruitment.delete.position')->post('/recruitment/delete-list-position', 'PositionController@destroy');
-Route::name('recruitment.list.employee')->get('/recruitment/list-employee', 'EmployeeController@showEmployeeList');
+Route::prefix('recruitment')->group(function() {
+  # Get
+  Route::name('recruitment')->get('/', 'HomeController@showRecruitemeneMenu');
+  Route::name('recruitment.add')->get('/add', 'EmployeeController@showAddForm');
+  Route::name('recruitment.edit.profile')->get('/edit-profile', 'EmployeeController@showEditProfileForm');
+  Route::name('recruitment.edit.profile')->post('/edit-profile', 'EmployeeController@storeEducationInfo');
+  Route::name('recruitment.add.department')->get('/add-department/{modal}', 'DepartmentController@showAddDepartmentForm');
+  Route::name('recruitment.add.position')->get('/add-position', 'PositionController@index');
+  Route::name('recruitment.add.position.modal')->get('/add-position-modal/{id}', 'PositionController@indexModal');
+  Route::name('recruitment.list.department')->get('/list-department', 'DepartmentController@showDepartmentList');
+  Route::name('recruitment.list.position')->get('/list-position', 'PositionController@showPositionList');
+  Route::name('recruitment.list.employee')->get('/list-employee', 'EmployeeController@showEmployeeList');
+
+  # Post
+  Route::name('recruitment.add.position')->post('/add-position', 'PositionController@store');
+  Route::name('recruitment.add.department')->post('/add-department', 'DepartmentController@store');
+  Route::name('recruitment.list.position.by.department')->post('/list-position-by-department', 'DepartmentController@getPositonByDepartment');
+  Route::name('recruitment.edit.position.by.department')->post('/edit-position-by-department', 'DepartmentController@update');
+  Route::name('recruitment.delete.position.by.department')->post('/delete-position-by-department', 'DepartmentController@destroy');
+  Route::name('recruitment.delete.position')->post('/delete-list-position', 'PositionController@destroy');
+});
 
 /**
  * User group
