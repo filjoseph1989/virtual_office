@@ -10,6 +10,10 @@ New:
   ☐ Issue 9: Progress bar using bootstrap will not work
   ☐ Issue 10: Improve the pagination layout in the DataTables
   ☐ Issue 11: In edit positions, check also if the name given already exist
+  ☐ Issue 12: enable the notification in top navigation
+  ☐ Issue 13: enable profile and setting in top navigation
+  ☐ Issue 14: enable the toggle bar in top navigation
+  ☐ Issue 15: enable thi line (go to this line)
 
 Done:
   ✔ Display the admin name in admin dashboard has an error @done(2017-06-07 12:18) @project(New)

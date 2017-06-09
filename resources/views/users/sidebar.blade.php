@@ -16,7 +16,7 @@
         <span>Welcome,</span>
         <h2>
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-            {{ $username }} <span class="caret"></span>
+            {{ $username }}
           </a>
         </h2>
       </div>
