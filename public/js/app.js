@@ -7604,6 +7604,7 @@ $(document).on('click', '.delete-position-name', function() {
             '</tr>';
           }
           $('#position-body tbody').html(html);
+          $('#modal-position-list').DataTable();
 
           swal(
             'Deleted!',

@@ -12,7 +12,7 @@
                 <ul class="dropdown-menu" role="menu">
                   <li><a href="#">Settings 1</a></li>
                 </ul>
-              </li>
+              </li>]
             </ul>
             <div class="clearfix"></div>
           </div>
@@ -85,7 +85,7 @@
       <div class="modal-body" id="position-body">
         <div class="row">
           <div class="col-md-12">
-            <table class="table table-bordered department-list" id="position-list">
+            <table class="table table-bordered department-list" id="modal-position-list">
               <thead>
                 <tr>
                   <th>#</th>
