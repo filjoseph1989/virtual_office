@@ -37,7 +37,6 @@
     <meta name="_token" content="{!! csrf_token() !!}" />
     <script src="{{ asset('js/jquery.min.js') }}?v=3.2.1" charset="utf-8"></script>
     <script src="{{ asset('js/jquery.dataTables.min.js') }}" charset="utf-8"></script>
-    <script src="{{ asset('js/jquery.tagsinput.min.js') }}" charset="utf-8"></script>
     <script src="{{ asset('js/sweetalert2.js') }}?v=2" charset="utf-8"></script>
     <script src="{{ asset('js/app.js') }}?v=0.5" charset="utf-8"></script>
 
@@ -45,7 +44,7 @@
       $('#position-list').DataTable();
       $('#employee-list').DataTable();
       $('#department-list').DataTable();
-      $('#add-modules').tagsInput();
+      // $('#modal-position-list').DataTable();
     </script>
   </body>
 </html>

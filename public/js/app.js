@@ -7446,6 +7446,7 @@ if (typeof NProgress != 'undefined') {
  * ------------------------------------------------------------------------------
  * My Custom JS Here
  * ------------------------------------------------------------------------------
+ * Positions
  */
 
 /**
@@ -7472,12 +7473,6 @@ $(document).on('click', '.department-position', function() {
   var position_new    = $(this).data('position-new');
   $('#position-title').html('List of positions in ' + department_name);
 
-  $.ajaxSetup({
-    headers: {
-      'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')
-    }
-  })
-
   $.ajax({
     type: 'POST',
   	url: '/recruitment/list-position-by-department',
@@ -7485,6 +7480,9 @@ $(document).on('click', '.department-position', function() {
       id: department_id,
     },
     dataType: 'json',
+    beforeSend: function(request) {
+      request.setRequestHeader("X-CSRF-TOKEN", $('meta[name="_token"]').attr('content'));
+    },
     success: function (data) {
       var html = "";
       for (var i = 0; i < data.length; i++) {
@@ -7499,6 +7497,8 @@ $(document).on('click', '.department-position', function() {
       }
       $('#position-body tbody').html(html);
       $('#position__add-new').attr('href', position_new);
+
+      $('#modal-position-list').DataTable();
     },
     error: function (data) {
       console.log('Error:');

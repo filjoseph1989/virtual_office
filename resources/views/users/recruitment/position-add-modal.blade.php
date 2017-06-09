@@ -42,10 +42,13 @@
               <div class="form-group">
                 <div class="col-md-6 col-md-offset-3">
                   <button id="send" type="submit" class="btn btn-success">
-                    <i class="fa fa-paper-plane-o" aria-hidden="true"></i> Submit
+                    <i class="fa fa-paper-plane-o" aria-hidden="true"></i> Send
                   </button>
                   <a href="{{ route('recruitment.list.position') }}" class="btn btn-success">
                     <i class="fa fa-table" aria-hidden="true"></i> All Positions
+                  </a>
+                  <a href="{{ route('recruitment.list.department') }}" class="btn btn-success">
+                    <i class="fa fa-table" aria-hidden="true"></i> List of Departments
                   </a>
                 </div>
               </div>

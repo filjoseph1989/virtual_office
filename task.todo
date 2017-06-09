@@ -1,7 +1,7 @@
 Sprint 7 Positions:
   ✔ Issue 1: recruitment/list-position has a conflict in delete, cannot get list of position by department since this page is the list of all positions, this should be in deffirent approach, change the class="name" in delete icon. @done(2017-06-08 11:51) @project(Sprint 7 Positions)
   ✔ Issue 2: Delete position on HR, will not update the list correctly @done(2017-06-08 10:41) @project(Sprint 7 Positions)
-  ☐ Issue 3: List of positions in Human Resource Department data-tables not working
+  ✔ Issue 3: List of positions in Human Resource Department data-tables not working @done(2017-06-09 11:29) @project(Sprint 7 Positions)
 
   ☐ Task 1: Size of the edit form should be 100%
   ☐ Task 2: Add department - Form validation:
