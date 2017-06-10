@@ -3,7 +3,7 @@
     <div class="page-content">
       <div class="clearfix container-fluid row">
         <ol class="breadcrumb" style="margin-top: 70px;">
-          <li><a href="#">recruitment</a></li>
+          <li><a href="{{ route('recruitment') }}">recruitment</a></li>
           <li class="active">list of department</li>
         </ol>
         <div class="x_panel">

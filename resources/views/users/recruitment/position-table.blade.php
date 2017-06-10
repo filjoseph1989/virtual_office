@@ -2,9 +2,13 @@
   <div class="side-body padding-top">
     <div class="page-content">
       <div class="clearfix container-fluid row">
+        <ol class="breadcrumb" style="margin-top: 70px;">
+          <li><a href="{{ route('recruitment') }}">recruitment</a></li>
+          <li class="active">list of positions</li>
+        </ol>
         <div class="x_panel">
           <div class="x_title">
-            <h2>List of All Position</h2>
+            <h2>List of All Positions</h2>
             <ul class="nav navbar-right panel_toolbox">
               <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a> </li>
               <!--
