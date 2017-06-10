@@ -123,24 +123,24 @@
           <h4 class="modal-title" id="module-modal-title"></h4>
         </div>
         <div class="modal-body">
-            {{ csrf_field() }}
-            <div class="item form-group">
-              <label class="control-label col-md-3 col-sm-3 col-xs-12" for="edit-module-name">
-                Module Name
-              </label>
-              <div class="col-md-6 col-sm-6 col-xs-12">
-                <input type="hidden" id="edit-module-id" name="id">
-                <input id="edit-module-name" name="name" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" placeholder="e.g Accounting" required="required" type="text">
-              </div>
+          {{ csrf_field() }}
+          <div class="item form-group">
+            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="edit-module-name">
+              Module Name
+            </label>
+            <div class="col-md-6 col-sm-6 col-xs-12">
+              <input type="hidden" id="edit-module-id" name="id">
+              <input id="edit-module-name" name="name" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" placeholder="e.g Accounting" required="required" type="text">
             </div>
-            <div class="item form-group">
-              <label class="control-label col-md-3 col-sm-3 col-xs-12" for="edit-module-icon">
-                Module Icon
-              </label>
-              <div class="col-md-6 col-sm-6 col-xs-12">
-                <input id="edit-module-icon" name="icon" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" placeholder="e.g. fa fa-close" required="required" type="text">
-              </div>
+          </div>
+          <div class="item form-group">
+            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="edit-module-icon">
+              Module Icon
+            </label>
+            <div class="col-md-6 col-sm-6 col-xs-12">
+              <input id="edit-module-icon" name="icon" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" placeholder="e.g. fa fa-close" required="required" type="text">
             </div>
+          </div>
         </div>
         <div class="modal-footer">
           <button type="submit" class="btn btn-success" id="send"><i class="fa fa-paper-plane"></i> Send</button>
