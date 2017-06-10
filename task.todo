@@ -1,10 +1,6 @@
-Sprint 7 Positions:
-  ✔ Issue 1: recruitment/list-position has a conflict in delete, cannot get list of position by department since this page is the list of all positions, this should be in deffirent approach, change the class="name" in delete icon. @done(2017-06-08 11:51) @project(Sprint 7 Positions)
-  ✔ Issue 2: Delete position on HR, will not update the list correctly @done(2017-06-08 10:41) @project(Sprint 7 Positions)
-  ✔ Issue 3: List of positions in Human Resource Department data-tables not working @done(2017-06-09 11:29) @project(Sprint 7 Positions)
-  ☐ issue 4: Delete position on modal does not update the list
-
-  ☐ Task 1: Size of the edit form should be 100%
+Sprint 8:
+  ✔ Task 1: Size of the edit form should be 100% @done(2017-06-10 08:46) @project(Sprint 8)
+  ✔ Task 3: On edit position, can cancel the edit @done(2017-06-10 08:46) @project(Sprint 8)
   ☐ Task 2: Add department - Form validation:
     ☐ Task 2: Check if the name exist
 
@@ -119,3 +115,7 @@ Sprint 7 Positions:
   ✔ List of position by department should have dataTables @done(2017-06-07 11:09) @project(Sprint 7 Positions)
   ✔ Delete position @done(2017-06-07 11:49) @project(Sprint 7 Positions)
   ✔ Delete position - update the list @done(2017-06-07 12:13) @project(Sprint 7 Positions)
+  ✔ Issue 1: recruitment/list-position has a conflict in delete, cannot get list of position by department since this page is the list of all positions, this should be in deffirent approach, change the class="name" in delete icon. @done(2017-06-08 11:51) @project(Sprint 7 Positions)
+  ✔ Issue 2: Delete position on HR, will not update the list correctly @done(2017-06-08 10:41) @project(Sprint 7 Positions)
+  ✔ Issue 3: List of positions in Human Resource Department data-tables not working @done(2017-06-09 11:29) @project(Sprint 7 Positions)
+  ✔ Issue 4: Delete position on modal does not update the list @done(2017-06-10 07:44) @project(Sprint 7 Positions)

@@ -37,11 +37,11 @@ Route::prefix('recruitment')->group(function() {
   Route::name('recruitment.list.employee')->get('/list-employee', 'EmployeeController@showEmployeeList');
 
   # Post
+  Route::name('recruitment.delete.position.by.department')->post('/delete-position-by-department', 'DepartmentController@destroy');
   Route::name('recruitment.add.position')->post('/add-position', 'PositionController@store');
   Route::name('recruitment.add.department')->post('/add-department', 'DepartmentController@store');
   Route::name('recruitment.list.position.by.department')->post('/list-position-by-department', 'DepartmentController@getPositonByDepartment');
   Route::name('recruitment.edit.position.by.department')->post('/edit-position-by-department', 'DepartmentController@update');
-  Route::name('recruitment.delete.position.by.department')->post('/delete-position-by-department', 'DepartmentController@destroy');
   Route::name('recruitment.delete.position')->post('/delete-list-position', 'PositionController@destroy');
 });
 
