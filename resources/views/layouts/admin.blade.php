@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="{{ asset('css/font-awesome.min.css') }}?v=4.7.0">
     <link rel="stylesheet" href="{{ asset('css/jquery.dataTables.css') }}">
     <link rel="stylesheet" href="{{ asset('css/jquery.tagsinput.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}?v=0.14">
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}?v=0.15">
 
     <link rel="apple-touch-icon" sizes="57x57" href="{{ asset('images/favicon/apple-icon-57x57.png') }}">
     <link rel="apple-touch-icon" sizes="60x60" href="{{ asset('images/favicon/apple-icon-60x60.png') }}">
@@ -51,10 +51,11 @@
 
     @yield ('content')
 
+    <meta name="_token" content="{!! csrf_token() !!}" />
     <script src="{{ asset('js/jquery.min.js') }}?v=3.2.1" charset="utf-8"></script>
     <script src="{{ asset('js/jquery.dataTables.min.js') }}" charset="utf-8"></script>
-    <script src="{{ asset('js/jquery.tagsinput.min.js') }}" charset="utf-8"></script>
-    <script src="{{ asset('js/app.js') }}?v=0.1" charset="utf-8"></script>
+    <script src="{{ asset('js/sweetalert2.js') }}?v=2" charset="utf-8"></script>
+    <script src="{{ asset('js/app.js') }}?v=0.6" charset="utf-8"></script>
 
     <script type="text/javascript">
       $('#position-list').DataTable();

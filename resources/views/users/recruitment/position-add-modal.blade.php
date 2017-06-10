@@ -20,11 +20,11 @@
           </div>
           <div class="x_content">
             <form class="form-horizontal form-label-left" novalidate="" action="{{ route('recruitment.add.position') }}" method="post">
-              @if (session('warning') === true)
+              @if (session('warning') === true and session('status'))
                 <div class="alert alert-success">
                   {{ session('status') }}
                 </div>
-              @else
+              @elseif (session('status'))
                 <div class="alert alert-warning">
                   {{ session('status') }}
                 </div>
