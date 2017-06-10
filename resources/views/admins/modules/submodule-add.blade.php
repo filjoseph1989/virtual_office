@@ -59,7 +59,9 @@
               <div class="form-group">
                 <div class="col-md-6 col-md-offset-3">
                   <button type="submit" class="btn btn-primary">Cancel</button>
-                  <button id="send" type="submit" class="btn btn-success">Submit</button>
+                  <button id="send" type="submit" class="btn btn-success">
+                    <i class="fa fa-floppy-o" aria-hidden="true"></i> Save
+                  </button>
                   <a href="{{ route('admin.submodules.list.all') }}" class="btn btn-success">
                     <i class="fa fa-table" aria-hidden="true"></i> Show All
                   </a>
