@@ -127,9 +127,11 @@ class PositionController extends Controller
   public function destroy(Request $request)
   {
     $position = Position::find($request->id);
+
     if ($position->delete()) {
       $message['delete_result'] = true;
-      $message['position_data'] = Position::all();
+      $message['position_data'] = $position->getPositionByDepartment($request->department_id, true);
+      // $message['position_data'] = Position::all();
       echo json_encode($message);
     }
   }

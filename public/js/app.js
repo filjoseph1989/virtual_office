@@ -7584,59 +7584,55 @@ $(document).on('click', '.department-position', function() {
   * @return
   */
  $(document).on('click', '.delete-position-name', function() {
-     var _this = this;
-     swal({
-         title: 'Are you sure?',
-         text: "You won't be able to revert this!",
-         type: 'warning',
-         showCancelButton: true,
-         confirmButtonColor: '#3085d6',
-         cancelButtonColor: '#d33',
-         confirmButtonText: 'Yes, delete it!'
-     }).then(function() {
-       var position_id = $(_this).data('position-id');
-       var department_id = $(_this).data('department-id');
-       var position_name = $(_this).data('position-name');
+   var _this = this;
+   swal({
+     title: 'Are you sure?',
+     text: "You won't be able to revert this!",
+     type: 'warning',
+     showCancelButton: true,
+     confirmButtonColor: '#3085d6',
+     cancelButtonColor: '#d33',
+     confirmButtonText: 'Yes, delete it!'
+   }).then(function() {
+     var position_id = $(_this).data('position-id');
+     var department_id = $(_this).data('department-id');
+     var position_name = $(_this).data('position-name');
 
-       $.ajax({
-         type: 'POST',
-         url: '/recruitment/delete-position-by-department',
-         data: {
-           id: position_id,
-           department_id: department_id,
-         },
-         dataType: 'json',
-         beforeSend: function(request) {
-           request.setRequestHeader("X-CSRF-TOKEN", $('meta[name="_token"]').attr('content'));
-         },
-         success: function(data) {
-           if (data.delete_result == true) {
-             var html = "";
-             for (var i = 0; i < data.position_data.length; i++) {
-               html += '<tr>' +
-               '<td scope="row">' + (i + 1) + '</td>' +
+     $.ajax({
+       type: 'POST',
+       url: '/recruitment/delete-position-by-department',
+       data: {
+         id: position_id,
+         department_id: department_id,
+       },
+       dataType: 'json',
+       beforeSend: function(request) {
+         request.setRequestHeader("X-CSRF-TOKEN", $('meta[name="_token"]').attr('content'));
+       },
+       success: function(data) {
+         if (data.delete_result == true) {
+           var html = "";
+           for (var i = 0; i < data.position_data.length; i++) {
+             html += '<tr>' +
+             '<td scope="row">' + (i + 1) + '</td>' +
                '<td scope="row" id="position-name-' + data.position_data[i].id + '">' + data.position_data[i].name + '</td>' +
                '<td class="position-list__action" id="position-action-' + data.position_data[i].id + '">' +
                '<a href="#" class="delete-position-name" data-position-id="' + data.position_data[i].id + '" data-position-name="' + data.position_data[i].name + '" data-department-id="' + department_id + '"><i class="fa fa-times" aria-hidden="true" title="Delete Position"></i></a>' +
                '<a href="#" class="edit-position-name" data-position-id="' + data.position_data[i].id + '" data-position-name="' + data.position_data[i].name + '" data-department-id="' + department_id + '"><i class="fa fa-pencil" aria-hidden="true" title="Edit Position Name"></i></a>' +
                '</td>' +
-               '</tr>';
-             }
-             $('#position-body tbody').html(html);
-             $('#modal-position-list').DataTable();
-
-             swal(
-               'Deleted!',
-               'Position ID is ' + position_name,
-               'success'
-             )
+             '</tr>';
            }
-         },
-         error: function(data) {
-           console.log('Error:');
+           $('#position-body tbody').html(html);
+           $('#modal-position-list').DataTable();
+
+           swal( 'Deleted!', position_name, 'success' )
          }
-       });
-     })
+       },
+       error: function(data) {
+         console.log('Error:');
+       }
+     });
+   })
  });
 
  /**
