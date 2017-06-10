@@ -24,6 +24,7 @@ Route::name('home')->get('/home', 'HomeController@home');
  * recruitment Area
  */
 Route::prefix('recruitment')->group(function() {
+
   # Get
   Route::name('recruitment')->get('/', 'HomeController@showRecruitemeneMenu');
   Route::name('recruitment.add')->get('/add', 'EmployeeController@showAddForm');
@@ -37,12 +38,15 @@ Route::prefix('recruitment')->group(function() {
 
   # Post
   Route::name('recruitment.edit.profile')->post('/edit-profile', 'EmployeeController@storeEducationInfo');
-  Route::name('recruitment.delete.position.by.department')->post('/delete-position-by-department', 'DepartmentController@destroy');
-  Route::name('recruitment.add.position')->post('/add-position', 'PositionController@store');
+
+  Route::name('recruitment.delete.department')->post('/delete-department', 'DepartmentController@destroy');
   Route::name('recruitment.add.department')->post('/add-department', 'DepartmentController@store');
   Route::name('recruitment.list.position.by.department')->post('/list-position-by-department', 'DepartmentController@getPositonByDepartment');
-  Route::name('recruitment.edit.position.by.department')->post('/edit-position-by-department', 'PositionController@update');
   Route::name('recruitment.edit.department')->post('/edit-department', 'DepartmentController@update');
+
+  Route::name('recruitment.add.position')->post('/add-position', 'PositionController@store');
+  Route::name('recruitment.edit.position.by.department')->post('/edit-position-by-department', 'PositionController@update');
+  Route::name('recruitment.delete.position.by.department')->post('/delete-position-by-department', 'PositionController@destroy');
   Route::name('recruitment.delete.position')->post('/delete-list-position', 'PositionController@destroy');
 });
 

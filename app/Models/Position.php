@@ -40,4 +40,5 @@ class Position extends Model
 
     return ($array === true) ? $result->toArray() : $result->toJson();
   }
+
 }

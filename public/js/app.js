@@ -7726,3 +7726,47 @@ $(document).on('click', '.edit-department', function() {
   $('#edit-department-id').val(department_id);
   $('#department-send').attr('data-department-id', department_id);
 });
+
+/**
+ * Delete Department request
+ *
+ * @return
+ */
+$(document).on('click', '.delete-department', function() {
+  var department_id   = $(this).parents('tr').data('department-id');
+  var department_name = $(this).parents('tr').data('department-name');
+
+  swal({
+    title: 'Are you sure?',
+    text: "You won't be able to revert this!",
+    type: 'warning',
+    showCancelButton: true,
+    confirmButtonColor: '#3085d6',
+    cancelButtonColor: '#d33',
+    confirmButtonText: 'Yes, delete it!'
+  }).then(function() {
+    $.ajax({
+      type: 'POST',
+      url: '/recruitment/delete-department',
+      data: {
+        id: department_id,
+      },
+      dataType: 'json',
+      beforeSend: function(request) {
+        request.setRequestHeader("X-CSRF-TOKEN", $('meta[name="_token"]').attr('content'));
+      },
+      success: function(data) {
+        if (data.delete_result == true) {
+          swal( 'Deleted!', department_name, 'success' ).then(
+            function () {
+              location.reload();
+            }
+          );
+        }
+      },
+      error: function(data) {
+        console.log('Error:');
+      }
+    });
+  })
+});
