@@ -124,16 +124,22 @@ class PositionController extends Controller
    * @param  int  $id
    * @return \Illuminate\Http\Response
    */
-  public function destroy(Request $request)
+  public function destroy(Request $request, $ext = false)
   {
     $position = Position::find($request->id);
 
     if ($position->delete()) {
       $message['delete_result'] = true;
-      $message['position_data'] = $position->getPositionByDepartment($request->department_id, true);
-      // $message['position_data'] = Position::all();
+      $message['position_data'] = ($ext === false )
+        ? $position->getPositionByDepartment($request->department_id, true)
+        : Position::all();
       echo json_encode($message);
     }
+  }
+
+  public function destroyPosition(Request $request)
+  {
+    self::destroy($request, true);
   }
 
   public function autocomplete(Request $request)

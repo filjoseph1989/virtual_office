@@ -47,7 +47,7 @@ Route::prefix('recruitment')->group(function() {
   Route::name('recruitment.add.position')->post('/add-position', 'PositionController@store');
   Route::name('recruitment.edit.position.by.department')->post('/edit-position-by-department', 'PositionController@update');
   Route::name('recruitment.delete.position.by.department')->post('/delete-position-by-department', 'PositionController@destroy');
-  // Route::name('recruitment.delete.position')->post('/delete-list-position', 'PositionController@destroy');
+  Route::name('recruitment.delete.position')->post('/delete-list-position', 'PositionController@destroyPosition');
 });
 
 /**

@@ -18,6 +18,7 @@ New:
   ☐ Issue 18: Optimize the ajax in apps.js
   ☐ Issue 19: Add better color picker for department colors
   ☐ Issue 20: On department-table.blade.php line 5 transfer the style to style.css
+  ☐ Issue 21: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`auth`.`admins`, CONSTRAINT `admins_position_id_foreign` FOREIGN KEY (`position_id`) REFERENCES `positions` (`id`)) (SQL: delete from `positions` where `id` = 1)
 
 Done:
   ✔ Issue 16: Get the color value (Go to this line) @done(2017-06-10 18:31) @project(New)
