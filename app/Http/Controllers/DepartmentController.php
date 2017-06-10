@@ -14,7 +14,8 @@ class DepartmentController extends Controller
    *
    * @return \Illuminate\Http\Response
    */
-  public function index() {
+  public function index()
+  {
       //
   }
 
@@ -135,18 +136,22 @@ class DepartmentController extends Controller
   }
 
   /**
-   * Remove the specified resource from storage.
+   * Remove the department name from the table
+   * Department
    *
-   * @param  int  $id
    * @return \Illuminate\Http\Response
    */
   public function destroy(Request $request)
   {
-    $position = Position::find($request->id);
-    if ($position->delete()) {
-      $message['delete_result'] = true;
-      $message['position_data'] = $position->getPositionByDepartment($request->department_id, true);
-      echo json_encode($message);
+    if (! Position::where('department_id', $request->id)->exists()) {
+      $department = Department::find($request->id);
+      if ($department->delete()) {
+        $message['delete_result'] = true;
+
+        # Get all department
+        // $message['position_data'] = $position->getPositionByDepartment($request->department_id, true);
+        echo json_encode($message);
+      }
     }
   }
 }

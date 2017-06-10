@@ -57,7 +57,7 @@
                       <td>{{ $value->name }}</td>
                       <td><div class="department-list__color" style="background-color: {{ strtolower($value->color) }};"></div>{{ $value->color }}</td>
                       <td class="department-list__action">
-                        <a href="#"><i class="fa fa-times" aria-hidden="true" title="Delete Department"></i></a>
+                        <a href="#"><i class="fa fa-times delete-department" aria-hidden="true" title="Delete Department"></i></a>
                         <a href="#" class="edit-department"
                           data-toggle = "modal"
                           data-target = "#edit-department">
