@@ -14,6 +14,8 @@ New:
   ☐ Issue 13: enable profile and setting in top navigation
   ☐ Issue 14: enable the toggle bar in top navigation
   ☐ Issue 15: enable thi line (go to this line)
+  ☐ Issue 16: Get the color value (Go to this line)
+  ☐ Issue 17: On department-table.blade.php assign the last color store on the database to the color
 
 Done:
   ✔ Display the admin name in admin dashboard has an error @done(2017-06-07 12:18) @project(New)

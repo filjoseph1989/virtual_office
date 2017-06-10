@@ -107,9 +107,15 @@ class PositionController extends Controller
    * @param  int  $id
    * @return \Illuminate\Http\Response
    */
-  public function update(Request $request, $id)
+  public function update(Request $request)
   {
-      //
+    $data           = $request->only(['id', 'name']);
+    $position       = Position::find($data['id']);
+    $position->name = $data['name'];
+    if ($position->save()) {
+      $message['data'] = true;
+      echo json_encode($message);
+    }
   }
 
   /**

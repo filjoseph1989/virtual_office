@@ -7646,61 +7646,107 @@ $(document).on('click', '.department-position', function() {
   * @return
   */
  $(document).on('click', '.delete-position', function() {
-     var _this = this;
-     swal({
-         title: 'Are you sure?',
-         text: "You won't be able to revert this!",
-         type: 'warning',
-         showCancelButton: true,
-         confirmButtonColor: '#3085d6',
-         cancelButtonColor: '#d33',
-         confirmButtonText: 'Yes, delete it!'
-     }).then(function() {
-         var position_id = $(_this).data('position-id');
-         var position_name = $(_this).data('position-name');
+   var _this = this;
+   swal({
+     title: 'Are you sure?',
+     text: "You won't be able to revert this!",
+     type: 'warning',
+     showCancelButton: true,
+     confirmButtonColor: '#3085d6',
+     cancelButtonColor: '#d33',
+     confirmButtonText: 'Yes, delete it!'
+   }).then(function() {
+     var position_id = $(_this).data('position-id');
+     var position_name = $(_this).data('position-name');
 
-         console.log(position_id, position_name);
+     console.log(position_id, position_name);
 
-         $.ajaxSetup({
-             headers: {
-                 'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')
-             }
-         })
-
-         $.ajax({
-             type: 'POST',
-             url: '/recruitment/delete-list-position',
-             data: {
-                 id: position_id,
-             },
-             dataType: 'json',
-             success: function(data) {
-                 if (data.delete_result == true) {
-                     var html = "";
-                     for (var i = 0; i < data.position_data.length; i++) {
-                         html +=
-                             '<tr>' +
-                             '<td scope="row">' + i + 1 + '</td>' +
-                             '<td scope="row" id="position-name-' + data.position_data[i].id + '">' + data.position_data[i].name + '</td>' +
-                             '<td class="position-list__action" id="position-action-' + data.position_data[i].id + '">' +
-                             '<a href="#" class="delete-position" data-position-id=' + data.position_data[i].id + '" data-position-name="' + data.position_data[i].name + '"><i class="fa fa-times" aria-hidden="true" title="Delete Position"></i></a>' +
-                             '<a href="#" class="edit-position-name" data-position-id="' + data.position_data[i].id + '" data-position-name="' + data.position_data[i].name + '"><i class="fa fa-pencil" aria-hidden="true" title="Edit Position Name"></i></a>' +
-                             '</td>' +
-                             '</tr>';
-                     }
-                     $('#position-list tbody').html(html);
-
-                     swal(
-                         'Deleted!',
-                         'Position ID is ' + position_name,
-                         'success'
-                     )
-                 }
-             },
-             error: function(data) {
-                 console.log('Error:');
-             }
-         });
-
+     $.ajaxSetup({
+       headers: {
+         'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')
+       }
      })
+
+     $.ajax({
+       type: 'POST',
+       url: '/recruitment/delete-list-position',
+       data: {
+         id: position_id,
+       },
+       dataType: 'json',
+       success: function(data) {
+         if (data.delete_result == true) {
+           var html = "";
+           for (var i = 0; i < data.position_data.length; i++) {
+             html +=
+             '<tr>' +
+             '<td scope="row">' + i + 1 + '</td>' +
+             '<td scope="row" id="position-name-' + data.position_data[i].id + '">' + data.position_data[i].name + '</td>' +
+             '<td class="position-list__action" id="position-action-' + data.position_data[i].id + '">' +
+             '<a href="#" class="delete-position" data-position-id=' + data.position_data[i].id + '" data-position-name="' + data.position_data[i].name + '"><i class="fa fa-times" aria-hidden="true" title="Delete Position"></i></a>' +
+             '<a href="#" class="edit-position-name" data-position-id="' + data.position_data[i].id + '" data-position-name="' + data.position_data[i].name + '"><i class="fa fa-pencil" aria-hidden="true" title="Edit Position Name"></i></a>' +
+             '</td>' +
+             '</tr>';
+           }
+           $('#position-list tbody').html(html);
+
+           swal(
+             'Deleted!',
+             'Position ID is ' + position_name,
+             'success'
+           )
+         }
+       },
+       error: function(data) {
+         console.log('Error:');
+       }
+     });
+
+   })
  });
+
+ /**
+  * ------------------------------------------------------------------------------
+  * Department
+  * ------------------------------------------------------------------------------
+  */
+
+/**
+ * Display the department name in the header of
+ * edit modal
+ *
+ * @return
+ */
+$(document).on('click', '.edit-department', function() {
+  var department_id   = $(this).parents('tr').data('department-id');
+  var department_name = $(this).parents('tr').data('department-name');
+
+  $('#department-modal-title').html('Edit ' + department_name);
+  $('#edit-department-name').val(department_name);
+  $('#edit-department-id').val(department_id);
+  $('#department-send').attr('data-department-id', department_id);
+});
+
+/**
+ * SUbmit the edited data for department
+ *
+ * Issue 16: I can't get the color value
+ * Refeerence: department-table.blade.php
+ *
+ * @return
+ */
+$(document).on('click', '#edit-department #department-send', function() {
+  var department_id = $(this).data('department-id');
+  var color         = $("#picker").spectrum("get");
+  console.log(color);
+
+  var form = $('#edit-department-form').serializeArray();
+  console.log(form);
+});
+/**
+ * Display the color picker in the department modal
+ * @type
+ */
+$('#edit-color').spectrum({
+  color: "f00"
+});

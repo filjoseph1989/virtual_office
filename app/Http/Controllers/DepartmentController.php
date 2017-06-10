@@ -122,12 +122,15 @@ class DepartmentController extends Controller
    */
   public function update(Request $request)
   {
-    $data           = $request->only(['id', 'name']);
-    $position       = Position::find($data['id']);
-    $position->name = $data['name'];
-    if ($position->save()) {
-      $message['data'] = true;
-      echo json_encode($message);
+    $data              = $request->only(['id', 'name', 'color']);
+    $department        = Department::find($data['id']);
+    $name              = $department->name;
+    $department->name  = $data['name'];
+    $department->color = $data['color'];
+
+    if ($department->save()) {
+      return redirect()->route('recruitment.list.department')
+        ->with('status', "Successfuly updated department name from {$department->name} to {$data['name']}");
     }
   }
 

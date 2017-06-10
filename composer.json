@@ -10,7 +10,8 @@
         "jolicode/jolinotif": "^1.1",
         "kint-php/kint": "^2.1",
         "laravel/framework": "5.4.*",
-        "laravel/tinker": "~1.0"
+        "laravel/tinker": "~1.0",
+        "symfony/var-dumper": "^3.3"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
