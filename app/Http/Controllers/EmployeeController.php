@@ -91,15 +91,22 @@ class EmployeeController extends Controller
    */
   public function showEditProfileForm()
   {
-    $degree  = Degree::all();
-    $course  = Course::orderBy('name', 'ASC')->get();
-    $cities  = Cities::orderBy('name', 'ASC')->get();
-    $country = Country::all();
-    $content = "users.recruitment.edit-profile";
+    $data = parent::getDetails([
+      'degree'  => Degree::all(),
+      'course'  => Course::orderBy('name', 'ASC')->get(),
+      'cities'  => Cities::orderBy('name', 'ASC')->get(),
+      'country' => Country::all(),
+      'content' => "users.recruitment.edit-profile",
+    ]);
 
-    return view('users.user-dashboard', compact('content', 'country','cities', 'course', 'degree'));
+    return view('users.user-dashboard', $data);
   }
 
+  /**
+   * Display the list of employee
+   *
+   * @return
+   */
   public function showEmployeeList()
   {
     $data = parent::getDetails([
