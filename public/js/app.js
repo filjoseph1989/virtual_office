@@ -7726,27 +7726,3 @@ $(document).on('click', '.edit-department', function() {
   $('#edit-department-id').val(department_id);
   $('#department-send').attr('data-department-id', department_id);
 });
-
-/**
- * SUbmit the edited data for department
- *
- * Issue 16: I can't get the color value
- * Refeerence: department-table.blade.php
- *
- * @return
- */
-$(document).on('click', '#edit-department #department-send', function() {
-  var department_id = $(this).data('department-id');
-  var color         = $("#picker").spectrum("get");
-  console.log(color);
-
-  var form = $('#edit-department-form').serializeArray();
-  console.log(form);
-});
-/**
- * Display the color picker in the department modal
- * @type
- */
-$('#edit-color').spectrum({
-  color: "f00"
-});
