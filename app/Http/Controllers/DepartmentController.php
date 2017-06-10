@@ -18,21 +18,33 @@ class DepartmentController extends Controller
   public function store(Request $request)
   {
     # Issue 7: Go to this line because I dont know how to this correctly
-    // $rules = [
-    //   'name' => 'required|unique:name|max:255',
-    // ];
-    //
-    // $validator = Validator::make($request->all(), $rules);
-    //
-    // if ($validator->fails()) {
-    //   return Redirect::to('recruitment.list.department')
-    //     ->withErrors($validator)
-    //     ->withInput();
-    // }
+    /*
+     $rules = [
+       'name' => 'required|unique:name|max:255',
+     ];
 
-    Department::create($request->only(['name', 'color']));
-    return redirect()->route('recruitment.list.department')
-      ->with('status', 'Successfuly added new Department');
+     $validator = Validator::make($request->all(), $rules);
+
+     if ($validator->fails()) {
+       return Redirect::to('recruitment.list.department')
+       ->withErrors($validator)
+       ->withInput();
+     }
+     */
+
+    # Issue 22:
+    # Check department name
+    $department = new Department();
+    if ($department->checkDepartmentName($request->name) === true) {
+      return redirect()->route('recruitment.list.department')
+        ->with(
+          'warning', 'Department Name Already Exist'
+        );
+    } else {
+      Department::create($request->only(['name', 'color']));
+      return redirect()->route('recruitment.list.department')
+        ->with('status', 'Successfuly added new Department');
+    }
   }
 
   /**

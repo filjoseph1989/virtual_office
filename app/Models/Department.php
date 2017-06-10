@@ -24,4 +24,17 @@ class Department extends Model
   {
     return parent::find($id)->name;
   }
+
+  /**
+   * Check if the name exist
+   * @param  string $name
+   * @return
+   */
+  public function checkDepartmentName($name = "")
+  {
+    $department = new Department();
+    return $department->select('*')
+      ->where('name', '=', $name)
+      ->exists();
+  }
 }

@@ -6,8 +6,8 @@ Sprint 8 Department:
   ✔ Task 19: on delete department Use sweetalert @done(2017-06-10 19:49) @project(Sprint 8 Department)
   ✔ Task 20: Check the delete position functionality @done(2017-06-10 20:18) @project(Sprint 8 Department)
   ✔ Task 21: Delete position on modal will flood all position after @done(2017-06-10 20:04) @project(Sprint 8 Department)
-  ☐ Task 21: Use sweetalert on add department
   ☐ Task 7: Check the department if already exist before adding new
+  ☐ Task 21: Use sweetalert on add department
   ☐ Task 9: Need a hover effect of department list action column
   ☐ Task 10: Need a hover effect of position list action column
   ☐ Task 13: Sidebar module for admin
