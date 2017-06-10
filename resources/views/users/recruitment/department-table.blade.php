@@ -2,9 +2,13 @@
   <div class="side-body padding-top">
     <div class="page-content">
       <div class="clearfix container-fluid row">
+        <ol class="breadcrumb" style="margin-top: 70px;">
+          <li><a href="#">recruitment</a></li>
+          <li class="active">list of department</li>
+        </ol>
         <div class="x_panel">
           <div class="x_title">
-            <h2>Recruitment</h2>
+            <h2>List of Department</h2>
             <ul class="nav navbar-right panel_toolbox">
               <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a> </li>
               <!--
@@ -124,12 +128,12 @@
 <div class="modal fade" id="department-add" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title" id="">Add New Department</h4>
-      </div>
-      <div class="modal-body">
-        <form class="form-horizontal form-label-left" novalidate="" action="{{ route('recruitment.add.department') }}" method="post">
+      <form class="form-horizontal form-label-left" novalidate="" action="{{ route('recruitment.add.department') }}" method="post">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title" id="">Add New Department</h4>
+        </div>
+        <div class="modal-body">
           {{ csrf_field() }}
           <div class="item form-group">
             <label class="control-label col-md-3 col-sm-3 col-xs-12" for="department-name">
@@ -140,26 +144,19 @@
             </div>
           </div>
           <div class="item form-group">
-            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="department-color">
-              Department Color <span class="required">*</span>
-            </label>
+            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="department-color">Department Color</label>
             <div class="col-md-6 col-sm-6 col-xs-12">
-              <input id="department-color" name="color" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" placeholder="e.g Red" type="text">
+              <input id="department-color" name="color" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" placeholder="e.g Red" type="color">
             </div>
           </div>
-          <div class="ln_solid"></div>
-          <div class="form-group">
-            <div class="col-md-6 col-md-offset-3">
-              <button id="send" type="submit" class="btn btn-success">
-                <i class="fa fa-paper-plane" aria-hidden="true"></i> Send
-              </button>
-            </div>
-          </div>
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-      </div>
+        </div>
+        <div class="modal-footer">
+          <button id="send" type="submit" class="btn btn-success">
+            <i class="fa fa-floppy-o" aria-hidden="true"></i> Save
+          </button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </form>
     </div>
   </div>
 </div>
@@ -190,10 +187,7 @@
           </div>
         </div>
         <div class="modal-footer">
-          <button type="submit" class="btn btn-success" id="department-send"><i class="fa fa-paper-plane"></i> Send</button>
-          <a id="fontawesome-icons" href="http://fontawesome.io/cheatsheet/" target="_blank" class="btn btn-success">
-            <i class="fa fa-paper-plane"></i> List of Icons
-          </a>
+          <button type="submit" class="btn btn-success" id="department-send"><i class="fa fa-floppy-o" aria-hidden="true"></i> Save</button>
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         </div>
       </form>

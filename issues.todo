@@ -14,12 +14,15 @@ New:
   ☐ Issue 13: enable profile and setting in top navigation
   ☐ Issue 14: enable the toggle bar in top navigation
   ☐ Issue 15: enable thi line (go to this line)
-  ☐ Issue 16: Get the color value (Go to this line)
   ☐ Issue 17: On department-table.blade.php assign the last color store on the database to the color
+  ☐ Issue 18: Optimize the ajax in apps.js
+  ☐ Issue 19: Add better color picker for department colors
+  ☐ Issue 20: On department-table.blade.php line 5 transfer the style to style.css
 
 Done:
-  ✔ Display the admin name in admin dashboard has an error @done(2017-06-07 12:18) @project(New)
+  ✔ Issue 16: Get the color value (Go to this line) @done(2017-06-10 18:31) @project(New)
   ✔ Issue 4: uri admin/modules problem @done(2017-06-04 00:20) @project(New)
+  ✔ Display the admin name in admin dashboard has an error @done(2017-06-07 12:18) @project(New)
   ✔ Remove this AdminSubModulesController/create same in web.php @done(2017-05-29 08:09)
   ✔ Display of the username if wrong @done(2017-05-20 16:13)
   ✔ Logo on the sidebar doesn't show up when in another page @done(2017-05-23 11:07)
