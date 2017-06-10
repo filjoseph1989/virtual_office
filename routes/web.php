@@ -27,21 +27,22 @@ Route::prefix('recruitment')->group(function() {
   # Get
   Route::name('recruitment')->get('/', 'HomeController@showRecruitemeneMenu');
   Route::name('recruitment.add')->get('/add', 'EmployeeController@showAddForm');
-  Route::name('recruitment.edit.profile')->get('/edit-profile', 'EmployeeController@showEditProfileForm');
-  Route::name('recruitment.edit.profile')->post('/edit-profile', 'EmployeeController@storeEducationInfo');
-  Route::name('recruitment.add.department')->get('/add-department/{modal}', 'DepartmentController@showAddDepartmentForm');
   Route::name('recruitment.add.position')->get('/add-position', 'PositionController@index');
   Route::name('recruitment.add.position.modal')->get('/add-position-modal/{id}', 'PositionController@indexModal');
+  Route::name('recruitment.add.department')->get('/add-department/{modal}', 'DepartmentController@showAddDepartmentForm');
+  Route::name('recruitment.edit.profile')->get('/edit-profile', 'EmployeeController@showEditProfileForm');
   Route::name('recruitment.list.department')->get('/list-department', 'DepartmentController@showDepartmentList');
   Route::name('recruitment.list.position')->get('/list-position', 'PositionController@showPositionList');
   Route::name('recruitment.list.employee')->get('/list-employee', 'EmployeeController@showEmployeeList');
 
   # Post
+  Route::name('recruitment.edit.profile')->post('/edit-profile', 'EmployeeController@storeEducationInfo');
   Route::name('recruitment.delete.position.by.department')->post('/delete-position-by-department', 'DepartmentController@destroy');
   Route::name('recruitment.add.position')->post('/add-position', 'PositionController@store');
   Route::name('recruitment.add.department')->post('/add-department', 'DepartmentController@store');
   Route::name('recruitment.list.position.by.department')->post('/list-position-by-department', 'DepartmentController@getPositonByDepartment');
-  Route::name('recruitment.edit.position.by.department')->post('/edit-position-by-department', 'DepartmentController@update');
+  Route::name('recruitment.edit.position.by.department')->post('/edit-position-by-department', 'PositionController@update');
+  Route::name('recruitment.edit.department')->post('/edit-department', 'DepartmentController@update');
   Route::name('recruitment.delete.position')->post('/delete-list-position', 'PositionController@destroy');
 });
 
