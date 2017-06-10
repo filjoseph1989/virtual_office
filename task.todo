@@ -1,10 +1,16 @@
-Sprint 8:
-  ✔ Task 1: Size of the edit form should be 100% @done(2017-06-10 08:46) @project(Sprint 8)
-  ✔ Task 3: On edit position, can cancel the edit @done(2017-06-10 08:46) @project(Sprint 8)
+Sprint 8 Department:
   ☐ Task 2: Add department - Form validation:
     ☐ Task 2: Check if the name exist
+  ☐ Task 4: Optimize the ajax in apps.js
+  ☐ Task 5: List of department - action
+  ☐ Task 6: Delete department
+  ☐ Task 7: Check the department if already exist
+  ☐ Task 8: Before deleting a department, check if it has a position
+  ☐ Task 9: Need a hover effect of department list action column
+  ☐ Task 10: Need a hover effect of position list action column
+  ☐ Task 11: Add color picker on department color
+  ✔ Task 12: Edit department name @done(2017-06-10 18:14) @project(Sprint 8 Department)
 
-  ☐ Delete department
   ☐ Sidebar module for admin
   ☐ Delete module
   ☐ Edit sub-module
@@ -30,12 +36,9 @@ Log:
   ☐ Study more on Eloquent relationship
   ☐ User add - add module using tag input
   ☐ User add - make email
-  ☐ List of department - action
   ☐ List of all employee - action
   ☐ List of employee by department
   ☐ List of employee by position
-  ☐ Add color picker on department color
-  ☐ Check the department if already exist
   ☐ Add family - Fetch first the user id before adding the family information
   ☐ Add employee - success alert
   ☐ Add employee - login check
@@ -47,10 +50,7 @@ Log:
   ☐ View profile - HR should be the one who can view employee profile
   ☐ Automatiic Capitalize in the browser side
   ☐ Can change profile picture
-  ☐ Before deleting a department, check if it has a position
-  ☐ Need a hover effect of department list action column
   ☐ On payroll HR should be able to sort, undertime, absent, etc
-  ☐ Must edit the position.department_id to update the records in database
   ☐ On the user perpective upon viewing profile, disable email, department, position, and government data
   ☐ Display the loggedin details last login
 
@@ -119,3 +119,5 @@ Sprint 7 Positions:
   ✔ Issue 2: Delete position on HR, will not update the list correctly @done(2017-06-08 10:41) @project(Sprint 7 Positions)
   ✔ Issue 3: List of positions in Human Resource Department data-tables not working @done(2017-06-09 11:29) @project(Sprint 7 Positions)
   ✔ Issue 4: Delete position on modal does not update the list @done(2017-06-10 07:44) @project(Sprint 7 Positions)
+  ✔ Task 1: Size of the edit form should be 100% @done(2017-06-10 08:46) @project(Sprint 8)
+  ✔ Task 3: On edit position, can cancel the edit @done(2017-06-10 08:46) @project(Sprint 8)

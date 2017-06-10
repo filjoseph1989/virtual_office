@@ -20,6 +20,7 @@
           </div>
           <div class="x_content">
             <div class="clearfix container-fluid row">
+
               @if (count($errors) > 0)
                 <div class="alert alert-danger">
                   <ul>
@@ -29,11 +30,13 @@
                   </ul>
                 </div>
               @endif
+
               @if (session('status'))
                 <div class="alert alert-success">
                   {{ session('status') }}
                 </div>
               @endif
+
               <table class="table table-bordered department-list" id="department-list">
                 <thead>
                   <tr>
@@ -45,20 +48,24 @@
                 </thead>
                 <tbody>
                   <?php foreach ($department as $key => $value): ?>
-                    <tr>
+                    <tr data-department-id="{{ $value->id }}" data-department-name="{{ $value->name }}">
                       <td scope="row">{{ $key + 1  }}</td>
                       <td>{{ $value->name }}</td>
                       <td><div class="department-list__color" style="background-color: {{ strtolower($value->color) }};"></div>{{ $value->color }}</td>
                       <td class="department-list__action">
                         <a href="#"><i class="fa fa-times" aria-hidden="true" title="Delete Department"></i></a>
-                        <a href="#"><i class="fa fa-pencil" aria-hidden="true" title="Edit Department Name"></i></a>
+                        <a href="#" class="edit-department"
+                          data-toggle = "modal"
+                          data-target = "#edit-department">
+                            <i class="fa fa-pencil" aria-hidden="true" title="Edit Department Name"></i>
+                        </a>
                         <a href="#" class="department-position"
-                          data-department-id="{{ $value->id }}"
-                          data-department-name="{{ $value->name }}"
-                          data-position-new="{{ route('recruitment.add.position.modal', $value->id) }}"
-                          data-route="{{ route('recruitment.list.position.by.department', $value->id) }}"
-                          data-toggle="modal"
-                          data-target="#position">
+                          data-department-id   = "{{ $value->id }}"
+                          data-department-name = "{{ $value->name }}"
+                          data-position-new    = "{{ route('recruitment.add.position.modal', $value->id) }}"
+                          data-route           = "{{ route('recruitment.list.position.by.department', $value->id) }}"
+                          data-toggle          = "modal"
+                          data-target          = "#position">
                             <i class="fa fa-table" aria-hidden="true" title="Display Position Under This Department"></i>
                         </a>
                       </td>
@@ -153,6 +160,43 @@
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
       </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="edit-department" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <form class="form-horizontal form-label-left" id="edit-department-form" novalidate="" action="{{ route('recruitment.edit.department') }}" method="post">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title" id="department-modal-title"></h4>
+        </div>
+        <div class="modal-body">
+          {{ csrf_field() }}
+          <div class="item form-group">
+            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="edit-department-name">
+              Department Name
+            </label>
+            <div class="col-md-6 col-sm-6 col-xs-12">
+              <input type="hidden" id="edit-department-id" name="id">
+              <input id="edit-department-name" name="name" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" placeholder="e.g Human Resources Department" required="required" type="text">
+            </div>
+          </div>
+          <div class="item form-group">
+            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="edit-color">Color</label>
+            <div class="col-md-6 col-sm-6 col-xs-12">
+              <input id="edit-color" name="color" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" placeholder="e.g. RED" required="required" type="color">
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-success" id="department-send"><i class="fa fa-paper-plane"></i> Send</button>
+          <a id="fontawesome-icons" href="http://fontawesome.io/cheatsheet/" target="_blank" class="btn btn-success">
+            <i class="fa fa-paper-plane"></i> List of Icons
+          </a>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </form>
     </div>
   </div>
 </div>
