@@ -2,6 +2,10 @@
   <div class="side-body padding-top">
     <div class="page-content">
       <div class="clearfix container-fluid row">
+        <ol class="breadcrumb" style="margin-top: 70px;">
+          <li><a href="{{ route('recruitment') }}">recruitment</a></li>
+          <li class="active">edit profile</li>
+        </ol>
         <div class="x_panel">
           <div class="x_title">
             <h2>Add Form</h2>

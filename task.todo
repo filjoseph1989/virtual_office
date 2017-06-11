@@ -1,14 +1,6 @@
 Sprint 9 Department:
-  ☐ Task 2: Add department - Form validation
-  ☐ Task 9: Need a hover effect of department list action column
-  ☐ Task 10: Need a hover effect of position list action column
-  ☐ Task 13: Sidebar module for admin
-  ☐ Task 14: Delete module
-  ☐ Task 15: Edit sub-module
-  ☐ Task 16: Delete sub-module
-  ☐ Task 17: Add new sub-module must have a list of routes
-  ☐ Task 18: Add breadcrumb in some pages
-  ☐ Task 22: Add position should check if already exist
+  ✔ Task 18: Add breadcrumb for user pages @done(2017-06-11 08:17) @project(Sprint 9 Department)
+  ☐ Task 23: Add breadcrumb for admin pages
 
 Log:
   ☐ Try fetch as replacement to ajax
@@ -47,6 +39,15 @@ Log:
   ☐ On the user perpective upon viewing profile, disable email, department, position, and government data
   ☐ Display the loggedin details last login
   ☐ Use sweetalert on add department
+  ☐ Task 2: Add department - Form validation
+  ☐ Task 9: Need a hover effect of department list action column
+  ☐ Task 10: Need a hover effect of position list action column
+  ☐ Task 13: Sidebar module for admin
+  ☐ Task 14: Delete module
+  ☐ Task 15: Edit sub-module
+  ☐ Task 16: Delete sub-module
+  ☐ Task 17: Add new sub-module must have a list of routes
+  ☐ Task 22: Add position should check if already exist
 
 Sprint 9: Sprint Department
   ✔ Task 21: Delete position on modal will flood all position after @done(2017-06-10 20:04) @project(Sprint 8 Department)
