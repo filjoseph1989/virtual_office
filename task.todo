@@ -1,13 +1,5 @@
-Sprint 8 Department:
+Sprint 9 Department:
   ☐ Task 2: Add department - Form validation
-  ✔ Task 5: List of department - action @done(2017-06-10 18:55) @project(Sprint 8 Department)
-  ✔ Task 6: Delete department @done(2017-06-10 19:50) @project(Sprint 8 Department)
-  ✔ Task 8: Before deleting a department, check if it has a position @done(2017-06-10 19:50) @project(Sprint 8 Department)
-  ✔ Task 19: on delete department Use sweetalert @done(2017-06-10 19:49) @project(Sprint 8 Department)
-  ✔ Task 20: Check the delete position functionality @done(2017-06-10 20:18) @project(Sprint 8 Department)
-  ✔ Task 21: Delete position on modal will flood all position after @done(2017-06-10 20:04) @project(Sprint 8 Department)
-  ☐ Task 7: Check the department if already exist before adding new
-  ☐ Task 21: Use sweetalert on add department
   ☐ Task 9: Need a hover effect of department list action column
   ☐ Task 10: Need a hover effect of position list action column
   ☐ Task 13: Sidebar module for admin
@@ -16,6 +8,7 @@ Sprint 8 Department:
   ☐ Task 16: Delete sub-module
   ☐ Task 17: Add new sub-module must have a list of routes
   ☐ Task 18: Add breadcrumb in some pages
+  ☐ Task 22: Add position should check if already exist
 
 Log:
   ☐ Try fetch as replacement to ajax
@@ -46,49 +39,59 @@ Log:
     ☐ Refer 1: Go to this line an the example are here
   ☐ Add family - form validation
   ☐ Add close option on profile welcome card
-  ☐ Dashboard sidebar should collapse
+  ☐ Dashboard sidebar should toggle
   ☐ View profile - HR should be the one who can view employee profile
-  ☐ Automatiic Capitalize in the browser side
+  ☐ Automatic Capitalize in the browser side
   ☐ Can change profile picture
   ☐ On payroll HR should be able to sort, undertime, absent, etc
   ☐ On the user perpective upon viewing profile, disable email, department, position, and government data
   ☐ Display the loggedin details last login
+  ☐ Use sweetalert on add department
+
+Sprint 9: Sprint Department
+  ✔ Task 21: Delete position on modal will flood all position after @done(2017-06-10 20:04) @project(Sprint 8 Department)
+  ✔ Task 20: Check the delete position functionality @done(2017-06-10 20:18) @project(Sprint 8 Department)
+  ✔ Task 19: on delete department Use sweetalert @done(2017-06-10 19:49) @project(Sprint 8 Department)
+  ✔ Task 8: Before deleting a department, check if it has a position @done(2017-06-10 19:50) @project(Sprint 8 Department)
+  ✔ Task 7: Check the department if already exist before adding new @done(2017-06-11 07:46) @project(Sprint 8 Department)
+  ✔ Task 6: Delete department @done(2017-06-10 19:50) @project(Sprint 8 Department)
+  ✔ Task 5: List of department - action @done(2017-06-10 18:55) @project(Sprint 8 Department)
 
 Sprint 1: Basic Forms
-✔ Add employee @done (5/18/2017, 10:28:40 AM)
-✔ Add family @done(2017-05-18 11:30)
-✔ Add department @done(2017-05-18 12:44)
-✔ Add position @done(2017-05-18 18:40)
-✔ Course dropdown @done(2017-05-20 11:29)
-✔ Level dropdown @done(2017-05-20 13:51)
-✔ Address dropdown @done(2017-05-20 15:32)
-✔ Add Education of user @done(2017-05-20 15:32)
-✔ Edit Profile @done(2017-05-20 15:32)
+  ✔ Add employee @done (5/18/2017, 10:28:40 AM)
+  ✔ Add family @done(2017-05-18 11:30)
+  ✔ Add department @done(2017-05-18 12:44)
+  ✔ Add position @done(2017-05-18 18:40)
+  ✔ Course dropdown @done(2017-05-20 11:29)
+  ✔ Level dropdown @done(2017-05-20 13:51)
+  ✔ Address dropdown @done(2017-05-20 15:32)
+  ✔ Add Education of user @done(2017-05-20 15:32)
+  ✔ Edit Profile @done(2017-05-20 15:32)
 
 Sprint 2: Display the data
-✔ List of department @done(2017-05-20 17:29)
-✔ List of department color @done(2017-05-21 17:12)
-✔ List of all employee @done(2017-05-21 17:44)
-✔ List of all position @done(2017-05-21 18:02)
+  ✔ List of department @done(2017-05-20 17:29)
+  ✔ List of department color @done(2017-05-21 17:12)
+  ✔ List of all employee @done(2017-05-21 17:44)
+  ✔ List of all position @done(2017-05-21 18:02)
 
 Sprint 3: DataTables
-✔ Working with dataTables on list of positions @done(2017-05-21 23:25)
-✔ DataTables for department list @done(2017-05-22 11:07)
-✔ DataTables for the list of employee @done(2017-05-22 11:09)
+  ✔ Working with dataTables on list of positions @done(2017-05-21 23:25)
+  ✔ DataTables for department list @done(2017-05-22 11:07)
+  ✔ DataTables for the list of employee @done(2017-05-22 11:09)
 
 Sprint 4: Admin Dashboard
-✔ Admin add new moddule @done(2017-05-25 10:50)
-✔ Admin display table of module @done(2017-05-25 10:50)
-✔ Admin add new sub module @done(2017-05-26 07:43)
-✔ Admin display sub module @done(2017-05-26 07:43)
-✔ Admin display table of positions  @done(2017-05-26 07:44)
-✔ Display sub-module of a module @done(2017-05-27 11:57)
-✔ Display breadcrumb in the sub-module @done(2017-05-27 11:57)
-✔ Add a sub-module to a module @done(2017-05-27 15:07)
-✔ Admin assign positions to module @done(2017-05-29 10:58)
-✔ On the http://mpci-vo.dev/admin/submodules/list/1 display the position currently assign in module @done(2017-05-29 10:58)
-✔ Login checker @done(2017-05-30 06:09)
-✔ How to add position in module? @done(2017-05-30 06:59)
+  ✔ Admin add new moddule @done(2017-05-25 10:50)
+  ✔ Admin display table of module @done(2017-05-25 10:50)
+  ✔ Admin add new sub module @done(2017-05-26 07:43)
+  ✔ Admin display sub module @done(2017-05-26 07:43)
+  ✔ Admin display table of positions  @done(2017-05-26 07:44)
+  ✔ Display sub-module of a module @done(2017-05-27 11:57)
+  ✔ Display breadcrumb in the sub-module @done(2017-05-27 11:57)
+  ✔ Add a sub-module to a module @done(2017-05-27 15:07)
+  ✔ Admin assign positions to module @done(2017-05-29 10:58)
+  ✔ On the http://mpci-vo.dev/admin/submodules/list/1 display the position currently assign in module @done(2017-05-29 10:58)
+  ✔ Login checker @done(2017-05-30 06:09)
+  ✔ How to add position in module? @done(2017-05-30 06:59)
 
 Sprint 5: Sidebar
   ✔ Module table - add new in modal @done(2017-05-30 06:36) @project(Sprint 5)

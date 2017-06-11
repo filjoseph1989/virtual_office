@@ -126,15 +126,16 @@ class DepartmentController extends Controller
    */
   public function destroy(Request $request)
   {
+    # Check on position
     if (! Position::where('department_id', $request->id)->exists()) {
       $department = Department::find($request->id);
       if ($department->delete()) {
         $message['delete_result'] = true;
-
-        # Get all department
-        // $message['position_data'] = $position->getPositionByDepartment($request->department_id, true);
         echo json_encode($message);
       }
+    } else {
+      $message['delete_result'] = false;
+      echo json_encode($message);
     }
   }
 }

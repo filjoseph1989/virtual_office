@@ -7677,7 +7677,7 @@ $(document).on('click', '.department-position', function() {
               '<td class="position-list__action" id="position-action-' + data.position_data[i].id + '">' +
                 '<a href="#" class="delete-position" data-position-id=' + data.position_data[i].id + '" data-position-name="' + data.position_data[i].name + '"><i class="fa fa-times" aria-hidden="true" title="Delete Position"></i></a>' +
                 '<a href="#" class="edit-position-name" data-position-id="' + data.position_data[i].id + '" data-position-name="' + data.position_data[i].name + '"><i class="fa fa-pencil" aria-hidden="true" title="Edit Position Name"></i></a>' +
-              '</td>' + 
+              '</td>' +
             '</tr>';
           }
           $('#position-list tbody').html(html);
@@ -7745,6 +7745,12 @@ $(document).on('click', '.delete-department', function() {
       success: function(data) {
         if (data.delete_result == true) {
           swal( 'Deleted!', department_name, 'success' ).then(
+            function () {
+              location.reload();
+            }
+          );
+        } if(data.delete_result == false) {
+          swal( 'Failed!', department_name + ' Has positions', 'error' ).then(
             function () {
               location.reload();
             }
