@@ -187,6 +187,9 @@
                   <button id="send" type="submit" class="btn btn-success">
                     <i class="fa fa-paper-plane"></i> Send
                   </button>
+                  <a href="{{ route('recruitment.list.employee') }}" class="btn btn-success">
+                    <i class="fa fa-table" aria-hidden="true"></i> List of Employees
+                  </a>
                 </div>
               </div>
             </form>
