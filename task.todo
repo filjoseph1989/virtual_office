@@ -1,8 +1,7 @@
 Sprint 10:
   ✔ Task 18: Add breadcrumb for user pages @done(2017-06-11 08:17) @project(Sprint 9 Department)
-  ☐ Task 24: On recruitment/add, on click the dropdown department options, a position under it should be fetch and display as a position in position select
-  ☐ City look up
-  ☐ Country look up
+  ✔ Task 24: On recruitment/add, on click the dropdown department options, a position under it should be fetch and display as a position in position select @done(2017-06-12 20:28) @project(Sprint 10)
+  ✔ Task 25: On recruitment/add create a city and country look up use for dropdown in adding new employee @done(2017-06-12 20:46) @project(Sprint 10)
   ☐ Contact, Tin, SSS, philhealth and Pag-ibig formatting
   ☐ Form validation
   ☐ On recruitment/add there should be show employees button

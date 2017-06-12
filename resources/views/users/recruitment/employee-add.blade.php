@@ -60,10 +60,10 @@
                 </label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
                   <select class="form-control col-md-7 col-xs-12" name="department_id" id="department">
-                    <option value="0">Select</option>
-                    <?php foreach ($department as $dkey => $dvalue): ?>
+                    <option value="0">Select Department</option>
+                    @foreach ($department as $dvalue):
                       <option value="{{ $dvalue->id }}" class="drop-down-department">{{ $dvalue->name }}</option>
-                    <?php endforeach; ?>
+                    @endforeach
                   </select>
                 </div>
               </div>
@@ -73,9 +73,8 @@
                 </label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
                   <select class="form-control col-md-7 col-xs-12" name="position_id" id="position">
-                    <option value="0">Select</option>
-                    <option value="1">Web Designer</option>
-                    <option value="2">Web Developer</option>
+                    <option value="0">Select Position</option>
+                    <!-- Ajax Job Here -->
                   </select>
                 </div>
               </div>
@@ -108,13 +107,16 @@
                 </div>
               </div>
               <div class="item form-group">
+                <!-- Issue 27 -->
                 <label class="control-label col-md-3 col-sm-3 col-xs-12" for="city">
                   City
                 </label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
                   <select name="city" class="form-control col-md-7 col-xs-12" id="city">
                     <option value="0">Select</option>
-                    <option value="1">Davao City</option>
+                    @foreach ($cities as $cvalue):
+                      <option value="{{ $cvalue->id }}" class="city-name">{{ $cvalue->name }}</option>
+                    @endforeach
                   </select>
                 </div>
               </div>
@@ -125,7 +127,9 @@
                 <div class="col-md-6 col-sm-6 col-xs-12">
                   <select class="form-control col-md-7 col-xs-12" name="country" id="country">
                     <option value="0">Select</option>
-                    <option value="1">Philippines</option>
+                    @foreach ($countries as $cvalue):
+                      <option value="{{ $cvalue->id }}" class="city-name">{{ $cvalue->name }}</option>
+                    @endforeach
                   </select>
                 </div>
               </div>

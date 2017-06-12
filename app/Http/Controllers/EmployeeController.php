@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\User;
-use App\Family;
+use App\Models\Family;
 use App\Models\Cities;
 use App\Models\Country;
 use App\Models\Course;
@@ -79,8 +79,10 @@ class EmployeeController extends Controller
   public function showAddForm()
   {
     $data = parent::getDetails([
+      'cities'     => Cities::orderBy('name', 'ASC')->get(),
+      'countries'  => Country::orderBy('name', 'ASC')->get(),
       'department' => Department::all(),
-      'content' => 'users.recruitment.employee-add'
+      'content'    => 'users.recruitment.employee-add'
     ]);
 
     return view('users.user-dashboard', $data);

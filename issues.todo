@@ -22,6 +22,8 @@ New:
   ☐ Issue 22: (Go to line) Optimize here by using laravel way of looking if name already exist
   ☐ Issue 23: recruitment/add-department is not working
   ☐ Issue 25: Has an error in query after making a submit request
+  ☐ Issue 26: Change the name of the country model from country to countries
+  ☐ Issue 27: (go to this line) Add city sufix on city name that does not contain it
 
 Done:
   ✔ Issue 23: Delete department that has position should alert user @done(2017-06-11 08:01) @project(New)
