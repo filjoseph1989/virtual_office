@@ -9,6 +9,7 @@ use App\Models\Country;
 use App\Models\Course;
 use App\Models\Degree;
 use App\Models\Education;
+use App\Models\Department;
 use Illuminate\Http\Request;
 use Monarobase\CountryList\CountryList;
 
@@ -78,6 +79,7 @@ class EmployeeController extends Controller
   public function showAddForm()
   {
     $data = parent::getDetails([
+      'department' => Department::all(),
       'content' => 'users.recruitment.employee-add'
     ]);
 

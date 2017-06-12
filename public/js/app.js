@@ -7763,3 +7763,35 @@ $(document).on('click', '.delete-department', function() {
     });
   })
 });
+
+/**
+ * ------------------------------------------------------------------------------
+ * Users
+ * ------------------------------------------------------------------------------
+ */
+$(document).on('change', '#department', function() {
+  var id = $(this).find("option:selected").attr("value");
+
+  $.ajax({
+    type: 'POST',
+    url: '/recruitment/list-position-by-department',
+    data: {
+      id: id,
+    },
+    dataType: 'json',
+    beforeSend: function(request) {
+      request.setRequestHeader("X-CSRF-TOKEN", $('meta[name="_token"]').attr('content'));
+    },
+    success: function(data) {
+      var html ='<option value="0">Select Position</option>';
+      for (var i = 0; i < data.length; i++) {
+        html +=
+        '<option value="'+data[i].id+'">'+data[i].name+'</option>';
+      }
+      $('#position').html(html);
+    },
+    error: function(data) {
+      console.log('Error:');
+    }
+  });
+ });

@@ -8,7 +8,7 @@
         </ol>
         <div class="x_panel">
           <div class="x_title">
-            <h2>Add Form</h2>
+            <h2>Add New Eemployee</h2>
             <ul class="nav navbar-right panel_toolbox">
               <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a></li>
               <!--
@@ -24,7 +24,6 @@
           </div>
           <div class="x_content">
             <form class="form-horizontal form-label-left" action="{{ route('user.posts') }}" method="post">
-              <span class="section">Personal Info</span>
               @if (session('status'))
                 <div class="alert alert-success">
                   {{ session('status') }}
@@ -60,10 +59,11 @@
                   Department <span class="required">*</span>
                 </label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
-                  <select class="form-control col-md-7 col-xs-12" name="department_id">
+                  <select class="form-control col-md-7 col-xs-12" name="department_id" id="department">
                     <option value="0">Select</option>
-                    <option value="1">Management Information System</option>
-                    <option value="2">Human Resources</option>
+                    <?php foreach ($department as $dkey => $dvalue): ?>
+                      <option value="{{ $dvalue->id }}" class="drop-down-department">{{ $dvalue->name }}</option>
+                    <?php endforeach; ?>
                   </select>
                 </div>
               </div>
@@ -72,7 +72,7 @@
                   Position <span class="required">*</span>
                 </label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
-                  <select class="form-control col-md-7 col-xs-12" name="position_id">
+                  <select class="form-control col-md-7 col-xs-12" name="position_id" id="position">
                     <option value="0">Select</option>
                     <option value="1">Web Designer</option>
                     <option value="2">Web Developer</option>
