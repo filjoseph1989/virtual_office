@@ -8,7 +8,7 @@
         </ol>
         <div class="x_panel">
           <div class="x_title">
-            <h2>Add Form</h2>
+            <h2>Add Department</h2>
             <ul class="nav navbar-right panel_toolbox">
               <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a></li>
               <!-- <li class="dropdown">
@@ -22,7 +22,6 @@
           </div>
           <div class="x_content">
             <form class="form-horizontal form-label-left" novalidate="" action="{{ route('recruitment.add.department', 'not') }}" method="post">
-              <span class="section">Add Department</span>
               @if (session('status'))
                 <div class="alert alert-success">
                   {{ session('status') }}

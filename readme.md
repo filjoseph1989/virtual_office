@@ -33,6 +33,17 @@ This README is a document whatever steps are necessary to get your application u
   4. Add back 2014_10_12_000000_create_users_table.php in database/migrations and run `php artisan migrate`
   5. Add back 2017_05_11_161459_create_admins_table.php  in database/migrations and run `php artisan migrate --seed`
 
+* Email configuration
+  1. open .env file or duplicate the .env.example
+  2. Update the information here
+        MAIL_DRIVER=smtp
+        MAIL_HOST=smtp.mailtrap.io
+        MAIL_PORT=2525
+        MAIL_USERNAME=[your-username]
+        MAIL_PASSWORD=[email-password]
+        MAIL_ENCRYPTION=null
+  3. Refer to this https://laravel.com/docs/5.4/mail
+
 * How to run tests
 * Deployment instructions
 

@@ -10,6 +10,7 @@ use App\Models\Course;
 use App\Models\Degree;
 use App\Models\Education;
 use App\Models\Department;
+use App\Mail\UserEmail;
 use Illuminate\Http\Request;
 use Monarobase\CountryList\CountryList;
 
@@ -33,7 +34,9 @@ class EmployeeController extends Controller
     $result             = $request->only(['position_id', 'department_id', 'first_name', 'last_name', 'email', 'gender', 'birthday', 'street', 'city', 'country', 'zipcode', 'contact', 'tin', 'sss', 'philhealth', 'pag_ibig']);
     $result['password'] = bcrypt('password');
 
-    User::create($result);
+    $users = User::create($result);
+
+    \Mail::to($users)->send(new UserEmail);
 
     return redirect()->route('recruitment.add')
       ->with('status', 'Successfuly added new employee');
