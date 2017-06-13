@@ -4,30 +4,30 @@ New:
   ☐ Issue 3: (Line Comment) Improve this using laravel way or eloquent way
   ☐ Issue 4: How to create|call bootstrap modal using jquery
   ☐ Issue 5: Go to this line and read it description in comment the concerns of this issue
-  ☐ Issue 6: What I want to remove the module from users?
   ☐ Issue 7: Go to this line because I dont know how to this correctly
   ☐ Issue 8: DataTables should activate only if records is more than 10
   ☐ Issue 9: Progress bar using bootstrap will not work
   ☐ Issue 10: Improve the pagination layout in the DataTables
-  ☐ Issue 11: In edit positions, check also if the name given already exist
   ☐ Issue 12: enable the notification in top navigation
   ☐ Issue 13: enable profile and setting in top navigation
   ☐ Issue 14: enable the toggle bar in top navigation
   ☐ Issue 15: enable thi line (go to this line)
-  ☐ Issue 17: On department-table.blade.php assign the last color store on the database to the color
   ☐ Issue 18: Optimize the ajax in apps.js
   ☐ Issue 19: Add better color picker for department colors
   ☐ Issue 20: On department-table.blade.php line 5 transfer the style to style.css
-  ☐ Issue 21: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`auth`.`admins`, CONSTRAINT `admins_position_id_foreign` FOREIGN KEY (`position_id`) REFERENCES `positions` (`id`)) (SQL: delete from `positions` where `id` = 1)
   ☐ Issue 22: (Go to line) Optimize here by using laravel way of looking if name already exist
-  ☐ Issue 23: recruitment/add-department is not working
   ☐ Issue 25: Has an error in query after making a submit request
   ☐ Issue 26: Change the name of the country model from country to countries
   ☐ Issue 27: (go to this line) Add city sufix on city name that does not contain it
 
 Done:
+  ✔ Issue 28: recruitment/add-department is not working @done (6/13/2017, 10:42:36 AM)
   ✔ Issue 23: Delete department that has position should alert user @done(2017-06-11 08:01) @project(New)
+  ✔ Issue 21: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`auth`.`admins`, CONSTRAINT `admins_position_id_foreign` FOREIGN KEY (`position_id`) REFERENCES `positions` (`id`)) (SQL: delete from `positions` where `id` = 1) @done(2017-06-12 21:30) @project(New)
+  ✔ Issue 17: On department-table.blade.php assign the last color store on the database to the color @done(2017-06-12 21:30) @project(New)
   ✔ Issue 16: Get the color value (Go to this line) @done(2017-06-10 18:31) @project(New)
+  ✔ Issue 11: In edit positions, check also if the name given already exist @done(2017-06-12 21:29) @project(New)
+  ✔ Issue 6: What I want to remove the module from users? @done(2017-06-12 21:29) @project(New)
   ✔ Issue 4: uri admin/modules problem @done(2017-06-04 00:20) @project(New)
   ✔ Display the admin name in admin dashboard has an error @done(2017-06-07 12:18) @project(New)
   ✔ Remove this AdminSubModulesController/create same in web.php @done(2017-05-29 08:09)

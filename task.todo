@@ -1,14 +1,10 @@
 Sprint 10:
-  ✔ Task 18: Add breadcrumb for user pages @done(2017-06-11 08:17) @project(Sprint 9 Department)
-  ✔ Task 24: On recruitment/add, on click the dropdown department options, a position under it should be fetch and display as a position in position select @done(2017-06-12 20:28) @project(Sprint 10)
-  ✔ Task 25: On recruitment/add create a city and country look up use for dropdown in adding new employee @done(2017-06-12 20:46) @project(Sprint 10)
-  ✔ Task 26: On recruitment/add there should be show employees button @done(2017-06-12 20:51) @project(Sprint 10)
+  ☐ Task 28: add module using tag input
+  ☐ Task 29: make email to the user after a successful registration
+  ☐ Task 23: Add breadcrumb for admin pages
+  ☐ Task 30: Make email to new registered employee
   ☐ Contact, Tin, SSS, philhealth and Pag-ibig formatting
   ☐ User Form validation
-  ☐ recruitment/list-department add plus icon for adding position
-  ☐ Task 23: Add breadcrumb for admin pages
-  ☐ User add - add module using tag input
-  ☐ User add - make email
 
 Log:
   ☐ Try fetch as replacement to ajax
@@ -27,7 +23,7 @@ Log:
   ☐ Add employee - success alert
   ☐ Add employee - login check
   ☐ Add employee - form validation:
-    ☐ Refer 1: Go to this line an the example are here
+  ☐ Refer 1: Go to this line an the example are here
   ☐ Add family - form validation
   ☐ Add close option on profile welcome card
   ☐ Dashboard sidebar should toggle
@@ -48,10 +44,17 @@ Log:
   ☐ Task 17: Add new sub-module must have a list of routes
   ☐ Task 22: Add position should check if already exist
 
-Sprint 9: Sprint Department
+Sprint 10:
+  ✔ Task 27: recruitment/list-department add plus icon for adding position @done(2017-06-12 20:53) @project(Sprint 10)
+  ✔ Task 26: On recruitment/add there should be show employees button @done(2017-06-12 20:51) @project(Sprint 10)
+  ✔ Task 25: On recruitment/add create a city and country look up use for dropdown in adding new employee @done(2017-06-12 20:46) @project(Sprint 10)
+  ✔ Task 24: On recruitment/add, on click the dropdown department options, a position under it should be fetch and display as a position in position select @done(2017-06-12 20:28) @project(Sprint 10)
   ✔ Task 21: Delete position on modal will flood all position after @done(2017-06-10 20:04) @project(Sprint 8 Department)
   ✔ Task 20: Check the delete position functionality @done(2017-06-10 20:18) @project(Sprint 8 Department)
   ✔ Task 19: on delete department Use sweetalert @done(2017-06-10 19:49) @project(Sprint 8 Department)
+  ✔ Task 18: Add breadcrumb for user pages @done(2017-06-11 08:17) @project(Sprint 9 Department)
+
+Sprint 9:
   ✔ Task 8: Before deleting a department, check if it has a position @done(2017-06-10 19:50) @project(Sprint 8 Department)
   ✔ Task 7: Check the department if already exist before adding new @done(2017-06-11 07:46) @project(Sprint 8 Department)
   ✔ Task 6: Delete department @done(2017-06-10 19:50) @project(Sprint 8 Department)

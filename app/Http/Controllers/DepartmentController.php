@@ -48,7 +48,7 @@ class DepartmentController extends Controller
   }
 
   /**
-   * Display the specified resource.
+   * Display the add department form
    *
    * @param  int  $id
    * @return \Illuminate\Http\Response
