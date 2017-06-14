@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Family;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -14,4 +14,17 @@ class Family extends Model
   protected $fillable = [
     'user_id', 'first_name', 'last_name', 'contact', 'relationship'
   ];
+
+  /**
+   * Return a row of a familt information
+   *
+   * @param  int $id user_id
+   * @return
+   */
+  public static function getFamily($id) {
+    $family = new Family();
+    return $family->select('*')
+      ->where('user_id', '=', $id)
+      ->get();
+  }
 }

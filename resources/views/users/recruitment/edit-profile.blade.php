@@ -35,7 +35,7 @@
                   First Name <span class="required">*</span>
                 </label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
-                  <input id="name" name="first_name" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" placeholder="both name(s) e.g John" required="required" type="text">
+                  <input id="name" name="first_name" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" placeholder="both name(s) e.g John" required="required" type="text" value="{{ $users->first_name }}">
                 </div>
               </div>
               <div class="item form-group">
@@ -43,7 +43,7 @@
                   Last Name <span class="required">*</span>
                 </label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
-                  <input id="last-name" name="last_name" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" placeholder="both name(s) e.g Doe" required="required" type="text">
+                  <input id="last-name" name="last_name" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" placeholder="both name(s) e.g Doe" required="required" type="text" value="{{ $users->last_name }}">
                 </div>
               </div>
               <div class="item form-group">
@@ -51,7 +51,7 @@
                   Email <span class="required">*</span>
                 </label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
-                  <input type="email" id="email" name="email" placeholder="e.g john@email.com" required="required" class="form-control col-md-7 col-xs-12">
+                  <input id="email" name="email" placeholder="e.g john@email.com" required="required" class="form-control col-md-7 col-xs-12" type="email" value="{{ $users->email }}">
                 </div>
               </div>
               <div class="item form-group">
@@ -60,7 +60,7 @@
                 </label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
                   <select class="form-control col-md-7 col-xs-12" name="department_id" id="department">
-                    <option value="0">Select</option>
+                    <option value="{{ $users->department_id }}">Select</option>
                     @foreach ($department as $dvalue):
                       <option value="{{ $dvalue->id }}" class="drop-down-department">{{ $dvalue->name }}</option>
                     @endforeach
@@ -73,7 +73,7 @@
                 </label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
                   <select class="form-control col-md-7 col-xs-12" name="position_id" id="position">
-                    <option value="0">Select</option>
+                    <option value="{{ $users->position_id }}">Select</option>
                     <!-- Ajax Job Here -->
                   </select>
                 </div>
@@ -84,7 +84,11 @@
                 </label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
                   <select class="form-control col-md-7 col-xs-12" name="gender">
-                    <option value="0">Select</option>
+                    @if ($users->gender == 1)
+                      <option value="{{ $users->gender }}">Male</option>
+                    @elseif ($users->gender == 2)
+                      <option value="{{ $users->gender }}">Female</option>
+                    @endif
                     <option value="1">Male</option>
                     <option value="2">Female</option>
                   </select>
@@ -95,7 +99,12 @@
                   Birthday
                 </label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
-                  <input type="date" id="birthday" name="birthday" class="form-control col-md-7 col-xs-12">
+                  <?php
+                    # Issue 34:
+                    $phpdate   = strtotime( $users->birthday );
+                    $mysqldate = date( 'Y-m-d', $phpdate );
+                  ?>
+                  <input id="birthday" name="birthday" class="form-control col-md-7 col-xs-12" type="date" value="{{ $mysqldate }}">
                 </div>
               </div>
               <div class="item form-group">
@@ -103,7 +112,7 @@
                   Street
                 </label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
-                  <input type="text" id="street" name="street" placeholder="Street" class="form-control col-md-7 col-xs-12">
+                  <input id="street" name="street" placeholder="Street" class="form-control col-md-7 col-xs-12" type="text" value="{{ $users->street }}">
                 </div>
               </div>
               <div class="item form-group">
@@ -112,7 +121,7 @@
                 </label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
                   <select name="city" class="form-control col-md-7 col-xs-12" id="city">
-                    <option value="0">Select</option>
+                    <option value="{{ $users->city }}">Select</option>
                     @foreach ($cities as $cvalue):
                       <option value="{{ $cvalue->id }}" class="city-name">{{ $cvalue->name }}</option>
                     @endforeach
@@ -125,7 +134,7 @@
                 </label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
                   <select class="form-control col-md-7 col-xs-12" name="country" id="country">
-                    <option value="0">Select</option>
+                    <option value="{{ $users->country }}">Select</option>
                     @foreach ($countries as $cvalue):
                       <option value="{{ $cvalue->id }}" class="city-name">{{ $cvalue->name }}</option>
                     @endforeach
@@ -137,7 +146,7 @@
                   Zipcode
                 </label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
-                  <input type="text" id="zipcode" name="zipcode" placeholder="e.g 8000" class="form-control col-md-7 col-xs-12">
+                  <input id="zipcode" name="zipcode" placeholder="e.g 8000" class="form-control col-md-7 col-xs-12" type="text" value="{{ $users->zipcode }}">
                 </div>
               </div>
               <div class="item form-group">
@@ -145,7 +154,7 @@
                   Contact
                 </label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
-                  <input type="tel" id="contact" name="contact" placeholder="e.g 0912 123 45 67" data-validate-length-range="8,20" class="form-control col-md-7 col-xs-12">
+                  <input id="contact" name="contact" placeholder="e.g 0912 123 45 67" data-validate-length-range="8,20" class="form-control col-md-7 col-xs-12" type="tel" value="{{ $users->contact }}">
                 </div>
               </div>
               <div class="item form-group">
@@ -153,7 +162,7 @@
                   TIN
                 </label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
-                  <input type="text" id="tin" name="tin" placeholder="e.g 000 000 000" data-validate-length-range="8,20" class="form-control col-md-7 col-xs-12">
+                  <input id="tin" name="tin" placeholder="e.g 000 000 000" data-validate-length-range="8,20" class="form-control col-md-7 col-xs-12" type="text" value="{{ $users->tin }}">
                 </div>
               </div>
               <div class="item form-group">
@@ -161,7 +170,7 @@
                   SSS
                 </label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
-                  <input type="text" id="sss" name="sss" placeholder="e.g 00 0000000 0" data-validate-length-range="8,20" class="form-control col-md-7 col-xs-12">
+                  <input id="sss" name="sss" placeholder="e.g 00 0000000 0" data-validate-length-range="8,20" class="form-control col-md-7 col-xs-12" type="text" value="{{ $users->sss }}">
                 </div>
               </div>
               <div class="item form-group">
@@ -169,7 +178,7 @@
                   Phil-Health
                 </label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
-                  <input type="text" id="phil-health" name="philhealth" placeholder="e.g 00 000000000 0" data-validate-length-range="8,20" class="form-control col-md-7 col-xs-12">
+                  <input id="phil-health" name="philhealth" placeholder="e.g 00 000000000 0" data-validate-length-range="8,20" class="form-control col-md-7 col-xs-12"  type="text" value="{{ $users->philhealth }}">
                 </div>
               </div>
               <div class="item form-group">
@@ -177,14 +186,15 @@
                   Pag-Ibig
                 </label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
-                  <input type="text" id="pag-ibig" name="pag_ibig" placeholder="e.g 0000 0000 0000" data-validate-length-range="8,20" class="form-control col-md-7 col-xs-12">
+                  <input id="pag-ibig" name="pag_ibig" placeholder="e.g 0000 0000 0000" data-validate-length-range="8,20" class="form-control col-md-7 col-xs-12"  type="text" value="{{ $users->pag_ibig }}">
                 </div>
               </div>
               <div class="ln_solid"></div>
               <div class="form-group">
                 <div class="col-md-6 col-md-offset-3">
-                  <button type="submit" class="btn btn-primary">Cancel</button>
-                  <button id="send" type="submit" class="btn btn-success">Submit</button>
+                  <button id="send" type="submit" class="btn btn-success">
+                    <i class="fa fa-floppy-o" aria-hidden="true"></i> Save
+                  </button>
                 </div>
               </div>
             </form>
@@ -192,16 +202,15 @@
         </div>
         <div class="x_panel">
           <div class="x_title">
-            <h2>Add Family Information</h2>
+            <h2>Add/Edit Family Information</h2>
             <ul class="nav navbar-right panel_toolbox">
-              <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-              </li>
-              <li class="dropdown">
+              <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a></li>
+              <!-- <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
                 <ul class="dropdown-menu" role="menu">
                   <li><a href="#">Settings 1</a></li>
                 </ul>
-              </li>
+              </li> -->
             </ul>
             <div class="clearfix"></div>
           </div>
@@ -218,6 +227,7 @@
                   First Name <span class="required">*</span>
                 </label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
+                  <input type="hidden" name="user_id" value="{{ $users->id }}">
                   <input id="first-name" name="first_name" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" placeholder="both name(s) e.g John" required="required" type="text">
                 </div>
               </div>
@@ -248,8 +258,9 @@
               <div class="ln_solid"></div>
               <div class="form-group">
                 <div class="col-md-6 col-md-offset-3">
-                  <button type="submit" class="btn btn-primary">Cancel</button>
-                  <button id="send" type="submit" class="btn btn-success">Submit</button>
+                  <button id="send" type="submit" class="btn btn-success">
+                    <i class="fa fa-floppy-o" aria-hidden="true"></i> Save
+                  </button>
                 </div>
               </div>
             </form>
@@ -257,7 +268,7 @@
         </div>
         <div class="x_panel">
           <div class="x_title">
-            <h2>Add Education Information</h2>
+            <h2>Add/Edit Education Information</h2>
             <ul class="nav navbar-right panel_toolbox">
               <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
               </li>
@@ -271,8 +282,7 @@
             <div class="clearfix"></div>
           </div>
           <div class="x_content">
-            <form class="form-horizontal form-label-left" novalidate="" action="{{ route('recruitment.edit.profile') }}" method="post">
-              <span class="section">Education Info</span>
+            <form class="form-horizontal form-label-left" novalidate="" action="{{ route('recruitment.edit.profiles') }}" method="post">
               @if (session('educationStatus'))
                 <div class="alert alert-success">
                   {{ session('educationStatus') }}
@@ -318,7 +328,7 @@
                   Street
                 </label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
-                  <input type="text" id="education-street" name="street" placeholder="Street" class="form-control col-md-7 col-xs-12">
+                  <input type="text" id="education-street" name="street" placeholder="Street" class="form-control col-md-7 col-xs-12" type="text">
                 </div>
               </div>
               <div class="item form-group">
@@ -327,7 +337,7 @@
                 </label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
                   <select name="city" class="form-control col-md-7 col-xs-12" id="city" id="education-city">
-                    <option value="0">Select City</option>
+                    <option value="{{ $users->city }}">Select City</option>
                     <?php foreach ($cities as $key => $cities_value): ?>
                       <option value="<?php echo "{$cities_value->id}"; ?>"><?php echo "{$cities_value->name}"; ?></option>
                     <?php endforeach; ?>
@@ -340,8 +350,8 @@
                 </label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
                   <select class="form-control col-md-7 col-xs-12" name="country" id="education-country">
-                    <option value="0">Select Country</option>
-                    @foreach ($countries as $value): 
+                    <option value="{{ $users->country }}">Select Country</option>
+                    @foreach ($countries as $value):
                       <option value="<?php echo "{$value->id}"; ?>"><?php echo "{$value->name}"; ?></option>
                     @endforeach;
                   </select>
@@ -358,8 +368,9 @@
               <div class="ln_solid"></div>
               <div class="form-group">
                 <div class="col-md-6 col-md-offset-3">
-                  <button type="submit" class="btn btn-primary">Cancel</button>
-                  <button id="send" type="submit" class="btn btn-success">Submit</button>
+                  <button id="send" type="submit" class="btn btn-success">
+                    <i class="fa fa-floppy-o" aria-hidden="true"></i> Save
+                  </button>
                 </div>
               </div>
             </form>

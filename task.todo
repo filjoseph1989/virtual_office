@@ -1,8 +1,9 @@
 Sprint 10:
-  ☐ Task 34: Fetch some of the user information to be display in user profile
-  ☐ Task 35: Add new field in the users table called wesbite or url - Refer Issue: 32
-  ☐ Task 33: Fetch the user information from the database to be edit
   ☐ Task 32: Make edit functionality for list of users
+  ☐ Task 35: Add new field in the users table called wesbite or url - Refer Issue: 32
+  ☐ Task 36: Fetch the data of the Family to be edit
+  ☐ Task 38: Update/Add Education
+  ☐ Task 39: Fetch the data of users education to be edit
   ☐ Task 30: Add color picker on recruitment/add-department
   ☐ Task 31: Make a beautiful email layout
   ☐ Task 28: add module using tag input
@@ -49,6 +50,9 @@ Log:
   ☐ Task 22: Add position should check if already exist
 
 Sprint 10:
+  ✔ Task 37: Update/Add Family @done(2017-06-14 13:43) @project(Sprint 10)
+  ✔ Task 34: Fetch some of the user information to be display in user profile @done(2017-06-14 12:02) @project(Sprint 10)
+  ✔ Task 33: Fetch the user information from the database to be edit @done(2017-06-14 13:41) @project(Sprint 10)
   ✔ Task 29: Make email to the user after a successful registration @done (6/13/2017, 12:41:07 PM)
   ✔ Task 27: recruitment/list-department add plus icon for adding position @done(2017-06-12 20:53) @project(Sprint 10)
   ✔ Task 26: On recruitment/add there should be show employees button @done(2017-06-12 20:51) @project(Sprint 10)

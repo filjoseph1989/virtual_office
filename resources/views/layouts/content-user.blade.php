@@ -34,7 +34,9 @@
                   <a href="#" target="_blank">www.example.com</a>
                 </li>
               </ul>
-              <a href="{{ route('recruitment.edit.profile') }}" class="btn btn-success"><i class="fa fa-edit m-right-xs"></i>Edit Profile</a>
+              <a href="{{ route('recruitment.edit.profile', $users->id) }}" class="btn btn-success">
+                <i class="fa fa-edit m-right-xs"></i> Edit Profile
+              </a>
               <h4>Skills</h4>
               <ul class="list-unstyled user_data">
                 <li>

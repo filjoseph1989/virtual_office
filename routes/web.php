@@ -24,7 +24,6 @@ Route::name('home')->get('/home', 'HomeController@home');
  * recruitment Area
  */
 Route::prefix('recruitment')->group(function() {
-
   # Get
   Route::name('recruitment')->get('/', 'HomeController@showRecruitemeneMenu');
   Route::name('recruitment.add')->get('/add', 'EmployeeController@showAddForm');
@@ -37,7 +36,7 @@ Route::prefix('recruitment')->group(function() {
   Route::name('recruitment.list.employee')->get('/list-employee', 'EmployeeController@showEmployeeList');
 
   # Post
-  Route::name('recruitment.edit.profile')->post('/edit-profile', 'EmployeeController@storeEducationInfo');
+  Route::name('recruitment.edit.profiles')->post('/edit-profile', 'EmployeeController@storeEducationInfo');
 
   Route::name('recruitment.delete.department')->post('/delete-department', 'DepartmentController@destroy');
   Route::name('recruitment.add.department')->post('/add-department', 'DepartmentController@store');

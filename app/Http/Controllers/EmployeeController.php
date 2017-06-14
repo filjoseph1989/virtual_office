@@ -50,10 +50,25 @@ class EmployeeController extends Controller
    */
   public function storeFamilyInfo(Request $request)
   {
-    $result = $request->only(['user_id', 'first_name', 'last_name', 'contact', 'relationship']);
+    $result  = $request->only(['user_id', 'first_name', 'last_name', 'contact', 'relationship']);
+
+    if (Family::where('user_id', $request->user_id)->exists()) {
+      $user_id = Family::getFamily($request->user_id)[0]->id;
+      $family  = Family::find($user_id);
+
+      $family->user_id      = $request->user_id;
+      $family->first_name   = $request->first_name;
+      $family->last_name    = $request->last_name;
+      $family->contact      = $request->contact;
+      $family->relationship = $request->relationship;
+      $family->save();
+
+      return redirect()->route('recruitment.edit.profile', $request->user_id)
+        ->with('familyStatus', 'Successfuly updated family information');
+    }
 
     Family::create($result);
-    return redirect()->route('recruitment.add.family')
+    return redirect()->route('recruitment.edit.profile', $request->user_id)
       ->with('familyStatus', 'Successfuly added family information');
   }
 
@@ -92,19 +107,20 @@ class EmployeeController extends Controller
   }
 
   /**
-   * Display the family form
+   * Display the edit form for user
    *
    * @return \Illuminate\Http\Response
    */
-  public function showEditProfileForm()
+  public function showEditProfileForm($id = 0)
   {
     $data = parent::getDetails([
-      'degree'  => Degree::all(),
-      'course'  => Course::orderBy('name', 'ASC')->get(),
-      'cities'  => Cities::orderBy('name', 'ASC')->get(),
-      'countries' => Country::all(),
+      'users'      => User::find($id),
+      'degree'     => Degree::all(),
+      'course'     => Course::orderBy('name', 'ASC')->get(),
+      'cities'     => Cities::orderBy('name', 'ASC')->get(),
+      'countries'  => Country::all(),
       'department' => Department::all(),
-      'content' => "users.recruitment.edit-profile",
+      'content'    => "users.recruitment.edit-profile",
     ]);
 
     return view('users.user-dashboard', $data);
