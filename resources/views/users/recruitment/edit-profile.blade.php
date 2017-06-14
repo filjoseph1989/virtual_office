@@ -8,7 +8,7 @@
         </ol>
         <div class="x_panel">
           <div class="x_title">
-            <h2>Add Form</h2>
+            <h2>Edit Form</h2>
             <ul class="nav navbar-right panel_toolbox">
               <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a></li>
               <!--
@@ -24,7 +24,6 @@
           </div>
           <div class="x_content">
             <form class="form-horizontal form-label-left" novalidate="" action="{{ route('user.posts') }}" method="post">
-              <span class="section">Personal Info</span>
               @if (session('status'))
                 <div class="alert alert-success">
                   {{ session('status') }}
@@ -60,10 +59,11 @@
                   Department <span class="required">*</span>
                 </label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
-                  <select class="form-control col-md-7 col-xs-12" name="department_id">
+                  <select class="form-control col-md-7 col-xs-12" name="department_id" id="department">
                     <option value="0">Select</option>
-                    <option value="1">Management Information System</option>
-                    <option value="2">Human Resources</option>
+                    @foreach ($department as $dvalue):
+                      <option value="{{ $dvalue->id }}" class="drop-down-department">{{ $dvalue->name }}</option>
+                    @endforeach
                   </select>
                 </div>
               </div>
@@ -72,10 +72,9 @@
                   Position <span class="required">*</span>
                 </label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
-                  <select class="form-control col-md-7 col-xs-12" name="position_id">
+                  <select class="form-control col-md-7 col-xs-12" name="position_id" id="position">
                     <option value="0">Select</option>
-                    <option value="1">Web Designer</option>
-                    <option value="2">Web Developer</option>
+                    <!-- Ajax Job Here -->
                   </select>
                 </div>
               </div>
@@ -114,9 +113,9 @@
                 <div class="col-md-6 col-sm-6 col-xs-12">
                   <select name="city" class="form-control col-md-7 col-xs-12" id="city">
                     <option value="0">Select</option>
-                    <?php foreach ($cities as $key => $cities_value): ?>
-                      <option value="{{ $cities_value->id}}">{{ $cities_value->name }}</option>
-                    <?php endforeach; ?>
+                    @foreach ($cities as $cvalue):
+                      <option value="{{ $cvalue->id }}" class="city-name">{{ $cvalue->name }}</option>
+                    @endforeach
                   </select>
                 </div>
               </div>
@@ -127,7 +126,9 @@
                 <div class="col-md-6 col-sm-6 col-xs-12">
                   <select class="form-control col-md-7 col-xs-12" name="country" id="country">
                     <option value="0">Select</option>
-                    <option value="1">Philippines</option>
+                    @foreach ($countries as $cvalue):
+                      <option value="{{ $cvalue->id }}" class="city-name">{{ $cvalue->name }}</option>
+                    @endforeach
                   </select>
                 </div>
               </div>
@@ -191,7 +192,7 @@
         </div>
         <div class="x_panel">
           <div class="x_title">
-            <h2>Add Form</h2>
+            <h2>Add Family Information</h2>
             <ul class="nav navbar-right panel_toolbox">
               <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
               </li>
@@ -206,7 +207,6 @@
           </div>
           <div class="x_content">
             <form class="form-horizontal form-label-left" novalidate="" action="{{ route('user.add.family') }}" method="post">
-              <span class="section">Family Info</span>
               @if (session('familyStatus'))
                 <div class="alert alert-success">
                   {{ session('familyStatus') }}
@@ -257,7 +257,7 @@
         </div>
         <div class="x_panel">
           <div class="x_title">
-            <h2>Add Form</h2>
+            <h2>Add Education Information</h2>
             <ul class="nav navbar-right panel_toolbox">
               <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
               </li>
@@ -341,9 +341,9 @@
                 <div class="col-md-6 col-sm-6 col-xs-12">
                   <select class="form-control col-md-7 col-xs-12" name="country" id="education-country">
                     <option value="0">Select Country</option>
-                    <?php foreach ($country as $key => $value): ?>
+                    @foreach ($countries as $value): 
                       <option value="<?php echo "{$value->id}"; ?>"><?php echo "{$value->name}"; ?></option>
-                    <?php endforeach; ?>
+                    @endforeach;
                   </select>
                 </div>
               </div>

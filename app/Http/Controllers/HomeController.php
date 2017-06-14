@@ -4,6 +4,10 @@ namespace App\Http\Controllers;
 
 use Auth;
 use App\User;
+use App\Models\Cities;
+use App\Models\Country;
+use App\Models\Position;
+use App\Models\Department;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -40,7 +44,15 @@ class HomeController extends Controller
    */
   public function home()
   {
-    $data = parent::getHomeDetails();
+    $data = parent::getHomeDetails([
+      'users'    => User::find(parent::getUserId()),
+      'department' => Department::getUserDepartmentName(User::find(parent::getUserId())->department_id),
+      'position' => Position::getUserPosition(User::find(parent::getUserId())->position_id),
+      'city' => Cities::getCityName(User::find(parent::getUserId())->city),
+      'country' => ucfirst(strtolower(Country::getCountryName(User::find(parent::getUserId())->country)))
+    ]);
+
+    // dd($data);
     return view('users.user-dashboard', $data);
   }
 

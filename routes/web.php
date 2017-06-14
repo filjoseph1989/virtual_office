@@ -31,7 +31,7 @@ Route::prefix('recruitment')->group(function() {
   Route::name('recruitment.add.position')->get('/add-position', 'PositionController@index');
   Route::name('recruitment.add.position.modal')->get('/add-position-modal/{id}', 'PositionController@indexModal');
   Route::name('recruitment.add.department')->get('/add-department/{modal?}', 'DepartmentController@showAddDepartmentForm');
-  Route::name('recruitment.edit.profile')->get('/edit-profile', 'EmployeeController@showEditProfileForm');
+  Route::name('recruitment.edit.profile')->get('/edit-profile/{id}', 'EmployeeController@showEditProfileForm');
   Route::name('recruitment.list.department')->get('/list-department', 'DepartmentController@showDepartmentList');
   Route::name('recruitment.list.position')->get('/list-position', 'PositionController@showPositionList');
   Route::name('recruitment.list.employee')->get('/list-employee', 'EmployeeController@showEmployeeList');

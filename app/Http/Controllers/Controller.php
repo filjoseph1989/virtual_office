@@ -148,7 +148,13 @@ class Controller extends BaseController
     return Auth::user()->id;
   }
 
-
+  /**
+   * Return the admin ID
+   *
+   * Issue 30:
+   *
+   * @return int
+   */
   protected function getAdminId()
   {
     return Admin::find(1)->id;

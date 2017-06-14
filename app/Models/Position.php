@@ -41,4 +41,15 @@ class Position extends Model
     return ($array === true) ? $result->toArray() : $result->toJson();
   }
 
+  /**
+   * Return the position name of the user from the given ID
+   *
+   * @param  int $id position ID
+   * @return string
+   */
+  public static function getUserPosition($id)
+  {
+    return parent::find($id)->name;
+  }
+
 }

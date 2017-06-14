@@ -26,6 +26,20 @@ class Department extends Model
   }
 
   /**
+   * Static way of getting department name
+   *
+   * Issue 31:
+   *
+   * @param  integer $id Department ID
+   * @return
+   */
+  public static function getUserDepartmentName($id = 0)
+  {
+    $department = new Department();
+    return $department->getDepartmentName($id);
+  }
+
+  /**
    * Check if the name exist
    * @param  string $name
    * @return

@@ -1,6 +1,9 @@
 Sprint 10:
-  ✔ Task 29: Make email to the user after a successful registration @done (6/13/2017, 12:41:07 PM)
-  ☐ Task 30: Add color picker on recruitment/add-department 
+  ☐ Task 34: Fetch some of the user information to be display in user profile
+  ☐ Task 35: Add new field in the users table called wesbite or url - Refer Issue: 32
+  ☐ Task 33: Fetch the user information from the database to be edit
+  ☐ Task 32: Make edit functionality for list of users
+  ☐ Task 30: Add color picker on recruitment/add-department
   ☐ Task 31: Make a beautiful email layout
   ☐ Task 28: add module using tag input
   ☐ Task 23: Add breadcrumb for admin pages
@@ -23,7 +26,7 @@ Log:
   ☐ Add family - Fetch first the user id before adding the family information
   ☐ Add employee - success alert
   ☐ Add employee - login check
-  ☐ Add employee - form validation:
+  ☐ Add employee - form validation
   ☐ Refer 1: Go to this line an the example are here
   ☐ Add family - form validation
   ☐ Add close option on profile welcome card
@@ -46,6 +49,7 @@ Log:
   ☐ Task 22: Add position should check if already exist
 
 Sprint 10:
+  ✔ Task 29: Make email to the user after a successful registration @done (6/13/2017, 12:41:07 PM)
   ✔ Task 27: recruitment/list-department add plus icon for adding position @done(2017-06-12 20:53) @project(Sprint 10)
   ✔ Task 26: On recruitment/add there should be show employees button @done(2017-06-12 20:51) @project(Sprint 10)
   ✔ Task 25: On recruitment/add create a city and country look up use for dropdown in adding new employee @done(2017-06-12 20:46) @project(Sprint 10)

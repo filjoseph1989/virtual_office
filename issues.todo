@@ -20,6 +20,10 @@ New:
   ☐ Issue 26: Change the name of the country model from country to countries
   ☐ Issue 27: (go to this line) Add city sufix on city name that does not contain it
   ☐ Issue 29: there should be a way that a position can be transfer to other department
+  ☐ Issue 30: The getAdminId() method in app\Http\Controllers\Controller.php should return ID from any admin, as of now it only return ID from column 1, what there are others?
+  ☐ Issue 31: Look for a way to combine this two method getDepartmentName() and getUserDepartmentName() on app\Models\Department.php
+  ☐ Issue 32: Add website on user fields in User Table in database
+  ☐ Issue 33: Remove 'username' index in the return of this method parent::getHomeDetails in in home() method in HomeController
 
 Done:
   ✔ Issue 28: recruitment/add-department is not working @done (6/13/2017, 10:42:36 AM)

@@ -102,7 +102,8 @@ class EmployeeController extends Controller
       'degree'  => Degree::all(),
       'course'  => Course::orderBy('name', 'ASC')->get(),
       'cities'  => Cities::orderBy('name', 'ASC')->get(),
-      'country' => Country::all(),
+      'countries' => Country::all(),
+      'department' => Department::all(),
       'content' => "users.recruitment.edit-profile",
     ]);
 
