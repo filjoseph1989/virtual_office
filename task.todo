@@ -1,9 +1,13 @@
-Sprint 10:
-  ✔ Task 38: Update/Add Education @done(2017-06-15 09:51) @project(Sprint 10)
-  ✔ Task 39: Fetch the data of users education to be edit @done(2017-06-15 09:51) @project(Sprint 10)
-  ☐ Task 32: Make edit functionality for list of users
+My Task:
+  ☐ Task 32: Make edit functionality for list of users in the user table
+  ☐ Task 45: Add family - form validation
+  ☐ Task 46: Add employee - form validation
   ☐ Task 35: Add new field in the users table called wesbite or url - Refer Issue: 32
   ☐ Task 40: Change user password
+  ☐ Task 41: Create autority and authority_groups tables for the users authority
+  ☐ Task 42: Add new form in admin panel for authority management
+  ☐ Task 43: Create CRUDS for authority and authority_groups
+  ☐ Task 44: Create a authority checker to be use by controllers
   ☐ Task 30: Add color picker on recruitment/add-department
   ☐ Task 31: Make a beautiful email layout
   ☐ Task 28: add module using tag input
@@ -12,29 +16,24 @@ Sprint 10:
   ☐ User Form validation
 
 Log:
-  ☐ Try fetch as replacement to ajax
   ☐ Create preloader too
+  ☐ Try fetch as replacement to ajax
   ☐ recruitment/list-department add a dynamic form using this http://jsfiddle.net/UeSsu/1/
   ☐ What if there are many admin registered, how to handle them?
   ☐ Add new admin
-  ☐ Admin privilidges
   ☐ Convert a user to an admin
   ☐ Try using this https://packagist.org/packages/jolicode/jolinotif
   ☐ Study more on Eloquent relationship
   ☐ List of all employee - action
   ☐ List of employee by department
   ☐ List of employee by position
-  ☐ Add family - Fetch first the user id before adding the family information
   ☐ Add employee - success alert
   ☐ Add employee - login check
-  ☐ Add employee - form validation
   ☐ Refer 1: Go to this line an the example are here
-  ☐ Add family - form validation
   ☐ Add close option on profile welcome card
   ☐ Dashboard sidebar should toggle
-  ☐ View profile - HR should be the one who can view employee profile
   ☐ Automatic Capitalize in the browser side
-  ☐ Can change profile picture
+  ☐ change profile picture
   ☐ On payroll HR should be able to sort, undertime, absent, etc
   ☐ On the user perpective upon viewing profile, disable email, department, position, and government data
   ☐ Display the loggedin details last login
@@ -49,7 +48,9 @@ Log:
   ☐ Task 17: Add new sub-module must have a list of routes
   ☐ Task 22: Add position should check if already exist
 
-Sprint 10:
+DONE:
+  ✔ Task 39: Fetch the data of users education to be edit @done(2017-06-15 09:51) @project(Sprint 10)
+  ✔ Task 38: Update/Add Education @done(2017-06-15 09:51) @project(Sprint 10)
   ✔ Task 37: Update/Add Family @done(2017-06-14 13:43) @project(Sprint 10)
   ✔ Task 36: Fetch the data of the Family to be edit @done(2017-06-15 09:10) @project(Sprint 10)
   ✔ Task 34: Fetch some of the user information to be display in user profile @done(2017-06-14 12:02) @project(Sprint 10)
@@ -63,12 +64,15 @@ Sprint 10:
   ✔ Task 20: Check the delete position functionality @done(2017-06-10 20:18) @project(Sprint 8 Department)
   ✔ Task 19: on delete department Use sweetalert @done(2017-06-10 19:49) @project(Sprint 8 Department)
   ✔ Task 18: Add breadcrumb for user pages @done(2017-06-11 08:17) @project(Sprint 9 Department)
-
-Sprint 9:
+  ✔ Task 12: Edit department name @done(2017-06-10 18:14) @project(Sprint 8 Department)
+  ✔ Task 11: Add color picker for on department color @done(2017-06-10 18:28) @project(Sprint 8 Department)
   ✔ Task 8: Before deleting a department, check if it has a position @done(2017-06-10 19:50) @project(Sprint 8 Department)
   ✔ Task 7: Check the department if already exist before adding new @done(2017-06-11 07:46) @project(Sprint 8 Department)
   ✔ Task 6: Delete department @done(2017-06-10 19:50) @project(Sprint 8 Department)
   ✔ Task 5: List of department - action @done(2017-06-10 18:55) @project(Sprint 8 Department)
+  ✔ Task 4: Optimize the ajax in apps.js @done(2017-06-10 18:28) @project(Sprint 8 Department)
+  ✔ Task 3: On edit position, can cancel the edit @done(2017-06-10 08:46) @project(Sprint 8)
+  ✔ Task 1: Size of the edit form should be 100% @done(2017-06-10 08:46) @project(Sprint 8)
 
 Sprint 1: Basic Forms
   ✔ Add employee @done (5/18/2017, 10:28:40 AM)
@@ -136,10 +140,3 @@ Sprint 7: Positions
   ✔ Issue 2: Delete position on HR, will not update the list correctly @done(2017-06-08 10:41) @project(Sprint 7 Positions)
   ✔ Issue 3: List of positions in Human Resource Department data-tables not working @done(2017-06-09 11:29) @project(Sprint 7 Positions)
   ✔ Issue 4: Delete position on modal does not update the list @done(2017-06-10 07:44) @project(Sprint 7 Positions)
-  ✔ Task 1: Size of the edit form should be 100% @done(2017-06-10 08:46) @project(Sprint 8)
-  ✔ Task 3: On edit position, can cancel the edit @done(2017-06-10 08:46) @project(Sprint 8)
-
-Sprint 8: Department
-  ✔ Task 4: Optimize the ajax in apps.js @done(2017-06-10 18:28) @project(Sprint 8 Department)
-  ✔ Task 11: Add color picker for on department color @done(2017-06-10 18:28) @project(Sprint 8 Department)
-  ✔ Task 12: Edit department name @done(2017-06-10 18:14) @project(Sprint 8 Department)
