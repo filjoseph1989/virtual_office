@@ -1,6 +1,6 @@
 My Task:
-  ☐ Task 50: Create a change password function
   ☐ Task 51: use old password to check the password and new as new password
+  ☐ Task 52: Check the value of the input field for changing the user password
   ☐ Task 28: Add module for specific user
   ☐ Task 31: Make a beautiful email layout
   ☐ Task 42: Add new form in admin panel for authority management
@@ -47,6 +47,7 @@ Log:
   ☐ Task 22: Add position should check if already exist
 
 DONE:
+  ✔ Task 50: Create a change password function @done(2017-06-16 00:29) @project(My Task)
   ✔ Task 41: Create autority and authority_groups tables for the users authority @done(2017-06-15 12:35) @project(My Task)
   ✔ Task 40: Add new input field in edit profile to change user password @done(2017-06-15 23:57) @project(My Task)
   ✔ Task 39: Fetch the data of users education to be edit @done(2017-06-15 09:51) @project(Sprint 10)

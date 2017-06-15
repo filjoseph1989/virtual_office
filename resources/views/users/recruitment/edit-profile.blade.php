@@ -23,12 +23,20 @@
             <div class="clearfix"></div>
           </div>
           <div class="x_content">
-            <form class="form-horizontal form-label-left" novalidate="" action="{{ route('user.posts') }}" method="post">
+            <form class="form-horizontal form-label-left" novalidate="" action="{{ route('user.change.password') }}" method="post">
               @if (session('status'))
-              <div class="alert alert-success">
-                {{ session('status') }}
-              </div>
-              @endif {{ csrf_field() }}
+                <div class="alert alert-success">
+                  {{ session('status') }}
+                </div>
+              @endif
+              @if (session('warning'))
+                <div class="alert alert-warning">
+                  {{ session('warning') }}
+                </div>
+              @endif
+
+              {{ csrf_field() }}
+              <input type="hidden" name="id" value="{{ $users->id }}">
               <div class="item form-group">
                 <label class="control-label col-md-3 col-sm-3 col-xs-12" for="old-password">
                   Old Password <span class="required">*</span>

@@ -53,6 +53,7 @@ Route::prefix('recruitment')->group(function() {
  * User group
  */
 Route::name('user.posts')->post('/user/posts', 'EmployeeController@store');
+Route::name('user.change.password')->post('/user/change/password', 'EmployeeController@storeNewPassword');
 Route::name('user.add.family')->post('/user/family', 'EmployeeController@storeFamilyInfo');
 
 /**
