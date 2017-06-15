@@ -228,7 +228,12 @@
                 </label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
                   <input type="hidden" name="user_id" value="{{ $users->id }}">
-                  <input id="first-name" name="first_name" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" placeholder="both name(s) e.g John" required="required" type="text" value="{{ $family[0]->first_name }}">
+                  <?php # Issue 36: ?>
+                  @if (isset($family[0]))
+                    <input id="first-name" name="first_name" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" placeholder="both name(s) e.g John" required="required" type="text" value="{{ $family[0]->first_name }}">
+                  @else
+                    <input id="first-name" name="first_name" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" placeholder="both name(s) e.g John" required="required" type="text">
+                  @endif
                 </div>
               </div>
               <div class="item form-group">
@@ -236,7 +241,11 @@
                   Last Name <span class="required">*</span>
                 </label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
-                  <input id="last-name" name="last_name" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" placeholder="both name(s) e.g Doe" required="required" type="text" value="{{ $family[0]->last_name }}">
+                  <?php if (isset($family[0])): ?>
+                    <input id="last-name" name="last_name" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" placeholder="both name(s) e.g Doe" required="required" type="text" value="{{ $family[0]->last_name }}">
+                  <?php else: ?>
+                    <input id="last-name" name="last_name" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" placeholder="both name(s) e.g Doe" required="required" type="text">
+                  <?php endif; ?>
                 </div>
               </div>
               <div class="item form-group">
@@ -244,7 +253,11 @@
                   Contact <span class="required">*</span>
                 </label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
-                  <input id="contact" name="contact" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" placeholder="e.g 0912 1234567" required="required" type="text" value="{{ $family[0]->contact }}">
+                  <?php if (isset($family[0])): ?>
+                    <input id="contact" name="contact" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" placeholder="e.g 0912 1234567" required="required" type="text" value="{{ $family[0]->contact }}">
+                  <?php else: ?>
+                    <input id="contact" name="contact" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" placeholder="e.g 0912 1234567" required="required" type="text">
+                  <?php endif; ?>
                 </div>
               </div>
               <div class="item form-group">
@@ -252,7 +265,11 @@
                   Relationship <span class="required">*</span>
                 </label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
-                  <input id="relationship" name="relationship" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" placeholder="e.g Brother" required="required" type="text" value="{{ $family[0]->relationship }}">
+                  <?php if (isset($family[0])): ?>
+                    <input id="relationship" name="relationship" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" placeholder="e.g Brother" required="required" type="text" value="{{ $family[0]->relationship }}">
+                  <?php else: ?>
+                    <input id="relationship" name="relationship" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" placeholder="e.g Brother" required="required" type="text">
+                  <?php endif; ?>
                 </div>
               </div>
               <div class="ln_solid"></div>
@@ -296,7 +313,11 @@
                 </label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
                   <select class="form-control col-md-7 col-xs-12" id="level" name="degree_id">
-                    <option value="{{ $education[0]->degree_id }}">Select Degree</option>
+                    <?php if (isset($education[0])): ?>
+                      <option value="{{ $education[0]->degree_id }}">Select Degree</option>
+                    <?php else: ?>
+                      <option value="0">Select Degree</option>
+                    <?php endif; ?>
                     <?php foreach ($degree as $key => $degree_value): ?>
                       <option value="{{ $degree_value->id }}">{{ $degree_value->name }}</option>
                     <?php endforeach; ?>
@@ -309,7 +330,11 @@
                 </label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
                   <select class="form-control col-md-7 col-xs-12" id="course" name="course_id">
-                    <option value="{{ $education[0]->course_id }}">Select Course</option>
+                    <?php if (isset($education[0])): ?>
+                      <option value="{{ $education[0]->course_id }}">Select Course</option>
+                    <?php else: ?>
+                      <option value="0">Select Course</option>
+                    <?php endif; ?>
                     <?php foreach ($course as $key => $courseValue): ?>
                       <option value="<?php echo "{$courseValue->id}"; ?>"><?php echo "{$courseValue->name}"; ?></option>
                     <?php endforeach; ?>
@@ -321,7 +346,11 @@
                   School Name <span class="required">*</span>
                 </label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
-                  <input id="school" name="school" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" placeholder="e.g John Hopkins University" required="required" type="text" value="{{ $education[0]->school }}">
+                  <?php if (isset($education[0])): ?>
+                    <input id="school" name="school" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" placeholder="e.g John Hopkins University" required="required" type="text" value="{{ $education[0]->school }}">
+                  <?php else: ?>
+                    <input id="school" name="school" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" placeholder="e.g John Hopkins University" required="required" type="text">
+                  <?php endif; ?>
                 </div>
               </div>
               <div class="item form-group">
@@ -329,7 +358,11 @@
                   Street
                 </label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
-                  <input type="text" id="education-street" name="street" placeholder="Street" class="form-control col-md-7 col-xs-12" type="text" value="{{ $education[0]->street }}">
+                  <?php if (isset($education[0])): ?>
+                    <input type="text" id="education-street" name="street" placeholder="Street" class="form-control col-md-7 col-xs-12" type="text" value="{{ $education[0]->street }}">
+                  <?php else: ?>
+                    <input type="text" id="education-street" name="street" placeholder="Street" class="form-control col-md-7 col-xs-12" type="text">
+                  <?php endif; ?>
                 </div>
               </div>
               <div class="item form-group">
@@ -338,7 +371,11 @@
                 </label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
                   <select name="city" class="form-control col-md-7 col-xs-12" id="city" id="education-city">
-                    <option value="{{ $education[0]->city }}">Select City</option>
+                    <?php if (isset($education[0])): ?>
+                      <option value="{{ $education[0]->city }}">Select City</option>
+                    <?php else: ?>
+                      <option value="0">Select City</option>
+                    <?php endif; ?>
                     <?php foreach ($cities as $key => $cities_value): ?>
                       <option value="<?php echo "{$cities_value->id}"; ?>"><?php echo "{$cities_value->name}"; ?></option>
                     <?php endforeach; ?>
@@ -351,7 +388,11 @@
                 </label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
                   <select class="form-control col-md-7 col-xs-12" name="country" id="education-country">
-                    <option value="{{ $education[0]->country }}">Select Country</option>
+                    <?php if (isset($education[0])): ?>
+                      <option value="{{ $education[0]->country }}">Select Country</option>
+                    <?php else: ?>
+                      <option value="0">Select Country</option>
+                    <?php endif; ?>
                     @foreach ($countries as $value):
                       <option value="<?php echo "{$value->id}"; ?>"><?php echo "{$value->name}"; ?></option>
                     @endforeach;
@@ -363,7 +404,11 @@
                   Graduated
                 </label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
-                  <input type="date" id="year-graduated" name="graduated_at" placeholder="e.g 2015" class="form-control col-md-7 col-xs-12" value="{{ $education[0]->graduated_at }}">
+                  <?php if (isset($education[0])): ?>
+                    <input type="date" id="year-graduated" name="graduated_at" placeholder="e.g 2015" class="form-control col-md-7 col-xs-12" value="{{ $education[0]->graduated_at }}">
+                  <?php else: ?>
+                    <input type="date" id="year-graduated" name="graduated_at" placeholder="e.g 2015" class="form-control col-md-7 col-xs-12">
+                  <?php endif; ?>
                 </div>
               </div>
               <div class="ln_solid"></div>

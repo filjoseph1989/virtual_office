@@ -1,5 +1,5 @@
 My Task:
-  ☐ Task 32: Make edit functionality for list of users in the user table
+  ✔ Task 32: Make edit functionality for list of users in the user table @done(2017-06-15 12:19) @project(My Task)
   ☐ Task 45: Add family - form validation
   ☐ Task 46: Add employee - form validation
   ☐ Task 35: Add new field in the users table called wesbite or url - Refer Issue: 32
@@ -12,8 +12,7 @@ My Task:
   ☐ Task 31: Make a beautiful email layout
   ☐ Task 28: add module using tag input
   ☐ Task 23: Add breadcrumb for admin pages
-  ☐ Contact, Tin, SSS, philhealth and Pag-ibig formatting
-  ☐ User Form validation
+  ☐ Task 47: Contact, Tin, SSS, philhealth and Pag-ibig formatting
 
 Log:
   ☐ Create preloader too

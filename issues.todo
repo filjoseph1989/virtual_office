@@ -26,6 +26,7 @@ New:
   ☐ Issue 33: Remove 'username' index in the return of this method parent::getHomeDetails in in home() method in HomeController
   ☐ Issue 34: (Go to this line) Transfer this to a controller
   ☐ Issue 35: storeFamilyInfo() and storeEducationInfo() in EmployeeController can be combined
+  ☐ Issue 36: (go to this line) Look for a better way to do this
 
 Done:
   ✔ Issue 35: Homepage is not working @done(2017-06-15 08:57) @project(New)

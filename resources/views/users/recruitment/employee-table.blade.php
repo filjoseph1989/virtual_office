@@ -33,16 +33,17 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <?php foreach ($employee as $key => $value): ?>
+                  <?php $key = 1; ?>
+                  @foreach ($employee as $value)
                     <tr>
-                      <td scope="row">{{ $key + 1  }}</td>
+                      <td scope="row">{{ $key++ }}</td>
                       <td>{{ ucfirst($value->first_name) }} {{ ucfirst($value->last_name) }}</td>
                       <td class="department-list__action">
                         <a href="#"><i class="fa fa-times" aria-hidden="true" title="Delete Employee"></i></a>
-                        <a href="#"><i class="fa fa-pencil" aria-hidden="true" title="Edit Employee Name"></i></a>
+                        <a href="{{ route('recruitment.edit.profile', $value->id) }}"><i class="fa fa-pencil" aria-hidden="true" title="Edit Employee Name"></i></a>
                       </td>
                     </tr>
-                  <?php endforeach; ?>
+                  @endforeach
                 </tbody>
               </table>
               <a href="{{ route('recruitment.add') }}" class="btn btn-success">
