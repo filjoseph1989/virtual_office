@@ -25,9 +25,9 @@ New:
   ☐ Issue 32: Add website on user fields in User Table in database
   ☐ Issue 33: Remove 'username' index in the return of this method parent::getHomeDetails in in home() method in HomeController
   ☐ Issue 34: (Go to this line) Transfer this to a controller
-  ✔ Issue 35: Homepage is not working @done(2017-06-15 08:57) @project(New)
 
 Done:
+  ✔ Issue 35: Homepage is not working @done(2017-06-15 08:57) @project(New)
   ✔ Issue 28: recruitment/add-department is not working @done (6/13/2017, 10:42:36 AM)
   ✔ Issue 23: Delete department that has position should alert user @done(2017-06-11 08:01) @project(New)
   ✔ Issue 21: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`auth`.`admins`, CONSTRAINT `admins_position_id_foreign` FOREIGN KEY (`position_id`) REFERENCES `positions` (`id`)) (SQL: delete from `positions` where `id` = 1) @done(2017-06-12 21:30) @project(New)

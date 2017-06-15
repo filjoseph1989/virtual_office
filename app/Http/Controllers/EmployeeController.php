@@ -120,6 +120,7 @@ class EmployeeController extends Controller
       'cities'     => Cities::orderBy('name', 'ASC')->get(),
       'countries'  => Country::all(),
       'department' => Department::all(),
+      'family'     => Family::getFamily($id),
       'content'    => "users.recruitment.edit-profile",
     ]);
 
