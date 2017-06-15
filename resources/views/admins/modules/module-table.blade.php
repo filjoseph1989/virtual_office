@@ -1,13 +1,10 @@
 <div class="container-fluid">
   <div class="side-body padding-top">
     <div class="page-content">
-      <div class="row">
-        <div class="col-md-12">
-          <ol class="breadcrumb">
-            <li class="active">Module</li>
-          </ol>
-        </div>
-      </div>
+      <ol class="breadcrumb" style="margin-top: 70px;">
+        <li><a href="{{ route('admin.modules') }}">module</a></li>
+        <li class="active">module table</li>
+      </ol>
       <div class="clearfix container-fluid row">
         <div class="x_panel">
           <div class="x_title">

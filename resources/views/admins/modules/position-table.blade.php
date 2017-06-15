@@ -1,6 +1,10 @@
 <div class="container-fluid">
   <div class="side-body padding-top">
     <div class="page-content">
+      <ol class="breadcrumb" style="margin-top: 70px;">
+        <li><a href="{{ route('admin.modules') }}">module</a></li>
+        <li class="active">list of all positions</li>
+      </ol>
       <div class="clearfix container-fluid row">
         <div class="x_panel">
           <div class="x_title">

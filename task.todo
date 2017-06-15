@@ -1,18 +1,19 @@
 My Task:
-  ☐ Task 45: Add family - form validation
-  ☐ Task 46: Add employee - form validation
+  ☐ Task 23: Add breadcrumb for admin pages
+  ☐ Task 28: add module using tag input
+  ☐ Task 30: Add color picker on recruitment/add-department
+  ☐ Task 31: Make a beautiful email layout
   ☐ Task 35: Add new field in the users table called wesbite or url - Refer Issue: 32
   ☐ Task 40: Add new input field in edit profile to change user password
   ☐ Task 42: Add new form in admin panel for authority management
   ☐ Task 43: Create CRUDS for authority and authority_groups
   ☐ Task 44: Create a authority checker to be use by controllers
-  ☐ Task 30: Add color picker on recruitment/add-department
-  ☐ Task 31: Make a beautiful email layout
-  ☐ Task 28: add module using tag input
-  ☐ Task 23: Add breadcrumb for admin pages
+  ☐ Task 45: Add family - form validation
+  ☐ Task 46: Add employee - form validation
   ☐ Task 47: Contact, Tin, SSS, philhealth and Pag-ibig formatting
   ☐ Task 48: On edit user profile, add new field which add authority if the currently loggedin user is the HR or has the authority of HR
   ☐ Task 49: Remove temporary the panel settings
+
 
 Log:
   ☐ Create preloader too
