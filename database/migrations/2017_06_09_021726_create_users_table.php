@@ -35,6 +35,7 @@ class CreateUsersTable extends Migration
       $table->char('philhealth', 15)->nullable();
       $table->char('pag_ibig', 15)->nullable();
       $table->string('profile_pic')->nullable();
+      $table->string('website')->nullable();
       $table->integer('active')->default(1);
       $table->rememberToken();
       $table->timestamps();

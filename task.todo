@@ -1,7 +1,6 @@
 My Task:
   ☐ Task 28: Add module for specific user
   ☐ Task 31: Make a beautiful email layout
-  ☐ Task 35: Add new field in the users table called wesbite or url - Refer Issue: 32
   ☐ Task 40: Add new input field in edit profile to change user password
   ☐ Task 42: Add new form in admin panel for authority management
   ☐ Task 43: Create CRUDS for authority and authority_groups
@@ -52,6 +51,7 @@ DONE:
   ✔ Task 38: Update/Add Education @done(2017-06-15 09:51) @project(Sprint 10)
   ✔ Task 37: Update/Add Family @done(2017-06-14 13:43) @project(Sprint 10)
   ✔ Task 36: Fetch the data of the Family to be edit @done(2017-06-15 09:10) @project(Sprint 10)
+  ✔ Task 35: Add new field in the users table called wesbite or url - Refer Issue: 32 @done(2017-06-15 23:44) @project(My Task)
   ✔ Task 34: Fetch some of the user information to be display in user profile @done(2017-06-14 12:02) @project(Sprint 10)
   ✔ Task 33: Fetch the user information from the database to be edit @done(2017-06-14 13:41) @project(Sprint 10)
   ✔ Task 32: Make edit functionality for list of users in the user table @done(2017-06-15 12:19) @project(My Task)

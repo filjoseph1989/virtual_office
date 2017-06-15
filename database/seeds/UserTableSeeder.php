@@ -29,7 +29,7 @@ class UserTableSeeder extends Seeder
       'sss'           => '123456789',
       'philhealth'    => '123456789',
       'pag_ibig'      => '123456789',
-      'pag_ibig'      => '',
+      'website'       => 'http://domain.com',
       'created_at'    => date('Y-m-d H:i:s'),
       'updated_at'    => date('Y-m-d H:i:s')
     ]);
