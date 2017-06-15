@@ -1,10 +1,8 @@
 My Task:
-  ✔ Task 32: Make edit functionality for list of users in the user table @done(2017-06-15 12:19) @project(My Task)
   ☐ Task 45: Add family - form validation
   ☐ Task 46: Add employee - form validation
   ☐ Task 35: Add new field in the users table called wesbite or url - Refer Issue: 32
   ☐ Task 40: Change user password
-  ☐ Task 41: Create autority and authority_groups tables for the users authority
   ☐ Task 42: Add new form in admin panel for authority management
   ☐ Task 43: Create CRUDS for authority and authority_groups
   ☐ Task 44: Create a authority checker to be use by controllers
@@ -13,6 +11,7 @@ My Task:
   ☐ Task 28: add module using tag input
   ☐ Task 23: Add breadcrumb for admin pages
   ☐ Task 47: Contact, Tin, SSS, philhealth and Pag-ibig formatting
+  ☐ Task 48: On edit user profile, add new field which add authority if the currently loggedin user is the HR or has the authority of HR
 
 Log:
   ☐ Create preloader too
@@ -48,12 +47,14 @@ Log:
   ☐ Task 22: Add position should check if already exist
 
 DONE:
+  ✔ Task 41: Create autority and authority_groups tables for the users authority @done(2017-06-15 12:35) @project(My Task)
   ✔ Task 39: Fetch the data of users education to be edit @done(2017-06-15 09:51) @project(Sprint 10)
   ✔ Task 38: Update/Add Education @done(2017-06-15 09:51) @project(Sprint 10)
   ✔ Task 37: Update/Add Family @done(2017-06-14 13:43) @project(Sprint 10)
   ✔ Task 36: Fetch the data of the Family to be edit @done(2017-06-15 09:10) @project(Sprint 10)
   ✔ Task 34: Fetch some of the user information to be display in user profile @done(2017-06-14 12:02) @project(Sprint 10)
   ✔ Task 33: Fetch the user information from the database to be edit @done(2017-06-14 13:41) @project(Sprint 10)
+  ✔ Task 32: Make edit functionality for list of users in the user table @done(2017-06-15 12:19) @project(My Task)
   ✔ Task 29: Make email to the user after a successful registration @done (6/13/2017, 12:41:07 PM)
   ✔ Task 27: recruitment/list-department add plus icon for adding position @done(2017-06-12 20:53) @project(Sprint 10)
   ✔ Task 26: On recruitment/add there should be show employees button @done(2017-06-12 20:51) @project(Sprint 10)
