@@ -32,8 +32,7 @@ class HomeController extends Controller
     if (Auth::check() === false) {
       return view('auth.user-login');
     } else {
-      $data = parent::getHomeDetails();
-      return view('users.user-dashboard', $data);
+      return self::home();
     }
   }
 
@@ -45,11 +44,11 @@ class HomeController extends Controller
   public function home()
   {
     $data = parent::getHomeDetails([
-      'users'    => User::find(parent::getUserId()),
-      'department' => Department::getUserDepartmentName(User::find(parent::getUserId())->department_id),
-      'position' => Position::getUserPosition(User::find(parent::getUserId())->position_id),
-      'city' => Cities::getCityName(User::find(parent::getUserId())->city),
-      'country' => ucfirst(strtolower(Country::getCountryName(User::find(parent::getUserId())->country)))
+      'users'       => User::find(parent::getUserId()),
+      'department'  => Department::getUserDepartmentName(User::find(parent::getUserId())->department_id),
+      'position'    => Position::getUserPosition(User::find(parent::getUserId())->position_id),
+      'city'        => Cities::getCityName(User::find(parent::getUserId())->city),
+      'country'     => ucfirst(strtolower(Country::getCountryName(User::find(parent::getUserId())->country)))
     ]);
 
     // dd($data);
