@@ -36,7 +36,7 @@ Route::prefix('recruitment')->group(function() {
   Route::name('recruitment.list.employee')->get('/list-employee', 'EmployeeController@showEmployeeList');
 
   # Post
-  Route::name('recruitment.edit.profiles')->post('/edit-profile', 'EmployeeController@storeEducationInfo');
+  Route::name('recruitment.edit.profiles')->post('/edit-profiles', 'EmployeeController@storeEducationInfo');
 
   Route::name('recruitment.delete.department')->post('/delete-department', 'DepartmentController@destroy');
   Route::name('recruitment.add.department')->post('/add-department', 'DepartmentController@store');

@@ -67,9 +67,10 @@ class EmployeeController extends Controller
         ->with('familyStatus', 'Successfuly updated family information');
     }
 
-    Family::create($result);
-    return redirect()->route('recruitment.edit.profile', $request->user_id)
-      ->with('familyStatus', 'Successfuly added family information');
+    if (Family::create($result)->wasRecentlyCreated) {
+      return redirect()->route('recruitment.edit.profile', $request->user_id)
+        ->with('familyStatus', 'Successfuly added family information');
+    }
   }
 
   /**
@@ -81,10 +82,27 @@ class EmployeeController extends Controller
   public function storeEducationInfo(Request $request)
   {
     $receive = $request->only(['user_id', 'degree_id', 'course_id', 'school', 'street', 'city', 'country', 'graduated_at']);
-    $receive['user_id'] = 1;
+
+    if (Education::where('user_id', $request->user_id)->exists()) {
+      $user_id   = Education::getEducation($request->user_id)[0]->id;
+      $education = Education::find($user_id);
+
+      $education->user_id      = $request->user_id;
+      $education->degree_id    = $request->degree_id;
+      $education->course_id    = $request->course_id;
+      $education->school       = $request->school;
+      $education->street       = $request->street;
+      $education->city         = $request->city;
+      $education->country      = $request->country;
+      $education->graduated_at = $request->graduated_at;
+      $education->save();
+
+      return redirect()->route('recruitment.edit.profile', $request->user_id)
+        ->with('educationStatus', 'Successfuly updated education information');
+    }
 
     if (Education::create($receive)->wasRecentlyCreated) {
-      return redirect()->route('recruitment.edit.profile')
+      return redirect()->route('recruitment.edit.profile', $request->user_id)
         ->with('educationStatus', 'Successfuly added new Education');
     }
   }
@@ -121,6 +139,7 @@ class EmployeeController extends Controller
       'countries'  => Country::all(),
       'department' => Department::all(),
       'family'     => Family::getFamily($id),
+      'education'  => Education::getEducation($id),
       'content'    => "users.recruitment.edit-profile",
     ]);
 

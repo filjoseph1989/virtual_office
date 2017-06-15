@@ -289,13 +289,14 @@
                 </div>
               @endif
               {{ csrf_field() }}
+              <input type="hidden" name="user_id" value="{{ $users->id }}">
               <div class="item form-group">
                 <label class="control-label col-md-3 col-sm-3 col-xs-12" for="level">
                   Level <span class="required">*</span>
                 </label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
                   <select class="form-control col-md-7 col-xs-12" id="level" name="degree_id">
-                    <option value="0">Select Degree</option>
+                    <option value="{{ $education[0]->degree_id }}">Select Degree</option>
                     <?php foreach ($degree as $key => $degree_value): ?>
                       <option value="{{ $degree_value->id }}">{{ $degree_value->name }}</option>
                     <?php endforeach; ?>
@@ -308,7 +309,7 @@
                 </label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
                   <select class="form-control col-md-7 col-xs-12" id="course" name="course_id">
-                    <option value="0">Select Course</option>
+                    <option value="{{ $education[0]->course_id }}">Select Course</option>
                     <?php foreach ($course as $key => $courseValue): ?>
                       <option value="<?php echo "{$courseValue->id}"; ?>"><?php echo "{$courseValue->name}"; ?></option>
                     <?php endforeach; ?>
@@ -320,7 +321,7 @@
                   School Name <span class="required">*</span>
                 </label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
-                  <input id="school" name="school" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" placeholder="e.g John Hopkins University" required="required" type="text">
+                  <input id="school" name="school" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" placeholder="e.g John Hopkins University" required="required" type="text" value="{{ $education[0]->school }}">
                 </div>
               </div>
               <div class="item form-group">
@@ -328,7 +329,7 @@
                   Street
                 </label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
-                  <input type="text" id="education-street" name="street" placeholder="Street" class="form-control col-md-7 col-xs-12" type="text">
+                  <input type="text" id="education-street" name="street" placeholder="Street" class="form-control col-md-7 col-xs-12" type="text" value="{{ $education[0]->street }}">
                 </div>
               </div>
               <div class="item form-group">
@@ -337,7 +338,7 @@
                 </label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
                   <select name="city" class="form-control col-md-7 col-xs-12" id="city" id="education-city">
-                    <option value="{{ $users->city }}">Select City</option>
+                    <option value="{{ $education[0]->city }}">Select City</option>
                     <?php foreach ($cities as $key => $cities_value): ?>
                       <option value="<?php echo "{$cities_value->id}"; ?>"><?php echo "{$cities_value->name}"; ?></option>
                     <?php endforeach; ?>
@@ -350,7 +351,7 @@
                 </label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
                   <select class="form-control col-md-7 col-xs-12" name="country" id="education-country">
-                    <option value="{{ $users->country }}">Select Country</option>
+                    <option value="{{ $education[0]->country }}">Select Country</option>
                     @foreach ($countries as $value):
                       <option value="<?php echo "{$value->id}"; ?>"><?php echo "{$value->name}"; ?></option>
                     @endforeach;
@@ -362,13 +363,13 @@
                   Graduated
                 </label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
-                  <input type="date" id="year-graduated" name="graduated_at" placeholder="e.g 2015" class="form-control col-md-7 col-xs-12">
+                  <input type="date" id="year-graduated" name="graduated_at" placeholder="e.g 2015" class="form-control col-md-7 col-xs-12" value="{{ $education[0]->graduated_at }}">
                 </div>
               </div>
               <div class="ln_solid"></div>
               <div class="form-group">
                 <div class="col-md-6 col-md-offset-3">
-                  <button id="send" type="submit" class="btn btn-success">
+                  <button id="submit" type="submit" class="btn btn-success">
                     <i class="fa fa-floppy-o" aria-hidden="true"></i> Save
                   </button>
                 </div>
