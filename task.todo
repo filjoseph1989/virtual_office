@@ -1,7 +1,5 @@
 My Task:
-  ☐ Task 23: Add breadcrumb for admin pages
-  ☐ Task 28: add module using tag input
-  ☐ Task 30: Add color picker on recruitment/add-department
+  ☐ Task 28: Add module for specific user
   ☐ Task 31: Make a beautiful email layout
   ☐ Task 35: Add new field in the users table called wesbite or url - Refer Issue: 32
   ☐ Task 40: Add new input field in edit profile to change user password
@@ -57,11 +55,13 @@ DONE:
   ✔ Task 34: Fetch some of the user information to be display in user profile @done(2017-06-14 12:02) @project(Sprint 10)
   ✔ Task 33: Fetch the user information from the database to be edit @done(2017-06-14 13:41) @project(Sprint 10)
   ✔ Task 32: Make edit functionality for list of users in the user table @done(2017-06-15 12:19) @project(My Task)
+  ✔ Task 30: Add color picker on recruitment/add-department @done(2017-06-15 23:31) @project(My Task)
   ✔ Task 29: Make email to the user after a successful registration @done (6/13/2017, 12:41:07 PM)
   ✔ Task 27: recruitment/list-department add plus icon for adding position @done(2017-06-12 20:53) @project(Sprint 10)
   ✔ Task 26: On recruitment/add there should be show employees button @done(2017-06-12 20:51) @project(Sprint 10)
   ✔ Task 25: On recruitment/add create a city and country look up use for dropdown in adding new employee @done(2017-06-12 20:46) @project(Sprint 10)
   ✔ Task 24: On recruitment/add, on click the dropdown department options, a position under it should be fetch and display as a position in position select @done(2017-06-12 20:28) @project(Sprint 10)
+  ✔ Task 23: Add breadcrumb for admin pages @done(2017-06-15 18:27) @project(My Task)
   ✔ Task 21: Delete position on modal will flood all position after @done(2017-06-10 20:04) @project(Sprint 8 Department)
   ✔ Task 20: Check the delete position functionality @done(2017-06-10 20:18) @project(Sprint 8 Department)
   ✔ Task 19: on delete department Use sweetalert @done(2017-06-10 19:49) @project(Sprint 8 Department)
