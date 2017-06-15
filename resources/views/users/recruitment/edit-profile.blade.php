@@ -8,6 +8,56 @@
         </ol>
         <div class="x_panel">
           <div class="x_title">
+            <h2>Change Password</h2>
+            <ul class="nav navbar-right panel_toolbox">
+              <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a></li>
+              <!--
+              Issue 15
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="#">Settings 1</a></li>
+                </ul>
+              </li> -->
+            </ul>
+            <div class="clearfix"></div>
+          </div>
+          <div class="x_content">
+            <form class="form-horizontal form-label-left" novalidate="" action="{{ route('user.posts') }}" method="post">
+              @if (session('status'))
+              <div class="alert alert-success">
+                {{ session('status') }}
+              </div>
+              @endif {{ csrf_field() }}
+              <div class="item form-group">
+                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="old-password">
+                  Old Password <span class="required">*</span>
+                </label>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                  <input id="old-password" name="old_password" class="form-control col-md-7 col-xs-12" required="required" type="password">
+                </div>
+              </div>
+              <div class="item form-group">
+                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="new-password">
+                  New Password <span class="required">*</span>
+                </label>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                  <input id="new-password" name="new_password" class="form-control col-md-7 col-xs-12" required="required" type="password">
+                </div>
+              </div>
+              <div class="ln_solid"></div>
+              <div class="form-group">
+                <div class="col-md-6 col-md-offset-3">
+                  <button id="password-submit" type="submit" class="btn btn-success">
+                    <i class="fa fa-floppy-o" aria-hidden="true"></i> Save
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="x_panel">
+          <div class="x_title">
             <h2>Edit Form</h2>
             <ul class="nav navbar-right panel_toolbox">
               <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a></li>
@@ -200,7 +250,7 @@
               <div class="ln_solid"></div>
               <div class="form-group">
                 <div class="col-md-6 col-md-offset-3">
-                  <button id="send" type="submit" class="btn btn-success">
+                  <button id="user-edit-submit" type="submit" class="btn btn-success">
                     <i class="fa fa-floppy-o" aria-hidden="true"></i> Save
                   </button>
                 </div>
@@ -283,7 +333,7 @@
               <div class="ln_solid"></div>
               <div class="form-group">
                 <div class="col-md-6 col-md-offset-3">
-                  <button id="send" type="submit" class="btn btn-success">
+                  <button id="famitly-edit-submit" type="submit" class="btn btn-success">
                     <i class="fa fa-floppy-o" aria-hidden="true"></i> Save
                   </button>
                 </div>

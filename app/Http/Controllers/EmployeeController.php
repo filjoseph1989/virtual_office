@@ -43,6 +43,15 @@ class EmployeeController extends Controller
   }
 
   /**
+   * Change the user password
+   * @return [type] [description]
+   */
+  public function changePassword()
+  {
+
+  }
+
+  /**
    * Store the family information
    *
    * @param  Request $request
