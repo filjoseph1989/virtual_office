@@ -38,14 +38,6 @@
               {{ csrf_field() }}
               <input type="hidden" name="id" value="{{ $users->id }}">
               <div class="item form-group">
-                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="old-password">
-                  Old Password <span class="required">*</span>
-                </label>
-                <div class="col-md-6 col-sm-6 col-xs-12">
-                  <input id="old-password" name="old_password" class="form-control col-md-7 col-xs-12" required="required" type="password">
-                </div>
-              </div>
-              <div class="item form-group">
                 <label class="control-label col-md-3 col-sm-3 col-xs-12" for="new-password">
                   New Password <span class="required">*</span>
                 </label>
