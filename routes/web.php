@@ -65,6 +65,7 @@ Route::prefix('admin')->group(function() {
   Route::name('admin.modules.edit')->post('/modules/edit', 'AdminModulesController@editModule');
   Route::name('admin.modules.add.position')->post('/modules/add/position', 'ModuleGroupController@store');
   Route::name('admin.modules.list')->get('/modules/list', 'AdminModulesController@index');
+  Route::name('admin.authority.list')->get('/authority/list', 'AuthorityController@index');
   Route::name('admin.submodules.add')->post('/submodules/add', 'AdminSubModulesController@store');
   Route::name('admin.submodules.list')->get('/submodules/list/{id}', 'AdminSubModulesController@showSubModuleList');
   Route::name('admin.position.list')->get('/position/list', 'PositionController@showAdminPositionList');

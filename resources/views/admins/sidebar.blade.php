@@ -32,6 +32,7 @@
             </a>
             <ul class="nav child_menu" style="display: none;">
               <li> <a href="{{ route('admin.modules') }}"> Modules </a> </li>
+              <li> <a href="#"> Authority </a> </li>
             </ul>
           </li>
         </ul>

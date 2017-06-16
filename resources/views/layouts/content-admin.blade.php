@@ -18,7 +18,7 @@
               </div>
             </div>
             <div class="clearfix container-fluid row">
-              <div class="animated flipInY col-lg-6 col-md-6 col-sm-6 col-xs-12">
+              <div class="animated flipInY col-lg-4 col-md-4 col-sm-4 col-xs-12">
                   <a href="{{ route('admin.position.list') }}">
                   <div class="tile-stats">
                     <div class="count">1</div>
@@ -27,12 +27,21 @@
                   </div>
                 </a>
               </div>
-              <div class="animated flipInY col-lg-6 col-md-6 col-sm-6 col-xs-12">
+              <div class="animated flipInY col-lg-4 col-md-4 col-sm-4 col-xs-12">
                 <a href="{{ route('admin.modules.list') }}">
                   <div class="tile-stats">
                     <div class="count">2</div>
                     <h3>Show Modules</h3>
                     <p>Click here to display module list</p>
+                  </div>
+                </a>
+              </div>
+              <div class="animated flipInY col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                <a href="{{ route('admin.authority.list') }}">
+                  <div class="tile-stats">
+                    <div class="count">3</div>
+                    <h3>Authorities</h3>
+                    <p>Click here to display the list authority</p>
                   </div>
                 </a>
               </div>
