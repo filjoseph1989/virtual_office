@@ -9,7 +9,7 @@
         <div class="x_panel">
           <div class="x_title">
             <h2>Authority Table</h2>
-            <ul class="nav navbar-right panel_toolbox">
+            <!-- <ul class="nav navbar-right panel_toolbox">
               <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a> </li>
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
@@ -17,7 +17,7 @@
                   <li><a href="#">Settings 1</a></li>
                 </ul>
               </li>
-            </ul>
+            </ul> -->
             <div class="clearfix"></div>
           </div>
           <div class="x_content">
@@ -25,6 +25,15 @@
               @if (session('status'))
                 <div class="alert alert-success">
                   {{ session('status') }}
+                </div>
+              @endif
+              @if (count($errors) > 0)
+                <div class="alert alert-warning">
+                  <ul>
+                    @foreach ($errors->all() as $error)
+                      <li>{{ $error }}</li>
+                    @endforeach
+                  </ul>
                 </div>
               @endif
               <div class="row">
