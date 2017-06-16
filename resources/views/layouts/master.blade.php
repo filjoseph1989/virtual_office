@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="{{ asset('css/jquery.dataTables.css') }}">
     <link rel="stylesheet" href="{{ asset('css/jquery.tagsinput.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/sweetalert2.css') }}?v=2">
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}?v=0.15">
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}?v=0.16">
 
     <link rel="apple-touch-icon" sizes="57x57" href="{{ asset('images/favicon/apple-icon-57x57.png') }}">
     <link rel="apple-touch-icon" sizes="60x60" href="{{ asset('images/favicon/apple-icon-60x60.png') }}">

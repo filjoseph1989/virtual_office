@@ -1,5 +1,4 @@
 My Task:
-  ☐ Task 52: Display all authorities
   ☐ Task 42: Add new form in admin panel for authority management
   ☐ Task 28: Add module for specific user
   ☐ Task 31: Make a beautiful email layout
@@ -46,6 +45,7 @@ Log:
   ☐ Task 22: Add position should check if already exist
 
 DONE:
+  ✔ Task 52: Display all authorities @done(2017-06-16 15:47) @project(My Task)
   ✔ Task 51: Perform the validation of the value of the input field for changing the user password @done(2017-06-16 01:11) @project(My Task)
   ✔ Task 50: Create a change password function @done(2017-06-16 00:29) @project(My Task)
   ✔ Task 41: Create autority and authority_groups tables for the users authority @done(2017-06-15 12:35) @project(My Task)

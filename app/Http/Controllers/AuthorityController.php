@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Authorities;
 use Illuminate\Http\Request;
 
 class AuthorityController extends Controller
@@ -14,6 +15,7 @@ class AuthorityController extends Controller
   public function index()
   {
     $data = parent::getAdminDetails([
+      'authorities' => Authorities::all(),
       'content' => 'admins.modules.authority-table'
     ]);
 

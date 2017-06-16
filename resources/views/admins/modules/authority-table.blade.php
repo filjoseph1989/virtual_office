@@ -29,23 +29,25 @@
               @endif
               <div class="row">
                 <div class="col-md-12">
-                  <table class="table table-bordered" id="module-list">
+                  <table class="table table-bordered" id="authorities-list">
                     <thead>
                       <tr>
                         <th>#</th>
-                        <th>Module Name</th>
-                        <th class="department-list__action">Action</th>
+                        <th>Authority Name</th>
+                        <th class="authority-list__action">Action</th>
                       </tr>
                     </thead>
                     <tbody>
-                      <tr>
-                        <td scope="row"></td>
-                        <td scope="row"></td>
-                        <td scope="row" class="department-list__action">
-                          <a href="#"><i class="fa fa-times" aria-hidden="true" title="Delete Authority"></i></a>
-                          <a href="#"><i class="fa fa-pencil" aria-hidden="true" title="Edit Authority"></i></a>
-                        </td>
-                      </tr>
+                      <?php foreach ($authorities as $akey => $avalue): ?>
+                        <tr>
+                          <td scope="row">{{ $akey +1 }}</td>
+                          <td scope="row">{{ $avalue->name }}</td>
+                          <td scope="row" class="authority-list__action">
+                            <a href="#"><i class="fa fa-times" aria-hidden="true" title="Delete Authority"></i></a>
+                            <a href="#"><i class="fa fa-pencil" aria-hidden="true" title="Edit Authority"></i></a>
+                          </td>
+                        </tr>
+                      <?php endforeach; ?>
                     </tbody>
                   </table>
                 </div>
@@ -64,3 +66,9 @@
     </div>
   </div>
 </div>
+
+@section('footer')
+  <script type="text/javascript">
+    $('#authorities-list').DataTable();
+  </script>
+@endsection
