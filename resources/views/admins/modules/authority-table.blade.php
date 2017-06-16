@@ -54,7 +54,7 @@
               </div>
               <div class="row">
                 <div class="col-md-12">
-                  <button type="button" class="btn btn-success" data-toggle="modal" data-target="#module-modal">
+                  <button type="button" class="btn btn-success" data-toggle="modal" data-target="#add-authority">
                     <i class="fa fa-plus" aria-hidden="true"></i> New
                   </button>
                 </div>
@@ -63,6 +63,32 @@
           </div>
         </div>
       </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="add-authority" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <form class="form-horizontal form-label-left" novalidate="" action="" method="post">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title" id="">Add Authority</h4>
+        </div>
+        <div class="modal-body">
+          {{ csrf_field() }}
+          <div class="item form-group">
+            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="authority-name">Authority Name</label>
+            <div class="col-md-6 col-sm-6 col-xs-12">
+              <input id="authority-name" name="name" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" placeholder="e.g Admin" required="required" type="text">
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button id="send" type="submit" class="btn btn-success"><i class="fa fa-paper-plane"></i> Send</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </form>
     </div>
   </div>
 </div>
