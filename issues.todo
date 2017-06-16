@@ -28,6 +28,7 @@ New:
   ☐ Issue 36: (go to this line) Look for a better way to do this
 
 Done:
+  ✔ Issue 37: The alert message for password appear also on user info  @done(2017-06-16 08:40) @project(New)
   ✔ Issue 35: Homepage is not working @done(2017-06-15 08:57) @project(New)
   ✔ Issue 32: Add website on user fields in User Table in database @done(2017-06-15 23:44) @project(New)
   ✔ Issue 28: recruitment/add-department is not working @done (6/13/2017, 10:42:36 AM)

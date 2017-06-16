@@ -50,7 +50,7 @@ class EmployeeController extends Controller
   {
     if (empty($request->new_password)) {
       return redirect()->route('recruitment.edit.profile', $request->id)
-        ->with('warning', 'Failed to change password');
+        ->with('passwordWarning', 'Failed to change password');
     }
 
     $users           = User::find($request->id);
@@ -58,10 +58,10 @@ class EmployeeController extends Controller
 
     if ($users->save()) {
       return redirect()->route('recruitment.edit.profile', $request->id)
-        ->with('status', 'Successfuly changed password');
+        ->with('passwordStatus', 'Successfuly changed password');
     } else {
       return redirect()->route('recruitment.edit.profile', $request->id)
-        ->with('warning', 'Failed to change password');
+        ->with('passwrodWarning', 'Failed to change password');
     }
   }
 

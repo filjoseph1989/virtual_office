@@ -24,14 +24,14 @@
           </div>
           <div class="x_content">
             <form class="form-horizontal form-label-left" novalidate="" action="{{ route('user.change.password') }}" method="post">
-              @if (session('status'))
+              @if (session('passwordStatus'))
                 <div class="alert alert-success">
-                  {{ session('status') }}
+                  {{ session('passwordStatus') }}
                 </div>
               @endif
-              @if (session('warning'))
+              @if (session('passwordWarning'))
                 <div class="alert alert-warning">
-                  {{ session('warning') }}
+                  {{ session('passwordWarning') }}
                 </div>
               @endif
 
