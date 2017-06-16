@@ -40,7 +40,9 @@ class AuthorityController extends Controller
    */
   public function store(Request $request)
   {
-      //
+    $data = $request->only(['name']);
+    Authorities::create($data);
+    return redirect()->route('admin.authority.list')->with('status', 'Successfuly added new module');
   }
 
   /**

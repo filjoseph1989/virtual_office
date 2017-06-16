@@ -1,4 +1,5 @@
 My Task:
+  ☐ Task 55: Validate the new submitted authority name
   ☐ Task 53: Create edit form modal for authority
   ☐ Task 28: Add module for specific user
   ☐ Task 31: Make a beautiful email layout
@@ -44,6 +45,7 @@ Log:
   ☐ Task 22: Add position should check if already exist
 
 DONE:
+  ✔ Task 54: Create a add function for new authority @done(2017-06-16 17:11) @project(My Task)
   ✔ Task 52: Display all authorities @done(2017-06-16 15:47) @project(My Task)
   ✔ Task 51: Perform the validation of the value of the input field for changing the user password @done(2017-06-16 01:11) @project(My Task)
   ✔ Task 50: Create a change password function @done(2017-06-16 00:29) @project(My Task)

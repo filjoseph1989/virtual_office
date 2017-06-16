@@ -53,7 +53,8 @@ class AdminModulesController extends Controller
   {
     $data = $request->only(['name']);
     Module::create($data);
-    return redirect()->route('admin.modules.list')->with('status', 'Successfuly added new module');
+    return redirect()->route('admin.authority.list')
+      ->with('status', 'Successfuly added new authority');
   }
 
   /**

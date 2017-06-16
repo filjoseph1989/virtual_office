@@ -70,7 +70,7 @@
 <div class="modal fade" id="add-authority" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
-      <form class="form-horizontal form-label-left" novalidate="" action="" method="post">
+      <form class="form-horizontal form-label-left" novalidate="" action="{{ route('admin.authority.add') }}" method="post">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
           <h4 class="modal-title" id="">Add Authority</h4>
@@ -85,7 +85,7 @@
           </div>
         </div>
         <div class="modal-footer">
-          <button id="send" type="submit" class="btn btn-success"><i class="fa fa-paper-plane"></i> Send</button>
+          <button id="send" type="submit" class="btn btn-success"><i class="fa fa-floppy-o" aria-hidden="true"></i> Save</button>
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         </div>
       </form>
