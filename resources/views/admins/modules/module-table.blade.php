@@ -11,12 +11,12 @@
             <h2>Module Table</h2>
             <ul class="nav navbar-right panel_toolbox">
               <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a> </li>
-              <li class="dropdown">
+              <!-- <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
                 <ul class="dropdown-menu" role="menu">
                   <li><a href="#">Settings 1</a></li>
                 </ul>
-              </li>
+              </li> -->
             </ul>
             <div class="clearfix"></div>
           </div>
@@ -34,6 +34,7 @@
                       <tr>
                         <th>#</th>
                         <th>Module Name</th>
+                        <th>Module Icon</th>
                         <th class="department-list__action">Action</th>
                       </tr>
                     </thead>
@@ -42,6 +43,7 @@
                         <tr>
                           <td scope="row">{{ $key + 1}}</td>
                           <td scope="row">{{ $value->name }}</td>
+                          <td scope="row">{{ $value->icon }}</td>
                           <td scope="row" class="department-list__action">
                             <a href="#"><i class="fa fa-times" aria-hidden="true" title="Delete Module"></i></a>
                             <a href="#" class="a-module-modal-edit" data-module-id="{{ $value->id }}" data-module-name="{{ $value->name }}" data-module-icon="{{ $value->icon }}" data-toggle="modal" data-target="#module-modal-edit">

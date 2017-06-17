@@ -4,8 +4,8 @@
       <div class="row">
         <div class="col-md-12">
           <ol class="breadcrumb">
-            <li><a href="{{ route('admin.modules.list') }}">Module</a></li>
-            <li class="active">Configuration</li>
+            <li><a href="{{ route('admin.modules.list') }}">modules</a></li>
+            <li class="active">configuration</li>
           </ol>
         </div>
       </div>
@@ -23,12 +23,12 @@
           <h2>Position Table</h2>
           <ul class="nav navbar-right panel_toolbox">
             <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a> </li>
-            <li class="dropdown">
+            <!-- <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
               <ul class="dropdown-menu" role="menu">
                 <li><a href="#">Settings 1</a></li>
               </ul>
-            </li>
+            </li> -->
           </ul>
           <div class="clearfix"></div>
         </div>
@@ -62,12 +62,12 @@
           <h2>Sub-Module Table</h2>
           <ul class="nav navbar-right panel_toolbox">
             <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a> </li>
-            <li class="dropdown">
+            <!-- <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
               <ul class="dropdown-menu" role="menu">
                 <li><a href="#">Settings 1</a></li>
               </ul>
-            </li>
+            </li> -->
           </ul>
           <div class="clearfix"></div>
         </div>

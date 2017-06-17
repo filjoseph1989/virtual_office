@@ -15,8 +15,8 @@ class CreateAuthoritiesGroupsTable extends Migration
   {
     Schema::create('authority_groups', function (Blueprint $table) {
       $table->increments('id');
-      $table->integer('user_id')->unsigned()->index();
-      $table->foreign('user_id')->references('id')->on('users');
+      $table->integer('position_id')->unsigned()->index();
+      $table->foreign('position_id')->references('id')->on('positions');
       $table->integer('authority_id')->unsigned()->index();
       $table->foreign('authority_id')->references('id')->on('authorities');
       $table->timestamps();

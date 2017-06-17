@@ -29,6 +29,14 @@ New:
   ☐ Issue 38: On admin/authority/list uri, on edit authority, when the user click the enter it will submit and add new authority, it should be prevented
   ☐ Issue 39: On admin/authority/list uri, on edit authority, swal is not working or display
   ☐ Issue 41: Delete department is not working
+  ☐ Issue 42: To change password must enter the old password
+  ☐ Issue 43: Instead of route in module find the other way to manage sub-modules
+  ☐ issue 44: Remove the number in every table
+
+  search slug for laravel
+  Instead of position change to priviledges
+  plan priviledges of the user and admin
+  permission na sangit
 
 Done:
   ✔ Issue 40: Edit module is not working @done(2017-06-17 11:38) @project(New)
