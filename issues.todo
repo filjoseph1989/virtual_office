@@ -28,9 +28,9 @@ New:
   ☐ Issue 36: (go to this line) Look for a better way to do this
   ☐ Issue 38: On admin/authority/list uri, on edit authority, when the user click the enter it will submit and add new authority, it should be prevented
   ☐ Issue 39: On admin/authority/list uri, on edit authority, swal is not working or display
-  ☐ Issue 40:
 
 Done:
+  ✔ Issue 40: Edit module is not working @done(2017-06-17 11:38) @project(New)
   ✔ Issue 37: The alert message for password appear also on user info  @done(2017-06-16 08:40) @project(New)
   ✔ Issue 35: Homepage is not working @done(2017-06-15 08:57) @project(New)
   ✔ Issue 32: Add website on user fields in User Table in database @done(2017-06-15 23:44) @project(New)

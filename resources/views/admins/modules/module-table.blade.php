@@ -44,7 +44,7 @@
                           <td scope="row">{{ $value->name }}</td>
                           <td scope="row" class="department-list__action">
                             <a href="#"><i class="fa fa-times" aria-hidden="true" title="Delete Module"></i></a>
-                            <a href="#" class="a-module-modal-edit" data-module-id="{{ $value->id }}" data-module-name="{{ $value->name }}" data-toggle="modal" data-target="#module-modal-edit">
+                            <a href="#" class="a-module-modal-edit" data-module-id="{{ $value->id }}" data-module-name="{{ $value->name }}" data-module-icon="{{ $value->icon }}" data-toggle="modal" data-target="#module-modal-edit">
                               <i class="fa fa-pencil" aria-hidden="true" title="Edit Module Name"></i>
                             </a>
                             <a href="{{ route('admin.submodules.list', $value->id) }}">
@@ -126,8 +126,8 @@
               Module Name
             </label>
             <div class="col-md-6 col-sm-6 col-xs-12">
-              <input type="hidden" id="edit-module-id" name="id">
-              <input id="edit-module-name" name="name" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" placeholder="e.g Accounting" required="required" type="text">
+              <input id="edit-module-modal-id" type="hidden" name="id">
+              <input id="edit-module-modal-name" name="name" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" placeholder="e.g Accounting" required="required" type="text">
             </div>
           </div>
           <div class="item form-group">
@@ -135,12 +135,12 @@
               Module Icon
             </label>
             <div class="col-md-6 col-sm-6 col-xs-12">
-              <input id="edit-module-icon" name="icon" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" placeholder="e.g. fa fa-close" required="required" type="text">
+              <input id="edit-module-modal-icon" name="icon" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" placeholder="e.g. fa fa-close" required="required" type="text">
             </div>
           </div>
         </div>
         <div class="modal-footer">
-          <button type="submit" class="btn btn-success" id="send"><i class="fa fa-paper-plane"></i> Send</button>
+          <button type="submit" class="btn btn-success"><i class="fa fa-floppy-o" aria-hidden="true"></i> Save</button>
           <a id="fontawesome-icons" href="http://fontawesome.io/cheatsheet/" target="_blank" class="btn btn-success">
             <i class="fa fa-paper-plane"></i> List of Icons
           </a>

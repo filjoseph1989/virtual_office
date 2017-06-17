@@ -108,7 +108,7 @@
 <div class="modal fade" id="edit-authority" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
-      <form class="form-horizontal form-label-left" novalidate="" action="" method="post">
+      <form class="form-horizontal form-label-left" novalidate="" action="{{ route('admin.authority.edit') }}" method="post">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
           <h4 class="modal-title" id="edit-authority-title"></h4>
@@ -126,7 +126,7 @@
           </div>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-success edit-authority-button" id="submit">
+          <button type="submit" class="btn btn-success edit-authority-button" id="submit">
             <i class="fa fa-floppy-o" aria-hidden="true"></i> Save
           </button>
           <button type="button" class="btn btn-default" data-dismiss="modal">

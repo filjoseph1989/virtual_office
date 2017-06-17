@@ -84,8 +84,8 @@ class AuthorityController extends Controller
     $authorities       = Authorities::find($data['id']);
     $authorities->name = $data['name'];
     if ($authorities->save()) {
-      $message['data'] = true;
-      echo json_encode($message);
+      return redirect()->route('admin.authority.list')
+        ->with('status', 'Successfuly updated authority');
     }
   }
 

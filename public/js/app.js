@@ -7456,11 +7456,13 @@ if (typeof NProgress != 'undefined') {
 $(document).on('click', '.a-module-modal-edit', function() {
   var module_id   = $(this).data('module-id');
   var module_name = $(this).data('module-name');
+  var module_icon = $(this).data('module-icon');
 
   // set values
   $('#module-modal-title').html('Edit ' + module_name);
-  $('#edit-module-id').val(module_id);
-  $('#edit-module-name').val(module_name);
+  $('#edit-module-modal-id').val(module_id);
+  $('#edit-module-modal-name').val(module_name);
+  $('#edit-module-modal-icon').val(module_icon);
 });
 
 /**
@@ -7811,28 +7813,28 @@ $(document).on('click', '.edit-authority-name', function() {
  * On submit edit authority
  * @return
  */
-$(document).on('click', '.edit-authority-button', function() {
-  var authority_id   = $('#edit-authority-id').val();
-  var authority_name = $('#edit-authority-name').val();
-
-  $.ajax({
-    type: 'POST',
-    url: '/admin/authority/edit',
-    data: {
-      id:   authority_id,
-      name: authority_name
-    },
-    dataType: 'json',
-    beforeSend: function(request) {
-      request.setRequestHeader("X-CSRF-TOKEN", $('meta[name="_token"]').attr('content'));
-    },
-    success: function(data) {
-      if (data.data == true) {
-        location.reload();
-      }
-    },
-    error: function(data) {
-      console.log('Error:');
-    }
-  });
-});
+// $(document).on('click', '.edit-authority-button', function() {
+//   var authority_id   = $('#edit-authority-id').val();
+//   var authority_name = $('#edit-authority-name').val();
+//
+//   $.ajax({
+//     type: 'POST',
+//     url: '/admin/authority/edit',
+//     data: {
+//       id:   authority_id,
+//       name: authority_name
+//     },
+//     dataType: 'json',
+//     beforeSend: function(request) {
+//       request.setRequestHeader("X-CSRF-TOKEN", $('meta[name="_token"]').attr('content'));
+//     },
+//     success: function(data) {
+//       if (data.data == true) {
+//         location.reload();
+//       }
+//     },
+//     error: function(data) {
+//       console.log('Error:');
+//     }
+//   });
+// });
