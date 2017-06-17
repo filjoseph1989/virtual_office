@@ -52,9 +52,7 @@
                           <td scope="row">{{ $akey +1 }}</td>
                           <td scope="row">{{ $avalue->name }}</td>
                           <td scope="row" class="authority-list__action">
-                            <a href="#">
-                              <i class="fa fa-times" aria-hidden="true" title="Delete Authority"></i>
-                            </a>
+                            <a href="#" class="delete-authority" data-id="{{ $avalue->id }}" data-name="{{ $avalue->name }}"><i class="fa fa-times" aria-hidden="true" title="Delete Authority"></i></a>
                             <a href="#" class="edit-authority-name" data-toggle="modal" data-target="#edit-authority" data-name="{{ $avalue->name }}" data-id="{{ $avalue->id }}">
                               <i class="fa fa-pencil" aria-hidden="true" title="Edit Authority"></i>
                             </a>

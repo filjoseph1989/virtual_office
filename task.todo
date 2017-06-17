@@ -1,5 +1,4 @@
 My Task:
-  ☐ Task 58: Delete authority
   ☐ Task 57: Submitting data from add modal form in add authority, must be done using ajax, to be able to catch the error retun during validation
   ☐ Task 28: Add module for specific user
   ☐ Task 31: Make a beautiful email layout
@@ -45,6 +44,7 @@ Log:
   ☐ Task 22: Add position should check if already exist
 
 DONE:
+  ✔ Task 58: Delete authority @done(2017-06-17 12:44) @project(My Task)
   ✔ Task 56: Verify if the name exist @done(2017-06-16 18:12) @project(DONE)
   ✔ Task 55: Validate the new submitted authority name @done(2017-06-16 18:12) @project(DONE)
   ✔ Task 54: Create a add function for new authority @done(2017-06-16 17:11) @project(My Task)

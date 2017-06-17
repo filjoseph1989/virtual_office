@@ -7809,32 +7809,83 @@ $(document).on('click', '.edit-authority-name', function() {
   $('#edit-authority-name').val(authority_name);
 });
 
-/**
- * On submit edit authority
- * @return
- */
-// $(document).on('click', '.edit-authority-button', function() {
-//   var authority_id   = $('#edit-authority-id').val();
-//   var authority_name = $('#edit-authority-name').val();
-//
-//   $.ajax({
-//     type: 'POST',
-//     url: '/admin/authority/edit',
-//     data: {
-//       id:   authority_id,
-//       name: authority_name
-//     },
-//     dataType: 'json',
-//     beforeSend: function(request) {
-//       request.setRequestHeader("X-CSRF-TOKEN", $('meta[name="_token"]').attr('content'));
-//     },
-//     success: function(data) {
-//       if (data.data == true) {
-//         location.reload();
-//       }
-//     },
-//     error: function(data) {
-//       console.log('Error:');
-//     }
-//   });
-// });
+$(document).on('click', '.delete-authority', function() {
+  var authority_id   = $(this).data('id');
+  console.log(authority_id);
+  var authority_name   = $(this).data('name');
+
+  swal({
+    title: 'Are you sure?',
+    text: "You won't be able to revert this!",
+    type: 'warning',
+    showCancelButton: true,
+    confirmButtonColor: '#3085d6',
+    cancelButtonColor: '#d33',
+    confirmButtonText: 'Yes, delete it!'
+  }).then(function () {
+    $.ajax({
+      type: 'POST',
+      url: '/admin/authority/delete',
+      data: {
+        id: authority_id,
+      },
+      dataType: 'json',
+      beforeSend: function(request) {
+        request.setRequestHeader("X-CSRF-TOKEN", $('meta[name="_token"]').attr('content'));
+      },
+      success: function(data) {
+        console.log(data);
+        if (data.delete_result == true) {
+          swal( 'Deleted!', authority_name, 'success' ).then(
+            function () {
+              location.reload();
+            }
+          );
+        }
+      },
+      error: function(data) {
+        console.log('Error:');
+      }
+    });
+  })
+
+  // swal({
+  //   title: 'Are you sure?',
+  //   text: "You won't be able to revert this!",
+  //   type: 'warning',
+  //   showCancelButton: true,
+  //   confirmButtonColor: '#3085d6',
+  //   cancelButtonColor: '#d33',
+  //   confirmButtonText: 'Yes, delete it!'
+  // }).then(function() {
+    // $.ajax({
+    //   type: 'POST',
+    //   url: '/recruitment/delete-department',
+    //   data: {
+    //     id: department_id,
+    //   },
+    //   dataType: 'json',
+    //   beforeSend: function(request) {
+    //     request.setRequestHeader("X-CSRF-TOKEN", $('meta[name="_token"]').attr('content'));
+    //   },
+    //   success: function(data) {
+    //     if (data.delete_result == true) {
+    //       swal( 'Deleted!', department_name, 'success' ).then(
+    //         function () {
+    //           location.reload();
+    //         }
+    //       );
+    //     } if(data.delete_result == false) {
+    //       swal( 'Failed!', department_name + ' Has positions', 'error' ).then(
+    //         function () {
+    //           location.reload();
+    //         }
+    //       );
+    //     }
+    //   },
+    //   error: function(data) {
+    //     console.log('Error:');
+    //   }
+    // });
+  // });
+});

@@ -28,6 +28,7 @@ New:
   ☐ Issue 36: (go to this line) Look for a better way to do this
   ☐ Issue 38: On admin/authority/list uri, on edit authority, when the user click the enter it will submit and add new authority, it should be prevented
   ☐ Issue 39: On admin/authority/list uri, on edit authority, swal is not working or display
+  ☐ Issue 41: Delete department is not working
 
 Done:
   ✔ Issue 40: Edit module is not working @done(2017-06-17 11:38) @project(New)

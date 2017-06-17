@@ -76,6 +76,7 @@ Route::prefix('admin')->group(function() {
   Route::name('admin.modules.add.position')->post('/modules/add/position', 'ModuleGroupController@store');
   Route::name('admin.authority.add')->post('/authority/list', 'AuthorityController@store');
   Route::name('admin.authority.edit')->post('/authority/edit', 'AuthorityController@update');
+  Route::name('admin.authority.delete')->post('/authority/delete', 'AuthorityController@destroy');
   Route::name('admin.submodules.add')->post('/submodules/add', 'AdminSubModulesController@store');
   Route::name('admin.login.submit')->post('/', 'Auth\AdminLoginController@login');
 });
