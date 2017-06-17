@@ -76,12 +76,17 @@ class AuthorityController extends Controller
    * Update the specified resource in storage.
    *
    * @param  \Illuminate\Http\Request  $request
-   * @param  int  $id
    * @return \Illuminate\Http\Response
    */
-  public function update(Request $request, $id)
+  public function update(Request $request)
   {
-      //
+    $data              = $request->only(['id', 'name']);
+    $authorities       = Authorities::find($data['id']);
+    $authorities->name = $data['name'];
+    if ($authorities->save()) {
+      $message['data'] = true;
+      echo json_encode($message);
+    }
   }
 
   /**

@@ -26,6 +26,9 @@ New:
   ☐ Issue 34: (Go to this line) Transfer this to a controller
   ☐ Issue 35: storeFamilyInfo() and storeEducationInfo() in EmployeeController can be combined
   ☐ Issue 36: (go to this line) Look for a better way to do this
+  ☐ Issue 38: On admin/authority/list uri, on edit authority, when the user click the enter it will submit and add new authority, it should be prevented
+  ☐ Issue 39: On admin/authority/list uri, on edit authority, swal is not working or display
+  ☐ Issue 40:
 
 Done:
   ✔ Issue 37: The alert message for password appear also on user info  @done(2017-06-16 08:40) @project(New)

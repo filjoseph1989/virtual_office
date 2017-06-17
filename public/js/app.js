@@ -7564,10 +7564,11 @@ $(document).on('click', '.edit-position-button', function() {
   });
 });
 
- /**
-  * Cancel edting the position name in modal table
-  * @return
-  */
+/**
+ * Cancel edting the position name in modal table
+ * @return
+ * @return {[type]} [description]
+ */
 $(document).on('click', '.edit-position-button-cancel', function() {
   var position_id   = $(this).data('position-id');
   var position_name = $(this).data('position-name');
@@ -7580,10 +7581,11 @@ $(document).on('click', '.edit-position-button-cancel', function() {
   );
 });
 
- /**
-  * Delete position from the department
-  * @return
-  */
+/**
+ * Delete position from the department
+ * @return
+ * @return {[type]} [description]
+ */
 $(document).on('click', '.delete-position-name', function() {
   var _this = this;
   swal({
@@ -7636,12 +7638,12 @@ $(document).on('click', '.delete-position-name', function() {
   })
 });
 
- /**
-  * Delete position on the url
-  * http://{$_SERVER['SERVER_NAME']}/recruitment/list-position
-  *
-  * @return
-  */
+/**
+ * Delete position on the url
+ * http://{$_SERVER['SERVER_NAME']}/recruitment/list-position
+ *
+ * @return
+ */
 $(document).on('click', '.delete-position', function() {
   var _this = this;
 
@@ -7693,11 +7695,11 @@ $(document).on('click', '.delete-position', function() {
   })
 });
 
- /**
-  * ------------------------------------------------------------------------------
-  * Department
-  * ------------------------------------------------------------------------------
-  */
+/**
+ * ------------------------------------------------------------------------------
+ * Department
+ * ------------------------------------------------------------------------------
+ */
 
 /**
  * Display the department name in the header of
@@ -7803,4 +7805,34 @@ $(document).on('click', '.edit-authority-name', function() {
   $('#edit-authority-title').html('Edit '+authority_name);
   $('#edit-authority-id').val(authority_id);
   $('#edit-authority-name').val(authority_name);
+});
+
+/**
+ * On submit edit authority
+ * @return
+ */
+$(document).on('click', '.edit-authority-button', function() {
+  var authority_id   = $('#edit-authority-id').val();
+  var authority_name = $('#edit-authority-name').val();
+
+  $.ajax({
+    type: 'POST',
+    url: '/admin/authority/edit',
+    data: {
+      id:   authority_id,
+      name: authority_name
+    },
+    dataType: 'json',
+    beforeSend: function(request) {
+      request.setRequestHeader("X-CSRF-TOKEN", $('meta[name="_token"]').attr('content'));
+    },
+    success: function(data) {
+      if (data.data == true) {
+        location.reload();
+      }
+    },
+    error: function(data) {
+      console.log('Error:');
+    }
+  });
 });

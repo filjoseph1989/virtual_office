@@ -87,7 +87,7 @@
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
           <h4 class="modal-title" id="">Add Authority</h4>
-        </div>
+        </div>{}
         <div class="modal-body">
           {{ csrf_field() }}
           <div class="item form-group">
@@ -126,8 +126,12 @@
           </div>
         </div>
         <div class="modal-footer">
-          <button type="submit" class="btn btn-success" id="send"><i class="fa fa-floppy-o" aria-hidden="true"></i> Save</button>
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-success edit-authority-button" id="submit">
+            <i class="fa fa-floppy-o" aria-hidden="true"></i> Save
+          </button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">
+            <i class="fa fa-close" aria-hidden="true"></i> Close
+          </button>
         </div>
       </form>
     </div>

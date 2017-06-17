@@ -60,18 +60,22 @@ Route::name('user.add.family')->post('/user/family', 'EmployeeController@storeFa
  * Administration group
  */
 Route::prefix('admin')->group(function() {
+  # GEt
   Route::name('admin.modules')->get('/modules', 'AdminController@showAdminModuleMenu');
-  Route::name('admin.modules.add')->post('/modules/add', 'AdminModulesController@storeNewModule');
-  Route::name('admin.modules.edit')->post('/modules/edit', 'AdminModulesController@editModule');
-  Route::name('admin.modules.add.position')->post('/modules/add/position', 'ModuleGroupController@store');
   Route::name('admin.modules.list')->get('/modules/list', 'AdminModulesController@index');
   Route::name('admin.authority.list')->get('/authority/list', 'AuthorityController@index');
-  Route::name('admin.authority.add')->post('/authority/list', 'AuthorityController@store');
-  Route::name('admin.submodules.add')->post('/submodules/add', 'AdminSubModulesController@store');
   Route::name('admin.submodules.list')->get('/submodules/list/{id}', 'AdminSubModulesController@showSubModuleList');
   Route::name('admin.position.list')->get('/position/list', 'PositionController@showAdminPositionList');
   Route::name('admin.position.list.autocomplete')->get('/position/autocomplete', 'PositionController@autocomplete');
   Route::name('admin.login')->get('/login', 'Auth\AdminLoginController@showLoginForm');
-  Route::name('admin.login.submit')->post('/', 'Auth\AdminLoginController@login');
   Route::name('admin')->get('/', 'AdminController@index');
+
+  # Post
+  Route::name('admin.modules.add')->post('/modules/add', 'AdminModulesController@storeNewModule');
+  Route::name('admin.modules.edit')->post('/modules/edit', 'AdminModulesController@editModule');
+  Route::name('admin.modules.add.position')->post('/modules/add/position', 'ModuleGroupController@store');
+  Route::name('admin.authority.add')->post('/authority/list', 'AuthorityController@store');
+  Route::name('admin.authority.edit')->post('/authority/edit', 'AuthorityController@update');
+  Route::name('admin.submodules.add')->post('/submodules/add', 'AdminSubModulesController@store');
+  Route::name('admin.login.submit')->post('/', 'Auth\AdminLoginController@login');
 });
