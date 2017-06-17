@@ -55,7 +55,7 @@
     <script src="{{ asset('js/jquery.min.js') }}?v=3.2.1" charset="utf-8"></script>
     <script src="{{ asset('js/jquery.dataTables.min.js') }}" charset="utf-8"></script>
     <script src="{{ asset('js/sweetalert2.js') }}?v=2" charset="utf-8"></script>
-    <script src="{{ asset('js/app.js') }}?v=0.9" charset="utf-8"></script>
+    <script src="{{ asset('js/app.js') }}?v=0.11" charset="utf-8"></script>
 
     <script type="text/javascript">
       $('#position-list').DataTable();
